@@ -4,6 +4,7 @@ import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 
@@ -12,8 +13,8 @@ public class FenetreTest extends BasicGame  {
 
 	private Animation animation;
 	
-	private static int LARGEUR = 32 * 20;
-	private static int HAUTEUR = 32 * 10;
+	private static int LARGEUR = 32 * 33;
+	private static int HAUTEUR = 32 * 20;
 	
 	public FenetreTest(String title) {
 		super(title);
@@ -41,8 +42,10 @@ public class FenetreTest extends BasicGame  {
 		g.fillRect(0, 0, 300, 70);
 		g.setColor(Color.white);
 		
+		g.drawImage( new Image("./sprites/fond.png"), 0, 0);
+		
 		g.drawAnimation( this.animation, 0, 0 );
-		g.drawAnimation( this.animation, 64, 32 );
+		g.drawAnimation( this.animation, LARGEUR - 32, HAUTEUR - 32 );
 	}
 	
 	@Override
