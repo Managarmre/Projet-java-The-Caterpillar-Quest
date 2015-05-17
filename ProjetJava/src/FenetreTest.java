@@ -16,6 +16,8 @@ public class FenetreTest extends BasicGame  {
 	private static int LARGEUR = 32 * 33;
 	private static int HAUTEUR = 32 * 20;
 	
+	public int ttt = 1000;
+	
 	public FenetreTest(String title) {
 		super(title);
 		// TODO Auto-generated constructor stub
@@ -38,10 +40,6 @@ public class FenetreTest extends BasicGame  {
 	public void render( GameContainer container, Graphics g ) throws SlickException {
 		// TODO Auto-generated method stub
 		
-		g.setColor(new Color(50, 50, 50, 180));
-		g.fillRect(0, 0, 300, 70);
-		g.setColor(Color.white);
-		
 		g.drawImage( new Image("./sprites/fond.png"), 0, 0);
 		
 		g.drawAnimation( this.animation, 0, 0 );
@@ -56,7 +54,10 @@ public class FenetreTest extends BasicGame  {
 	
 	public static void main( String[] args ) {
 		try {
-			new AppGameContainer(new FenetreTest("test"), LARGEUR, HAUTEUR, false).start();
+			AppGameContainer app = new AppGameContainer(new FenetreTest("test") ); //, LARGEUR, HAUTEUR, false);
+			app.setDisplayMode( LARGEUR,  HAUTEUR,  false );
+			app.start();
+			
 		} catch (SlickException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
