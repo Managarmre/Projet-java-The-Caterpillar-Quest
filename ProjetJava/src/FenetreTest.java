@@ -12,6 +12,7 @@ import org.newdawn.slick.SpriteSheet;
 public class FenetreTest extends BasicGame  {
 
 	private Animation animation;
+	private Animation guepe;
 	
 	private static int LARGEUR = 32 * 33;
 	private static int HAUTEUR = 32 * 20;
@@ -34,6 +35,14 @@ public class FenetreTest extends BasicGame  {
 		this.animation = new Animation();
 		this.animation.addFrame( spriteSheet.getSprite(0, 0), 100);
 		
+		
+		SpriteSheet spriteGuepe = new SpriteSheet("sprites/guepe.png", 32, 32);
+		this.guepe = new Animation();
+		this.guepe.addFrame( spriteGuepe.getSprite(0, 0), 100);
+		this.guepe.addFrame( spriteGuepe.getSprite(1, 0), 100);
+		this.guepe.addFrame( spriteGuepe.getSprite(2, 0), 100);
+		this.guepe.addFrame( spriteGuepe.getSprite(3, 0), 100);
+		
 	}
 	
 	@Override
@@ -44,6 +53,8 @@ public class FenetreTest extends BasicGame  {
 		
 		g.drawAnimation( this.animation, 0, 0 );
 		g.drawAnimation( this.animation, LARGEUR - 32, HAUTEUR - 32 );
+		
+		g.drawAnimation( this.guepe,  100, 100 );
 	}
 	
 	@Override
