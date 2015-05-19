@@ -37,7 +37,7 @@ public class Score implements Comparable<Score>, Serializable {
 		else if( this.nbPoints < score.nbPoints ) return -1;
 		
 		// puis avec la durée
-		if( this.duree > score.duree ) return 1;
+		if( this.duree < score.duree ) return 1;
 		else if( this.duree == score.duree ) return 0;
 		else return -1;
 	}

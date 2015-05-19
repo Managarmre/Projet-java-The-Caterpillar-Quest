@@ -53,7 +53,7 @@ public class Application {
 			scores = new GestionScores();
 		}
 		
-		//scores.ajouterScore( new Score("test", 2, 1000) );
+		//scores.ajouterScore( new Score("test", 2, 8000) );
 				
 		scores.afficherScores();
 		
