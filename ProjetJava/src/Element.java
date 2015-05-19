@@ -25,4 +25,24 @@ public abstract class Element {
 		
 		return false;
 	}
+
+	public Point getPosition() {
+		return position;
+	}
+
+	public int getHauteur() {
+		return hauteur;
+	}
+
+	public int getLargeur() {
+		return largeur;
+	}
+
+	public Shape getForme() {
+		return forme;
+	}
+
+	public Shape getHitbox() {
+		return hitbox;
+	}
 }
