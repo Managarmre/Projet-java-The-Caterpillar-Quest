@@ -1,16 +1,14 @@
-import org.newdawn.slick.Image;
-import org.newdawn.slick.geom.Point;
+
 import org.newdawn.slick.geom.Shape;
 
 
 public abstract class ElementRamassable extends ElementFixe {
 
-	private int nbPoints = 0;
+	private int nbPoints;
 	
-	public ElementRamassable(Point position, int hauteur, int largeur, Shape forme, Shape hitbox, Image imageFond, int nbPoints) {
-		super(position, hauteur, largeur, forme, hitbox, imageFond);
+	public ElementRamassable( int x, int y, int hauteur, int largeur, Shape hitbox, String cheminImage, int nbPoints ) {
+		super( x, y, hauteur, largeur, hitbox, cheminImage );
 		this.nbPoints = nbPoints;
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getNbPoints() {
@@ -21,4 +19,6 @@ public abstract class ElementRamassable extends ElementFixe {
 		this.nbPoints = nbPoints;
 	}
 
+	
+	
 }

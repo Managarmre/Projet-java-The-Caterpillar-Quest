@@ -1,15 +1,31 @@
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Shape;
 
 
 public abstract class ElementFixe extends Element {
 
-	private Image image;
+	protected String cheminImage;
+	protected Image image;
 	
-	public ElementFixe(Point position, int hauteur, int largeur, Shape forme, Shape hitbox, Image imageFond) {
-		super(position, hauteur, largeur, forme, hitbox);
-		this.image = imageFond;
+	public ElementFixe( int x, int y, int hauteur, int largeur, Shape hitbox, String cheminImage ) {
+		super( x, y, hauteur, largeur, hitbox );
+		this.cheminImage = cheminImage;
 	}
-
+	
+	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
+		
+		graphique.drawImage( this.image, this.getPositionX(), this.getPositionY() );
+		
+	}
+	
+	public void initialiser() throws SlickException {
+		
+		this.image = new Image( this.cheminImage );
+		
+	}
+	
 }

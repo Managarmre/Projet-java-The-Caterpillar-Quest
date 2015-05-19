@@ -30,7 +30,7 @@ public class FenetreTest extends BasicGame  {
 	public void init( GameContainer container ) throws SlickException {
 		// TODO Auto-generated method stub
 		
-		SpriteSheet spriteSheet = new SpriteSheet("sprites/plateforme.png", 32, 32);
+		SpriteSheet spriteSheet = new SpriteSheet("sprites/plateforme.png", 64, 64);
 		
 		this.animation = new Animation();
 		this.animation.addFrame( spriteSheet.getSprite(0, 0), 100);

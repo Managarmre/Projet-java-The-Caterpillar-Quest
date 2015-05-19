@@ -1,25 +1,29 @@
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
+import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Shape;
+import org.newdawn.slick.geom.Transform;
 
 
 public abstract class Element {
 
-	private Point position;
-	private int hauteur = 0, largeur = 0;
 	private Shape forme;
 	private Shape hitbox;
 	
-	public Element(Point position, int hauteur, int largeur, Shape forme, Shape hitbox){
-		this.position = position;
-		this.hauteur = hauteur;
-		this.largeur = largeur;
+	public Element( Shape forme, Shape hitbox ){
+		
 		this.forme = forme;
 		this.hitbox = hitbox;
 	}
 	
-	public void afficher(){
-		
+	public Element( int x, int y, int hauteur, int largeur, Shape hitbox ) {
+		this( new Rectangle( x, y, largeur, hauteur ), hitbox );
 	}
+	
+	public abstract void initialiser() throws SlickException;
+	public abstract void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException;
 	
 	public boolean estEnCollisionAvec(Element e){
 		
@@ -29,16 +33,23 @@ public abstract class Element {
 			return true;
 	}
 
-	public Point getPosition() {
-		return position;
-	}
 
+	public float getPositionX() {
+		return this.forme.getX();
+	}
+	
+	public float getPositionY() {
+		return this.forme.getY();
+	}
+	
+	
+	
 	public int getHauteur() {
-		return hauteur;
+		return (int) this.forme.getHeight();
 	}
 
 	public int getLargeur() {
-		return largeur;
+		return (int) this.forme.getWidth();
 	}
 
 	public Shape getForme() {

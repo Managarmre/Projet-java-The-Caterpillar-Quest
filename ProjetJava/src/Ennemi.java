@@ -1,21 +1,17 @@
-import org.newdawn.slick.SpriteSheet;
+
 import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Shape;
 
 
 public abstract class Ennemi extends ElementDeplacable {
 
-	private Point depart, arrivee;
-	private boolean deplacementHorizontal;
-	
+	private Point depart, arrivee;	
 
-	public Ennemi(Point position, int hauteur, int largeur, Shape forme, Shape hitbox, SpriteSheet[] sprites, Point depart, Point arrivee, boolean deplacementHorizontal) {
+	public Ennemi( int x, int y, int hauteur, int largeur, Shape hitbox, String cheminSprite, Point depart, Point arrivee ) {
+		super( x, y, hauteur, largeur, hitbox, cheminSprite );
 		
-		super(position, hauteur, largeur, forme, hitbox, sprites);
 		this.depart = depart;
 		this.arrivee = arrivee;
-		this.deplacementHorizontal = deplacementHorizontal;
-
 	}
 
 	public Point getDepart() {
@@ -34,24 +30,5 @@ public abstract class Ennemi extends ElementDeplacable {
 		this.arrivee = arrivee;
 	}
 	
-	public boolean isDeplacementHorizontal() {
-		return deplacementHorizontal;
-	}
-
-	public void setDeplacementHorizontal(boolean deplacementHorizontal) {
-		this.deplacementHorizontal = deplacementHorizontal;
-	}
 	
-	@Override
-	public void seDeplacer(Point point) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public Point getProchainePosition() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
