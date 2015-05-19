@@ -23,7 +23,10 @@ public abstract class Element {
 	
 	public boolean estEnCollisionAvec(Element e){
 		
-		return false;
+		if(this.hitbox.intersects(e.getHitbox()))
+			return false;
+		else
+			return true;
 	}
 
 	public Point getPosition() {
