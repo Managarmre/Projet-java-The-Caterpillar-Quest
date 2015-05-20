@@ -40,10 +40,10 @@ public class Carte {
 			this.elementsFixes.add(plateforme);
 		}
 		
-		Ennemi guepe = new Guepe( 100, 100, null, null, null, true );
+		Ennemi guepe = new Guepe( 250, 250, null, new Point(250, 50), new Point(250, 300), true );
 		this.ennemis.add(guepe);
-		this.ennemis.add( new Guepe( 132, 100, null, null, null, true ) );
-		this.ennemis.add( new Guepe( 164, 100, null, null, null, true ) );
+		this.ennemis.add( new Guepe( 300, 300, null, new Point(600, 300), new Point(100, 300), false ) );
+		this.ennemis.add( new Guepe( 400, 100, null, new Point(500, 250), new Point(200, 150), true ) );
 		
 		Cerise cerise = new Cerise( 200, 200, null );
 		this.elementsRamassables.add(cerise);

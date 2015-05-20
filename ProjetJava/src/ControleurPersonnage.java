@@ -11,6 +11,8 @@ public class ControleurPersonnage implements KeyListener {
 	@Override
 	public void keyPressed( int key, char c ) {
 
+		System.out.println(c);
+		
 		switch(key) {
 		
 			case Input.KEY_UP:
@@ -51,7 +53,7 @@ public class ControleurPersonnage implements KeyListener {
 	@Override
 	public boolean isAcceptingInput() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override

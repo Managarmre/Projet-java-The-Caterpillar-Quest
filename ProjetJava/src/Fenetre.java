@@ -12,12 +12,15 @@ public class Fenetre extends BasicGame {
 	
 	private Image fond;
 	private Carte carte;
+	private ControleurPersonnage controleurPersonnage;
 	
 	public Fenetre( String title ) {
 		super(title);
 		
 		this.camera = new Camera();
 		this.carte = new Carte();
+		
+		this.controleurPersonnage = new ControleurPersonnage();
 	}
 	
 	@Override
@@ -30,6 +33,7 @@ public class Fenetre extends BasicGame {
 		this.fond = new Image("./sprites/fond.png");
 		this.carte.initialiser();
 		
+		conteneur.getInput().addKeyListener( this.controleurPersonnage );
 	}
 	
 	
@@ -45,7 +49,6 @@ public class Fenetre extends BasicGame {
 
 		graphique.drawImage( this.fond, 0, 0 );
 		this.carte.afficher( conteneur, graphique );
-	}
-	
+	}	
 
 }
