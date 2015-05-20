@@ -9,17 +9,18 @@ import org.newdawn.slick.geom.Shape;
 
 public class Guepe extends Ennemi {
 	
-	private boolean deplacementHorizintal;
+	private boolean deplacementHorizontal;
 	
 	public Guepe( int x, int y, Shape hitbox, Point depart, Point arrivee, boolean deplacementHorizontal ) {
 		super( x, y, 32, 32, hitbox, "./sprites/guepe.png", depart, arrivee );
 		
-		this.deplacementHorizintal = deplacementHorizontal;
+		this.deplacementHorizontal = deplacementHorizontal;
 		
-		if( this.deplacementHorizintal ) this.animations = new Animation[2];	// 2 animations : aller et retour
+		if( this.deplacementHorizontal ) this.animations = new Animation[2];	// 2 animations : aller et retour
 		else this.animations = new Animation[1];	// une seule animation pour la guêpe verticale
 		
 		// mise à jour du sens
+
 		
 	}
 
@@ -34,7 +35,7 @@ public class Guepe extends Ennemi {
 		this.animations = new Animation[ nombreAnimations ];
 		
 		this.animations[0] = this.chargerAnimation( 0, 0, 3 );
-		if( this.deplacementHorizintal ) this.animations[1] = this.chargerAnimation( 1, 0, 3 );
+		if( this.deplacementHorizontal ) this.animations[1] = this.chargerAnimation( 1, 0, 3 );
 		
 	}
 	

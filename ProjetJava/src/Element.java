@@ -28,9 +28,9 @@ public abstract class Element {
 	public boolean estEnCollisionAvec(Element e){
 		
 		if(this.hitbox.intersects(e.getHitbox()))
-			return false;
-		else
 			return true;
+		else
+			return false;
 	}
 
 
