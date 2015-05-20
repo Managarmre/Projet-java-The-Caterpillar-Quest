@@ -36,7 +36,18 @@ public class Fenetre extends BasicGame {
 	@Override
 	public void update( GameContainer conteneur, int delta ) throws SlickException {
 
+		for(Ennemi e : this.carte.getEnnemis())
+		if( this.carte.getPersonnage().estEnCollisionAvec(e) )
+			System.out.println("");
+			//mourir();
+		for(ElementRamassable c : carte.getElementsRamassables())
+			if( carte.getPersonnage().estEnCollisionAvec(c))
+				System.out.println("");
+				//ramasserCerise();
 		
+		if(carte.getPersonnage().estEnCollisionAvec(this.carte.getPorte()))
+			System.out.println("");
+			//gagner();
 		
 	}
 

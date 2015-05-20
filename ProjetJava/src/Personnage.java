@@ -10,6 +10,7 @@ import org.newdawn.slick.geom.Shape;
 public class Personnage extends ElementDeplacable {
 
 	private static int vitesse = 3;
+	private int nbCerises = 0;
 	
 	public Personnage( int x, int y, Shape hitbox ) {
 		super( x, y, 32, 32, hitbox, "./sprites/personnage.png" );	
@@ -28,6 +29,9 @@ public class Personnage extends ElementDeplacable {
 		return null;
 	}
 	
+	public void gestionCollision(){
+		
+	}
 	
 	@Override
 	public void afficher(GameContainer conteneur, Graphics graphique) throws SlickException {
