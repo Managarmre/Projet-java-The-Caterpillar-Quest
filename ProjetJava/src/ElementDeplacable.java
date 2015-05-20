@@ -1,4 +1,5 @@
 import org.newdawn.slick.Animation;
+import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Point;
@@ -21,37 +22,19 @@ public abstract class ElementDeplacable extends Element {
 	
 	
 	public abstract void seDeplacer(Point point);
-	
+	public abstract void update( GameContainer conteneur, int delta ) throws SlickException;
 	public abstract Point getProchainePosition();
 	
-	
-	@Override
-	public void initialiser() throws SlickException {
 		
-		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
+	protected Animation chargerAnimation( int numeroLigne, int debutColonne, int finColonne ) {
 		
-		int nombreAnimations = this.sprite.getVerticalCount();
-		this.animations = new Animation[ nombreAnimations ];
+		Animation animation = new Animation();
 		
-		this.chargerAnimation();
-	}
-	
-	
-	private void chargerAnimation() {
-		
-		int nombreLignesSprite = this.sprite.getVerticalCount();
-		int nombreColonnesSprite = this.sprite.getHorizontalCount();
-		
-		for( int i = 0; i < nombreLignesSprite; i++ ) {
-			
-			this.animations[i] = new Animation();
-			
-			for( int j = 0; j < nombreColonnesSprite; j++ ) {
-				this.animations[i].addFrame( this.sprite.getSprite(j, i), 100 );
-			}
-			
+		for( int i = debutColonne; i <= finColonne; i++ ) {
+			animation.addFrame( this.sprite.getSprite(i, numeroLigne), 100 );
 		}
 		
+		return animation;		
 	}
 	
 }

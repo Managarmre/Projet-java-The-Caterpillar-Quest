@@ -9,7 +9,7 @@ import org.newdawn.slick.geom.Transform;
 
 
 public class Carte {
-
+	
 	private Personnage personnage;
 	private Porte porte;
 	
@@ -19,8 +19,7 @@ public class Carte {
 	
 	
 	public Carte() {
-		
-		
+				
 		this.elementsRamassables = new ArrayList<ElementRamassable>();
 		this.ennemis = new ArrayList<Ennemi>();
 		this.elementsFixes = new ArrayList<ElementFixe>();
@@ -45,46 +44,60 @@ public class Carte {
 		this.ennemis.add(guepe);
 		this.ennemis.add( new Guepe( 132, 100, null, null, null, true ) );
 		this.ennemis.add( new Guepe( 164, 100, null, null, null, true ) );
+		
+		Cerise cerise = new Cerise( 200, 200, null );
+		this.elementsRamassables.add(cerise);
+		
 	}
 	
 	
 	public void initialiser() throws SlickException {
 		
-		this.personnage.initialiser();
-		this.porte.initialiser();
-		
-		for( Ennemi ennemi : this.ennemis ) {
-			ennemi.initialiser();
-		}
-		
 		for( ElementFixe fixe : this.elementsFixes ) {
 			fixe.initialiser();
 		}
 		
+		for( Ennemi ennemi : this.ennemis ) {
+			ennemi.initialiser();
+		}
+				
 		for( ElementRamassable ramassable : this.elementsRamassables ) {
 			ramassable.initialiser();
 		}
 		
+		this.personnage.initialiser();
+		this.porte.initialiser();
+		
+	}
+
+
+	public void update( GameContainer conteneur, int delta ) throws SlickException {
+		
+		for( Ennemi ennemi : this.ennemis ) {
+			ennemi.update( conteneur, delta );
+		}
+		
+		this.personnage.update( conteneur, delta );
+		
+		
 	}
 	
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
-		
-		//graphique.drawAnimation( this.personnage.animations[0], this.personnage.getPositionX(), this.personnage.getPositionY() );
-		
-		this.personnage.afficher( conteneur, graphique );
-		this.porte.afficher( conteneur, graphique );
+				
+		for( ElementFixe fixe : this.elementsFixes ) {
+			fixe.afficher( conteneur, graphique );
+		}
 		
 		for( Ennemi ennemi : this.ennemis ) {
 			ennemi.afficher( conteneur, graphique );
 		}
 		
-		for( ElementFixe fixe : this.elementsFixes ) {
-			fixe.afficher( conteneur, graphique );
-		}
-		
 		for( ElementRamassable ramassable : this.elementsRamassables ) {
 			ramassable.afficher( conteneur, graphique );
 		}
+		
+		this.porte.afficher( conteneur, graphique );
+		this.personnage.afficher( conteneur, graphique );
 		
 	}
 	

@@ -36,6 +36,7 @@ public class Fenetre extends BasicGame {
 	@Override
 	public void update( GameContainer conteneur, int delta ) throws SlickException {
 
+
 		for(Ennemi e : this.carte.getEnnemis())
 		if( this.carte.getPersonnage().estEnCollisionAvec(e) )
 			System.out.println("");
@@ -48,6 +49,9 @@ public class Fenetre extends BasicGame {
 		if(carte.getPersonnage().estEnCollisionAvec(this.carte.getPorte()))
 			System.out.println("");
 			//gagner();
+
+		this.carte.update( conteneur, delta );
+
 		
 	}
 
