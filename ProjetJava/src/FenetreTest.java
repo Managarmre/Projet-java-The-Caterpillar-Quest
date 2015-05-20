@@ -13,8 +13,8 @@ public class FenetreTest extends BasicGame  {
 
 	private Animation animation;
 	
-	private static int LARGEUR = 32 * 33;
-	private static int HAUTEUR = 32 * 20;
+	protected static int LARGEUR = 32 * 33;
+	protected static int HAUTEUR = 32 * 20;
 	
 	public int ttt = 1000;
 	
