@@ -27,10 +27,10 @@ public abstract class Element {
 	
 	public boolean estEnCollisionAvec(Element e){
 		
-		if(this.hitbox.intersects(e.getHitbox()))
+	//	if(this.hitbox.intersects(e.getHitbox()))
 			return true;
-		else
-			return false;
+	/*	else
+			return false;*/
 	}
 
 
@@ -42,7 +42,13 @@ public abstract class Element {
 		return this.forme.getY();
 	}
 	
+	public void setPositionX(float positionX){
+		this.forme.setX(positionX);
+	}
 	
+	public void setPositionY(float positionY){
+		this.forme.setY(positionY);
+	}
 	
 	public int getHauteur() {
 		return (int) this.forme.getHeight();

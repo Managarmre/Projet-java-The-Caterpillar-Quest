@@ -41,7 +41,7 @@ public class Guepe extends Ennemi {
 	
 
 	@Override
-	public void update( GameContainer conteneur, int delta ) throws SlickException {
+	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException {
 		
 		
 		
