@@ -9,7 +9,7 @@ import org.newdawn.slick.geom.Shape;
 
 public class Personnage extends ElementDeplacable {
 
-	
+	private static int vitesse = 3;
 	
 	public Personnage( int x, int y, Shape hitbox ) {
 		super( x, y, 32, 32, hitbox, "./sprites/personnage.png" );	
@@ -18,8 +18,9 @@ public class Personnage extends ElementDeplacable {
 	@Override
 	public void seDeplacer(Point point) {
 		// TODO Auto-generated method stub
-		
+
 	}
+	
 
 	@Override
 	public Point getProchainePosition() {

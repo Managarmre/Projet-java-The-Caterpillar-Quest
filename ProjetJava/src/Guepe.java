@@ -9,14 +9,14 @@ import org.newdawn.slick.geom.Shape;
 
 public class Guepe extends Ennemi {
 	
-	private boolean deplacementHorizintal;
+	private boolean deplacementHorizontal;
 	
 	public Guepe( int x, int y, Shape hitbox, Point depart, Point arrivee, boolean deplacementHorizontal ) {
 		super( x, y, 32, 32, hitbox, "./sprites/guepe.png", depart, arrivee );
 		
-		this.deplacementHorizintal = deplacementHorizontal;
+		this.deplacementHorizontal = deplacementHorizontal;
 		
-		// il y a deux type d'animations pour la guêpe, l'allé et le retour
+		// il y a deux types d'animations pour la guêpe, l'aller et le retour
 		//this.animations = new Animation[2];
 		
 	}
