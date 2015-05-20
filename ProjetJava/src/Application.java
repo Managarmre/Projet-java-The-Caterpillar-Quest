@@ -19,7 +19,7 @@ public class Application {
 			Fenetre fenetre = new Fenetre("The Quaterpillar Quest");
 			
 			AppGameContainer app = new AppGameContainer(fenetre);
-			app.setDisplayMode( largeur,  hauteur,  false );
+			app.setDisplayMode( largeur,  hauteur,  false ); 	// false : ne pas mettre en plein écran
 			app.start();
 			
 		} catch (SlickException e) {

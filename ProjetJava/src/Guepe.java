@@ -11,17 +11,17 @@ import org.newdawn.slick.geom.Vector2f;
 public class Guepe extends Ennemi {
 	
 	private enum Orientation {
-		Gauche(0), 
-		Droite(1);
+		Gauche(0), 	// la guêpe regarde vers la gauche
+		Droite(1); 	// la guêpe regarde vers la droite
 		
-		private int valeur;
+		private int indiceAnimation;
 		
 		Orientation( int valeur ) {
-			this.valeur = valeur;
+			this.indiceAnimation = valeur;
 		}
 		
-		public int getValeur() {
-			return this.valeur;
+		public int getIndiceAnimation() {
+			return this.indiceAnimation;
 		}
 	}
 	
@@ -36,18 +36,13 @@ public class Guepe extends Ennemi {
 		if( this.deplacementHorizontal ) {
 			
 			this.animations = new Animation[2];	// 2 animations : aller et retour
-			
 			this.orientation = ( this.getPositionY() - this.getArrivee().getY() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
-			
 		}
 		else {
 			this.animations = new Animation[1];	// une seule animation pour la guêpe verticale
-			this.orientation = Orientation.Gauche;
+			this.orientation = Orientation.Gauche; 	// une guêpe verticale regarde toujours vers la gauche
 		}
-		
-		// mise à jour du sens
-		
-		
+				
 	}
 
 
@@ -72,11 +67,16 @@ public class Guepe extends Ennemi {
 		float oldX = this.getPositionX();
 		float oldY = this.getPositionY();
 		
+		// si la guêpe est arrivée à destination (sur le point d'arrivé)
 		if( Math.abs( oldX - this.getArrivee().getX() ) < 0.1 && Math.abs( oldY - this.getArrivee().getY() ) < 0.1 ){
+			
+			// on intervertie les points de départ et d'arrivé
 			Point tmp = this.getArrivee();
 			this.setArrivee( this.getDepart() );
 			this.setDepart(tmp);
 			
+			// on met à jour l'orientation de la guêpe
+			// une guêpe verticale ne peut pas changer son orientation
 			this.orientation = ( this.deplacementHorizontal && this.getPositionY() - this.getArrivee().getY() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
 			
 		}
@@ -96,11 +96,8 @@ public class Guepe extends Ennemi {
 	
 	@Override
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
-		
-		//int indiceAnimation = this.deplacementHorizontal ? this.getDepart().getX() < this.getArrivee().getX() ? 1 : 0 : 0;
-		//int indiceAnimation = ( this.orientation == Orientation.Gauche ) ? 0 : 1;
-		
-		graphique.drawAnimation( this.animations[ this.orientation.getValeur() ], this.getPositionY(), this.getPositionX() );
+
+		graphique.drawAnimation( this.animations[ this.orientation.getIndiceAnimation() ], this.getPositionY(), this.getPositionX() );
 	}
 
 	@Override
