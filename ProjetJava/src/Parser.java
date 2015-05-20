@@ -15,31 +15,81 @@ import org.newdawn.slick.AppGameContainer;
 
 public class Parser 
 {
-	private char pointeur;
-	private static int taille=20; // les 20 premières lignes du fichier
-	private int colonne;
-	private String fichier;
-	private ArrayList<char[]> ligneLue;
+	private Carte carte;
 	
-	public Parser(String f) throws IOException
+	private char pointeur;
+	private static int nombreLignesMax=20; // on ne lit que les 20 premières lignes du fichier
+	private int colonne;
+	private String cheminFichier;
+	private ArrayList<char[]> lignesLues;		// ET LES PLURIELS, ILS SE PERDENT EN CHEMIN ?
+	
+	public Parser( Carte carte ) throws IOException
 	{
-		this.fichier="default.map"; //f
+		this.carte = carte;
+		
+		this.cheminFichier="default.map"; //f // carte.getCheminFichierCarte();
 		this.pointeur=' ';
 		this.colonne=0;
-		this.ligneLue=new ArrayList<char[]>(20);
+		this.lignesLues=new ArrayList<char[]>(20);
+		
 		// récupération des 20 premières lignes du fichier
-		InputStream ips=new FileInputStream(this.fichier); 
+		InputStream ips=new FileInputStream(this.cheminFichier); 
 		InputStreamReader ipsr=new InputStreamReader(ips);
 		BufferedReader br=new BufferedReader(ipsr);
 		String ligne;
-		for (int i=0;i<taille;i++)
+		for (int i=0;i<nombreLignesMax;i++)
 		{
 			ligne=br.readLine();
-			this.ligneLue.add(ligne.toCharArray());
+			this.lignesLues.add(ligne.toCharArray());
 		}
 		br.close();
+		
+		//this.chargerColonnesSuivantes(22);	// on charge les 20 premières colonnes
 	}
 	
+	
+	// envoie des 32 premières colonnes des 20 lignes
+	public void getEcranInit() throws IOException
+	{
+		boucle(32);
+		System.out.println("FIN");
+	}
+	
+	// envoie de la colonne suivante
+	public void chargerColonneSuivante() //getColonne()
+	{
+		//boucle(this.colonne+1);
+		this.chargerColonnesSuivantes(1);
+	}
+	
+	
+	public void chargerColonnesSuivantes( int nombreColonnes ) {
+		
+		boucle(this.colonne+nombreColonnes );
+		
+		//this.colonne = this.colonne + nombreColonnes;		
+	}
+
+	
+	public void boucle(int maxCol)
+	{
+		Carte c = this.carte;
+		
+		while (this.colonne<maxCol)
+		{
+			for (int i=0;i<nombreLignesMax;i++)
+			{
+				if (this.lignesLues.get(i).length>this.colonne)
+				{
+					char caractere = this.lignesLues.get(i)[this.colonne];
+					afficheImage(caractere,i,this.colonne);		// nom très mal choisie.....		
+				}
+			}
+			this.colonne++;
+		}
+	}
+	
+	/*
 	public int lectureChar(char c)
 	{
 		int i=-1;
@@ -54,18 +104,22 @@ public class Parser
 		}
 		return i;
 	}
+	*/
 	
-	public void afficheImage(char c, Carte cc, int ligne, int colonne)
+	public void afficheImage(char c, int ligne, int colonne)
 	{
-		int i = lectureChar(c);
-		switch(i)
-		{
-			case -1: break;
-			case 0: cc.addPlateforme(new Plateforme(ligne,colonne));System.out.print("Plateforme - ");break;
-			case 1: cc.addPorte(new Porte(ligne,colonne));System.out.print("Porte - ");break;
-			case 2: cc.addCerise(new Cerise(ligne,colonne));System.out.print("Cerise - ");break;
-			case 3: cc.addGuepe(new Guepe(ligne,colonne));System.out.print("Guepe - ");break;
-			case 4: 
+		Carte cc = this.carte;
+		
+		
+		//int i = lectureChar(c);			// <-- étape qui ne sert à rien ?
+		//switch(i) 
+		
+		switch(c){
+			case '#': cc.addPlateforme(new Plateforme(ligne,colonne));System.out.print("Plateforme - ");break;
+			case 'P': cc.addPorte(new Porte(ligne,colonne));System.out.print("Porte - ");break;
+			case 'c': cc.addCerise(new Cerise(ligne,colonne));System.out.print("Cerise - ");break;
+			case 'x': cc.addGuepe(new Guepe(ligne,colonne));System.out.print("Guepe - ");break;
+			case 'A': 
 				if (!cc.aUnPersonnage()) // un seul personnage sur la carte !!!
 				{
 					cc.addPersonnage(new Personnage(ligne,colonne));
@@ -76,48 +130,26 @@ public class Parser
 					System.out.print("Ignore - ");
 				}
 				break;
-		}
+			
+			default: 
+				break;
+	}
 	}
 	
-	public void boucle(int maxCol,Carte c)
-	{
-		while (this.colonne<maxCol)
-		{
-			for (int i=0;i<taille;i++)
-			{
-				if (this.ligneLue.get(i).length>this.colonne)
-				{
-					char caractere = this.ligneLue.get(i)[this.colonne];
-					afficheImage(caractere,c,i,this.colonne);					
-				}
-			}
-			this.colonne++;
-		}
-	}
 	
-	// envoie des 32 premières colonnes des 20 lignes
-	public void getEcranInit(Carte c) throws IOException
-	{
-		boucle(32,c);
-		System.out.println("FIN");
-	}
-		
-	// envoie de la colonne suivante
-	public void getColonne(Carte c)
-	{
-		boucle(this.colonne+1,c);
-	}
+	
+	
 		
 	public static class Application
 	{
 		public static void main(String[] args) throws IOException
 		{
-			Parser p = new Parser("fichiertexte.txt");
-			Carte c = new Carte();
-			p.getEcranInit(c);
+			Carte c = new Carte("default.map");		// à modifier
+			Parser p = new Parser(c);
+			p.getEcranInit();
 			for (int i=0;i<6;i++)
 			{
-				p.getColonne(c);
+				p.chargerColonneSuivante();
 			}
 		}
 	}

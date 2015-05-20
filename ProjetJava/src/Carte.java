@@ -3,19 +3,24 @@ import java.util.ArrayList;
 
 public class Carte 
 {
+	private String cheminFichierCarte;
 	private ArrayList<Guepe> guepe;
 	private ArrayList<Cerise> cerise;
-	private ArrayList<Personnage> personnage;
+	
+	private Personnage personnage;
+	
+	//private ArrayList<Personnage> personnage;
 	private ArrayList<Plateforme> plateforme;
 	private ArrayList<Porte> porte;
 	
-	public Carte()
+	public Carte( String cheminCarte )
 	{
+		this.cheminFichierCarte = cheminCarte;
 		this.guepe=new ArrayList<Guepe>();
 		this.plateforme=new ArrayList<Plateforme>(20);
 		this.cerise=new ArrayList<Cerise>(20);
 		this.porte=new ArrayList<Porte>(20);
-		this.personnage=new ArrayList<Personnage>(1);
+		//this.personnage=new ArrayList<Personnage>(1);
 	}
 	
 	public void addGuepe(Guepe g)
@@ -40,11 +45,15 @@ public class Carte
 
 	public void addPersonnage(Personnage p)
 	{
-		this.personnage.add(p);
+		this.personnage = p; //.add(p);
 	}
 	
 	public boolean aUnPersonnage()
 	{
-		return this.personnage.size()==1;
+		return this.personnage != null; //.size()==1;
+	}
+	
+	public String getCheminFichierCarte() {
+		return this.cheminFichierCarte;
 	}
 }
