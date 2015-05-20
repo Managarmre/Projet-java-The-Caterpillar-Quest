@@ -36,7 +36,7 @@ public class Fenetre extends BasicGame {
 	@Override
 	public void update( GameContainer conteneur, int delta ) throws SlickException {
 
-		
+		this.carte.update( conteneur, delta );
 		
 	}
 

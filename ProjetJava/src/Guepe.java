@@ -16,11 +16,37 @@ public class Guepe extends Ennemi {
 		
 		this.deplacementHorizintal = deplacementHorizontal;
 		
-		// il y a deux type d'animations pour la guêpe, l'allé et le retour
-		//this.animations = new Animation[2];
+		if( this.deplacementHorizintal ) this.animations = new Animation[2];	// 2 animations : aller et retour
+		else this.animations = new Animation[1];	// une seule animation pour la guêpe verticale
+		
+		// mise à jour du sens
 		
 	}
 
+
+	
+	@Override
+	public void initialiser() throws SlickException {
+		
+		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
+		
+		int nombreAnimations = this.sprite.getVerticalCount();
+		this.animations = new Animation[ nombreAnimations ];
+		
+		this.animations[0] = this.chargerAnimation( 0, 0, 3 );
+		if( this.deplacementHorizintal ) this.animations[1] = this.chargerAnimation( 1, 0, 3 );
+		
+	}
+	
+
+	@Override
+	public void update( GameContainer conteneur, int delta ) throws SlickException {
+		
+		
+		
+	}
+	
+	
 	@Override
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
 
@@ -39,4 +65,7 @@ public class Guepe extends Ennemi {
 		return null;
 	}
 
+
+
+	
 }
