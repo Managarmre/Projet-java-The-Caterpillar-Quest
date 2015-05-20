@@ -11,7 +11,7 @@ public class Personnage extends ElementDeplacable {
 
 	private static int vitesse = 3;
 
-	private int nbCerises = 0;
+	private int nbPoints = 0;
 	private boolean tombe, isMoving = false;
 
 	private Direction direction;
@@ -135,6 +135,8 @@ public class Personnage extends ElementDeplacable {
 		graphique.drawAnimation( this.animations[0], this.getPositionX(), this.getPositionY() );
 	}
 
-	
+	public int getNbPoints() {
+		return this.nbPoints;
+	}
 
 }

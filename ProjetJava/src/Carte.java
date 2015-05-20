@@ -25,17 +25,16 @@ public class Carte {
 		this.ennemis = new ArrayList<Ennemi>();
 		this.elementsFixes = new ArrayList<ElementFixe>();
 		
-		this.personnage = new Personnage( 10, 10, null );
-		this.porte = new Porte( 200, 20, null );
+		this.personnage = new Personnage( 10, 32*18, null );
+		this.porte = new Porte( 32*31, 32*17, null );
 		
-		this.remplir();	// ----------------------------------------------------------- à retirer
+		this.remplir();	// ----------------------------------------------------------- à remplacer par l'appel du parseur
 	}
 
 
 	public void remplir() {
 		
 		Plateforme plateforme;
-		Point position;
 		for( int i = 0; i < 33; i++ ) {
 			plateforme = new Plateforme( 32*i, 32*19, null );
 			this.elementsFixes.add(plateforme);
@@ -46,7 +45,7 @@ public class Carte {
 		this.ennemis.add( new Guepe( 300, 300, null, new Point(600, 300), new Point(100, 300), false ) );
 		this.ennemis.add( new Guepe( 400, 100, null, new Point(500, 250), new Point(200, 150), true ) );
 		
-		Cerise cerise = new Cerise( 200, 200, null );
+		Cerise cerise = new Cerise( 32*12, 32*18, null );
 		this.elementsRamassables.add(cerise);
 		
 	}

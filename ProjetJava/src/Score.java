@@ -10,5 +10,8 @@ public class Score {
 		this.tempsJeu = tempsJeu;
 	}
 	
+	public void afficher() {
+		System.out.println("test");
+	}
 	
 }
