@@ -23,7 +23,7 @@ public class Parser
 	
 	public Parser(String f) throws IOException
 	{
-		this.fichier="fichiertexte.txt"; //f
+		this.fichier="default.map"; //f
 		this.pointeur=' ';
 		this.colonne=0;
 		this.ligneLue=new ArrayList<char[]>(20);
