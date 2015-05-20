@@ -17,8 +17,8 @@ public class Personnage extends ElementDeplacable {
 	private Direction direction;
 
 	
-	public Personnage( int x, int y, Shape hitbox ) {
-		super( x, y, 32, 32, hitbox, "./sprites/personnage.png" );	
+	public Personnage( int x, int y ) {
+		super( x, y, 32, 32, null, "./sprites/personnage.png" );	
 		this.direction = Direction.IMMOBILE;
 		this.animations = new Animation[6];
 	}

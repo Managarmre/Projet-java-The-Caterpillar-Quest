@@ -28,8 +28,8 @@ public class Guepe extends Ennemi {
 	private boolean deplacementHorizontal;
 	private Orientation orientation;
 	
-	public Guepe( int x, int y, Shape hitbox, Point depart, Point arrivee, boolean deplacementHorizontal ) {
-		super( x, y, 32, 32, hitbox, "./sprites/guepe.png", depart, arrivee );
+	public Guepe( int x, int y, Point depart, Point arrivee, boolean deplacementHorizontal ) {
+		super( x, y, 32, 32, null, "./sprites/guepe.png", depart, arrivee );
 		
 		this.deplacementHorizontal = deplacementHorizontal;
 		

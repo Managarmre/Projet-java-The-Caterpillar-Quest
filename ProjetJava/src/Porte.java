@@ -6,8 +6,8 @@ import org.newdawn.slick.geom.Shape;
 
 public class Porte extends ElementFixe {
 
-	public Porte( int x, int y, Shape hitbox ) {
-		super( x, y, 64, 32, hitbox, "./sprites/porte.png" );
+	public Porte( int x, int y ) {
+		super( x, y, 64, 32, null, "./sprites/porte.png" );
 	}
 
 	

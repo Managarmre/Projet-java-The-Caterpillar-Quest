@@ -58,7 +58,7 @@ public class Fenetre extends BasicGame {
 		
 		// afficher le nombre de cerises et le temps
 		graphique.setColor( Color.darkGray );
-		graphique.drawString( "nb points : " + this.carte.getPersonnage().getNbPoints() , 32, 6 );
+		graphique.drawString( "cerises : " + this.carte.getPersonnage().getNbPoints() , 32, 6 );
 		graphique.drawString( "temps : " + this.tempsEcoule , 32*10, 6 );
 		
 	}

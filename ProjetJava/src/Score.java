@@ -2,9 +2,9 @@
 public class Score {
 
 	private int nbPoints;
-	private float tempsJeu;
+	private int tempsJeu;
 	
-	public Score(int nbPoints, float tempsJeu){
+	public Score(int nbPoints, int tempsJeu){
 		
 		this.nbPoints = nbPoints;
 		this.tempsJeu = tempsJeu;
