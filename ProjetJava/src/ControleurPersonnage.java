@@ -4,8 +4,10 @@ import org.newdawn.slick.KeyListener;
 
 public class ControleurPersonnage implements KeyListener {
 
-	public ControleurPersonnage( ) {
-		
+	private Personnage personnage;
+
+	public ControleurPersonnage( Personnage personnage ) {
+		this.personnage = personnage;
 	}
 	
 	@Override

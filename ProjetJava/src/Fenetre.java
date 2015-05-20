@@ -12,7 +12,6 @@ public class Fenetre extends BasicGame {
 	
 	private Image fond;
 	private Carte carte;
-	private ControleurPersonnage controleurPersonnage;
 	
 	public Fenetre( String title ) {
 		super(title);
@@ -20,7 +19,6 @@ public class Fenetre extends BasicGame {
 		this.camera = new Camera();
 		this.carte = new Carte();
 		
-		this.controleurPersonnage = new ControleurPersonnage();
 	}
 	
 	@Override
@@ -31,9 +29,8 @@ public class Fenetre extends BasicGame {
 		
 		
 		this.fond = new Image("./sprites/fond.png");
-		this.carte.initialiser();
+		this.carte.initialiser(conteneur);
 		
-		conteneur.getInput().addKeyListener( this.controleurPersonnage );
 	}
 	
 	
@@ -41,6 +38,7 @@ public class Fenetre extends BasicGame {
 	public void update( GameContainer conteneur, int delta ) throws SlickException {
 
 		this.carte.update( conteneur, delta );
+
 		
 	}
 
@@ -49,6 +47,8 @@ public class Fenetre extends BasicGame {
 
 		graphique.drawImage( this.fond, 0, 0 );
 		this.carte.afficher( conteneur, graphique );
-	}	
+
+	}
+	
 
 }

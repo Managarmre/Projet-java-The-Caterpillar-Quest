@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+import org.newdawn.slick.AppletGameContainer.Container;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -51,7 +52,7 @@ public class Carte {
 	}
 	
 	
-	public void initialiser() throws SlickException {
+	public void initialiser(GameContainer conteneur) throws SlickException {
 		
 		for( ElementFixe fixe : this.elementsFixes ) {
 			fixe.initialiser();
@@ -68,16 +69,19 @@ public class Carte {
 		this.personnage.initialiser();
 		this.porte.initialiser();
 		
+		ControleurPersonnage controller = new ControleurPersonnage(this.personnage);
+		conteneur.getInput().addKeyListener(controller);
+		
 	}
 
 
 	public void update( GameContainer conteneur, int delta ) throws SlickException {
 		
 		for( Ennemi ennemi : this.ennemis ) {
-			ennemi.update( conteneur, delta );
+			ennemi.update( conteneur, delta, this );
 		}
 		
-		this.personnage.update( conteneur, delta );
+		this.personnage.update( conteneur, delta, this );
 		
 		
 	}

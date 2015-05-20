@@ -22,7 +22,7 @@ public abstract class ElementDeplacable extends Element {
 	
 	
 	public abstract void seDeplacer(Point point);
-	public abstract void update( GameContainer conteneur, int delta ) throws SlickException;
+	public abstract void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException;
 	public abstract Point getProchainePosition();
 	
 		

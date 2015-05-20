@@ -11,10 +11,15 @@ public class Personnage extends ElementDeplacable {
 
 	private static int vitesse = 3;
 
+	private int nbCerises = 0;
+	private boolean tombe, isMoving = false;
+
+	private Direction direction;
+
 	
 	public Personnage( int x, int y, Shape hitbox ) {
 		super( x, y, 32, 32, hitbox, "./sprites/personnage.png" );	
-		
+		this.direction = Direction.IMMOBILE;
 		this.animations = new Animation[6];
 	}
 
@@ -31,7 +36,17 @@ public class Personnage extends ElementDeplacable {
 		return null;
 	}
 	
+	public void gestionCollision(){
+		
+	}
 	
+	public Direction getDirection() {
+		return direction;
+	}
+
+	public void setDirection(Direction direction) {
+		this.direction = direction;
+	}
 
 	@Override
 	public void initialiser() throws SlickException {
@@ -44,11 +59,75 @@ public class Personnage extends ElementDeplacable {
 	
 	
 	@Override
-	public void update( GameContainer conteneur, int delta ) throws SlickException {
+	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException {
 		
 		
+		if(isMoving){
+			
+			this.setPositionX(this.getPositionX() + .1f * delta);
+			System.out.println("Déplacement à droite\n");
+			
+			switch(direction){
+			
+			case DROITE: // déplacement à droite
+				
+				break;
+			case GAUCHE: // déplacement à gauche
+				this.setPositionX(this.getPositionX() - .1f * delta);
+				break;
+			case HAUT: // saut
+				this.setPositionY(this.getPositionY() - .1f * delta);
+				if (!tombe) { // Personnage au sol
+					this.setPositionY(this.getPositionY() + .1f * delta);
+				} else { // Personnage en l'air
+					   this.setPositionY(this.getPositionY() - .1f * delta);
+				}
+				break;
+			}
+		}
+			
+		
+		
+		/*for(Ennemi e : carte.getEnnemis()){
+			if( carte.getPersonnage().estEnCollisionAvec(e) )
+				System.out.println("");
+				//mourir();
+		}
+		for(ElementRamassable c : carte.getElementsRamassables()){
+			if( carte.getPersonnage().estEnCollisionAvec(c))
+				System.out.println("");
+				//ramasserCerise();
+		}				
+		if(carte.getPersonnage().estEnCollisionAvec(carte.getPorte()))
+			System.out.println("");
+			//gagner();
+		if(carte.getPersonnage().estEnCollisionAvec(carte.getElementsFixes()))*/
+				
 	}
 	
+	public static int getVitesse() {
+		return vitesse;
+	}
+
+	public static void setVitesse(int vitesse) {
+		Personnage.vitesse = vitesse;
+	}
+
+	public boolean isTombe() {
+		return tombe;
+	}
+
+	public void setTombe(boolean tombe) {
+		this.tombe = tombe;
+	}
+
+	public boolean isMoving() {
+		return isMoving;
+	}
+
+	public void setMoving(boolean isMoving) {
+		this.isMoving = isMoving;
+	}
 	
 	@Override
 	public void afficher(GameContainer conteneur, Graphics graphique) throws SlickException {

@@ -31,10 +31,10 @@ public abstract class Element {
 	
 	public boolean estEnCollisionAvec(Element e){
 		
-		if(this.hitbox.intersects(e.getHitbox()))
+	//	if(this.hitbox.intersects(e.getHitbox()))
 			return true;
-		else
-			return false;
+	/*	else
+			return false;*/
 	}
 
 
@@ -46,6 +46,7 @@ public abstract class Element {
 		return this.position.getY();
 	}
 	
+
 	public Point getPosition() {
 		return this.position;
 	}
@@ -66,8 +67,7 @@ public abstract class Element {
 		this.position.setX( x );
 		this.position.setY( y );
 	}
-	
-	
+
 	public int getHauteur() {
 		return this.hauteur;
 	}
