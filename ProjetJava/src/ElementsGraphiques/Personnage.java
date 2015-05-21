@@ -1,5 +1,7 @@
 package ElementsGraphiques;
 
+import java.util.Iterator;
+
 import org.newdawn.slick.Animation;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -20,11 +22,11 @@ public class Personnage extends ElementDeplacable {
 
 	private Direction direction;
 
-	double vx = 0.0;
-	double vy = 0.0; // A toi de choisir constante1 en faisant des essais pour que le mouvement te convienne
-	double ay = 0.015; // Même commentaire que pour constante1
-	double dx = 0.0;
-	double dy = 0.0;
+	private double vx = 0.0;
+	private double vy = 0.0; // A toi de choisir constante1 en faisant des essais pour que le mouvement te convienne
+	private double ay = 0.015; // Même commentaire que pour constante1
+	private double dx = 0.0;
+	private double dy = 0.0;
 	
 	public Personnage( int x, int y ) {
 		super( x, y, 32, 32, new Rectangle(0, 0, 32, 32), "./sprites/personnage.png" );	
@@ -98,7 +100,31 @@ public class Personnage extends ElementDeplacable {
 		}
 			
 		
+		for( Iterator<ElementRamassable> iterateur = carte.getElementsRamassables().iterator(); iterateur.hasNext(); ) {
+			
+			ElementRamassable ramassable = iterateur.next();
+			
+			if( this.estEnCollisionAvec(ramassable) ) {			
+				this.nbPoints += ramassable.getNbPoints();
+				iterateur.remove();			// on supprime l'élément ramassable de la carte
+			}
+			
+		}
 		
+		for( Ennemi ennemi : carte.getEnnemis() ) {
+			
+			if( this.estEnCollisionAvec(ennemi) ) {
+				System.out.println("MEURT !!!");
+			}
+			
+		}
+		
+		for( Porte porte : carte.getPortes() ) {
+			if( this.estEnCollisionAvec(porte) ) {
+				System.out.println("Fin du jeu, tout est OK");
+			}
+		}
+				
 		/*for(Ennemi e : carte.getEnnemis()){
 			if( carte.getPersonnage().estEnCollisionAvec(e) )
 				System.out.println("");
@@ -149,6 +175,12 @@ public class Personnage extends ElementDeplacable {
 
 	public int getNbPoints() {
 		return this.nbPoints;
+	}
+
+	@Override
+	public boolean collision(Carte carte) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

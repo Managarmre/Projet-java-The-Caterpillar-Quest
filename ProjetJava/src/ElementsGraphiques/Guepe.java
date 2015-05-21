@@ -32,9 +32,7 @@ public class Guepe extends Ennemi {
 	
 	private boolean deplacementHorizontal;
 	private Orientation orientation;
-	
-	//public static float[] points = { 6, 20, 23, 7, 23, 25 };
-	
+		
 	public Guepe( int x, int y, Point depart, Point arrivee, boolean deplacementHorizontal ) {
 		super( x, y, 32, 32, new Rectangle(5, 9, 25, 17), "./sprites/guepe.png", depart, arrivee );
 		
@@ -88,19 +86,22 @@ public class Guepe extends Ennemi {
 		this.setPosition( newX, newY );
 		
 		// gestion de la collision avec les éléments de la carte
-		boolean collision = false;
-		for( ElementFixe element : carte.getElementsFixes() ) {
-			if( this.estEnCollisionAvec(element) ) {
-				collision = true;
-				break;
-			}
-		}
+		boolean collision = this.collision(carte);
 		
 		if( collision ) this.setPosition( oldX, oldY );
 		
 		// si la guêpe est arrivée à destination (sur le point d'arrivé)
 		if( collision || this.estArriveDestination() ) this.faireDemiTour();
 		
+	}
+	
+	public boolean collision( Carte carte ) {
+		
+		for( ElementFixe element : carte.getElementsFixes() ) {
+			if( this.estEnCollisionAvec(element) ) return true;
+		}
+			
+		return false;
 	}
 	
 	public boolean estArriveDestination() {

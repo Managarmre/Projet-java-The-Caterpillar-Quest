@@ -27,7 +27,9 @@ public abstract class ElementDeplacable extends Element {
 	}
 	
 	public abstract void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException;
-		
+	
+	public abstract boolean collision( Carte carte );
+	
 	protected Animation chargerAnimation( int numeroLigne, int debutColonne, int finColonne ) {
 		
 		Animation animation = new Animation();

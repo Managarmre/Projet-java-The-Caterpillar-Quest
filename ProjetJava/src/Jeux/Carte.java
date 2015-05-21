@@ -1,5 +1,6 @@
 package Jeux;
 import java.util.ArrayList;
+import java.util.Collection;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -19,8 +20,8 @@ import ElementsGraphiques.Porte;
 public class Carte {
 	
 	private Personnage personnage;
-	private Porte porte;
 	
+	private ArrayList<Porte> portes;
 	private ArrayList<ElementRamassable> elementsRamassables;
 	private ArrayList<Ennemi> ennemis;
 	private ArrayList<ElementFixe> elementsFixes;
@@ -34,10 +35,8 @@ public class Carte {
 		
 
 		this.personnage = new Personnage( 10, 32*18 );
-		this.porte = new Porte( 200, 20 );
+		this.portes = new ArrayList<Porte>();
 		this.personnage = new Personnage( 10, 32*18 );
-		this.porte = new Porte( 32*31, 32*17 );
-
 		
 		this.remplir();	// ----------------------------------------------------------- à remplacer par l'appel du parseur
 	}
@@ -51,14 +50,7 @@ public class Carte {
 			this.elementsFixes.add(plateforme);
 		}
 		
-		/*
-		Ennemi guepe = new Guepe( 250, 250, new Point(250, 50), new Point(250, 300), true );
-		this.ennemis.add(guepe);
-		this.ennemis.add( new Guepe( 300, 300, new Point(600, 300), new Point(100, 300), false ) );
-		this.ennemis.add( new Guepe( 200, 800, new Point(500, 250), new Point(200, 150), true ) );
-		this.ennemis.add( new Guepe( 200, 150, new Point(200, 1000), new Point(200, 150), true ) );
-		this.ennemis.add( new Guepe( 400, 400, 1000, 400, false ) );
-		*/
+		this.portes.add( new Porte(32*30, 32*17) );
 		
 		// déplacements horizontale
 		this.ennemis.add( new Guepe( 400, 100, 600, 100, true ) );	// gauche -> droite
@@ -68,7 +60,7 @@ public class Carte {
 		
 		// déplacement verticale
 		this.ennemis.add( new Guepe( 100, 500, 100, 1000, false ) );	// haut -> bas
-		this.ennemis.add( new Guepe( 200, 400, 200, 100, false ) );	// bas -> haut
+		this.ennemis.add( new Guepe( 200, 400, 200, 100, false ) );		// bas -> haut
 		
 		// déplacement diagonale
 		this.ennemis.add( new Guepe( 400, 400, 500, 800, true ) );
@@ -95,8 +87,11 @@ public class Carte {
 			ennemi.initialiser();
 		}		
 		
+		for( Porte porte : this.portes ) {
+			porte.initialiser();
+		}
+		
 		this.personnage.initialiser();
-		this.porte.initialiser();
 		
 		ControleurPersonnage controller = new ControleurPersonnage(this.personnage);
 		conteneur.getInput().addKeyListener(controller);
@@ -111,7 +106,6 @@ public class Carte {
 		}
 		
 		this.personnage.update( conteneur, delta, this );
-		
 		
 	}
 	
@@ -129,7 +123,10 @@ public class Carte {
 			ennemi.afficher( conteneur, graphique );
 		}
 		
-		this.porte.afficher( conteneur, graphique );
+		for( Porte porte : this.portes ) {
+			porte.afficher( conteneur, graphique );
+		}
+		
 		this.personnage.afficher( conteneur, graphique );
 		
 	}
@@ -140,28 +137,35 @@ public class Carte {
 		return personnage;
 	}
 
-
-	public Porte getPorte() {
-		return porte;
+	
+	public ArrayList<Porte> getPortes() {
+		return this.portes;
 	}
-
-
+	
 	public ArrayList<ElementRamassable> getElementsRamassables() {
 		return elementsRamassables;
 	}
-
 
 	public ArrayList<Ennemi> getEnnemis() {
 		return ennemis;
 	}
 
-
 	public ArrayList<ElementFixe> getElementsFixes() {
 		return elementsFixes;
 	}
 	
+		
+	public void supprimerElementRamassable( ElementRamassable ramassable ) {
+		this.elementsRamassables.remove(ramassable);
+	}
 	
+	public void supprimerEnnemi( Ennemi ennemi ) {
+		this.ennemis.remove(ennemi);
+	}
 	
+	public void supprimerElementFixe( ElementFixe fixe ) {
+		this.elementsFixes.remove(fixe);
+	}
 	
 	
 	
