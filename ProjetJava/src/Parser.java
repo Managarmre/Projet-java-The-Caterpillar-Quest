@@ -1,5 +1,5 @@
 /**
- * @author Pauline & Titouan
+ * @author Pauline
  */
 
 import java.io.BufferedReader;
@@ -40,10 +40,12 @@ public class Parser
 		InputStreamReader ipsr=new InputStreamReader(ips);
 		BufferedReader br=new BufferedReader(ipsr);
 		String ligne;
-		for (int i=0;i<nombreLignesMax;i++)
+		int i=0;
+		while ((ligne=br.readLine())!=null && i<nombreLignesMax)
 		{
-			ligne=br.readLine();
+			ligne=ligne.replaceAll("	","   "); // on remplace les tabulations par une succession de 3 espaces mais en règle générale, tabulations à éviter
 			this.lignesLues.add(ligne.toCharArray());
+			i++;
 		}
 		br.close();
 	}
@@ -71,10 +73,10 @@ public class Parser
 	 */
 	public void recupererColonnes(int maxCol)
 	{
-		int colonneAAtteindre = this.colonne+maxCol;		
+		int colonneAAtteindre = this.colonne+maxCol;
 		while (this.colonne<colonneAAtteindre)
 		{
-			for (int i=0;i<nombreLignesMax;i++)
+			for (int i=0;i<this.lignesLues.size();i++)
 			{
 				if (this.lignesLues.get(i).length>this.colonne)
 				{
@@ -85,6 +87,16 @@ public class Parser
 			this.colonne++;
 		}
 	}
+	
+	/**
+	 * Méthode permettant de vérifier qu'un caractère est un entier
+	 * @param c le caractère à vérifier
+	 * @return un booleen
+	 */
+	public boolean estEntier(char c)
+	{
+		return Character.isDigit(c);
+	}
 
 	/**
 	 * Méthode permettant de traiter un caractère et de modifier la carte en fonction de ce dernier
@@ -94,12 +106,29 @@ public class Parser
 	 */
 	public void lectureCaractere(char c, int ligne, int colonne)
 	{
+		int deplacement=3;
+		int recupDeplacement=colonne+1;
 		switch(c)
 		{
-			case '#': this.carte.addPlateforme(new Plateforme(ligne,colonne));break;
-			case 'P': this.carte.addPorte(new Porte(ligne,colonne));break;
-			case 'c': this.carte.addCerise(new Cerise(ligne,colonne));break;
-			case 'x': this.carte.addGuepe(new Guepe(ligne,colonne));break;
+			case '#': this.carte.addPlateforme(new Plateforme(ligne,colonne)); break;
+			case 'P': this.carte.addPorte(new Porte(ligne,colonne)); break;
+			case 'c': this.carte.addCerise(new Cerise(ligne,colonne)); break;
+			case 'v': 
+				if (this.lignesLues.get(ligne).length>recupDeplacement && this.estEntier(this.lignesLues.get(ligne)[recupDeplacement]))
+				{
+					deplacement=Character.getNumericValue(this.lignesLues.get(ligne)[recupDeplacement]);
+				}
+				Guepe guepeVerticale = new Guepe(colonne,ligne,deplacement,false);
+				this.carte.addGuepe(guepeVerticale);
+				break;
+			case 'h': 
+				if (this.lignesLues.get(ligne).length>recupDeplacement && this.estEntier(this.lignesLues.get(ligne)[recupDeplacement]))
+				{
+					deplacement=Character.getNumericValue(this.lignesLues.get(ligne)[recupDeplacement]);
+				}
+				Guepe guepeHorizontale = new Guepe(colonne,ligne,deplacement,true);
+				this.carte.addGuepe(guepeHorizontale);
+				break;
 			case 'A': 
 				if (!this.carte.aUnPersonnage()) // un seul personnage sur la carte !!!
 				{
@@ -119,7 +148,7 @@ public class Parser
 			Carte c = new Carte();
 			Parser p = new Parser(c);
 			p.getEcranInit();
-			for (int i=0;i<6;i++)
+			for (int i=0;i<72;i++)
 			{
 				p.chargerColonneSuivante();
 			}

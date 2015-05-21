@@ -1,8 +1,20 @@
 
 public class Guepe extends Element
-{
-	public Guepe(int l, int c)
+{	
+	private int pointArrivee;
+	private int pointDepart=0;
+	private boolean deplacementHorizontal;
+	
+	public Guepe( int x, int y, int arrivee, boolean deplacementHorizontal )
 	{
-		super(l,c);
+		super(y,x);
+		this.pointArrivee=this.pointDepart+arrivee;
+		this.deplacementHorizontal=deplacementHorizontal;
+		System.out.println(y+" -- "+x+" : "+this.toString());
+	}
+	
+	public String toString()
+	{
+		return "guepe "+this.deplacementHorizontal+" de "+this.pointArrivee+" cases --- ";
 	}
 }
