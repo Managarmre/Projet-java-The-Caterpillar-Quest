@@ -4,7 +4,6 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Point;
-import org.newdawn.slick.geom.Shape;
 
 
 public class Personnage extends ElementDeplacable {

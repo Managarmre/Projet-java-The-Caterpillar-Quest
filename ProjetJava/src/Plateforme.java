@@ -1,7 +1,3 @@
-import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
-import org.newdawn.slick.geom.Point;
-import org.newdawn.slick.geom.Shape;
 
 
 public class Plateforme extends ElementFixe {
