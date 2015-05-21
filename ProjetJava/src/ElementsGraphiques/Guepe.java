@@ -43,7 +43,7 @@ public class Guepe extends Ennemi {
 		if( this.deplacementHorizontal ) {
 			
 			this.animations = new Animation[2];	// 2 animations : aller et retour
-			this.orientation = ( this.getPositionY() - this.getArrivee().getY() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
+			this.orientation = ( this.getPositionX() - this.getArrivee().getX() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
 		}
 		else {
 			this.animations = new Animation[1];	// une seule animation pour la guêpe verticale
@@ -79,11 +79,13 @@ public class Guepe extends Ennemi {
 		
 		Vector2f vecteurDirection = new Vector2f( this.getArrivee().getX() - oldX, this.getArrivee().getY() - oldY );
 		
-		Vector2f vecteur = new Vector2f( 0.1f * delta, 0f );
+		Vector2f vecteur = new Vector2f( 0.1f * delta, 0 );
 		vecteur.add( vecteurDirection.getTheta() );
 		
 		float newX = this.getPositionX() + vecteur.getX();
 		float newY = this.getPositionY() + vecteur.getY();
+		
+		this.setPosition( newX, newY );
 		
 		// gestion de la collision avec les éléments de la carte
 		boolean collision = false;
@@ -94,11 +96,10 @@ public class Guepe extends Ennemi {
 			}
 		}
 		
+		if( collision ) this.setPosition( oldX, oldY );
+		
 		// si la guêpe est arrivée à destination (sur le point d'arrivé)
-		if( collision || this.estArriveDestination() ){
-			this.faireDemiTour();			
-		}
-		else if( !collision ) this.setPosition( newX, newY );
+		if( collision || this.estArriveDestination() ) this.faireDemiTour();
 		
 	}
 	
@@ -114,14 +115,14 @@ public class Guepe extends Ennemi {
 		
 		// on met à jour l'orientation de la guêpe
 		// une guêpe verticale ne peut pas changer son orientation
-		this.orientation = ( this.deplacementHorizontal && this.getPositionY() - this.getArrivee().getY() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
+		this.orientation = ( this.deplacementHorizontal && this.getPositionX() - this.getArrivee().getX() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
 		
 	}
 	
 	@Override
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
 		super.afficher( conteneur, graphique );
-		graphique.drawAnimation( this.animations[ this.orientation.getIndiceAnimation() ], this.getPositionY(), this.getPositionX() );
+		graphique.drawAnimation( this.animations[ this.orientation.getIndiceAnimation() ], this.getPositionX(), this.getPositionY() );
 		
 	}
 

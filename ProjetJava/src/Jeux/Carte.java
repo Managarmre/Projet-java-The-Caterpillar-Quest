@@ -51,13 +51,29 @@ public class Carte {
 			this.elementsFixes.add(plateforme);
 		}
 		
+		/*
 		Ennemi guepe = new Guepe( 250, 250, new Point(250, 50), new Point(250, 300), true );
 		this.ennemis.add(guepe);
-		//this.ennemis.add( new Guepe( 300, 300, new Point(600, 300), new Point(100, 300), false ) );
-		//this.ennemis.add( new Guepe( 600, 800, new Point(500, 250), new Point(200, 150), true ) );
-		//this.ennemis.add( new Guepe( 200, 150, new Point(200, 1000), new Point(200, 150), true ) );
-		
+		this.ennemis.add( new Guepe( 300, 300, new Point(600, 300), new Point(100, 300), false ) );
+		this.ennemis.add( new Guepe( 200, 800, new Point(500, 250), new Point(200, 150), true ) );
+		this.ennemis.add( new Guepe( 200, 150, new Point(200, 1000), new Point(200, 150), true ) );
 		this.ennemis.add( new Guepe( 400, 400, 1000, 400, false ) );
+		*/
+		
+		// déplacements horizontale
+		this.ennemis.add( new Guepe( 400, 100, 600, 100, true ) );	// gauche -> droite
+		this.ennemis.add( new Guepe( 600, 150, 400, 150, true ) );	// droite -> gauche
+		
+		this.ennemis.add( new Guepe(600, 300, 300, 300, true) );
+		
+		// déplacement verticale
+		this.ennemis.add( new Guepe( 100, 500, 100, 1000, false ) );	// haut -> bas
+		this.ennemis.add( new Guepe( 200, 400, 200, 100, false ) );	// bas -> haut
+		
+		// déplacement diagonale
+		this.ennemis.add( new Guepe( 400, 400, 500, 800, true ) );
+		this.ennemis.add( new Guepe( 400, 400, 1000, 400, true ) );
+		
 		
 		Cerise cerise = new Cerise( 32*12, 32*18 );
 		this.elementsRamassables.add(cerise);
