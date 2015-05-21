@@ -1,9 +1,19 @@
+package Jeux;
 import java.util.ArrayList;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
+
+import ElementsGraphiques.Cerise;
+import ElementsGraphiques.ElementFixe;
+import ElementsGraphiques.ElementRamassable;
+import ElementsGraphiques.Ennemi;
+import ElementsGraphiques.Guepe;
+import ElementsGraphiques.Personnage;
+import ElementsGraphiques.Plateforme;
+import ElementsGraphiques.Porte;
 
 
 public class Carte {

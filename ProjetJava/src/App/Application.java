@@ -1,5 +1,9 @@
+package App;
+
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.SlickException;
+
+import Jeux.Fenetre;
 
 
 public class Application {

@@ -1,3 +1,4 @@
+package ElementsGraphiques;
 
 import org.newdawn.slick.geom.Shape;
 

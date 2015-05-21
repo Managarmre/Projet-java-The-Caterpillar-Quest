@@ -1,3 +1,5 @@
+package ElementsGraphiques;
+
 import org.newdawn.slick.Animation;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -5,6 +7,8 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Rectangle;
+
+import Jeux.Carte;
 
 
 public class Personnage extends ElementDeplacable {

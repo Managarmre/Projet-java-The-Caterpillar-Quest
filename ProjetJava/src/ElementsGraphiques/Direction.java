@@ -1,3 +1,4 @@
+package ElementsGraphiques;
 
 public enum Direction {
 
