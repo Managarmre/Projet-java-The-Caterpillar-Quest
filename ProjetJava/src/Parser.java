@@ -103,25 +103,44 @@ public class Parser
 		int recupDeplacement=colonne+1;
 		int x = colonne*32;
 		int y = ligne*32;
+		String sens="";
 		switch(c)
 		{
 			case '#': this.carte.ajoutElementFixe(new Plateforme(x,y)); break;
 			case 'P': this.carte.ajoutPorte(new Porte(x,y)); break;
 			case 'c': this.carte.ajoutElementRamassable(new Cerise(x,y)); break;
 			case 'v': 
+				sens = "bas"; // sens par défaut verticalement
 				if (this.lignesLues.get(ligne).length>recupDeplacement && this.estEntier(this.lignesLues.get(ligne)[recupDeplacement]))
 				{
+					if (this.lignesLues.get(ligne).length>recupDeplacement+1 && this.lignesLues.get(ligne)[recupDeplacement+1]=='^')
+					{
+						sens="haut";
+					}
 					deplacement=Character.getNumericValue(this.lignesLues.get(ligne)[recupDeplacement]);
 				}
-				Guepe guepeVerticale = new Guepe(x,y,x,y+deplacement,false);
+				else if (this.lignesLues.get(ligne).length>recupDeplacement && this.lignesLues.get(ligne)[recupDeplacement]=='^')
+				{
+					sens="haut";
+				}
+				Guepe guepeVerticale = new Guepe(x,y,x,y+deplacement,false,sens);
 				this.carte.ajoutEnnemi(guepeVerticale);
 				break;
 			case 'h': 
+				sens="droite"; // sens par défaut horizontalement
 				if (this.lignesLues.get(ligne).length>recupDeplacement && this.estEntier(this.lignesLues.get(ligne)[recupDeplacement]))
 				{
+					if (this.lignesLues.get(ligne).length>recupDeplacement+1 && this.lignesLues.get(ligne)[recupDeplacement+1]=='<')
+					{
+						sens="gauche";
+					}
 					deplacement=Character.getNumericValue(this.lignesLues.get(ligne)[recupDeplacement]);
 				}
-				Guepe guepeHorizontale = new Guepe(x,y,x+deplacement,y,true);
+				else if (this.lignesLues.get(ligne).length>recupDeplacement && this.lignesLues.get(ligne)[recupDeplacement]=='<')
+				{
+					sens="gauche";
+				}
+				Guepe guepeHorizontale = new Guepe(x,y,x+deplacement,y,true,sens);
 				this.carte.ajoutEnnemi(guepeHorizontale);
 				break;
 			case 'A': 
