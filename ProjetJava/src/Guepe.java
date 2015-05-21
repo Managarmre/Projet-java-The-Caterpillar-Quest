@@ -32,7 +32,6 @@ public class Guepe extends Ennemi {
 	//public static float[] points = { 6, 20, 23, 7, 23, 25 };
 	
 	public Guepe( int x, int y, Point depart, Point arrivee, boolean deplacementHorizontal ) {
-		super( x, y, 32, 32, new Rectangle(0, 0, 32, 32), "./sprites/guepe.png", depart, arrivee );
 		 // new Rectangle(0, 0, 32, 32)
 		this.deplacementHorizontal = deplacementHorizontal;
 		

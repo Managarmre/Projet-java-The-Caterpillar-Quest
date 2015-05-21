@@ -24,9 +24,10 @@ public abstract class Element {
 		// la position de la hitbox est donnée par rapport à l'image, et non à la fenêtre
 		// on modifie donc cette hitbox pour quelle ait les bonnes positions
 		this.positionOrigineHitbox = new Point( hitbox.getX(), hitbox.getY() );
-		hitbox.setX( this.positionOrigineHitbox.getX() + position.getX() );
-		hitbox.setY( this.positionOrigineHitbox.getY() + position.getY() );
 		this.hitbox = hitbox;
+		this.hitbox.setX( this.positionOrigineHitbox.getX() + position.getX() );
+		this.hitbox.setY( this.positionOrigineHitbox.getY() + position.getY() );
+		
 	}
 	
 	public Element( int x, int y, int hauteur, int largeur, Shape hitbox ) {
@@ -69,7 +70,7 @@ public abstract class Element {
 		this.position.setX(x);
 		
 		// bizarrerie du code de la librairie
-		this.hitbox.setY( this.positionOrigineHitbox.getX() + x );
+		this.hitbox.setY( this.positionOrigineHitbox.getY() + x );
 
 	}
 	
@@ -77,12 +78,16 @@ public abstract class Element {
 		this.position.setY(y);
 		
 		// bizarrerie du code de la librairie
-		this.hitbox.setX( this.positionOrigineHitbox.getY() + y );
+		this.hitbox.setX( this.positionOrigineHitbox.getX() + y );
 	}
 	
 	public void setPosition( float x, float y ) {
 		this.setPositionX(x);
 		this.setPositionY(y);
+	}
+	
+	public void setPosition( double x, double y ) {
+		this.setPosition( (float)x, (float)y );
 	}
 	
 	public void setPosition( Point position ) {

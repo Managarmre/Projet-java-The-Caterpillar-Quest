@@ -102,9 +102,8 @@ public class Personnage extends ElementDeplacable {
 				dy += ay;
 
 			}
-			this.setPositionX(this.getPositionX() + dx);
-			this.setPositionY(this.getPositionY() + dy);
 			
+			this.setPosition( this.getPositionX() + dx, this.getPositionY() + dy );
 		}
 			
 		
