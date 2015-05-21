@@ -11,7 +11,7 @@ public class Personnage extends ElementDeplacable {
 
 	private static int vitesse = 20;
 
-	private int nbCerises = 0;
+	private int nbPoints = 0;
 	private boolean tombe, isMoving = false;
 
 	private Direction direction;
@@ -22,8 +22,8 @@ public class Personnage extends ElementDeplacable {
 	double dx = 0.0;
 	double dy = 0.0;
 	
-	public Personnage( int x, int y, Shape hitbox ) {
-		super( x, y, 32, 32, hitbox, "./sprites/personnage.png" );	
+	public Personnage( int x, int y ) {
+		super( x, y, 32, 32, null, "./sprites/personnage.png" );	
 		this.direction = Direction.IMMOBILE;
 		this.animations = new Animation[6];
 	}
@@ -95,7 +95,7 @@ public class Personnage extends ElementDeplacable {
 				//this.setPositionY(this.getPositionY() + .1f * delta);
 				//dy -= ay;
 				dy = 0;
-				tombe = false;
+
 			} else { // Personnage en l'air
 				//this.setPositionY(this.getPositionY() - .1f * delta);
 				//dy = 0.0;
@@ -156,6 +156,8 @@ public class Personnage extends ElementDeplacable {
 		graphique.drawAnimation( this.animations[0], this.getPositionX(), this.getPositionY() );
 	}
 
-	
+	public int getNbPoints() {
+		return this.nbPoints;
+	}
 
 }

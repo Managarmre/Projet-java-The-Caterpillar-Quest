@@ -19,8 +19,12 @@ public class Application {
 			Fenetre fenetre = new Fenetre("The Quaterpillar Quest");
 			
 			AppGameContainer app = new AppGameContainer(fenetre);
-			app.setDisplayMode( largeur,  hauteur,  false );
+			app.setDisplayMode( largeur,  hauteur,  false ); 	// false : ne pas mettre en plein écran
+			app.setShowFPS(false);		// n'affiche pas le "FPS" sur la fenêtre
 			app.start();
+			
+			fenetre.getScoreJoueur().afficher();
+			
 			
 		} catch (SlickException e) {
 			e.printStackTrace();

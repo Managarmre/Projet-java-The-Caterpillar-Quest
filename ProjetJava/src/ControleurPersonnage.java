@@ -4,16 +4,19 @@ import org.newdawn.slick.KeyListener;
 
 public class ControleurPersonnage implements KeyListener {
 
+
 	private Personnage player;
 	
 	public ControleurPersonnage( Personnage player) {
 		this.player = player;
-	}
+		}
+
 	
 	@Override
 	public void keyPressed( int key, char c ) {
 
 		System.out.println(c);
+
 		switch(key) {
 		
 			case Input.KEY_UP:

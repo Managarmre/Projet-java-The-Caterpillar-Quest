@@ -9,17 +9,21 @@ import org.newdawn.slick.geom.Transform;
 
 public abstract class Element {
 
-	private Shape forme;
+	private Point position;
+	private int hauteur;
+	private int largeur;
 	private Shape hitbox;
 	
-	public Element( Shape forme, Shape hitbox ){
+	public Element( Point forme, int hauteur, int largeur, Shape hitbox ){
 		
-		this.forme = forme;
+		this.position = forme;
+		this.hauteur = hauteur;
+		this.largeur = largeur;
 		this.hitbox = hitbox;
 	}
 	
 	public Element( int x, int y, int hauteur, int largeur, Shape hitbox ) {
-		this( new Rectangle( x, y, largeur, hauteur ), hitbox );
+		this( new Point( x, y) , largeur, hauteur, hitbox );
 	}
 	
 	public abstract void initialiser() throws SlickException;
@@ -35,32 +39,53 @@ public abstract class Element {
 
 
 	public float getPositionX() {
-		return this.forme.getX();
+		return this.position.getX();
 	}
 	
 	public float getPositionY() {
-		return this.forme.getY();
+		return this.position.getY();
 	}
 	
+
 	public void setPositionX(double d){
-		this.forme.setX((float) d);
+		this.position.setX((float) d);
 	}
 	
 	public void setPositionY(double d){
-		this.forme.setY((float) d);
+		this.position.setY((float) d);
+	}
+
+
+	public Point getPosition() {
+		return this.position;
 	}
 	
+	public void setPositionX( float x ) {
+		this.position.setX(x);
+	}
+	
+	public void setPositionY( float y ) {
+		this.position.setY(y);
+	}
+	
+	public void setPosition( Point position ) {
+		this.position = position;
+
+	}
+	
+	public void setPosition( float x, float y ) {
+		this.position.setX( x );
+		this.position.setY( y );
+	}
+
 	public int getHauteur() {
-		return (int) this.forme.getHeight();
+		return this.hauteur;
 	}
 
 	public int getLargeur() {
-		return (int) this.forme.getWidth();
+		return this.largeur;
 	}
 
-	public Shape getForme() {
-		return forme;
-	}
 
 	public Shape getHitbox() {
 		return hitbox;
