@@ -45,7 +45,9 @@ public class Carte {
 		this.ennemis.add(guepe);
 		//this.ennemis.add( new Guepe( 300, 300, new Point(600, 300), new Point(100, 300), false ) );
 		//this.ennemis.add( new Guepe( 600, 800, new Point(500, 250), new Point(200, 150), true ) );
-		//this.ennemis.add( new Guepe( 200, 150, new Point(600, 800), new Point(200, 150), true ) );
+		//this.ennemis.add( new Guepe( 200, 150, new Point(200, 1000), new Point(200, 150), true ) );
+		
+		this.ennemis.add( new Guepe( 400, 400, 1000, 400, false ) );
 		
 		Cerise cerise = new Cerise( 32*12, 32*18 );
 		this.elementsRamassables.add(cerise);
@@ -59,13 +61,13 @@ public class Carte {
 			fixe.initialiser();
 		}
 		
-		for( Ennemi ennemi : this.ennemis ) {
-			ennemi.initialiser();
-		}
-				
 		for( ElementRamassable ramassable : this.elementsRamassables ) {
 			ramassable.initialiser();
 		}
+		
+		for( Ennemi ennemi : this.ennemis ) {
+			ennemi.initialiser();
+		}		
 		
 		this.personnage.initialiser();
 		this.porte.initialiser();
@@ -93,12 +95,12 @@ public class Carte {
 			fixe.afficher( conteneur, graphique );
 		}
 		
-		for( Ennemi ennemi : this.ennemis ) {
-			ennemi.afficher( conteneur, graphique );
-		}
-		
 		for( ElementRamassable ramassable : this.elementsRamassables ) {
 			ramassable.afficher( conteneur, graphique );
+		}
+		
+		for( Ennemi ennemi : this.ennemis ) {
+			ennemi.afficher( conteneur, graphique );
 		}
 		
 		this.porte.afficher( conteneur, graphique );

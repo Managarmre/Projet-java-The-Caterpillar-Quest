@@ -22,11 +22,8 @@ public abstract class ElementDeplacable extends Element {
 		this.cheminSprite = cheminSprite;
 	}
 	
-	
-	public abstract void seDeplacer(Point point);
 	public abstract void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException;
-	public abstract Point getProchainePosition();
-			
+		
 	protected Animation chargerAnimation( int numeroLigne, int debutColonne, int finColonne ) {
 		
 		Animation animation = new Animation();

@@ -1,11 +1,14 @@
 import org.newdawn.slick.Animation;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.BasicGame;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
+import org.newdawn.slick.geom.Point;
+import org.newdawn.slick.geom.Rectangle;
 
 
 public class FenetreTest extends BasicGame  {
@@ -50,10 +53,22 @@ public class FenetreTest extends BasicGame  {
 		
 		g.drawImage( new Image("./sprites/fond.png"), 0, 0);
 		
-		g.drawAnimation( this.animation, 0, 0 );
-		g.drawAnimation( this.animation, LARGEUR - 32, HAUTEUR - 32 );
+		Rectangle rectangle = new Rectangle( 0, 100, 200, 200 );
+		g.setColor( Color.red );
+		g.draw(rectangle);
 		
-		g.drawAnimation( this.guepe,  100, 100 );
+		rectangle.setX(300);
+		System.out.println( " x : " + rectangle.getX() + " y : " + rectangle.getY() );
+		g.setColor( Color.green );
+		g.draw(rectangle);
+		
+		for( float i = 300; i < 400; i += 0.1f ) {
+			Point p = new Point( i, 100 );
+			g.setColor( Color.darkGray );
+			g.draw(p);
+		}
+		
+		
 	}
 	
 	@Override

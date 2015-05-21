@@ -27,19 +27,6 @@ public class Personnage extends ElementDeplacable {
 		this.direction = Direction.IMMOBILE;
 		this.animations = new Animation[6];
 	}
-
-	@Override
-	public void seDeplacer(Point point) {
-		// TODO Auto-generated method stub
-
-	}
-	
-
-	@Override
-	public Point getProchainePosition() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 	public void gestionCollision(){
 		
