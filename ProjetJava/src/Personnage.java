@@ -9,13 +9,18 @@ import org.newdawn.slick.geom.Rectangle;
 
 public class Personnage extends ElementDeplacable {
 
-	private static int vitesse = 3;
+	private static int vitesse = 20;
 
 	private int nbPoints = 0;
 	private boolean tombe, isMoving = false;
 
 	private Direction direction;
 
+	double vx = 0.0;
+	double vy = 0.0; // A toi de choisir constante1 en faisant des essais pour que le mouvement te convienne
+	double ay = 0.015; // Même commentaire que pour constante1
+	double dx = 0.0;
+	double dy = 0.0;
 	
 	public Personnage( int x, int y ) {
 		super( x, y, 32, 32, new Rectangle(0, 0, 32, 32), "./sprites/personnage.png" );	
@@ -61,29 +66,45 @@ public class Personnage extends ElementDeplacable {
 	@Override
 	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException {
 		
+		double vx = delta * 0.010 * vitesse;
+		double vy = delta * 0.010 * vitesse; // A toi de choisir constante1 en faisant des essais pour que le mouvement te convienne
+		
+		ay = vy * (40.0 / 1000.0) / 4.0;
+
 		
 		if(isMoving){
-			
-			this.setPositionX(this.getPositionX() + .1f * delta);
-			System.out.println("Déplacement à droite\n");
 			
 			switch(direction){
 			
 			case DROITE: // déplacement à droite
-				
+				dx = vx;
+				//this.setPositionX(this.getPositionX() + vx);
 				break;
 			case GAUCHE: // déplacement à gauche
-				this.setPositionX(this.getPositionX() - .1f * delta);
+				dx = -vx;
+				//this.setPositionX(this.getPositionX() - .1f * delta);
 				break;
 			case HAUT: // saut
-				this.setPositionY(this.getPositionY() - .1f * delta);
-				if (!tombe) { // Personnage au sol
-					this.setPositionY(this.getPositionY() + .1f * delta);
-				} else { // Personnage en l'air
-					   this.setPositionY(this.getPositionY() - .1f * delta);
-				}
+				dy = vy;
+				tombe = true;
+				//this.setPositionY(this.getPositionY() - .1f * delta);				
 				break;
 			}
+			
+			if (!tombe) { // Personnage au sol
+				//this.setPositionY(this.getPositionY() + .1f * delta);
+				//dy -= ay;
+				dy = 0;
+
+			} else { // Personnage en l'air
+				//this.setPositionY(this.getPositionY() - .1f * delta);
+				//dy = 0.0;
+				dy += ay;
+
+			}
+			this.setPositionX(this.getPositionX() + dx);
+			this.setPositionY(this.getPositionY() + dy);
+			
 		}
 			
 		

@@ -22,8 +22,12 @@ public class Carte {
 		this.ennemis = new ArrayList<Ennemi>();
 		this.elementsFixes = new ArrayList<ElementFixe>();
 		
+
+		this.personnage = new Personnage( 10, 32*18 );
+		this.porte = new Porte( 200, 20 );
 		this.personnage = new Personnage( 10, 32*18 );
 		this.porte = new Porte( 32*31, 32*17 );
+
 		
 		this.remplir();	// ----------------------------------------------------------- à remplacer par l'appel du parseur
 	}

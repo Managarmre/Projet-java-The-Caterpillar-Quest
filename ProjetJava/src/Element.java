@@ -89,6 +89,7 @@ public abstract class Element {
 		this.position = position;
 		this.hitbox.setY( this.positionOrigineHitbox.getX() + position.getX() );
 		this.hitbox.setX( this.positionOrigineHitbox.getY() + position.getY() );
+
 	}
 	
 	
