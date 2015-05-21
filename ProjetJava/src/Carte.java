@@ -23,6 +23,11 @@ public class Carte
 		//this.personnage=new ArrayList<Personnage>(1);
 	}
 	
+	public Carte()
+	{
+		this("default.map");
+	}
+	
 	public void addGuepe(Guepe g)
 	{
 		this.guepe.add(g);
