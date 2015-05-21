@@ -7,10 +7,12 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
-import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Rectangle;
 
 import Jeux.Carte;
+import Jeux.PartieException;
+import Jeux.PartieGagneeException;
+import Jeux.PartiePerdueException;
 
 
 public class Personnage extends ElementDeplacable {
@@ -57,7 +59,7 @@ public class Personnage extends ElementDeplacable {
 	
 	
 	@Override
-	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException {
+	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException, PartieException {
 		
 		double vx = delta * 0.010 * vitesse;
 		double vy = delta * 0.010 * vitesse; // A toi de choisir constante1 en faisant des essais pour que le mouvement te convienne
@@ -115,13 +117,15 @@ public class Personnage extends ElementDeplacable {
 			
 			if( this.estEnCollisionAvec(ennemi) ) {
 				System.out.println("MEURT !!!");
+				// 
+				throw new PartiePerdueException();
 			}
 			
 		}
 		
 		for( Porte porte : carte.getPortes() ) {
 			if( this.estEnCollisionAvec(porte) ) {
-				System.out.println("Fin du jeu, tout est OK");
+				throw new PartieGagneeException();	// le personnage touche une porte, le jeu est terminé
 			}
 		}
 				

@@ -1,11 +1,10 @@
 package Jeux;
+
 import java.util.ArrayList;
-import java.util.Collection;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
-import org.newdawn.slick.geom.Point;
 
 import ElementsGraphiques.Cerise;
 import ElementsGraphiques.ElementFixe;
@@ -20,7 +19,7 @@ import ElementsGraphiques.Porte;
 public class Carte {
 	
 	private Personnage personnage;
-	
+		
 	private ArrayList<Porte> portes;
 	private ArrayList<ElementRamassable> elementsRamassables;
 	private ArrayList<Ennemi> ennemis;
@@ -99,7 +98,7 @@ public class Carte {
 	}
 
 
-	public void update( GameContainer conteneur, int delta ) throws SlickException {
+	public void update( GameContainer conteneur, int delta ) throws SlickException, PartieException {
 		
 		for( Ennemi ennemi : this.ennemis ) {
 			ennemi.update( conteneur, delta, this );
@@ -130,7 +129,6 @@ public class Carte {
 		this.personnage.afficher( conteneur, graphique );
 		
 	}
-	
 	
 	
 	public Personnage getPersonnage() {
@@ -167,6 +165,8 @@ public class Carte {
 		this.elementsFixes.remove(fixe);
 	}
 	
+	
+	//public boolean elementEnCollisionAvecPorte( )
 	
 	
 }

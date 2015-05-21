@@ -6,7 +6,6 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Point;
-import org.newdawn.slick.geom.Polygon;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Vector2f;
 
@@ -109,6 +108,7 @@ public class Guepe extends Ennemi {
 	}
 	
 	private void faireDemiTour() {
+		
 		// on intervertie les points de départ et d'arrivé
 		Point tmp = this.getArrivee();
 		this.setArrivee( this.getDepart() );

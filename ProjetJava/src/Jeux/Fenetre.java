@@ -6,7 +6,7 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
-import org.newdawn.slick.geom.Rectangle;
+
 
 import App.Score;
 
@@ -18,6 +18,7 @@ public class Fenetre extends BasicGame {
 	
 	private Image fond;
 	private Carte carte;
+	private boolean partieGagnee = false;
 	
 	private int tempsEcoule;
 	private long tempsLancement;
@@ -48,7 +49,17 @@ public class Fenetre extends BasicGame {
 	@Override
 	public void update( GameContainer conteneur, int delta ) throws SlickException {
 
-		this.carte.update( conteneur, delta );
+		try {
+			this.carte.update( conteneur, delta );
+		} 
+		catch( PartieGagneeException gagnee ) {
+			this.partieGagnee = true;
+			conteneur.exit();
+			
+		} catch( PartieException partieException ) {
+			this.partieGagnee = false;
+			conteneur.exit();
+		}
 		
 		this.tempsEcoule = (int) (System.currentTimeMillis() - this.tempsLancement) / 1000;
 		
@@ -70,6 +81,10 @@ public class Fenetre extends BasicGame {
 	
 	public Score getScoreJoueur() {
 		return new Score( this.carte.getPersonnage().getNbPoints(), this.tempsEcoule );
+	}
+	
+	public boolean isPartieGagnee() {
+		return this.partieGagnee;
 	}
 
 }
