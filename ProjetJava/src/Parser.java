@@ -1,5 +1,5 @@
 /**
- * @author Pauline & Titouan
+ * @author Pauline
  */
 
 import java.io.BufferedReader;
