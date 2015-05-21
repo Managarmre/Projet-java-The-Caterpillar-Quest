@@ -32,7 +32,8 @@ public class Guepe extends Ennemi {
 	//public static float[] points = { 6, 20, 23, 7, 23, 25 };
 	
 	public Guepe( int x, int y, Point depart, Point arrivee, boolean deplacementHorizontal ) {
-		 // new Rectangle(0, 0, 32, 32)
+		super( x, y, 32, 32, new Rectangle(5, 9, 25, 17), "./sprites/guepe.png", depart, arrivee );
+		
 		this.deplacementHorizontal = deplacementHorizontal;
 		
 		if( this.deplacementHorizontal ) {
@@ -72,32 +73,46 @@ public class Guepe extends Ennemi {
 		float oldX = this.getPositionX();
 		float oldY = this.getPositionY();
 		
-		// si la guêpe est arrivée à destination (sur le point d'arrivé)
-		if( Math.abs( oldX - this.getArrivee().getX() ) < 0.1 && Math.abs( oldY - this.getArrivee().getY() ) < 0.1 ){
-			
-			// on intervertie les points de départ et d'arrivé
-			Point tmp = this.getArrivee();
-			this.setArrivee( this.getDepart() );
-			this.setDepart(tmp);
-			
-			// on met à jour l'orientation de la guêpe
-			// une guêpe verticale ne peut pas changer son orientation
-			this.orientation = ( this.deplacementHorizontal && this.getPositionY() - this.getArrivee().getY() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
-			
-		}
-				
 		Vector2f vecteurDirection = new Vector2f( this.getArrivee().getX() - oldX, this.getArrivee().getY() - oldY );
 		
 		Vector2f vecteur = new Vector2f( 0.1f * delta, 0f );
 		vecteur.add( vecteurDirection.getTheta() );
 		
-		float newX = oldX + vecteur.getX();
-		float newY = oldY + vecteur.getY() ;
+		float newX = this.getPositionX() + vecteur.getX();
+		float newY = this.getPositionY() + vecteur.getY();
 		
-		this.setPosition( newX, newY );
+		// gestion de la collision avec les éléments de la carte
+		boolean collision = false;
+		for( ElementFixe element : carte.getElementsFixes() ) {
+			if( this.estEnCollisionAvec(element) ) {
+				collision = true;
+				break;
+			}
+		}
+		
+		// si la guêpe est arrivée à destination (sur le point d'arrivé)
+		if( collision || this.estArriveDestination() ){
+			this.faireDemiTour();			
+		}
+		else if( !collision ) this.setPosition( newX, newY );
 		
 	}
 	
+	public boolean estArriveDestination() {
+		return Math.abs( this.getPositionX() - this.getArrivee().getX() ) < 0.1 && Math.abs( this.getPositionY() - this.getArrivee().getY() ) < 0.1;
+	}
+	
+	private void faireDemiTour() {
+		// on intervertie les points de départ et d'arrivé
+		Point tmp = this.getArrivee();
+		this.setArrivee( this.getDepart() );
+		this.setDepart(tmp);
+		
+		// on met à jour l'orientation de la guêpe
+		// une guêpe verticale ne peut pas changer son orientation
+		this.orientation = ( this.deplacementHorizontal && this.getPositionY() - this.getArrivee().getY() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
+		
+	}
 	
 	@Override
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
@@ -106,17 +121,7 @@ public class Guepe extends Ennemi {
 		
 	}
 
-	@Override
-	public void seDeplacer(Point point) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public Point getProchainePosition() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 
 
