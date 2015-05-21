@@ -42,12 +42,12 @@ public abstract class Element {
 		return this.forme.getY();
 	}
 	
-	public void setPositionX(float positionX){
-		this.forme.setX(positionX);
+	public void setPositionX(double d){
+		this.forme.setX((float) d);
 	}
 	
-	public void setPositionY(float positionY){
-		this.forme.setY(positionY);
+	public void setPositionY(double d){
+		this.forme.setY((float) d);
 	}
 	
 	public int getHauteur() {

@@ -25,7 +25,7 @@ public class Carte {
 		this.ennemis = new ArrayList<Ennemi>();
 		this.elementsFixes = new ArrayList<ElementFixe>();
 		
-		this.personnage = new Personnage( 10, 10, null );
+		this.personnage = new Personnage( 10, 32*18, null );
 		this.porte = new Porte( 200, 20, null );
 		
 		this.remplir();	// ----------------------------------------------------------- à retirer

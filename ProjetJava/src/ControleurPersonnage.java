@@ -4,22 +4,33 @@ import org.newdawn.slick.KeyListener;
 
 public class ControleurPersonnage implements KeyListener {
 
-	public ControleurPersonnage( ) {
-		
+	private Personnage player;
+	
+	public ControleurPersonnage( Personnage player) {
+		this.player = player;
 	}
 	
 	@Override
 	public void keyPressed( int key, char c ) {
 
+		System.out.println(c);
 		switch(key) {
 		
 			case Input.KEY_UP:
+				this.player.setDirection(Direction.HAUT);
+				this.player.setMoving(true);
 				break;
 				
 			case Input.KEY_LEFT:
+				this.player.setDirection(Direction.GAUCHE);
+				this.player.setMoving(true);
 			    break;
 			    
 			case Input.KEY_RIGHT:
+				System.out.println("touche droite\n");
+				this.player.setMoving(true);
+				this.player.setDirection(Direction.DROITE);
+				
 			    break;
 			
 			default: 
@@ -30,7 +41,7 @@ public class ControleurPersonnage implements KeyListener {
 
 	@Override
 	public void keyReleased( int key, char c ) {
-		// TODO Auto-generated method stub
+		 this.player.setMoving(false);
 		
 	}
 	
@@ -51,7 +62,7 @@ public class ControleurPersonnage implements KeyListener {
 	@Override
 	public boolean isAcceptingInput() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
