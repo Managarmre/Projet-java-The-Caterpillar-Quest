@@ -1,5 +1,5 @@
+package App;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -7,18 +7,14 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.nio.file.NoSuchFileException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.ListIterator;
-import java.util.TreeSet;
-
-import javax.annotation.processing.FilerException;
-import javax.swing.text.html.HTMLDocument.Iterator;
-
 
 
 public class GestionScores implements Serializable {
+	
+	private static final long serialVersionUID = 1217692534656696222L;
 	
 	private int tailleMax;
 	private ArrayList<Score> liste;

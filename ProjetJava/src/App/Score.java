@@ -1,3 +1,4 @@
+package App;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -5,6 +6,8 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 public class Score implements Comparable<Score>, Serializable {
+	
+	private static final long serialVersionUID = -443166922353306614L;
 	
 	private String nomJoueur;
 	private int nbPoints;
