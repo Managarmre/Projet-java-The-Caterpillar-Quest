@@ -13,6 +13,9 @@ import App.Score;
 
 public class Fenetre extends BasicGame {
 	
+	public static final int LARGEUR = 32 * 33;
+	public static final int HAUTEUR = 32 * 20;
+		
 	private GameContainer conteneur;
 	private Camera camera;	
 	

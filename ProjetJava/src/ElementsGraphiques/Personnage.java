@@ -99,35 +99,33 @@ public class Personnage extends ElementDeplacable {
 			}
 			
 			this.setPosition( this.getPositionX() + dx, this.getPositionY() + dy );
-		}
+
+			if( this.getPositionY() > 32*20 ) throw new PartiePerdueException();
 			
-		
-		for( Iterator<ElementRamassable> iterateur = carte.getElementsRamassables().iterator(); iterateur.hasNext(); ) {
+			// les éléments ramassables peuvent disparaîtres, on utilise une boucle permettant de supprimer les éléments pendant le parcours
+			for( Iterator<ElementRamassable> iterateur = carte.getElementsRamassables().iterator(); iterateur.hasNext(); ) {
+				
+				ElementRamassable ramassable = iterateur.next();
+				
+				if( this.estEnCollisionAvec(ramassable) ) {			
+					this.nbPoints += ramassable.getNbPoints();
+					iterateur.remove();			// on supprime l'élément ramassable de la carte
+				}
+				
+			}
 			
-			ElementRamassable ramassable = iterateur.next();
-			
-			if( this.estEnCollisionAvec(ramassable) ) {			
-				this.nbPoints += ramassable.getNbPoints();
-				iterateur.remove();			// on supprime l'élément ramassable de la carte
+
+			// le personnage touche une porte, le jeu est terminé
+			for( Porte porte : carte.getPortes() ) {
+				if( this.estEnCollisionAvec(porte) ) throw new PartieGagneeException();	
 			}
 			
 		}
-		
-		for( Ennemi ennemi : carte.getEnnemis() ) {
-			
-			if( this.estEnCollisionAvec(ennemi) ) {
-				System.out.println("MEURT !!!");
-				// 
-				throw new PartiePerdueException();
-			}
-			
+				
+		for( Ennemi ennemi : carte.getEnnemis() ) {	
+			if( this.estEnCollisionAvec(ennemi) ) throw new PartiePerdueException();
 		}
-		
-		for( Porte porte : carte.getPortes() ) {
-			if( this.estEnCollisionAvec(porte) ) {
-				throw new PartieGagneeException();	// le personnage touche une porte, le jeu est terminé
-			}
-		}
+			
 				
 		/*for(Ennemi e : carte.getEnnemis()){
 			if( carte.getPersonnage().estEnCollisionAvec(e) )
