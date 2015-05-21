@@ -71,7 +71,7 @@ public abstract class Element {
 		this.position.setX(x);
 		
 		// bizarrerie du code de la librairie
-		this.hitbox.setY( this.positionOrigineHitbox.getY() + x );
+		this.hitbox.setX( this.positionOrigineHitbox.getX() + x );
 
 	}
 	
@@ -79,7 +79,7 @@ public abstract class Element {
 		this.position.setY(y);
 		
 		// bizarrerie du code de la librairie
-		this.hitbox.setX( this.positionOrigineHitbox.getX() + y );
+		this.hitbox.setY( this.positionOrigineHitbox.getY() + y );
 	}
 	
 	public void setPosition( float x, float y ) {
@@ -93,8 +93,8 @@ public abstract class Element {
 	
 	public void setPosition( Point position ) {
 		this.position = position;
-		this.hitbox.setY( this.positionOrigineHitbox.getX() + position.getX() );
-		this.hitbox.setX( this.positionOrigineHitbox.getY() + position.getY() );
+		this.hitbox.setX( this.positionOrigineHitbox.getX() + position.getX() );
+		this.hitbox.setY( this.positionOrigineHitbox.getY() + position.getY() );
 
 	}
 	
