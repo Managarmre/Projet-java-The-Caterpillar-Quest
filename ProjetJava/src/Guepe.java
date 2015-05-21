@@ -4,6 +4,8 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Point;
+import org.newdawn.slick.geom.Polygon;
+import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Vector2f;
 
 
@@ -27,9 +29,11 @@ public class Guepe extends Ennemi {
 	private boolean deplacementHorizontal;
 	private Orientation orientation;
 	
+	//public static float[] points = { 6, 20, 23, 7, 23, 25 };
+	
 	public Guepe( int x, int y, Point depart, Point arrivee, boolean deplacementHorizontal ) {
-		super( x, y, 32, 32, null, "./sprites/guepe.png", depart, arrivee );
-		
+		super( x, y, 32, 32, new Rectangle(0, 0, 32, 32), "./sprites/guepe.png", depart, arrivee );
+		 // new Rectangle(0, 0, 32, 32)
 		this.deplacementHorizontal = deplacementHorizontal;
 		
 		if( this.deplacementHorizontal ) {
@@ -44,7 +48,10 @@ public class Guepe extends Ennemi {
 				
 	}
 
-
+	public Guepe( int xDepart, int yDepart, int xArrive, int yArrive, boolean deplacementHorizontale ) {
+		this( xDepart, yDepart, new Point(xDepart, yDepart),  new Point(xArrive, yArrive), deplacementHorizontale);
+	}
+	
 	
 	@Override
 	public void initialiser() throws SlickException {
@@ -95,8 +102,9 @@ public class Guepe extends Ennemi {
 	
 	@Override
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
-
+		super.afficher( conteneur, graphique );
 		graphique.drawAnimation( this.animations[ this.orientation.getIndiceAnimation() ], this.getPositionY(), this.getPositionX() );
+		
 	}
 
 	@Override

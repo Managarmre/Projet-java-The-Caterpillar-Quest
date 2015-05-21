@@ -4,6 +4,7 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Point;
+import org.newdawn.slick.geom.Rectangle;
 
 
 public class Personnage extends ElementDeplacable {
@@ -17,7 +18,7 @@ public class Personnage extends ElementDeplacable {
 
 	
 	public Personnage( int x, int y ) {
-		super( x, y, 32, 32, null, "./sprites/personnage.png" );	
+		super( x, y, 32, 32, new Rectangle(0, 0, 32, 32), "./sprites/personnage.png" );	
 		this.direction = Direction.IMMOBILE;
 		this.animations = new Animation[6];
 	}
@@ -130,7 +131,8 @@ public class Personnage extends ElementDeplacable {
 	
 	@Override
 	public void afficher(GameContainer conteneur, Graphics graphique) throws SlickException {
-				
+		
+		super.afficher( conteneur, graphique);
 		graphique.drawAnimation( this.animations[0], this.getPositionX(), this.getPositionY() );
 	}
 

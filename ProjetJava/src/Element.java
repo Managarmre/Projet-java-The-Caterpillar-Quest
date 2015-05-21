@@ -1,3 +1,4 @@
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -10,29 +11,44 @@ public abstract class Element {
 	private Point position;
 	private int hauteur;
 	private int largeur;
-	private Shape hitbox;
 	
-	public Element( Point forme, int hauteur, int largeur, Shape hitbox ){
+	private Shape hitbox;
+	private Point positionOrigineHitbox;
+	
+	public Element( Point position, int hauteur, int largeur, Shape hitbox ){
 		
-		this.position = forme;
+		this.position = position;
 		this.hauteur = hauteur;
 		this.largeur = largeur;
+		
+		// la position de la hitbox est donnée par rapport à l'image, et non à la fenêtre
+		// on modifie donc cette hitbox pour quelle ait les bonnes positions
+		this.positionOrigineHitbox = new Point( hitbox.getX(), hitbox.getY() );
+		hitbox.setX( this.positionOrigineHitbox.getX() + position.getX() );
+		hitbox.setY( this.positionOrigineHitbox.getY() + position.getY() );
 		this.hitbox = hitbox;
 	}
 	
 	public Element( int x, int y, int hauteur, int largeur, Shape hitbox ) {
-		this( new Point( x, y) , largeur, hauteur, hitbox );
+		this( new Point(x, y) , largeur, hauteur, hitbox );
 	}
 	
 	public abstract void initialiser() throws SlickException;
-	public abstract void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException;
+	
+	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
+		
+		Shape hitbox = this.getHitbox();	
+		graphique.setColor( Color.red );
+		graphique.draw(hitbox);
+		
+	}
 	
 	public boolean estEnCollisionAvec(Element e){
 		
-	//	if(this.hitbox.intersects(e.getHitbox()))
+		if( this.hitbox.intersects(e.getHitbox()) )
 			return true;
-	/*	else
-			return false;*/
+		else
+			return false;
 	}
 
 
@@ -44,28 +60,41 @@ public abstract class Element {
 		return this.position.getY();
 	}
 	
-
 	public Point getPosition() {
 		return this.position;
 	}
 	
+	
 	public void setPositionX( float x ) {
 		this.position.setX(x);
+		
+		// bizarrerie du code de la librairie
+		this.hitbox.setY( this.positionOrigineHitbox.getX() + x );
+
 	}
 	
 	public void setPositionY( float y ) {
 		this.position.setY(y);
+		
+		// bizarrerie du code de la librairie
+		this.hitbox.setX( this.positionOrigineHitbox.getY() + y );
+	}
+	
+	public void setPosition( float x, float y ) {
+		this.setPositionX(x);
+		this.setPositionY(y);
 	}
 	
 	public void setPosition( Point position ) {
 		this.position = position;
+		this.hitbox.setY( this.positionOrigineHitbox.getX() + position.getX() );
+		this.hitbox.setX( this.positionOrigineHitbox.getY() + position.getY() );
 	}
 	
-	public void setPosition( float x, float y ) {
-		this.position.setX( x );
-		this.position.setY( y );
-	}
+	
 
+	
+	
 	public int getHauteur() {
 		return this.hauteur;
 	}

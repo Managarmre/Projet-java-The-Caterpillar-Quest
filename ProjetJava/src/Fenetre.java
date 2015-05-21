@@ -4,6 +4,7 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.geom.Rectangle;
 
 
 public class Fenetre extends BasicGame {
@@ -60,6 +61,11 @@ public class Fenetre extends BasicGame {
 		graphique.setColor( Color.darkGray );
 		graphique.drawString( "cerises : " + this.carte.getPersonnage().getNbPoints() , 32, 6 );
 		graphique.drawString( "temps : " + this.tempsEcoule , 32*10, 6 );
+		
+		float x = 10f;
+		float y = 400f;
+		Rectangle rect = new Rectangle( x, y, 10, 50 );
+		graphique.draw(rect);
 		
 	}
 	

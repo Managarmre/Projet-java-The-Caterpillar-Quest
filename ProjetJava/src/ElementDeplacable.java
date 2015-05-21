@@ -1,5 +1,7 @@
 import org.newdawn.slick.Animation;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Point;
@@ -24,8 +26,7 @@ public abstract class ElementDeplacable extends Element {
 	public abstract void seDeplacer(Point point);
 	public abstract void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException;
 	public abstract Point getProchainePosition();
-	
-		
+			
 	protected Animation chargerAnimation( int numeroLigne, int debutColonne, int finColonne ) {
 		
 		Animation animation = new Animation();

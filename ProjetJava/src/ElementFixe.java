@@ -1,3 +1,4 @@
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -17,7 +18,8 @@ public abstract class ElementFixe extends Element {
 	
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
 		
-		graphique.drawImage( this.image, this.getPositionX(), this.getPositionY() );
+		super.afficher( conteneur, graphique );
+		graphique.drawImage( this.image, this.getPositionX(), this.getPositionY() );	
 		
 	}
 	

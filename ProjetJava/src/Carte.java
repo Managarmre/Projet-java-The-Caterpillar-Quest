@@ -39,8 +39,9 @@ public class Carte {
 		
 		Ennemi guepe = new Guepe( 250, 250, new Point(250, 50), new Point(250, 300), true );
 		this.ennemis.add(guepe);
-		this.ennemis.add( new Guepe( 300, 300, new Point(600, 300), new Point(100, 300), false ) );
-		this.ennemis.add( new Guepe( 600, 800, new Point(500, 250), new Point(200, 150), true ) );
+		//this.ennemis.add( new Guepe( 300, 300, new Point(600, 300), new Point(100, 300), false ) );
+		//this.ennemis.add( new Guepe( 600, 800, new Point(500, 250), new Point(200, 150), true ) );
+		//this.ennemis.add( new Guepe( 200, 150, new Point(600, 800), new Point(200, 150), true ) );
 		
 		Cerise cerise = new Cerise( 32*12, 32*18 );
 		this.elementsRamassables.add(cerise);
