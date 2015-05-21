@@ -9,7 +9,6 @@ public class Carte
 	
 	private Personnage personnage;
 	
-	//private ArrayList<Personnage> personnage;
 	private ArrayList<Plateforme> plateforme;
 	private ArrayList<Porte> porte;
 	
@@ -20,7 +19,6 @@ public class Carte
 		this.plateforme=new ArrayList<Plateforme>(20);
 		this.cerise=new ArrayList<Cerise>(20);
 		this.porte=new ArrayList<Porte>(20);
-		//this.personnage=new ArrayList<Personnage>(1);
 	}
 	
 	public Carte()
@@ -50,15 +48,16 @@ public class Carte
 
 	public void addPersonnage(Personnage p)
 	{
-		this.personnage = p; //.add(p);
+		this.personnage = p;
 	}
 	
 	public boolean aUnPersonnage()
 	{
-		return this.personnage != null; //.size()==1;
+		return this.personnage != null;
 	}
 	
-	public String getCheminFichierCarte() {
+	public String getCheminFichierCarte()
+	{
 		return this.cheminFichierCarte;
 	}
 }

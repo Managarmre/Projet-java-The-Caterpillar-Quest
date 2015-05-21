@@ -1,5 +1,5 @@
 /**
- * @author Pauline
+ * @author Pauline & Titouan
  */
 
 import java.io.BufferedReader;
@@ -111,6 +111,7 @@ public class Parser
 		}
 	}
 
+	// test interne
 	public static class Application
 	{
 		public static void main(String[] args) throws IOException
