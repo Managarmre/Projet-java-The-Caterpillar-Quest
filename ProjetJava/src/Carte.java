@@ -1,63 +1,58 @@
 import java.util.ArrayList;
 
-
-public class Carte 
-{
-	private String cheminFichierCarte;
-	private ArrayList<Guepe> guepe;
-	private ArrayList<Cerise> cerise;
+public class Carte {
 	
 	private Personnage personnage;
-	
-	private ArrayList<Plateforme> plateforme;
 	private ArrayList<Porte> porte;
 	
-	public Carte( String cheminCarte )
-	{
-		this.cheminFichierCarte = cheminCarte;
-		this.guepe=new ArrayList<Guepe>();
-		this.plateforme=new ArrayList<Plateforme>(20);
-		this.cerise=new ArrayList<Cerise>(20);
-		this.porte=new ArrayList<Porte>(20);
-	}
+	private String fichier;
 	
-	public Carte()
-	{
-		this("default.map");
-	}
+	private ArrayList<ElementRamassable> elementsRamassables;
+	private ArrayList<Ennemi> ennemis;
+	private ArrayList<ElementFixe> elementsFixes;
 	
-	public void addGuepe(Guepe g)
-	{
-		this.guepe.add(g);
-	}
-
-	public void addPlateforme(Plateforme p)
-	{
-		this.plateforme.add(p);
-	}
-
-	public void addCerise(Cerise c)
-	{
-		this.cerise.add(c);
-	}
-
-	public void addPorte(Porte p)
-	{
-		this.porte.add(p);
-	}
-
-	public void addPersonnage(Personnage p)
-	{
-		this.personnage = p;
-	}
 	
-	public boolean aUnPersonnage()
+	public Carte() 
 	{
-		return this.personnage != null;
+		this.elementsRamassables = new ArrayList<ElementRamassable>();
+		this.ennemis = new ArrayList<Ennemi>();
+		this.elementsFixes = new ArrayList<ElementFixe>();
+		this.porte=new ArrayList<Porte>();
+		this.fichier="default.map";
 	}
 	
 	public String getCheminFichierCarte()
 	{
-		return this.cheminFichierCarte;
+		return this.fichier;
 	}
+	
+	public void ajoutPorte(Porte p)
+	{
+		this.porte.add(p);
+	}
+	
+	public void ajoutPersonnage(Personnage p)
+	{
+		this.personnage=p;
+	}
+	
+	public boolean aUnPersonnage()
+	{
+		return this.personnage!=null;
+	}
+	
+	public void ajoutElementRamassable(ElementRamassable er)
+	{
+		this.elementsRamassables.add(er);
+	}
+	
+	public void ajoutElementFixe(ElementFixe ef)
+	{
+		this.elementsFixes.add(ef);
+	}
+	
+	public void ajoutEnnemi(Ennemi e)
+	{
+		this.ennemis.add(e);
+	}	
 }

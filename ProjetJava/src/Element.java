@@ -1,17 +1,23 @@
 
-public abstract class Element 
-{
-	private int ligne;
-	private int colonne;
+import org.newdawn.slick.geom.Point;
+
+
+public abstract class Element {
+
+	private Point position;
+	private int hauteur;
+	private int largeur;
 	
-	public Element(int l, int c)
-	{
-		this.ligne=l;
-		this.colonne=c;
+	public Element( Point forme, int hauteur, int largeur){
+		
+		this.position = forme;
+		this.hauteur = hauteur;
+		this.largeur = largeur;
+		System.out.println(this.getClass());
 	}
 	
-	public String toString()
-	{
-		return this.ligne+" "+this.colonne;
+	public Element( int x, int y, int hauteur, int largeur) {
+		this( new Point( x, y) , largeur, hauteur);
 	}
+	
 }

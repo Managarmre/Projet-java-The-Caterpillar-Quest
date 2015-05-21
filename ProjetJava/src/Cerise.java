@@ -1,8 +1,9 @@
 
-public class Cerise extends Element
-{
-	public Cerise(int l, int c)
-	{
-		super(l,c);
+public class Cerise extends ElementRamassable {
+
+	public Cerise( int x, int y ) {
+		super( x, y, 32, 32, "./sprites/cerise.png", 1 );
 	}
+	
+	
 }

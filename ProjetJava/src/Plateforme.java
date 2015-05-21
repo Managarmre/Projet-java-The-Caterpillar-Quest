@@ -1,8 +1,7 @@
+public class Plateforme extends ElementFixe {
 
-public class Plateforme extends Element
-{
-	public Plateforme(int l, int c)
-	{
-		super(l,c);
+	public Plateforme( int x, int y ) {
+		super( x, y, 32, 32, "./sprites/plateforme.png" );		
 	}
+		
 }

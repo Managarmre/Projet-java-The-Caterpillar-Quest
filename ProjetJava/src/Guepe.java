@@ -1,20 +1,15 @@
+import java.awt.Point;
 
-public class Guepe extends Element
-{	
-	private int pointArrivee;
-	private int pointDepart=0;
+public class Guepe extends Ennemi {
+		
 	private boolean deplacementHorizontal;
 	
-	public Guepe( int x, int y, int arrivee, boolean deplacementHorizontal )
-	{
-		super(y,x);
-		this.pointArrivee=this.pointDepart+arrivee;
-		this.deplacementHorizontal=deplacementHorizontal;
-		System.out.println(y+" -- "+x+" : "+this.toString());
+	//pointdepartx pointdeparty
+	// x = departx / y=departy / depart=arriveex / arrivee=arriveey
+	public Guepe( int x, int y, int depart, int arrivee, boolean deplacementHorizontal ) {
+		super( x, y, 32, 32,"./sprites/guepe.png", depart, arrivee );
+		
+		this.deplacementHorizontal = deplacementHorizontal;				
 	}
 	
-	public String toString()
-	{
-		return "guepe "+this.deplacementHorizontal+" de "+this.pointArrivee+" cases --- ";
-	}
 }

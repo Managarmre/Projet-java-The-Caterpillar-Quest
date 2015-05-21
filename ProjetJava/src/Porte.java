@@ -1,8 +1,9 @@
 
-public class Porte extends Element
-{
-	public Porte(int l, int c)
-	{
-		super(l,c);
+public class Porte extends ElementFixe {
+
+	public Porte( int x, int y ) {
+		super( x, y, 64, 32, "./sprites/porte.png" );
 	}
+
+	
 }

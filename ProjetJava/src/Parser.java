@@ -2,15 +2,8 @@
  * @author Pauline
  */
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
-import org.newdawn.slick.AppGameContainer;
 
 public class Parser 
 {
@@ -108,31 +101,33 @@ public class Parser
 	{
 		int deplacement=3;
 		int recupDeplacement=colonne+1;
+		int x = colonne*32;
+		int y = ligne*32;
 		switch(c)
 		{
-			case '#': this.carte.addPlateforme(new Plateforme(ligne,colonne)); break;
-			case 'P': this.carte.addPorte(new Porte(ligne,colonne)); break;
-			case 'c': this.carte.addCerise(new Cerise(ligne,colonne)); break;
+			case '#': this.carte.ajoutElementFixe(new Plateforme(x,y)); break;
+			case 'P': this.carte.ajoutPorte(new Porte(x,y)); break;
+			case 'c': this.carte.ajoutElementRamassable(new Cerise(x,y)); break;
 			case 'v': 
 				if (this.lignesLues.get(ligne).length>recupDeplacement && this.estEntier(this.lignesLues.get(ligne)[recupDeplacement]))
 				{
 					deplacement=Character.getNumericValue(this.lignesLues.get(ligne)[recupDeplacement]);
 				}
-				Guepe guepeVerticale = new Guepe(colonne,ligne,deplacement,false);
-				this.carte.addGuepe(guepeVerticale);
+				Guepe guepeVerticale = new Guepe(x,y,x,y+deplacement,false);
+				this.carte.ajoutEnnemi(guepeVerticale);
 				break;
 			case 'h': 
 				if (this.lignesLues.get(ligne).length>recupDeplacement && this.estEntier(this.lignesLues.get(ligne)[recupDeplacement]))
 				{
 					deplacement=Character.getNumericValue(this.lignesLues.get(ligne)[recupDeplacement]);
 				}
-				Guepe guepeHorizontale = new Guepe(colonne,ligne,deplacement,true);
-				this.carte.addGuepe(guepeHorizontale);
+				Guepe guepeHorizontale = new Guepe(x,y,x+deplacement,y,true);
+				this.carte.ajoutEnnemi(guepeHorizontale);
 				break;
 			case 'A': 
 				if (!this.carte.aUnPersonnage()) // un seul personnage sur la carte !!!
 				{
-					this.carte.addPersonnage(new Personnage(ligne,colonne));
+					this.carte.ajoutPersonnage(new Personnage(ligne,colonne));
 				}
 				break;
 			default: 
