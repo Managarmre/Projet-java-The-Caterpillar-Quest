@@ -10,55 +10,78 @@ import org.newdawn.slick.SlickException;
 import app.Score;
 
 
-
-
 /**
+ * Représente le jeu joué par le joueur.
+ * Cette classe contient la caméra, la carte, et l'image de fond.
+ * Cette classe devra être passé en paramètre d'un AppGameContainer, afin d'afficher à l'écran la fenêtre du jeu.
+ * 
  * @author Maxime Pineau
- *
+ * @see <a href="http://slick.ninjacave.com/javadoc/org/newdawn/slick/AppGameContainer.html">AppGameContainer</a>
+ * @see Camera
+ * @see Carte
+ * @see ControleurPersonnage
  */
 public class Jeu extends BasicGame {
 	
+	/**
+	 * La largeur de la fenêtre de jeu.
+	 */
 	public static final int LARGEUR = 32 * 33;
+	
+	/**
+	 * La hauteur de la fenêtre de jeu.
+	 */
 	public static final int HAUTEUR = 32 * 20;
 		
 	private GameContainer conteneur;
-	private Camera camera;	
-	
-	private Image fond;
+	private Camera camera;
 	private Carte carte;
+	private Image fond;
 	private boolean partieGagnee = false;
 	
+	private String nomJoueur;
 	private int tempsEcoule;
 	private long tempsLancement;
 	
-	public Jeu( String titre ) {
-		super(titre);
-		
+	/**
+	 * Crée un nouveau jeu. 
+	 * @param nomJoueur Le nom du joueur jouant la partie.
+	 */
+	public Jeu( String nomJoueur ) {
+		super("The Quaterpillar Quest");
 		
 		this.carte = new Carte();
-		
 		this.camera = new Camera( this.carte.getPersonnage() );
-		
 		this.tempsEcoule = 0;
+		this.nomJoueur = nomJoueur;
 	}
 	
+	/**
+	 * Initialise le jeu. 
+	 * Cette méthode est appelé avant le lancement de la boucle principale.
+	 * C'est également dans cette méthode que l'on ajoute l'écouteur du claver, permettant ainsi de bouger le personnage.
+	 * @see <a href="http://slick.ninjacave.com/javadoc/org/newdawn/slick/BasicGame.html#init(org.newdawn.slick.GameContainer)">BasicGame.init()</a>
+	 */
 	@Override
 	public void init( GameContainer conteneur ) throws SlickException {
 		
-		this.conteneur = conteneur;
-		//this.conteneur.setShowFPS(false);	// ne plus afficher "FPS" sur la fenêtre
-	
-		
+		this.conteneur = conteneur;	
 		this.fond = new Image("./sprites/fond.png");
-		this.carte.initialiser(conteneur);
+		this.tempsLancement = System.currentTimeMillis();
 		
+		this.carte.initialiser(conteneur);		
+	
+		// on ajoute le controleur permettant la gestion des E/S pour le personnage.
 		ControleurPersonnage controller = new ControleurPersonnage( this.carte.getPersonnage() );
 		conteneur.getInput().addKeyListener(controller);
-		
-		this.tempsLancement = System.currentTimeMillis();
 	}
 	
 	
+	/**
+	 * Met à jour les données du jeu (position des éléments...).
+	 * Les éléments graphiques ne sont pas affichés sur la fenêtre dans cette méthode.
+	 * @see <a href="http://slick.ninjacave.com/javadoc/org/newdawn/slick/BasicGame.html#update(org.newdawn.slick.GameContainer,%20int)">BasicGame.update()</a>
+	 */
 	@Override
 	public void update( GameContainer conteneur, int delta ) throws SlickException {
 
@@ -80,6 +103,10 @@ public class Jeu extends BasicGame {
 		
 	}
 
+	/**
+	 * Met à jour l'affichage des éléments graphiques (dans la fenêtre de jeu).
+	 * @see <a href="http://slick.ninjacave.com/javadoc/org/newdawn/slick/Game.html#render(org.newdawn.slick.GameContainer,%20org.newdawn.slick.Graphics)">Game.render()</a>
+	 */
 	@Override
 	public void render( GameContainer conteneur, Graphics graphique ) throws SlickException {
 
@@ -99,10 +126,19 @@ public class Jeu extends BasicGame {
 				
 	}
 	
+	/**
+	 * Retourne le score actuel du joueur.
+	 * @return Le score du joueur.
+	 */
 	public Score getScoreJoueur() {
 		return new Score( this.carte.getPersonnage().getNbPoints(), this.tempsEcoule );
 	}
 	
+	/**
+	 * Retourne vrai si le joueur a gagné la partie, et faux sinon. 
+	 * La partie est gagnée si une exception PartieGagneeException a été lancée.
+	 * @return Vrai si le joueur a gagné la partie, faux sinon.
+	 */
 	public boolean isPartieGagnee() {
 		return this.partieGagnee;
 	}

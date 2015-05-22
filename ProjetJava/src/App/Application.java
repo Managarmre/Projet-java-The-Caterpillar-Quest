@@ -22,19 +22,17 @@ public class Application {
 		// on change la sortie des logs
 		Log.setLogSystem( new FileLogSystem() );	// les logs de la fenêtre vont dans un fichier de log
 		
-		Jeu fenetre = new Jeu("The Quaterpillar Quest");
+		Jeu jeu = new Jeu("The Quaterpillar Quest");
 		
 		try {
 			
-			AppGameContainer app = new AppGameContainer(fenetre);
+			AppGameContainer app = new AppGameContainer(jeu);
 			app.setDisplayMode( Jeu.LARGEUR,  Jeu.HAUTEUR,  false ); 	// false : ne pas mettre en plein écran
 			app.setShowFPS(false);		// n'affiche pas le "FPS" sur la fenêtre
-			app.setTargetFrameRate(60); // limite à 60 FPS
 			app.setForceExit(false);	// ne pas fermer automatiquement le programme après fermeture de la fenêtre
 			
 			app.start();
-			
-			
+						
 		} 
 		catch (SlickException e) {
 			e.printStackTrace();
@@ -42,9 +40,9 @@ public class Application {
 		}
 		
 		
-		if( fenetre.isPartieGagnee() ) {
+		if( jeu.isPartieGagnee() ) {
 
-			fenetre.getScoreJoueur().afficher();
+			jeu.getScoreJoueur().afficher();
 			
 		}
 		

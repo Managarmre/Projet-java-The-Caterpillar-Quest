@@ -13,8 +13,24 @@ import org.newdawn.slick.geom.Vector2f;
 
 
 
+/**
+ * Représente une guêpe.
+ * Le sprite de la guêpe se trouve dans le dossier './sprites/guepe.png'.
+ * La guêpe effectuera des aller-retour entre sa position de départ et sa position d'arrivée. 
+ * La guêpe ne peut pas traverser les éléments fixes de la carte, elle fera donc demi-tour si le cas se présente.
+ * 
+ * @author Maxime Pineau
+ *
+ */
 public class Guepe extends Ennemi {
 	
+	/**
+	 * La direction vers laquelle la guêpe se déplace.
+	 * La valeur de cette direction permet de récupérer l'animation correspondante, 
+	 * car elle correspond à l'indice de cet animation dans le tableau d'animations.
+	 * @author Maxime
+	 *
+	 */
 	private enum Orientation {
 		Gauche(0), 	// la guêpe regarde vers la gauche
 		Droite(1); 	// la guêpe regarde vers la droite
@@ -25,6 +41,9 @@ public class Guepe extends Ennemi {
 			this.indiceAnimation = valeur;
 		}
 		
+		/**
+		 * @return L'indice correspondant à l'animation stocké dans le tableau d'animations.
+		 */
 		public int getIndiceAnimation() {
 			return this.indiceAnimation;
 		}
@@ -33,6 +52,16 @@ public class Guepe extends Ennemi {
 	private boolean deplacementHorizontal;
 	private Orientation orientation;
 		
+	/**
+	 * Crée une nouvelle guêpe, se déplaçant entre le point de départ et le point d'arrivée.
+	 * La position initiale peut être différente du point de départ.
+	 * La guêpe fera des aller-retour entre le point de départ et le point d'arrivée.
+	 * @param x La position initiale x de la guêpe.
+	 * @param y La position initiale y de la guêpe.
+	 * @param depart Le point de départ de la guêpe.
+	 * @param arrivee Le point d'arrivée de la gupepe.
+	 * @param deplacementHorizontal Vrai si la guêpe se déplace horizontalement, et faux si elle se déplace verticalement.
+	 */
 	public Guepe( int x, int y, Point depart, Point arrivee, boolean deplacementHorizontal ) {
 		super( x, y, 32, 32, new Rectangle(5, 9, 25, 17), "./sprites/guepe.png", depart, arrivee );
 		
@@ -50,6 +79,15 @@ public class Guepe extends Ennemi {
 				
 	}
 
+	/** 
+	 * Crée une nouvelle guêpe, se déplaçant entre le point de départ et le point d'arrivée.
+	 * La position initiale est le point de départ.
+	 * @param xDepart La position x de départ de la guêpe.
+	 * @param yDepart La position y de départ de la guêpe.
+	 * @param xArrive La position x d'arrivée de la guêpe.
+	 * @param yArrive La position y d'arrivée de la guêpe.
+	 * @param deplacementHorizontale Vrai si la guêpe se déplace horizontalement, et faux si elle se déplace verticalement.
+	 */
 	public Guepe( int xDepart, int yDepart, int xArrive, int yArrive, boolean deplacementHorizontale ) {
 		this( xDepart, yDepart, new Point(xDepart, yDepart),  new Point(xArrive, yArrive), deplacementHorizontale);
 	}
@@ -95,6 +133,11 @@ public class Guepe extends Ennemi {
 		
 	}
 	
+	/**
+	 * Retourne vrai si la guêpe entre en collision avec un élément fixe de la carte.
+	 * @param carte
+	 * @return Vrai si la guêpe entre en collision avec un élément fixe de la carte.
+	 */
 	public boolean collision( Carte carte ) {
 		
 		for( ElementFixe element : carte.getElementsFixes() ) {
@@ -104,10 +147,9 @@ public class Guepe extends Ennemi {
 		return false;
 	}
 	
-	public boolean estArriveDestination() {
-		return Math.abs( this.getPositionX() - this.getArrivee().getX() ) < 0.1 && Math.abs( this.getPositionY() - this.getArrivee().getY() ) < 0.1;
-	}
-	
+	/**
+	 * La guêpe fait demi-tour.
+	 */
 	private void faireDemiTour() {
 		
 		// on intervertie les points de départ et d'arrivé
@@ -121,9 +163,10 @@ public class Guepe extends Ennemi {
 		
 	}
 	
+	
 	@Override
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
-		super.afficher( conteneur, graphique );
+
 		graphique.drawAnimation( this.animations[ this.orientation.getIndiceAnimation() ], this.getPositionX(), this.getPositionY() );
 		
 	}

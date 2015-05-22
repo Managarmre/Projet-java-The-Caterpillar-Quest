@@ -17,6 +17,14 @@ import elementsGraphiques.Porte;
 
 
 
+/**
+ * Classe représantant la carte du jeu.
+ * Cette classe contient tout les éléments graphique. Ces éléments graphiques se trouvent dans le package 'elementsGraphiques'.
+ * Celle-ci doit être chargée à partir d'un fichier .map, se chargement est effectuer à l'aide de la classe Parser.
+ * 
+ * @author Maxime Pineau
+ * @see elementsGraphiques
+ */
 public class Carte {
 	
 	private Personnage personnage;
@@ -27,26 +35,32 @@ public class Carte {
 	private ArrayList<ElementFixe> elementsFixes;
 	
 	
+	/**
+	 * Crée une nouvelle carte.
+	 */
 	public Carte() {
 				
 		this.elementsRamassables = new ArrayList<ElementRamassable>();
 		this.ennemis = new ArrayList<Ennemi>();
 		this.elementsFixes = new ArrayList<ElementFixe>();
-		
-
-		this.personnage = new Personnage( 10, 32*18 );
 		this.portes = new ArrayList<Porte>();
+		
 		this.personnage = new Personnage( 10, 32 * 10 );
 		
-		this.remplir();	// ----------------------------------------------------------- à remplacer par l'appel du parseur
+		this.testerCarte();	// ----------------------------------------------------------- à remplacer par l'appel du parseur
 	}
 
 
-	public void remplir() {
+	private void testerCarte() {
 		
 		Plateforme plateforme;
 		for( int i = 0; i < 33; i++ ) {
 			plateforme = new Plateforme( 32*i, 32*19 );
+			this.elementsFixes.add(plateforme);
+		}
+		
+		for( int i = 10; i < 28; i++ ) {
+			plateforme = new Plateforme( 32*i, 32*15 );
 			this.elementsFixes.add(plateforme);
 		}
 		
@@ -73,6 +87,12 @@ public class Carte {
 	}
 	
 	
+	/**
+	 * Initialise la carte et ses éléments graphiques (ajout des images, sprites...).
+	 * Cette méthode est à appeler dans la fonction Jeu.init().
+	 * @param conteneur	Le conteneur du jeu
+	 * @throws SlickException Lancée lorsqu'une erreur est détectée par la librairie Slick2D (image non trouvée...).
+	 */
 	public void initialiser(GameContainer conteneur) throws SlickException {
 		
 		for( ElementFixe fixe : this.elementsFixes ) {
@@ -93,10 +113,16 @@ public class Carte {
 		
 		this.personnage.initialiser();
 		
-		
 	}
 
 
+	/**
+	 * Met à jours les données de la cartes (positions des éléments...).
+	 * @param conteneur Le conteneur du jeu.
+	 * @param delta Le temps qui s'est passé depuis la dernière mise à jour en millisecondes. 
+	 * @throws SlickException Lancée lorsqu'une erreur est détectée par la librairie Slick2D.
+	 * @throws PartieException Indique que la partie a été gagnée ou perdue.
+	 */
 	public void update( GameContainer conteneur, int delta ) throws SlickException, PartieException {
 		
 		for( Ennemi ennemi : this.ennemis ) {
@@ -107,6 +133,12 @@ public class Carte {
 		
 	}
 	
+	/**
+	 * Affiche les éléments de la carte dans la fenêtre graphique.
+	 * @param conteneur Le conteneur du jeu.
+	 * @param graphique Le graphique du jeu.
+	 * @throws SlickException Lancée lorsqu'une erreur est détectée par la librairie Slick2D.
+	 */
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
 				
 		for( ElementFixe fixe : this.elementsFixes ) {
@@ -130,6 +162,9 @@ public class Carte {
 	}
 	
 	
+	
+	
+	
 	public Personnage getPersonnage() {
 		return personnage;
 	}
@@ -151,7 +186,7 @@ public class Carte {
 		return elementsFixes;
 	}
 	
-		
+	
 	public void supprimerElementRamassable( ElementRamassable ramassable ) {
 		this.elementsRamassables.remove(ramassable);
 	}

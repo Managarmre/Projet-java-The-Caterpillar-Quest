@@ -185,7 +185,6 @@ public class Personnage extends ElementDeplacable {
 	@Override
 	public void afficher(GameContainer conteneur, Graphics graphique) throws SlickException {
 		
-		super.afficher( conteneur, graphique);
 		graphique.drawAnimation( this.animations[0], this.getPositionX(), this.getPositionY() );
 	}
 
@@ -193,10 +192,5 @@ public class Personnage extends ElementDeplacable {
 		return this.nbPoints;
 	}
 
-	@Override
-	public boolean collision(Carte carte) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 }
