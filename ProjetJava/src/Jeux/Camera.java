@@ -18,6 +18,7 @@ public class Camera {
 	
 	public void update() {
 		
+		// mise à jour de la position de la caméra selon la position du personnage et de l'ancien état de la caméra
 	}
 	
 	public void placer( GameContainer conteneur, Graphics graphique ) {
