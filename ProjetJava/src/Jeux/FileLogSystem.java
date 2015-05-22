@@ -8,6 +8,8 @@ import org.newdawn.slick.util.DefaultLogSystem;
 
 public class FileLogSystem extends DefaultLogSystem {
 
+	// https://github.com/ariejan/slick2d/blob/master/src/org/newdawn/slick/util/DefaultLogSystem.java
+	
 	private String cheminFichierLog = "TheQuaterpillarQuest.log"; 
 	
 	public FileLogSystem( String cheminFichierLog ) {

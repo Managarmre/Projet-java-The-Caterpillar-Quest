@@ -26,11 +26,12 @@ public class Fenetre extends BasicGame {
 	private int tempsEcoule;
 	private long tempsLancement;
 	
-	public Fenetre( String title ) {
-		super(title);
+	public Fenetre( String titre ) {
+		super(titre);
 		
-		this.camera = new Camera();
 		this.carte = new Carte();
+		
+		this.camera = new Camera( this.carte.getPersonnage() );
 		
 		this.tempsEcoule = 0;
 	}
@@ -44,6 +45,9 @@ public class Fenetre extends BasicGame {
 		
 		this.fond = new Image("./sprites/fond.png");
 		this.carte.initialiser(conteneur);
+		
+		ControleurPersonnage controller = new ControleurPersonnage( this.carte.getPersonnage() );
+		conteneur.getInput().addKeyListener(controller);
 		
 		this.tempsLancement = System.currentTimeMillis();
 	}
@@ -71,15 +75,20 @@ public class Fenetre extends BasicGame {
 	@Override
 	public void render( GameContainer conteneur, Graphics graphique ) throws SlickException {
 
+		// on affiche le fond fixe
 		graphique.drawImage( this.fond, 0, 0 );
+		
+		// on déplace le graphique vers la gauche pour faire bouger la carte
+		this.camera.placer( conteneur, graphique );
+		
+		// on affiche les éléments de la carte sur le graphique
 		this.carte.afficher( conteneur, graphique );
-		
-		
+				
 		// afficher le nombre de cerises et le temps
 		graphique.setColor( Color.darkGray );
 		graphique.drawString( "cerises : " + this.carte.getPersonnage().getNbPoints() , 32, 6 );
 		graphique.drawString( "temps : " + this.tempsEcoule , 32*10, 6 );
-				
+		
 	}
 	
 	public Score getScoreJoueur() {

@@ -92,8 +92,6 @@ public class Carte {
 		
 		this.personnage.initialiser();
 		
-		ControleurPersonnage controller = new ControleurPersonnage(this.personnage);
-		conteneur.getInput().addKeyListener(controller);
 		
 	}
 
