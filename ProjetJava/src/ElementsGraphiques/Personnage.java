@@ -73,43 +73,49 @@ public class Personnage extends ElementDeplacable {
 		vx = (float) (delta * 0.015 * this.speed);
 		vy = (float) (delta * 0.05 * this.speed );
 		
-		ay = (float) (vy * delta * 0.01);
+		ay = (float) (vy * (delta/1000.0) / 0.5);
 		
 		if(direction == Direction.DROITE){
 			
 			if(isMoving){
 				dx = vx;
-				this.setPosition(this.getPositionX() + dx, this.getPositionY() + dy);
+				if(jumping){
+					dy -= ay;
+				}				
+				this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
 			}				
 		}
 		else if(direction == Direction.GAUCHE){
 			
 			if(isMoving){
 				dx = -vx;
-
-				this.setPosition(this.getPositionX() + dx, this.getPositionY() + dy);
+				if(jumping){
+					dy -= ay;
+				}
+				this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
 			}				
 		}
 		else 
 			dx = 0;
+		
 		if(! jumping){ //si le joueur est au sol
 
 			if(direction == Direction.HAUT && isMoving){
 				dy = vy;
-				System.out.println("Jump\n");
+				dx = vx;
 				this.jumping = true; // le personnage va sauter
 				isMoving = false;
+				this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
 			}else{
 				dy = 0; // on ne prend pas en compte le saut car le personnage est déjà en l'air
 			}
 			
 		}else{ // le personnage est en l'air
-			
-			if(! estEnCollision)
 				dy -= ay;
+				this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
 		}
 			
-			this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
+			
 		
 			
 			if( this.getPositionY() > 32*20 ){
@@ -141,8 +147,6 @@ public class Personnage extends ElementDeplacable {
 				jumping = false; // on dit que le personnage est au sol
 				estEnCollision = true;
 
-			}else{
-				estEnCollision = false;
 			}
 				
 		}
