@@ -68,6 +68,8 @@ public class Fenetre extends BasicGame {
 			conteneur.exit();
 		}
 		
+		this.camera.update();
+		
 		this.tempsEcoule = (int) (System.currentTimeMillis() - this.tempsLancement) / 1000;
 		
 	}
