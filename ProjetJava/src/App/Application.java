@@ -1,9 +1,16 @@
 package App;
 
+/** 
+ * Classe contenant le point d'entrée su jeu.
+ * @author Maxime
+ */
 public class Application {
 
-	/**
-	 * @param args
+	/** 
+	 * Point d'entrée du jeu. 
+	 * Le joueur devra entrer son nom en premier paramètre, puis le chemin vers le fichier de la carte si il le désir.
+	 * @param args arguments du programme.
+	 * @author Maxime Pineau
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,6 +27,7 @@ public class Application {
 		}
 		
 		String nomJoueur = args[0];
+		System.out.println(nomJoueur);
 		
 		String cheminFichierMap = "";	// chemin par défaut
 		if( args.length >= 2 ) cheminFichierMap = args[1];
