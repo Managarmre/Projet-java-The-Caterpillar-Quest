@@ -7,8 +7,8 @@ import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.util.Log;
 
-import Jeux.Fenetre;
-import Jeux.FileLogSystem;
+import Jeu.Fenetre;
+import Jeu.FileLogSystem;
 
 
 public class Application {

@@ -1,4 +1,4 @@
-package Jeux;
+package Jeu;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.KeyListener;
 
@@ -6,6 +6,12 @@ import ElementsGraphiques.Direction;
 import ElementsGraphiques.Personnage;
 
 
+/**
+ * 
+ * 
+ * @author Cyril Caron
+ *
+ */
 public class ControleurPersonnage implements KeyListener {
 
 

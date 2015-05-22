@@ -11,10 +11,10 @@ import org.newdawn.slick.SpriteSheet;
 
 import org.newdawn.slick.geom.Rectangle;
 
-import Jeux.Carte;
-import Jeux.PartieException;
-import Jeux.PartieGagneeException;
-import Jeux.PartiePerdueException;
+import Jeu.Carte;
+import Jeu.PartieException;
+import Jeu.PartieGagneeException;
+import Jeu.PartiePerdueException;
 
 
 

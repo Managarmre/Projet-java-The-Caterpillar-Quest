@@ -1,4 +1,4 @@
-package Jeux;
+package Jeu;
 
 import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.Color;
@@ -11,6 +11,10 @@ import org.newdawn.slick.SlickException;
 import App.Score;
 
 
+/**
+ * @author Maxime Pineau
+ *
+ */
 public class Fenetre extends BasicGame {
 	
 	public static final int LARGEUR = 32 * 33;
@@ -81,17 +85,17 @@ public class Fenetre extends BasicGame {
 		// on affiche le fond fixe
 		graphique.drawImage( this.fond, 0, 0 );
 		
-		// on déplace le graphique vers la gauche pour faire bouger la carte
+		// afficher le nombre de cerises et le temps
+		graphique.setColor( Color.darkGray );
+		graphique.drawString( "cerises : " + this.carte.getPersonnage().getNbPoints() , 32, 6  );
+		graphique.drawString( "temps : " + this.tempsEcoule , 32*10, 6 );
+		
+		// on déplace le graphique vers la gauche pour faire bouger la carte à l'écran
 		this.camera.placer( conteneur, graphique );
 		
 		// on affiche les éléments de la carte sur le graphique
 		this.carte.afficher( conteneur, graphique );
 				
-		// afficher le nombre de cerises et le temps
-		graphique.setColor( Color.darkGray );
-		graphique.drawString( "cerises : " + this.carte.getPersonnage().getNbPoints() , 32 + this.camera.getPositionCameraX(), 6  );
-		graphique.drawString( "temps : " + this.tempsEcoule , 32*10 + this.camera.getPositionCameraX(), 6 );
-		
 	}
 	
 	public Score getScoreJoueur() {
