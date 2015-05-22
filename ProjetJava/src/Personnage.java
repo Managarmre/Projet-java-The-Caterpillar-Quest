@@ -5,22 +5,20 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Shape;
+import org.newdawn.slick.geom.Vector2f;
 
 
 public class Personnage extends ElementDeplacable {
 
-	private static int vitesse = 20;
 
 	private int nbPoints = 0;
-	private boolean tombe, isMoving = false;
+	private boolean tombe, isMoving = false, jumping = false;
 
 	private Direction direction;
-
-	double vx = 0.0;
-	double vy = 0.0; // A toi de choisir constante1 en faisant des essais pour que le mouvement te convienne
-	double ay = 0.015; // Même commentaire que pour constante1
-	double dx = 0.0;
-	double dy = 0.0;
+	
+	private static float gravity = 0.5f, jumpStrength = -0.05f, speed = 0.5f;
+	
+	private float vx = 0, vy = 0;
 	
 	public Personnage( int x, int y ) {
 		super( x, y, 32, 32, null, "./sprites/personnage.png" );	
@@ -66,47 +64,38 @@ public class Personnage extends ElementDeplacable {
 	@Override
 	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException {
 		
-		double vx = delta * 0.010 * vitesse;
-		double vy = delta * 0.010 * vitesse; // A toi de choisir constante1 en faisant des essais pour que le mouvement te convienne
+		vx += gravity * delta;
 		
-		ay = vy * (40.0 / 1000.0) / 4.0;
-
 		
 		if(isMoving){
 			
 			switch(direction){
 			
 			case DROITE: // déplacement à droite
-				dx = vx;
-				//this.setPositionX(this.getPositionX() + vx);
+				vx = speed;
+				this.setPositionX(this.getPositionX() + vx);
 				break;
 			case GAUCHE: // déplacement à gauche
-				dx = -vx;
-				//this.setPositionX(this.getPositionX() - .1f * delta);
+				vx = - speed;
+				this.setPositionX(this.getPositionX() + vx);
 				break;
 			case HAUT: // saut
-				dy = vy;
-				tombe = true;
-				//this.setPositionY(this.getPositionY() - .1f * delta);				
+
+				this.setPositionY(this.getPositionY() - 0.5f);
+				System.out.println("jump");
+				//this.setPositionY(this.getPositionY() - 0.5f);
+				
 				break;
 			}
+						
 			
-			if (!tombe) { // Personnage au sol
-				//this.setPositionY(this.getPositionY() + .1f * delta);
-				//dy -= ay;
-				dy = 0;
-
-			} else { // Personnage en l'air
-				//this.setPositionY(this.getPositionY() - .1f * delta);
-				//dy = 0.0;
-				dy += ay;
-
-			}
-			this.setPositionX(this.getPositionX() + dx);
-			this.setPositionY(this.getPositionY() + dy);
-			
+			//this.setPositionY(this.getPositionY() + vy);
+						
 		}
 			
+		if(jumping){
+
+		}
 		
 		
 		/*for(Ennemi e : carte.getEnnemis()){
@@ -126,12 +115,12 @@ public class Personnage extends ElementDeplacable {
 				
 	}
 	
-	public static int getVitesse() {
-		return vitesse;
+	public static float getSpeed() {
+		return speed;
 	}
 
-	public static void setVitesse(int vitesse) {
-		Personnage.vitesse = vitesse;
+	public static void setSpeed(int speed) {
+		Personnage.speed = speed;
 	}
 
 	public boolean isTombe() {
