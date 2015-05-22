@@ -1,14 +1,20 @@
 package App;
 
 /** 
- * Classe contenant le point d'entrée su jeu.
+ * Classe contenant le point d'entrée du jeu.
+ * 
  * @author Maxime
  */
 public class Application {
 
 	/** 
-	 * Point d'entrée du jeu. 
-	 * Le joueur devra entrer son nom en premier paramètre, puis le chemin vers le fichier de la carte si il le désir.
+	 * Point d'entrée du jeu. Lance la fenêtre de jeu.
+	 * Le joueur devra entrer son nom en premier paramètre, puis le chemin vers le fichier de la carte s'il le désir. <br/>
+	 * - args[0] contiendra le nom / pseudo du joueur. <br/>
+	 * - arg[1] pourra contenir le chemin du fichier. <br/>
+	 * Redirige également les logs dans un fichier de log. <br/>
+	 * À la fin de la partie, les scores des 5 meilleurs joueurs s'afficheront, ainsi que le score du joueur actuel si il a terminé la partie.
+	 * 
 	 * @param args arguments du programme.
 	 * @author Maxime Pineau
 	 */

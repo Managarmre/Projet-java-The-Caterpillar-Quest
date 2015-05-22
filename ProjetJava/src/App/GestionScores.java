@@ -12,6 +12,12 @@ import java.util.Collections;
 import java.util.ListIterator;
 
 
+/**
+ * 
+ * 
+ * @author Maxime
+ *
+ */
 public class GestionScores implements Serializable {
 	
 	private static final long serialVersionUID = 1217692534656696222L;
