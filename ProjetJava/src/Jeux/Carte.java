@@ -35,7 +35,7 @@ public class Carte {
 
 		this.personnage = new Personnage( 10, 32*18 );
 		this.portes = new ArrayList<Porte>();
-		this.personnage = new Personnage( 10, 32*18 );
+		this.personnage = new Personnage( 10, 32 * 10 );
 		
 		this.remplir();	// ----------------------------------------------------------- à remplacer par l'appel du parseur
 	}

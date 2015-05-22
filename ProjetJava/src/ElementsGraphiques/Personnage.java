@@ -22,18 +22,18 @@ public class Personnage extends ElementDeplacable {
 
 
 	private int nbPoints = 0;
-	private boolean tombe, isMoving = false, jumping = false;
+	private boolean  isMoving = false, jumping = false, estEnCollision = false;
 
 	private Direction direction;
 
 	
-	private static float gravity = 0.5f, jumpStrength = -0.05f, speed = 0.5f;
+	private float speed = 10f;
 	
 
 
 	private float vx = 0.0f;
 	private float vy = 0.0f; // A toi de choisir constante1 en faisant des essais pour que le mouvement te convienne
-	private float ay = 0.015f; // Même commentaire que pour constante1
+	private float ay = 0.0f; // Même commentaire que pour constante1
 	private float dx = 0.0f;
 	private float dy = 0.0f;
 
@@ -69,34 +69,53 @@ public class Personnage extends ElementDeplacable {
 	@Override
 	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException, PartieException {
 		
-		vx += gravity * delta;
-		
-		
-		if(isMoving){
-			
-			switch(direction){
-			
-			case DROITE: // déplacement à droite
-				vx = speed;
-				this.setPositionX(this.getPositionX() + vx);
-				break;
-			case GAUCHE: // déplacement à gauche
-				vx = - speed;
-				this.setPositionX(this.getPositionX() + vx);
-				break;
-			case HAUT: // saut
 
-				this.setPositionY(this.getPositionY() - 0.5f);
-				System.out.println("jump");
-				//this.setPositionY(this.getPositionY() - 0.5f);
-				
-				break;
+		vx = (float) (delta * 0.015 * this.speed);
+		vy = (float) (delta * 0.05 * this.speed );
+		
+		ay = (float) (vy * delta * 0.01);
+		
+		if(direction == Direction.DROITE){
+			
+			if(isMoving){
+				dx = vx;
+				this.setPosition(this.getPositionX() + dx, this.getPositionY() + dy);
+			}				
+		}
+		else if(direction == Direction.GAUCHE){
+			
+			if(isMoving){
+				dx = -vx;
+
+				this.setPosition(this.getPositionX() + dx, this.getPositionY() + dy);
+			}				
+		}
+		else 
+			dx = 0;
+		if(! jumping){ //si le joueur est au sol
+
+			if(direction == Direction.HAUT && isMoving){
+				dy = vy;
+				System.out.println("Jump\n");
+				this.jumping = true; // le personnage va sauter
+				isMoving = false;
+			}else{
+				dy = 0; // on ne prend pas en compte le saut car le personnage est déjà en l'air
 			}
-
 			
-			this.setPosition( this.getPositionX() + dx, this.getPositionY() + dy );
+		}else{ // le personnage est en l'air
+			
+			if(! estEnCollision)
+				dy -= ay;
+		}
+			
+			this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
+		
+			
+			if( this.getPositionY() > 32*20 ){
 
-			if( this.getPositionY() > 32*20 ) throw new PartiePerdueException();
+				throw new PartiePerdueException();
+			}
 			
 			// les éléments ramassables peuvent disparaîtres, on utilise une boucle permettant de supprimer les éléments pendant le parcours
 			for( Iterator<ElementRamassable> iterateur = carte.getElementsRamassables().iterator(); iterateur.hasNext(); ) {
@@ -108,53 +127,47 @@ public class Personnage extends ElementDeplacable {
 					iterateur.remove();			// on supprime l'élément ramassable de la carte
 				}
 				
-			}
-			
+			}			
 
 			// le personnage touche une porte, le jeu est terminé
 			for( Porte porte : carte.getPortes() ) {
-				if( this.estEnCollisionAvec(porte) ) throw new PartieGagneeException();	
+				//if( this.estEnCollisionAvec(porte) ) throw new PartieGagneeException();	
 			}
 			
+		
+		
+		for( ElementFixe plateforme : carte.getElementsFixes() ) {	
+			if( this.estEnCollisionAvec(plateforme) ){
+				jumping = false; // on dit que le personnage est au sol
+				estEnCollision = true;
+
+			}else{
+				estEnCollision = false;
+			}
+				
 		}
+		
 				
 		for( Ennemi ennemi : carte.getEnnemis() ) {	
-			if( this.estEnCollisionAvec(ennemi) ) throw new PartiePerdueException();
+			//if( this.estEnCollisionAvec(ennemi) ) throw new PartiePerdueException();
 		}
-			
-
-		/*for(Ennemi e : carte.getEnnemis()){
-			if( carte.getPersonnage().estEnCollisionAvec(e) )
-				System.out.println("");
-				//mourir();
-		}
-		for(ElementRamassable c : carte.getElementsRamassables()){
-			if( carte.getPersonnage().estEnCollisionAvec(c))
-				System.out.println("");
-				//ramasserCerise();
-		}				
-		if(carte.getPersonnage().estEnCollisionAvec(carte.getPorte()))
-			System.out.println("");
-			//gagner();
-		if(carte.getPersonnage().estEnCollisionAvec(carte.getElementsFixes()))*/
-				
+		
+							
 	}
 	
-	public static float getSpeed() {
+	public void gravity(){
+
+		
+	}
+	
+	public float getSpeed() {
 		return speed;
 	}
 
-	public static void setSpeed(int speed) {
-		Personnage.speed = speed;
+	public void setSpeed(int speed) {
+		this.speed = speed;
 	}
 
-	public boolean isTombe() {
-		return tombe;
-	}
-
-	public void setTombe(boolean tombe) {
-		this.tombe = tombe;
-	}
 
 	public boolean isMoving() {
 		return isMoving;

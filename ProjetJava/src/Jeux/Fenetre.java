@@ -29,6 +29,7 @@ public class Fenetre extends BasicGame {
 	public Fenetre( String titre ) {
 		super(titre);
 		
+		
 		this.carte = new Carte();
 		
 		this.camera = new Camera( this.carte.getPersonnage() );
@@ -41,7 +42,7 @@ public class Fenetre extends BasicGame {
 		
 		this.conteneur = conteneur;
 		//this.conteneur.setShowFPS(false);	// ne plus afficher "FPS" sur la fenêtre
-		
+	
 		
 		this.fond = new Image("./sprites/fond.png");
 		this.carte.initialiser(conteneur);

@@ -29,8 +29,8 @@ public class Application {
 			
 			AppGameContainer app = new AppGameContainer(fenetre);
 			app.setDisplayMode( Fenetre.LARGEUR,  Fenetre.HAUTEUR,  false ); 	// false : ne pas mettre en plein écran
-			app.setShowFPS(false);		// n'affiche pas le "FPS" sur la fenêtre
-			
+			app.setShowFPS(true);		// n'affiche pas le "FPS" sur la fenêtre
+			app.setTargetFrameRate(60); // limite à 60 FPS
 			app.setForceExit(false);	// ne pas fermer automatiquement le programme après fermeture de la fenêtre
 			
 			app.start();
