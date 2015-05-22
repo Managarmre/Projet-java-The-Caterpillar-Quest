@@ -74,6 +74,7 @@ public abstract class ElementDeplacable extends Element {
 	 * @param debutColonne Le numéro de la première colonne contenant les images de l'animation.
 	 * @param finColonne Le numéro de la dernière colonne contenant les images de l'animation.
 	 * @return L'animation correspondante.
+	 * @author Maxime Pineau
 	 */
 	protected Animation chargerAnimation( int numeroLigne, int debutColonne, int finColonne ) {
 		

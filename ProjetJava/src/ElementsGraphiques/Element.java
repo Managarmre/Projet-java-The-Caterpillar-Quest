@@ -23,8 +23,9 @@ public abstract class Element {
 	private int hauteur;
 	private int largeur;
 	
-	private Shape hitbox;
+	// on sauvegarde la position de la hitbox relative à l'élément pour pouvoir la placer à la bonne position.
 	private Point positionOrigineHitbox;
+	private Shape hitbox;
 	
 	/**
 	 * Crée un nouvel élément graphique.
@@ -44,8 +45,8 @@ public abstract class Element {
 		// on modifie donc cette hitbox pour quelle ait les bonnes positions
 		this.positionOrigineHitbox = new Point( hitbox.getX(), hitbox.getY() );
 		this.hitbox = hitbox;
-		this.hitbox.setX( this.positionOrigineHitbox.getX() + position.getX() );
-		this.hitbox.setY( this.positionOrigineHitbox.getY() + position.getY() );
+		this.hitbox.setX( this.positionOrigineHitbox.getX() + position.getX() );	// on replace la hitbox sur l'élément
+		this.hitbox.setY( this.positionOrigineHitbox.getY() + position.getY() );	
 		
 	}
 	
@@ -90,16 +91,10 @@ public abstract class Element {
 	 * Cette collision est détectée en utilisant les hitbox des éléments graphiques.
 	 * @param e L'élément graphqiue avec lequel on doit vérifier si l'élément actuel est en collision.
 	 * @return Vrai si cet élément graphique et l'élément e sont en collision, faux sinon.
-	 * @author Cyril Caron
 	 */
 	public boolean estEnCollisionAvec(Element e){
-		
-		if( this.hitbox.intersects(e.getHitbox()) )
-			return true;
-		else
-			return false;
+		return this.hitbox.intersects( e.getHitbox() );
 	}
-
 
 	/**
 	 * Retourne la position x de l'élément sur la fenêtre de jeu.
@@ -134,7 +129,7 @@ public abstract class Element {
 	 */
 	public void setPositionX( float x ) {
 		this.position.setX(x);
-		this.hitbox.setX( this.positionOrigineHitbox.getX() + x );
+		this.hitbox.setX( this.positionOrigineHitbox.getX() + x );	// on replace la hitbox sur l'élément
 
 	}
 	
@@ -146,7 +141,7 @@ public abstract class Element {
 	 */
 	public void setPositionY( float y ) {
 		this.position.setY(y);
-		this.hitbox.setY( this.positionOrigineHitbox.getY() + y );
+		this.hitbox.setY( this.positionOrigineHitbox.getY() + y );	// on replace la hitbox sur l'élément
 	}
 	
 	/**
@@ -179,7 +174,7 @@ public abstract class Element {
 	 */
 	public void setPosition( Point position ) {
 		this.position = position;
-		this.hitbox.setX( this.positionOrigineHitbox.getX() + position.getX() );
+		this.hitbox.setX( this.positionOrigineHitbox.getX() + position.getX() );	// on replace la hitbox sur l'élément
 		this.hitbox.setY( this.positionOrigineHitbox.getY() + position.getY() );
 
 	}

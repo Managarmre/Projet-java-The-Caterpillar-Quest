@@ -44,12 +44,13 @@ public class FileLogSystem implements LogSystem {
 		try {
 			
 			FileWriter out = new FileWriter( this.cheminFichierLog, true );	// true : pour append dans le fichier
-			out.write( new Date()+" DEBUG:" + message + "\n" );
+			out.write( new Date() + " DEBUG:" + message + "\n" );
 			out.close();
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 	
 	

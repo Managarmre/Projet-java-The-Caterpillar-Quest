@@ -42,23 +42,18 @@ public abstract class ElementFixe extends Element {
 		this.cheminImage = cheminImage;
 	}
 	
-
-	/* (non-Javadoc)
-	 * @see elementsGraphiques.Element#afficher(org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
-	 */
-	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
-		
-		graphique.drawImage( this.image, this.getPositionX(), this.getPositionY() );	
-		
-	}
-	
-	/* (non-Javadoc)
-	 * @see elementsGraphiques.Element#initialiser()
-	 */
+	@Override
 	public void initialiser() throws SlickException {
 		
 		this.image = new Image( this.cheminImage );
 	
 	}
 	
+	@Override
+	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
+		
+		graphique.drawImage( this.image, this.getPositionX(), this.getPositionY() );	
+		
+	}
+		
 }
