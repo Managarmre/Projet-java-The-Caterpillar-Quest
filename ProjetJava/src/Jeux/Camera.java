@@ -32,14 +32,11 @@ public class Camera {
 		
 		graphique.translate( - this.positionCameraX, 0 );
 		
-		float borne = conteneur.getWidth() / 3;
-		
-		
-		
-		
 	}
 	
-	
+	public float getPositionCameraX() {
+		return this.positionCameraX;
+	}
 	
 	
 }
