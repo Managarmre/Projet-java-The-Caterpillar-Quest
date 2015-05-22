@@ -1,8 +1,9 @@
+package ElementsGraphiques;
+
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
-import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Shape;
 
 
@@ -18,7 +19,8 @@ public abstract class ElementFixe extends Element {
 	
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
 		
-		graphique.drawImage( this.image, this.getPositionX(), this.getPositionY() );
+		super.afficher( conteneur, graphique );
+		graphique.drawImage( this.image, this.getPositionX(), this.getPositionY() );	
 		
 	}
 	

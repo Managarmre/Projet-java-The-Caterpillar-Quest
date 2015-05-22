@@ -1,3 +1,4 @@
+package App;
 
 public class Score {
 
@@ -11,7 +12,7 @@ public class Score {
 	}
 	
 	public void afficher() {
-		System.out.println("test");
+		System.out.println( this.nbPoints + " " + this.tempsJeu );
 	}
 	
 }

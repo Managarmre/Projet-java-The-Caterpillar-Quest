@@ -1,11 +1,21 @@
+package ElementsGraphiques;
+
+import java.util.Iterator;
+
 import org.newdawn.slick.Animation;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
-import org.newdawn.slick.geom.Point;
-import org.newdawn.slick.geom.Shape;
-import org.newdawn.slick.geom.Vector2f;
+
+
+import org.newdawn.slick.geom.Rectangle;
+
+import Jeux.Carte;
+import Jeux.PartieException;
+import Jeux.PartieGagneeException;
+import Jeux.PartiePerdueException;
+
 
 
 public class Personnage extends ElementDeplacable {
@@ -15,28 +25,23 @@ public class Personnage extends ElementDeplacable {
 	private boolean tombe, isMoving = false, jumping = false;
 
 	private Direction direction;
+
 	
 	private static float gravity = 0.5f, jumpStrength = -0.05f, speed = 0.5f;
 	
-	private float vx = 0, vy = 0;
+
+
+	private float vx = 0.0f;
+	private float vy = 0.0f; // A toi de choisir constante1 en faisant des essais pour que le mouvement te convienne
+	private float ay = 0.015f; // Même commentaire que pour constante1
+	private float dx = 0.0f;
+	private float dy = 0.0f;
+
 	
 	public Personnage( int x, int y ) {
-		super( x, y, 32, 32, null, "./sprites/personnage.png" );	
+		super( x, y, 32, 32, new Rectangle(0, 0, 32, 32), "./sprites/personnage.png" );	
 		this.direction = Direction.IMMOBILE;
 		this.animations = new Animation[6];
-	}
-
-	@Override
-	public void seDeplacer(Point point) {
-		// TODO Auto-generated method stub
-
-	}
-	
-
-	@Override
-	public Point getProchainePosition() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 	
 	public void gestionCollision(){
@@ -62,7 +67,7 @@ public class Personnage extends ElementDeplacable {
 	
 	
 	@Override
-	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException {
+	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException, PartieException {
 		
 		vx += gravity * delta;
 		
@@ -87,17 +92,37 @@ public class Personnage extends ElementDeplacable {
 				
 				break;
 			}
-						
-			
-			//this.setPositionY(this.getPositionY() + vy);
-						
-		}
-			
-		if(jumping){
 
+			
+			this.setPosition( this.getPositionX() + dx, this.getPositionY() + dy );
+
+			if( this.getPositionY() > 32*20 ) throw new PartiePerdueException();
+			
+			// les éléments ramassables peuvent disparaîtres, on utilise une boucle permettant de supprimer les éléments pendant le parcours
+			for( Iterator<ElementRamassable> iterateur = carte.getElementsRamassables().iterator(); iterateur.hasNext(); ) {
+				
+				ElementRamassable ramassable = iterateur.next();
+				
+				if( this.estEnCollisionAvec(ramassable) ) {			
+					this.nbPoints += ramassable.getNbPoints();
+					iterateur.remove();			// on supprime l'élément ramassable de la carte
+				}
+				
+			}
+			
+
+			// le personnage touche une porte, le jeu est terminé
+			for( Porte porte : carte.getPortes() ) {
+				if( this.estEnCollisionAvec(porte) ) throw new PartieGagneeException();	
+			}
+			
 		}
-		
-		
+				
+		for( Ennemi ennemi : carte.getEnnemis() ) {	
+			if( this.estEnCollisionAvec(ennemi) ) throw new PartiePerdueException();
+		}
+			
+
 		/*for(Ennemi e : carte.getEnnemis()){
 			if( carte.getPersonnage().estEnCollisionAvec(e) )
 				System.out.println("");
@@ -141,12 +166,19 @@ public class Personnage extends ElementDeplacable {
 	
 	@Override
 	public void afficher(GameContainer conteneur, Graphics graphique) throws SlickException {
-				
+		
+		super.afficher( conteneur, graphique);
 		graphique.drawAnimation( this.animations[0], this.getPositionX(), this.getPositionY() );
 	}
 
 	public int getNbPoints() {
 		return this.nbPoints;
+	}
+
+	@Override
+	public boolean collision(Carte carte) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

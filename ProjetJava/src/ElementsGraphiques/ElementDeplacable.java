@@ -1,9 +1,13 @@
+package ElementsGraphiques;
+
 import org.newdawn.slick.Animation;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
-import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Shape;
+
+import Jeux.Carte;
+import Jeux.PartieException;
 
 
 public abstract class ElementDeplacable extends Element {
@@ -20,12 +24,10 @@ public abstract class ElementDeplacable extends Element {
 		this.cheminSprite = cheminSprite;
 	}
 	
+	public abstract void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException, PartieException;
 	
-	public abstract void seDeplacer(Point point);
-	public abstract void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException;
-	public abstract Point getProchainePosition();
+	public abstract boolean collision( Carte carte );
 	
-		
 	protected Animation chargerAnimation( int numeroLigne, int debutColonne, int finColonne ) {
 		
 		Animation animation = new Animation();
