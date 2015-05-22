@@ -228,13 +228,3 @@ Fri May 22 02:16:22 CEST 2015 DEBUG:Found 2 controllers
 Fri May 22 02:16:22 CEST 2015 DEBUG:0 : USB Receiver
 Fri May 22 02:16:22 CEST 2015 DEBUG:1 : USB Receiver
 Fri May 22 02:16:22 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
-Fri May 22 02:17:37 CEST 2015 DEBUG:Slick Build #237
-Fri May 22 02:17:37 CEST 2015 DEBUG:LWJGL Version: 2.9.2
-Fri May 22 02:17:37 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
-Fri May 22 02:17:37 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
-Fri May 22 02:17:37 CEST 2015 DEBUG:Starting display 1056x640
-Fri May 22 02:17:37 CEST 2015 DEBUG:Use Java PNG Loader = true
-Fri May 22 02:17:38 CEST 2015 DEBUG:Found 2 controllers
-Fri May 22 02:17:38 CEST 2015 DEBUG:0 : USB Receiver
-Fri May 22 02:17:38 CEST 2015 DEBUG:1 : USB Receiver
-Fri May 22 02:17:38 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
