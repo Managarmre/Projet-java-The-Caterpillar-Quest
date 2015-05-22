@@ -12,7 +12,7 @@ import java.io.Serializable;
  * Un score pourra également être comparer à autre. 
  * Le score ayant le nombre de points de plus grand sera le score suppérieur. En cas d'égalité, le score suppérieur sera celui possédant le plus petit temps.
  * 
- * @author Maxime
+ * @author Maxime Pineau
  * 
  */
 public class Score implements Comparable<Score>, Serializable {
@@ -24,7 +24,7 @@ public class Score implements Comparable<Score>, Serializable {
 	private int tempsEcoule;
 	
 	/**
-	 * Crée un score pour un joueur selon son nombre de points et le temps écoulé en secondes pour terminé un niveau.
+	 * Crée un score pour un joueur selon son nombre de points et le temps écoulé en secondes pour terminer un niveau.
 	 * @param nomJoueur Le nom du joueur.
 	 * @param nbPoint Le nombre de points que le joueur réussi à obtenir.
 	 * @param tempsEcoule Le temps passé par le joueur pour terminer le niveau en seconde.
