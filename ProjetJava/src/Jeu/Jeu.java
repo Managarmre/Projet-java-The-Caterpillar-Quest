@@ -1,4 +1,4 @@
-package Jeu;
+package jeu;
 
 import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.Color;
@@ -7,15 +7,16 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
+import app.Score;
 
-import App.Score;
+
 
 
 /**
  * @author Maxime Pineau
  *
  */
-public class Fenetre extends BasicGame {
+public class Jeu extends BasicGame {
 	
 	public static final int LARGEUR = 32 * 33;
 	public static final int HAUTEUR = 32 * 20;
@@ -30,7 +31,7 @@ public class Fenetre extends BasicGame {
 	private int tempsEcoule;
 	private long tempsLancement;
 	
-	public Fenetre( String titre ) {
+	public Jeu( String titre ) {
 		super(titre);
 		
 		

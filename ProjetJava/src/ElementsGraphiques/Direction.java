@@ -1,4 +1,4 @@
-package ElementsGraphiques;
+package elementsGraphiques;
 
 public enum Direction {
 

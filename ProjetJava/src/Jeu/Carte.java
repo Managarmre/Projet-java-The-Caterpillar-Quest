@@ -1,4 +1,4 @@
-package Jeu;
+package jeu;
 
 import java.util.ArrayList;
 
@@ -6,14 +6,15 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
-import ElementsGraphiques.Cerise;
-import ElementsGraphiques.ElementFixe;
-import ElementsGraphiques.ElementRamassable;
-import ElementsGraphiques.Ennemi;
-import ElementsGraphiques.Guepe;
-import ElementsGraphiques.Personnage;
-import ElementsGraphiques.Plateforme;
-import ElementsGraphiques.Porte;
+import elementsGraphiques.Cerise;
+import elementsGraphiques.ElementFixe;
+import elementsGraphiques.ElementRamassable;
+import elementsGraphiques.Ennemi;
+import elementsGraphiques.Guepe;
+import elementsGraphiques.Personnage;
+import elementsGraphiques.Plateforme;
+import elementsGraphiques.Porte;
+
 
 
 public class Carte {

@@ -1,4 +1,7 @@
-package ElementsGraphiques;
+package elementsGraphiques;
+
+import jeu.Carte;
+import jeu.PartieException;
 
 import org.newdawn.slick.Animation;
 import org.newdawn.slick.GameContainer;
@@ -6,8 +9,6 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Shape;
 
-import Jeu.Carte;
-import Jeu.PartieException;
 
 
 public abstract class ElementDeplacable extends Element {

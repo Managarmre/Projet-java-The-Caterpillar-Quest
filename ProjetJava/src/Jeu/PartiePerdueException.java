@@ -1,4 +1,4 @@
-package Jeu;
+package jeu;
 
 /**
  * Exception lancée lorsque le joueur a perdu la partie. 

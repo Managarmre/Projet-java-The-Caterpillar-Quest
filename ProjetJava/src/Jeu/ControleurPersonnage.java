@@ -1,9 +1,10 @@
-package Jeu;
+package jeu;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.KeyListener;
 
-import ElementsGraphiques.Direction;
-import ElementsGraphiques.Personnage;
+import elementsGraphiques.Direction;
+import elementsGraphiques.Personnage;
+
 
 
 /**

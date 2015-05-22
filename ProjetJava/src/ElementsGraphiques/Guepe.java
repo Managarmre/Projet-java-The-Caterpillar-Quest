@@ -1,4 +1,6 @@
-package ElementsGraphiques;
+package elementsGraphiques;
+
+import jeu.Carte;
 
 import org.newdawn.slick.Animation;
 import org.newdawn.slick.GameContainer;
@@ -9,7 +11,6 @@ import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Vector2f;
 
-import Jeu.Carte;
 
 
 public class Guepe extends Ennemi {

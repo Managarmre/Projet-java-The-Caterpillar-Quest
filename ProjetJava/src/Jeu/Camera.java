@@ -1,9 +1,10 @@
-package Jeu;
+package jeu;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 
-import ElementsGraphiques.Personnage;
+import elementsGraphiques.Personnage;
+
 
 /**
  * Caméra du jeu.
@@ -28,7 +29,7 @@ public class Camera {
 	public Camera( Personnage personnage ) {
 		this.personnage = personnage;
 		this.positionCameraX = 0;
-		this.TIERS_LARGEUR_ECRAN = Fenetre.LARGEUR / 3;
+		this.TIERS_LARGEUR_ECRAN = Jeu.LARGEUR / 3;
 	}
 	
 	/**

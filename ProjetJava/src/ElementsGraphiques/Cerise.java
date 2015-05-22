@@ -1,4 +1,4 @@
-package ElementsGraphiques;
+package elementsGraphiques;
 
 import org.newdawn.slick.geom.Polygon;
 

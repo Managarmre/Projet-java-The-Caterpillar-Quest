@@ -1,14 +1,15 @@
-package App;
+package app;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import jeu.Jeu;
+import jeu.FileLogSystem;
 
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.util.Log;
 
-import Jeu.Fenetre;
-import Jeu.FileLogSystem;
 
 
 public class Application {
@@ -22,12 +23,12 @@ public class Application {
 		// on change la sortie des logs
 		Log.setLogSystem( new FileLogSystem() );	// les logs de la fenêtre vont dans un fichier de log
 		
-		Fenetre fenetre = new Fenetre("The Quaterpillar Quest");
+		Jeu fenetre = new Jeu("The Quaterpillar Quest");
 		
 		try {
 			
 			AppGameContainer app = new AppGameContainer(fenetre);
-			app.setDisplayMode( Fenetre.LARGEUR,  Fenetre.HAUTEUR,  false ); 	// false : ne pas mettre en plein écran
+			app.setDisplayMode( Jeu.LARGEUR,  Jeu.HAUTEUR,  false ); 	// false : ne pas mettre en plein écran
 			app.setShowFPS(true);		// n'affiche pas le "FPS" sur la fenêtre
 			app.setTargetFrameRate(60); // limite à 60 FPS
 			app.setForceExit(false);	// ne pas fermer automatiquement le programme après fermeture de la fenêtre
@@ -38,7 +39,7 @@ public class Application {
 		} 
 		catch (SlickException e) {
 			e.printStackTrace();
-			Logger.getLogger( Fenetre.class.getName()).log(Level.SEVERE, null, e);
+			Logger.getLogger( Jeu.class.getName()).log(Level.SEVERE, null, e);
 		}
 		
 		

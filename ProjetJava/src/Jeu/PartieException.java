@@ -1,4 +1,4 @@
-package Jeu;
+package jeu;
 
 /**
  * Signale qu'une exception est apparue durant la partie.
