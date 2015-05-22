@@ -1,4 +1,4 @@
-package App;
+package app;
 
 /**
  * Exception lancée lors d'une erreur de chargemet ou de sauvegarde du gestionnaire de score.

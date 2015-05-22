@@ -1,4 +1,4 @@
-package App;
+package app;
 
 /** 
  * Classe contenant le point d'entrée du jeu. <br/>
