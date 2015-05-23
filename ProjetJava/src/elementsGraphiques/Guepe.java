@@ -124,28 +124,15 @@ public class Guepe extends Ennemi {
 		this.setPosition( newX, newY );
 		
 		// gestion de la collision avec les éléments de la carte
-		boolean collision = this.collision(carte);
+		boolean collision = carte.elementEnCollisionAvecUnElementFixe(this);
 		
-		if( collision ) this.setPosition( oldX, oldY );
+		if(collision) this.setPosition( oldX, oldY );
 		
 		// si la guêpe est arrivée à destination (sur le point d'arrivé)
 		if( collision || this.estArriveDestination() ) this.faireDemiTour();
 		
 	}
 	
-	/**
-	 * Retourne vrai si la guêpe entre en collision avec un élément fixe de la carte.
-	 * @param carte
-	 * @return Vrai si la guêpe entre en collision avec un élément fixe de la carte.
-	 */
-	public boolean collision( Carte carte ) {
-		
-		for( ElementFixe element : carte.getElementsFixes() ) {
-			if( this.estEnCollisionAvec(element) ) return true;
-		}
-			
-		return false;
-	}
 	
 	/**
 	 * La guêpe fait demi-tour.

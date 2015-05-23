@@ -3,6 +3,7 @@ package elementsGraphiques;
 import java.util.Iterator;
 
 import jeu.Carte;
+import jeu.Jeu;
 import jeu.PartieException;
 import jeu.PartieGagneeException;
 import jeu.PartiePerdueException;
@@ -115,49 +116,27 @@ public class Personnage extends ElementDeplacable {
 				dy -= ay;
 				this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
 		}
-			
-			
-		
-			
-			if( this.getPositionY() > 32*20 ){
-
-				throw new PartiePerdueException();
-			}
-			
-			// les éléments ramassables peuvent disparaîtres, on utilise une boucle permettant de supprimer les éléments pendant le parcours
-			for( Iterator<ElementRamassable> iterateur = carte.getElementsRamassables().iterator(); iterateur.hasNext(); ) {
-				
-				ElementRamassable ramassable = iterateur.next();
-				
-				if( this.estEnCollisionAvec(ramassable) ) {			
-					this.nbPoints += ramassable.getNbPoints();
-					iterateur.remove();			// on supprime l'élément ramassable de la carte
-				}
-				
-			}			
-
-			// le personnage touche une porte, le jeu est terminé
-			for( Porte porte : carte.getPortes() ) {
-				//if( this.estEnCollisionAvec(porte) ) throw new PartieGagneeException();	
-			}
-			
-		
-		
-		for( ElementFixe plateforme : carte.getElementsFixes() ) {	
-			if( this.estEnCollisionAvec(plateforme) ){
-				jumping = false; // on dit que le personnage est au sol
-				estEnCollision = true;
-
-			}
-				
+					
+		ElementRamassable elementRamassable = carte.getElementRamassableEnCollisionAvecElement(this); 
+		if( elementRamassable != null ) {
+			this.nbPoints += elementRamassable.getNbPoints();
+			carte.supprimerElementRamassable(elementRamassable);
 		}
 		
-				
-		for( Ennemi ennemi : carte.getEnnemis() ) {	
-			//if( this.estEnCollisionAvec(ennemi) ) throw new PartiePerdueException();
+		if( carte.elementEnCollisionAvecUnElementFixe(this) ) {
+			jumping = false; // on dit que le personnage est au sol
+			estEnCollision = true;
 		}
 		
-							
+		// le personnage touche une porte, le joueur gagne la partie
+		//if( carte.elementEnCollisionAvecUnePortes(this) ) throw new PartieGagneeException();
+		
+		// le personnage touche une guêpe, le joueur perd la partie
+		//if( carte.elementEnCollisionAvecUnEnnemi(this) ) throw new PartiePerdueException();
+		
+		// le personnage sort de la fenêtre, le joueur perd la partie
+		//if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
+
 	}
 	
 	public void gravity(){
