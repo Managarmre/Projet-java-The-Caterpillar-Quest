@@ -1,3 +1,6 @@
+/**
+ * @author Pauline
+ */
 public class Plateforme extends ElementFixe {
 
 	public Plateforme( int x, int y ) {

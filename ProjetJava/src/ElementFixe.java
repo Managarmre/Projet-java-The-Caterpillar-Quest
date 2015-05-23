@@ -1,4 +1,6 @@
-
+/**
+ * @author Pauline
+ */
 public abstract class ElementFixe extends Element {
 
 	protected String cheminImage;

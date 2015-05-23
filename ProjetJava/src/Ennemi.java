@@ -1,3 +1,6 @@
+/**
+ * @author Pauline
+ */
 import java.awt.Point;
 
 
@@ -12,7 +15,7 @@ public abstract class Ennemi extends ElementDeplacable {
 		this.depart = new Point(x,y);
 		this.arrivee = new Point(arriveex,arriveey);
 		this.sensDeplacement = sens;
-		System.out.println(this.sensDeplacement);
+		//System.out.println(this.sensDeplacement);
 	}
 	
 }

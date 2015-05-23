@@ -1,3 +1,7 @@
+/**
+ * @author Pauline
+ */
+
 import java.util.ArrayList;
 
 public class Carte {

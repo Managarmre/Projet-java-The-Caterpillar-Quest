@@ -1,3 +1,6 @@
+/**
+ * @author Pauline
+ */
 import java.awt.Point;
 
 public class Guepe extends Ennemi {

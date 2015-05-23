@@ -66,12 +66,12 @@ public class Parser
 	 */
 	public void recupererColonnes(int maxCol)
 	{
-		int colonneAAtteindre = this.colonne+maxCol;
+		int colonneAAtteindre = this.colonne+maxCol; // le numéro de la colonne finale
 		while (this.colonne<colonneAAtteindre)
 		{
 			for (int i=0;i<this.lignesLues.size();i++)
 			{
-				if (this.lignesLues.get(i).length>this.colonne)
+				if (this.lignesLues.get(i).length>this.colonne) // on vérifie que la ligne possède assez de colonnes avant de récupérer les informations
 				{
 					char caractere = this.lignesLues.get(i)[this.colonne];
 					lectureCaractere(caractere,i,this.colonne);	
@@ -99,17 +99,17 @@ public class Parser
 	 */
 	public void lectureCaractere(char c, int ligne, int colonne)
 	{
-		int deplacement=3;
+		int deplacement=3; // nombre de colonnes par déplacement par défaut
 		int recupDeplacement=colonne+1;
-		int x = colonne*32;
-		int y = ligne*32;
+		int x = colonne*32; // position de départ
+		int y = ligne*32; // position de départ
 		String sens="";
 		switch(c)
 		{
-			case '#': this.carte.ajoutElementFixe(new Plateforme(x,y)); break;
-			case 'P': this.carte.ajoutPorte(new Porte(x,y)); break;
-			case 'c': this.carte.ajoutElementRamassable(new Cerise(x,y)); break;
-			case 'v': 
+			case '#': this.carte.ajoutElementFixe(new Plateforme(x,y)); break; // lecture d'une plateforme
+			case 'P': this.carte.ajoutPorte(new Porte(x,y)); break; // lecture d'une porte
+			case 'c': this.carte.ajoutElementRamassable(new Cerise(x,y)); break; // lecture d'une cerise
+			case 'v':  // lecture d'une guepe se déplaçant verticalement
 				sens = "bas"; // sens par défaut verticalement
 				if (this.lignesLues.get(ligne).length>recupDeplacement && this.estEntier(this.lignesLues.get(ligne)[recupDeplacement]))
 				{
@@ -123,10 +123,11 @@ public class Parser
 				{
 					sens="haut";
 				}
+				deplacement*=32;
 				Guepe guepeVerticale = new Guepe(x,y,x,y+deplacement,false,sens);
 				this.carte.ajoutEnnemi(guepeVerticale);
 				break;
-			case 'h': 
+			case 'h': // lecture d'une guepe se déplaçant horizontalement
 				sens="droite"; // sens par défaut horizontalement
 				if (this.lignesLues.get(ligne).length>recupDeplacement && this.estEntier(this.lignesLues.get(ligne)[recupDeplacement]))
 				{
@@ -140,16 +141,17 @@ public class Parser
 				{
 					sens="gauche";
 				}
+				deplacement*=32;
 				Guepe guepeHorizontale = new Guepe(x,y,x+deplacement,y,true,sens);
 				this.carte.ajoutEnnemi(guepeHorizontale);
 				break;
-			case 'A': 
-				if (!this.carte.aUnPersonnage()) // un seul personnage sur la carte !!!
+			case 'A': // lecture de l'avatar du personnage
+				if (!this.carte.aUnPersonnage()) // on s'assure qu'il n'y qu'un seul personnage sur la carte !!!
 				{
 					this.carte.ajoutPersonnage(new Personnage(ligne,colonne));
 				}
 				break;
-			default: 
+			default: // on ignore les autres caractères
 				break;
 		}
 	}
@@ -162,7 +164,7 @@ public class Parser
 			Carte c = new Carte();
 			Parser p = new Parser(c);
 			p.getEcranInit();
-			for (int i=0;i<72;i++)
+			for (int i=0;i<(200-32);i++)
 			{
 				p.chargerColonneSuivante();
 			}

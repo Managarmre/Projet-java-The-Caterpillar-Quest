@@ -1,4 +1,6 @@
-
+/**
+ * @author Pauline
+ */
 public class Porte extends ElementFixe {
 
 	public Porte( int x, int y ) {

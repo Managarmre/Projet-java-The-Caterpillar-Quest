@@ -1,3 +1,6 @@
+/**
+ * @author Pauline
+ */
 public abstract class ElementRamassable extends ElementFixe {
 
 	private int nbPoints;

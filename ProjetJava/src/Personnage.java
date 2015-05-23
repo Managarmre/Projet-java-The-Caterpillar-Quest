@@ -1,3 +1,6 @@
+/**
+ * @author Pauline
+ */
 public class Personnage extends ElementDeplacable {
 	
 	public Personnage( int x, int y ) {

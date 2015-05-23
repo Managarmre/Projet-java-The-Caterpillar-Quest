@@ -1,4 +1,6 @@
-
+/**
+ * @author Pauline
+ */
 public class Cerise extends ElementRamassable {
 
 	public Cerise( int x, int y ) {

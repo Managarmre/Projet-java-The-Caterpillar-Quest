@@ -1,4 +1,6 @@
-
+/**
+ * @author Pauline
+ */
 import org.newdawn.slick.geom.Point;
 
 
@@ -13,7 +15,7 @@ public abstract class Element
 		this.position = forme;
 		this.hauteur = hauteur;
 		this.largeur = largeur;
-		System.out.println(this.getClass());
+		//System.out.println(this.getClass());
 	}
 	
 	public Element( int x, int y, int hauteur, int largeur) 
