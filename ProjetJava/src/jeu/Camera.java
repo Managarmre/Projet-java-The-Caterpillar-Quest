@@ -7,7 +7,7 @@ import elementsGraphiques.Personnage;
 
 
 /**
- * Caméra du jeu.
+ * Caméra du jeu, elle gère la zone de déplacement du personnage.
  * La caméra permet de faire avancer la carte (les éléments de la carte) à l'écran. <br/>
  * La carte s'avancera si le personnage arrive à la limite de sa zone de déplacement. <br/>
  * Le personnage du joueur ne peut se déplacer que sur le 1er tiers de l'écran. <br/>
@@ -23,7 +23,7 @@ public class Camera {
 	private final float TIERS_LARGEUR_ECRAN;
 	
 	/**
-	 * Crée une caméra, qui déplacera les éléments graphiqueslorsque le personnage arrivera à la limite de sa zone de déplacement.
+	 * Crée une caméra, qui déplacera les éléments graphiques lorsque le personnage arrivera à la limite de sa zone de déplacement.
 	 * @param personnage Le personnage que la caméra doit surveiller.
 	 */
 	public Camera( Personnage personnage ) {
@@ -34,15 +34,19 @@ public class Camera {
 	
 	/**
 	 * Met à jour la position de la caméra en fonction de la position du personnage (et de sa zone de déplacement).
+	 * Si le personnage dépasse sa zone de déplacement à droite, la caméra avance avec lui, déplassant ainsi la carte.
+	 * Si le personnage dépasse sa zone de déplacement à gauche, et sort de lr'écran, on replace le personnage sur le bord de la fenêtre.
 	 */
 	public void update() {
 		
 		float positionPersonnageX = this.personnage.getPositionX();
 		float borneDeplacementMaximaleX = this.positionCameraX + this.TIERS_LARGEUR_ECRAN;
 		
-		// si le personnage dépasse sa zone de déplacement, on met à jour la position de la caméra
+		// si le personnage dépasse sa zone de déplacement à droite, on met à jour la position de la caméra afin d'avancer la carte.
 		if( positionPersonnageX > borneDeplacementMaximaleX ) this.positionCameraX = positionPersonnageX - this.TIERS_LARGEUR_ECRAN;
 		
+		// le personnage ne peut pas revenir en arrière, on le replace si le cas se présente.
+		if( positionPersonnageX - this.positionCameraX < 0.1 ) this.personnage.setPositionX( this.positionCameraX );
 	}
 	
 	/**

@@ -1,7 +1,5 @@
 package elementsGraphiques;
 
-import java.util.Iterator;
-
 import jeu.Carte;
 import jeu.Jeu;
 import jeu.PartieException;
@@ -15,14 +13,14 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 
 
+import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Rectangle;
 
 
 
 
 public class Personnage extends ElementDeplacable {
-
-
+	
 	private int nbPoints = 0;
 	private boolean  isMoving = false, jumping = false, estEnCollision = false;
 
@@ -71,7 +69,8 @@ public class Personnage extends ElementDeplacable {
 	@Override
 	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException, PartieException {
 		
-
+		Point oldPosition = this.getPosition();
+		
 		vx = (float) (delta * 0.015 * this.speed);
 		vy = (float) (delta * 0.05 * this.speed );
 		
@@ -135,8 +134,8 @@ public class Personnage extends ElementDeplacable {
 		//if( carte.elementEnCollisionAvecUnEnnemi(this) ) throw new PartiePerdueException();
 		
 		// le personnage sort de la fenêtre, le joueur perd la partie
-		//if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
-
+		if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
+		
 	}
 	
 	public void gravity(){
