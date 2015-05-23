@@ -2,6 +2,7 @@
  * @author Pauline
  */
 
+package parser;
 import java.io.*;
 import java.util.ArrayList;
 

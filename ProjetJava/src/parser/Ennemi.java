@@ -1,6 +1,8 @@
 /**
  * @author Pauline
  */
+
+package parser;
 import java.awt.Point;
 
 

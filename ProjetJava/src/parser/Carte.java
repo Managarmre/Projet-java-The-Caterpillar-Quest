@@ -2,6 +2,7 @@
  * @author Pauline
  */
 
+package parser;
 import java.util.ArrayList;
 
 public class Carte {

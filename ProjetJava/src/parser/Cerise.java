@@ -1,6 +1,8 @@
 /**
  * @author Pauline
  */
+
+package parser;
 public class Cerise extends ElementRamassable {
 
 	public Cerise( int x, int y ) {

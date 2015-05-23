@@ -1,6 +1,9 @@
 /**
  * @author Pauline
  */
+
+package parser;
+
 public class Personnage extends ElementDeplacable {
 	
 	public Personnage( int x, int y ) {

@@ -1,6 +1,9 @@
 /**
  * @author Pauline
  */
+
+package parser;
+
 public abstract class ElementDeplacable extends Element {
 	
 	protected String cheminSprite;

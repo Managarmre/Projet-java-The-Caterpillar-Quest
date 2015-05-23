@@ -1,6 +1,9 @@
 /**
  * @author Pauline
  */
+
+package parser;
+
 public class Plateforme extends ElementFixe {
 
 	public Plateforme( int x, int y ) {
