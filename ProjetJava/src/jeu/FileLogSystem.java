@@ -31,7 +31,7 @@ public class FileLogSystem implements LogSystem {
 	 * Crée une instance de FileLogSystem qui redirigera les logs de Slick2D vers le fichier 'TheQuaterpillarQuest.log'.
 	 */
 	public FileLogSystem() {
-		this("TheQuaterpillarQuest.log");
+		this("TheCaterpillarQuest.log");
 	}
 	
 	

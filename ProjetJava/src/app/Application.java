@@ -22,7 +22,7 @@ public class Application {
 		// on change la sortie des logs
 		Log.setLogSystem( new FileLogSystem() );	// les logs de la fenêtre vont dans un fichier de log
 		
-		Jeu jeu = new Jeu("The Quaterpillar Quest");
+		Jeu jeu = new Jeu("The Caterpillar Quest");
 		
 		try {
 			
