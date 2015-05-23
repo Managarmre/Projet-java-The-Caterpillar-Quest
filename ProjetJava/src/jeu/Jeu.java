@@ -48,7 +48,7 @@ public class Jeu extends BasicGame {
 	 * @param nomJoueur Le nom du joueur jouant la partie.
 	 */
 	public Jeu( String nomJoueur ) {
-		super("The Quaterpillar Quest");
+		super("The Caterpillar Quest");
 		
 		this.carte = new Carte();
 		this.camera = new Camera( this.carte.getPersonnage() );
