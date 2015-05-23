@@ -12,6 +12,7 @@ import java.util.Collections;
 import java.util.ListIterator;
 
 
+
 /**
  * Classe permettant de sauvegarder des scores.
  * Cette classe permet de charger et de sauvegarder un certain nombre de scores à partir d'un fichier.
