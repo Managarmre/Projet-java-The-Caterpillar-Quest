@@ -7,7 +7,7 @@ import elementsGraphiques.Personnage;
 
 
 /**
- * 
+ * Cette classe permet de récupérer les entrées clavier, et de modifier vers quelle direction le personnage se dirige en fonction de celles-ci.
  * 
  * @author Cyril Caron
  * 

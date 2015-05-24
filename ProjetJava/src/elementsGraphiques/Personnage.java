@@ -22,6 +22,11 @@ import org.newdawn.slick.geom.Rectangle;
 /**
  * @author Cyril
  * Représente le personnage jouable à l'écran
+
+ * Représente le personnage du joueur, celui-ci pourra être déplacé sur la carte par le joueur avec son clavier.
+ * @author Cyril Caron
+ * @autor Maxime Pineau
+ *
  */
 public class Personnage extends ElementDeplacable {
 	
@@ -41,6 +46,7 @@ public class Personnage extends ElementDeplacable {
 	private double tempsSaut = 0.5;
 	
 	/**
+	 * Crée un personnage.
 	 * @param x La position en x du personnage
 	 * @param y La position en y du personnage
 	 */
@@ -160,7 +166,7 @@ public class Personnage extends ElementDeplacable {
 	
 	/**
 	 * Indique si le personnage est en collision avec une plateforme
-	 * @param carte
+	 * @param carte 
 	 * @return
 	 */
 	public boolean estEnCollisionAvecPlateforme(Carte carte){
@@ -213,6 +219,10 @@ public class Personnage extends ElementDeplacable {
 		graphique.drawAnimation( this.animations[0], this.getPositionX(), this.getPositionY() );
 	}
 
+	/**
+	 * Retourne le nombre de points qu'a obtenu le personnage.
+	 * @return Le nombre de points qu'a obtenu le personnage.
+	 */
 	public int getNbPoints() {
 		return this.nbPoints;
 	}
