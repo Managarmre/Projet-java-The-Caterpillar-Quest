@@ -40,7 +40,6 @@ public abstract class Ennemi extends ElementDeplacable {
 	 * @author Maxime Pineau
 	 */
 	public boolean estArriveDestination() {
-		return Math.abs( this.getPositionX() - this.getArrivee().getX() ) < 0.1 && Math.abs( this.getPositionY() - this.getArrivee().getY() ) < 0.1;
 	}
 	
 	/**
