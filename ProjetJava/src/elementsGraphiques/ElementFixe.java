@@ -52,6 +52,7 @@ public abstract class ElementFixe extends Element {
 	@Override
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
 		
+		super.afficher(conteneur, graphique);
 		graphique.drawImage( this.image, this.getPositionX(), this.getPositionY() );	
 		
 	}

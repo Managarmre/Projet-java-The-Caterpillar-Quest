@@ -71,7 +71,6 @@ public class Personnage extends ElementDeplacable {
 	@Override
 	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException, PartieException {
 		
-		Point oldPosition = this.getPosition();
 		
 		vx = (float) (delta * 0.015 * this.speed);
 		vy = (float) (delta * 0.05 * this.speed );
@@ -95,11 +94,10 @@ public class Personnage extends ElementDeplacable {
 			
 			if(isMoving){
 				dx = -vx;// déplacement à gauche
-				if(jumping){
+				if(jumping && ! isCollisionOnTop){ 
 					dy -= ay;
 				}
-				//if( this.isCollisionOnTop)
-				//this.setPositionX(this.getPositionX()  + dx);
+
 			}				
 		}
 		else 
@@ -108,6 +106,7 @@ public class Personnage extends ElementDeplacable {
 		if( this.isCollisionOnTop && isMoving) // si on se déplace sur une plateforme
 			this.setPositionX(this.getPositionX() + dx);
 		
+		// on teste la collision en x
 		if(this.estEnCollisionAvecPlateforme(carte) && ! isCollisionOnTop){ // on ignore les collisions avec le haut de la plateforme
 			dx = -dx;
 			this.setPositionX(this.getPositionX() + dx);
@@ -123,37 +122,32 @@ public class Personnage extends ElementDeplacable {
 					dy = vy;
 					dx = vx;
 					this.jumping = true; // le personnage va sauter
-					isMoving = false;
+
 					this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
 				}
 				
 				
 			}else{
-				dy = 0; // on ne prend pas en compte le saut car le personnage est déjà en l'air
+				//dy = 0; // on ne prend pas en compte le saut car le personnage est déjà en l'air
 			}
 			
 		}else{ // le personnage est en l'air
 			dy -= ay;	// on applique la gravité		
-			this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
+			this.setPositionY( this.getPositionY() - dy);
 		}
 
 		
 		//this.setPositionY(this.getPositionY() - dy);
 		
+		// on teste la collision en y
 		if(this.estEnCollisionAvecPlateforme(carte) && ! isCollisionOnTop){
-			dy = -dy;
+			dy = -dy; 
 			this.setPositionY(this.getPositionY() + dy);
 			dy = 0;
 		}
 
 			//this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
 			
-				
-		if( this.getPositionY() > 32*20 ){
-
-			throw new PartiePerdueException();
-
-		}
 		
 		// les éléments ramassables peuvent disparaître, on utilise une boucle permettant de supprimer les éléments pendant le parcours
 		/*for( Iterator<ElementRamassable> iterateur = carte.getElementsRamassables().iterator(); iterateur.hasNext(); ) {
@@ -215,14 +209,20 @@ public class Personnage extends ElementDeplacable {
 		for( ElementFixe plateforme : carte.getElementsFixes() ) {	
 			if( this.estEnCollisionAvec(plateforme) ){
 				
-				if(this.getPositionY()  <= plateforme.getPositionY() ){
+				if(this.getPositionY() + this.getHauteur() <= plateforme.getPositionY() + 15){ // collision en haut
+					this.setPositionY(plateforme.getPositionY() - this.getHauteur());
 					isCollisionOnTop = true;
 					jumping = false;
-				}else
+				}else{// collision sur les autres côtés
+					
+					jumping = true;
 					isCollisionOnTop = false;
+					isMoving = false;
+				}					
 					
 				return true;		
 			}
+				
 		}
 
 		jumping = true; // le personnage est en l'air
@@ -250,6 +250,7 @@ public class Personnage extends ElementDeplacable {
 	@Override
 	public void afficher(GameContainer conteneur, Graphics graphique) throws SlickException {
 		
+		super.afficher(conteneur, graphique);
 		graphique.drawAnimation( this.animations[0], this.getPositionX(), this.getPositionY() );
 	}
 
