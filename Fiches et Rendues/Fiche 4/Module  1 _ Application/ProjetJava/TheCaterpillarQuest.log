@@ -1,0 +1,1639 @@
+Sun May 24 18:07:42 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:07:42 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:07:42 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:07:42 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:07:43 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:07:43 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:07:43 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:07:43 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:07:43 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:07:43 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:07:43 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:08:21 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:08:21 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:08:21 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:08:21 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:08:21 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:08:21 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:08:22 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:08:22 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:08:22 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:08:22 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:08:22 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:17:59 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:17:59 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:17:59 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:17:59 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:17:59 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:17:59 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:17:59 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:17:59 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:17:59 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:17:59 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:17:59 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:18:04 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:18:04 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:18:04 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:18:04 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:18:05 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:18:05 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:18:05 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:18:05 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:18:05 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:18:05 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:18:05 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:19:28 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:19:28 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:19:28 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:19:28 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:19:28 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:19:28 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:19:29 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:19:29 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:19:29 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:19:29 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:19:29 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:19:38 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:19:38 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:19:38 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:19:38 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:19:38 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:19:38 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:19:38 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:19:38 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:19:38 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:19:38 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:19:38 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:22:10 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:22:10 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:22:10 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:22:10 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:22:10 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:22:10 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:22:10 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:22:10 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:22:10 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:22:10 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:22:10 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:22:22 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:22:22 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:22:22 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:22:22 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:22:22 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:22:22 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:22:22 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:22:22 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:22:22 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:22:22 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:22:22 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:22:34 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:22:34 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:22:34 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:22:34 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:22:34 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:22:34 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:22:34 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:22:34 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:22:34 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:22:34 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:22:34 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:22:56 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:22:56 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:22:56 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:22:56 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:22:57 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:22:57 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:22:57 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:22:57 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:22:57 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:22:57 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:22:57 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:25:22 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:25:23 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:25:23 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:25:23 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:25:23 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:25:23 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:25:23 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:25:23 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:25:23 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:25:23 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:25:23 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:33:24 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:33:24 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:33:24 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:33:24 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:33:25 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:33:25 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:33:25 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:33:25 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:33:25 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:33:25 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:33:25 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:52:48 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:52:48 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:52:48 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:52:48 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:52:48 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:52:48 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:52:48 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:52:48 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:52:48 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:52:48 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:52:48 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:59:18 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:59:18 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:59:18 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:59:18 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:59:18 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:59:18 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:59:18 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:59:18 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:59:18 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:59:18 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:59:18 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:59:43 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:59:43 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:59:43 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:59:43 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:59:43 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:59:43 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:59:43 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:59:43 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:59:43 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:59:43 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:59:43 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 18:59:56 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 18:59:56 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 18:59:56 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 18:59:56 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 18:59:56 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 18:59:56 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 18:59:56 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 18:59:56 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 18:59:56 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 18:59:56 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 18:59:56 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:00:13 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:00:13 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:00:13 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:00:13 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:00:13 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:00:13 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:00:13 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:00:13 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:00:13 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:00:13 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:00:13 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:00:58 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:00:58 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:00:58 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:00:58 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:00:58 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:00:58 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:00:58 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:00:58 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:00:58 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:00:58 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:00:58 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:01:22 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:01:22 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:01:22 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:01:22 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:01:22 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:01:22 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:01:22 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:01:22 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:01:22 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:01:22 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:01:22 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:06:06 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:06:06 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:06:06 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:06:06 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:06:07 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:06:07 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:06:07 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:06:07 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:06:07 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:06:07 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:06:07 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:06:28 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:06:28 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:06:28 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:06:28 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:06:28 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:06:28 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:06:28 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:06:28 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:06:28 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:06:28 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:06:28 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:09:23 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:09:23 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:09:23 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:09:23 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:09:23 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:09:23 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:09:23 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:09:23 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:09:23 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:09:23 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:09:23 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:09:39 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:09:39 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:09:39 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:09:39 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:09:39 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:09:39 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:09:39 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:09:39 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:09:39 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:09:39 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:09:40 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:10:22 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:10:22 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:10:22 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:10:22 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:10:22 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:10:22 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:10:22 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:10:22 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:10:22 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:10:22 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:10:22 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:10:39 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:10:39 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:10:39 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:10:39 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:10:39 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:10:39 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:10:39 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:10:39 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:10:39 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:10:39 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:10:39 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:10:46 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:10:46 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:10:46 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:10:46 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:10:46 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:10:46 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:10:46 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:10:46 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:10:46 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:10:46 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:10:47 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:12:09 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:12:09 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:12:09 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:12:09 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:12:09 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:12:09 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:12:10 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:12:10 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:12:10 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:12:10 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:12:10 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:12:17 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:12:17 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:12:17 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:12:17 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:12:17 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:12:17 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:12:17 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:12:17 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:12:17 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:12:17 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:12:17 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:15:18 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:15:19 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:15:19 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:15:19 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:15:19 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:15:19 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:15:19 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:15:19 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:15:19 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:15:19 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:15:20 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:19:00 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:19:00 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:19:00 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:19:00 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:19:00 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:19:00 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:19:01 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:19:01 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:19:01 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:19:01 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:19:01 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:27:04 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:27:04 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:27:04 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:27:04 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:27:04 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:27:04 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:27:05 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:27:05 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:27:05 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:27:05 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:27:05 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:27:33 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:27:33 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:27:33 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:27:33 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:27:33 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:27:33 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:27:34 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:27:34 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:27:34 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:27:34 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:27:34 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:28:09 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:28:09 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:28:09 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:28:09 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:28:10 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:28:10 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:28:10 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:28:10 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:28:10 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:28:10 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:28:10 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:30:46 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:30:46 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:30:46 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:30:46 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:30:47 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:30:47 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:30:47 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:30:47 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:30:47 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:30:47 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:30:48 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:33:02 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:33:02 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:33:02 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:33:02 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:33:02 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:33:02 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:33:03 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:33:03 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:33:03 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:33:03 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:33:03 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:33:21 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:33:21 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:33:21 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:33:21 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:33:22 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:33:22 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:33:23 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:33:23 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:33:23 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:33:23 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:33:23 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:33:37 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:33:37 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:33:37 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:33:37 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:33:37 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:33:37 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:33:38 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:33:38 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:33:38 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:33:38 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:33:38 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:34:40 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:34:40 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:34:40 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:34:40 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:34:40 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:34:40 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:34:41 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:34:41 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:34:41 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:34:41 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:34:41 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:35:46 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:35:46 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:35:46 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:35:46 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:35:46 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:35:46 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:35:46 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:35:46 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:35:46 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:35:46 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:35:46 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:41:58 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:41:58 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:41:58 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:41:58 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:41:58 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:41:58 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:41:59 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:41:59 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:41:59 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:41:59 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:41:59 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:48:13 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:48:13 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:48:13 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:48:13 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:48:13 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:48:14 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:48:14 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:48:14 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:48:14 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:48:14 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:48:14 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:48:27 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:48:28 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:48:28 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:48:28 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:48:28 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:48:28 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:48:29 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:48:29 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:48:29 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:48:29 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:48:29 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:49:09 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:49:09 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:49:09 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:49:09 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:49:10 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:49:10 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:49:10 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:49:10 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:49:10 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:49:10 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:49:11 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:55:34 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:55:34 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:55:34 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:55:34 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:55:34 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:55:34 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:55:35 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:55:35 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:55:35 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:55:35 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:55:35 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 19:55:50 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 19:55:50 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 19:55:50 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 19:55:50 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 19:55:51 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 19:55:51 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 19:55:51 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 19:55:51 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 19:55:51 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 19:55:51 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 19:55:51 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:08:57 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:08:57 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:08:57 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:08:57 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:08:57 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:08:57 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:08:58 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:08:58 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:08:58 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:08:58 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:08:58 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:08:59 CEST 2015 DEBUG:null
+Sun May 24 20:08:59 CEST 2015 DEBUG:Game.update() failure - check the game code.
+Sun May 24 20:09:06 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:09:06 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:09:06 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:09:06 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:09:06 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:09:06 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:09:07 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:09:07 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:09:07 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:09:07 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:09:07 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:09:08 CEST 2015 DEBUG:null
+Sun May 24 20:09:08 CEST 2015 DEBUG:Game.update() failure - check the game code.
+Sun May 24 20:09:23 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:09:24 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:09:24 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:09:24 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:09:24 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:09:24 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:09:24 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:09:24 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:09:24 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:09:24 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:09:25 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:09:29 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:09:29 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:09:29 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:09:29 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:09:30 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:09:30 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:09:30 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:09:30 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:09:30 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:09:30 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:09:30 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:09:36 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:09:36 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:09:36 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:09:36 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:09:36 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:09:36 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:09:37 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:09:37 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:09:37 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:09:37 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:09:37 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:09:47 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:09:47 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:09:47 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:09:47 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:09:48 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:09:48 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:09:48 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:09:48 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:09:48 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:09:48 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:09:49 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:10:14 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:10:14 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:10:14 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:10:14 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:10:15 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:10:15 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:10:15 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:10:15 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:10:15 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:10:15 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:10:15 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:10:25 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:10:25 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:10:25 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:10:25 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:10:26 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:10:26 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:10:26 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:10:26 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:10:26 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:10:26 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:10:26 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:10:34 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:10:35 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:10:35 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:10:35 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:10:35 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:10:35 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:10:36 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:10:36 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:10:36 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:10:36 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:10:36 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:10:50 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:10:50 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:10:50 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:10:50 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:10:51 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:10:51 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:10:51 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:10:51 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:10:51 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:10:51 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:10:51 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:12:30 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:12:30 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:12:30 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:12:30 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:12:31 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:12:31 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:12:31 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:12:31 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:12:31 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:12:31 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:12:32 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:13:10 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:13:10 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:13:10 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:13:10 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:13:11 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:13:11 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:13:11 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:13:11 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:13:11 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:13:11 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:13:11 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:13:50 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:13:50 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:13:50 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:13:50 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:13:50 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:13:50 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:13:51 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:13:51 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:13:51 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:13:51 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:13:51 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:23:46 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:23:46 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:23:46 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:23:46 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:23:46 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:23:46 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:23:47 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:23:47 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:23:47 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:23:47 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:23:47 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:24:14 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:24:14 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:24:14 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:24:14 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:24:15 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:24:15 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:24:15 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:24:15 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:24:15 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:24:15 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:24:15 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:24:44 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:24:44 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:24:44 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:24:44 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:24:44 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:24:44 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:24:45 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:24:45 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:24:45 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:24:45 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:24:45 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:25:11 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:25:11 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:25:11 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:25:11 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:25:12 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:25:12 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:25:13 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:25:13 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:25:13 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:25:13 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:25:13 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:25:26 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:25:26 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:25:26 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:25:26 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:25:27 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:25:27 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:25:27 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:25:27 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:25:27 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:25:27 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:25:27 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:25:58 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:25:58 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:25:58 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:25:58 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:25:59 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:25:59 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:26:00 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:26:00 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:26:00 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:26:00 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:26:00 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:26:17 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:26:17 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:26:17 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:26:17 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:26:17 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:26:17 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:26:18 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:26:18 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:26:18 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:26:18 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:26:18 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:26:34 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:26:34 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:26:34 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:26:34 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:26:34 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:26:34 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:26:35 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:26:35 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:26:35 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:26:35 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:26:35 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:27:18 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:27:18 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:27:18 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:27:18 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:27:19 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:27:19 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:27:19 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:27:19 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:27:19 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:27:19 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:27:20 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:27:43 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:27:43 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:27:43 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:27:43 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:27:44 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:27:44 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:27:44 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:27:44 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:27:44 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:27:44 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:27:45 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:28:07 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:28:07 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:28:07 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:28:07 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:28:08 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:28:08 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:28:09 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:28:09 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:28:09 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:28:09 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:28:09 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:28:27 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:28:27 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:28:27 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:28:27 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:28:27 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:28:27 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:28:28 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:28:28 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:28:28 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:28:28 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:28:28 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:28:46 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:28:46 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:28:46 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:28:46 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:28:47 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:28:47 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:28:48 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:28:48 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:28:48 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:28:48 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:28:48 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:29:26 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:29:26 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:29:26 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:29:26 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:29:26 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:29:26 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:29:27 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:29:27 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:29:27 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:29:27 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:29:27 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:30:50 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:30:50 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:30:50 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:30:50 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:30:50 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:30:50 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:30:51 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:30:51 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:30:51 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:30:51 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:30:51 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:31:29 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:31:30 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:31:30 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:31:30 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:31:30 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:31:30 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:31:31 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:31:31 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:31:31 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:31:31 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:31:31 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 20:32:04 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 20:32:04 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 20:32:04 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 20:32:04 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 20:32:04 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 20:32:05 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 20:32:05 CEST 2015 DEBUG:Found 3 controllers
+Sun May 24 20:32:05 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 20:32:05 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 20:32:05 CEST 2015 DEBUG:2 : HID Interface
+Sun May 24 20:32:05 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 21:45:59 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 21:45:59 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 21:45:59 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 21:45:59 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 21:45:59 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 21:45:59 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 21:45:59 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 21:45:59 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 21:45:59 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 21:45:59 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 21:46:52 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 21:46:52 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 21:46:52 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 21:46:52 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 21:46:52 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 21:46:52 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 21:46:53 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 21:46:53 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 21:46:53 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 21:46:53 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 21:52:15 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 21:52:16 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 21:52:16 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 21:52:16 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 21:52:16 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 21:52:16 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 21:52:16 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 21:52:16 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 21:52:16 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 21:52:16 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 21:54:20 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 21:54:20 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 21:54:20 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 21:54:20 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 21:54:20 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 21:54:20 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 21:54:21 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 21:54:21 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 21:54:21 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 21:54:21 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 21:54:25 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 21:54:25 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 21:54:25 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 21:54:25 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 21:54:26 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 21:54:26 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 21:54:26 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 21:54:26 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 21:54:26 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 21:54:26 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 21:55:39 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 21:55:39 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 21:55:39 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 21:55:39 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 21:55:40 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 21:55:40 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 21:55:40 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 21:55:40 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 21:55:40 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 21:55:40 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 21:56:58 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 21:56:58 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 21:56:58 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 21:56:58 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 21:56:58 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 21:56:58 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 21:56:59 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 21:56:59 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 21:56:59 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 21:56:59 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 21:57:48 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 21:57:48 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 21:57:48 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 21:57:48 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 21:57:49 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 21:57:49 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 21:57:49 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 21:57:49 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 21:57:49 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 21:57:49 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 21:59:11 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 21:59:11 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 21:59:11 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 21:59:11 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 21:59:11 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 21:59:11 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 21:59:12 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 21:59:12 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 21:59:12 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 21:59:12 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 21:59:45 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 21:59:45 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 21:59:45 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 21:59:45 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 21:59:46 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 21:59:46 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 21:59:46 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 21:59:46 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 21:59:46 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 21:59:47 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:00:03 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:00:03 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:00:03 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:00:03 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:00:04 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:00:04 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:00:04 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:00:04 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:00:04 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:00:04 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:10:27 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:10:27 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:10:27 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:10:27 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:10:27 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:10:27 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:10:28 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:10:28 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:10:28 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:10:28 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:10:41 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:10:41 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:10:41 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:10:41 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:10:42 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:10:42 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:10:42 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:10:42 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:10:42 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:10:42 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:13:22 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:13:22 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:13:22 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:13:22 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:13:23 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:13:23 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:13:23 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:13:23 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:13:23 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:13:23 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:16:31 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:16:31 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:16:31 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:16:31 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:16:31 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:16:31 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:16:32 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:16:32 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:16:32 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:16:32 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:16:59 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:16:59 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:16:59 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:16:59 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:17:00 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:17:00 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:17:00 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:17:00 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:17:00 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:17:00 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:17:58 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:17:58 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:17:58 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:17:58 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:17:58 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:17:59 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:17:59 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:17:59 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:17:59 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:17:59 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:18:34 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:18:34 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:18:34 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:18:34 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:18:34 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:18:35 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:18:35 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:18:35 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:18:35 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:18:35 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:18:41 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:18:42 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:18:42 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:18:42 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:18:42 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:18:42 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:18:43 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:18:43 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:18:43 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:18:43 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:18:55 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:18:55 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:18:55 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:18:55 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:18:55 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:18:55 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:18:56 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:18:56 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:18:56 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:18:56 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:19:28 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:19:28 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:19:28 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:19:28 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:19:28 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:19:28 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:19:29 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:19:29 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:19:29 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:19:29 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:20:12 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:20:12 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:20:12 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:20:12 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:20:13 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:20:13 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:20:13 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:20:13 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:20:13 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:20:13 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:21:11 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:21:11 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:21:11 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:21:11 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:21:12 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:21:12 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:21:12 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:21:12 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:21:12 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:21:13 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:22:38 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:22:38 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:22:38 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:22:38 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:22:38 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:22:38 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:22:39 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:22:39 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:22:39 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:22:39 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:27:37 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:27:37 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:27:37 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:27:37 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:27:38 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:27:38 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:27:38 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:27:38 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:27:38 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:27:38 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:29:25 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:29:25 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:29:25 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:29:25 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:29:25 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:29:25 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:29:26 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:29:26 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:29:26 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:29:26 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:30:16 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:30:17 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:30:17 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:30:17 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:30:17 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:30:17 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:30:18 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:30:18 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:30:18 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:30:18 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:31:35 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:31:35 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:31:35 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:31:35 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:31:35 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:31:35 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:31:36 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:31:36 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:31:36 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:31:36 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:37:30 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:37:30 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:37:30 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:37:30 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:37:30 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:37:30 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:37:31 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:37:31 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:37:31 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:37:31 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:39:03 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:39:03 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:39:03 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:39:03 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:39:03 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:39:03 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:39:04 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:39:04 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:39:04 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:39:04 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:39:28 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:39:28 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:39:28 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:39:28 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:39:29 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:39:29 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:39:29 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:39:29 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:39:29 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:39:29 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:41:14 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:41:14 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:41:14 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:41:14 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:41:15 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:41:15 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:41:15 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:41:15 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:41:15 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:41:15 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:41:39 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:41:39 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:41:39 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:41:39 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:41:39 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:41:39 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:41:40 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:41:40 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:41:40 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:41:40 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:42:06 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:42:06 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:42:06 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:42:06 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:42:07 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:42:07 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:42:07 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:42:07 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:42:07 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:42:07 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:43:21 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:43:21 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:43:21 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:43:21 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:43:21 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:43:21 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:43:22 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:43:22 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:43:22 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:43:22 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:45:24 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:45:24 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:45:24 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:45:24 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:45:24 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:45:24 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:45:25 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:45:25 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:45:25 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:45:25 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:46:48 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:46:48 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:46:48 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:46:48 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:46:49 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:46:49 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:46:49 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:46:49 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:46:49 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:46:49 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:47:21 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:47:21 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:47:21 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:47:21 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:47:22 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:47:22 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:47:22 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:47:22 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:47:22 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:47:22 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:48:30 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:48:30 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:48:30 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:48:30 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:48:30 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:48:30 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:48:31 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:48:31 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:48:31 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:48:31 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:51:07 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:51:07 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:51:07 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:51:07 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:51:08 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:51:08 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:51:08 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:51:08 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:51:08 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:51:08 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:52:03 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:52:03 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:52:03 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:52:03 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:52:04 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:52:04 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:52:04 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:52:04 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:52:04 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:52:04 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:53:59 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:53:59 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:53:59 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:53:59 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:54:00 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:54:00 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:54:00 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:54:00 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:54:00 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:54:00 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:54:13 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:54:13 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:54:13 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:54:13 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:54:13 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:54:13 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:54:14 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:54:14 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:54:14 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:54:14 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:54:46 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:54:46 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:54:46 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:54:46 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:54:46 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:54:46 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:54:47 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:54:47 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:54:47 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:54:47 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:56:06 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:56:06 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:56:06 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:56:06 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:56:07 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:56:07 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:56:07 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:56:07 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:56:07 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:56:07 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:57:04 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:57:04 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:57:04 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:57:04 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:57:05 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:57:05 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:57:05 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:57:05 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:57:05 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:57:05 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:59:04 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:59:04 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:59:04 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:59:04 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:59:04 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:59:05 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:59:05 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:59:05 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:59:05 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:59:05 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 22:59:56 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 22:59:56 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 22:59:56 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 22:59:56 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 22:59:57 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 22:59:57 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 22:59:57 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 22:59:57 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 22:59:57 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 22:59:57 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:00:25 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:00:25 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:00:25 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:00:25 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:00:26 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:00:26 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:00:26 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:00:26 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:00:26 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:00:26 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:06:03 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:06:03 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:06:03 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:06:03 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:06:04 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:06:04 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:06:04 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:06:04 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:06:04 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:06:04 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:09:46 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:09:46 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:09:46 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:09:46 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:09:46 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:09:47 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:09:47 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:09:47 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:09:47 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:09:47 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:10:21 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:10:21 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:10:21 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:10:21 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:10:22 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:10:22 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:10:22 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:10:22 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:10:22 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:10:22 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:11:21 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:11:21 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:11:21 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:11:21 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:11:22 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:11:22 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:11:22 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:11:22 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:11:22 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:11:22 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:20:38 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:20:39 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:20:39 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:20:39 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:20:39 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:20:39 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:20:39 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:20:39 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:20:39 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:20:40 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:21:18 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:21:18 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:21:18 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:21:18 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:21:19 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:21:19 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:21:19 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:21:19 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:21:19 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:21:19 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:22:04 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:22:04 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:22:04 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:22:04 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:22:05 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:22:05 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:22:05 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:22:05 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:22:05 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:22:05 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:23:00 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:23:00 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:23:00 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:23:00 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:23:01 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:23:01 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:23:01 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:23:01 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:23:01 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:23:01 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:23:31 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:23:31 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:23:31 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:23:31 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:23:32 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:23:32 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:23:32 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:23:32 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:23:32 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:23:32 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:24:38 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:24:38 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:24:38 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:24:38 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:24:39 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:24:39 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:24:39 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:24:39 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:24:39 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:24:39 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:27:29 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:27:29 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:27:29 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:27:29 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:27:30 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:27:30 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:27:30 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:27:30 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:27:30 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:27:30 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:29:40 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:29:40 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:29:40 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:29:40 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:29:40 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:29:40 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:29:41 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:29:41 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:29:41 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:29:41 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:30:19 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:30:19 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:30:19 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:30:19 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:30:19 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:30:19 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:30:20 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:30:20 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:30:20 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:30:20 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:32:41 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:32:41 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:32:41 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:32:41 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:32:42 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:32:42 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:32:42 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:32:42 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:32:42 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:32:43 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:36:10 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:36:10 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:36:10 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:36:10 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:36:11 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:36:11 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:36:11 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:36:11 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:36:11 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:36:11 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:37:19 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:37:19 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:37:19 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:37:19 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:37:20 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:37:20 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:37:20 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:37:20 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:37:20 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:37:20 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:41:32 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:41:32 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:41:32 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:41:32 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:41:32 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:41:33 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:41:33 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:41:33 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:41:33 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:41:33 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:43:01 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:43:01 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:43:01 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:43:01 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:43:02 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:43:02 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:43:02 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:43:02 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:43:02 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:43:03 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:43:09 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:43:09 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:43:09 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:43:09 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:43:09 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:43:10 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:43:10 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:43:10 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:43:10 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:43:10 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:47:17 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:47:17 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:47:17 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:47:17 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:47:18 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:47:18 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:47:18 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:47:18 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:47:18 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:47:19 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:49:02 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:49:02 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:49:02 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:49:02 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:49:03 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:49:03 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:49:03 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:49:03 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:49:03 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:49:03 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:51:37 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:51:37 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:51:37 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:51:37 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:51:38 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:51:38 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:51:38 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:51:38 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:51:38 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:51:38 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:56:37 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:56:37 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:56:37 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:56:37 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:56:38 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:56:38 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:56:38 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:56:38 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:56:38 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:56:38 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:56:42 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:56:42 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:56:42 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:56:42 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:56:43 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:56:43 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:56:43 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:56:43 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:56:43 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:56:44 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:58:06 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:58:06 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:58:06 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:58:06 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:58:06 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:58:06 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:58:07 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:58:07 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:58:07 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:58:07 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:58:20 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:58:20 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:58:20 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:58:20 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:58:21 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:58:21 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:58:21 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:58:21 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:58:21 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:58:21 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:58:55 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:58:55 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:58:55 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:58:55 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:58:56 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:58:56 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:58:56 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:58:56 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:58:56 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:58:57 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:59:35 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:59:35 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:59:35 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:59:35 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:59:36 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:59:36 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:59:36 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:59:36 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:59:36 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:59:36 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Sun May 24 23:59:40 CEST 2015 DEBUG:Slick Build #237
+Sun May 24 23:59:40 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Sun May 24 23:59:40 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Sun May 24 23:59:40 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Sun May 24 23:59:40 CEST 2015 DEBUG:Starting display 1056x640
+Sun May 24 23:59:40 CEST 2015 DEBUG:Use Java PNG Loader = true
+Sun May 24 23:59:41 CEST 2015 DEBUG:Found 2 controllers
+Sun May 24 23:59:41 CEST 2015 DEBUG:0 : USB Receiver
+Sun May 24 23:59:41 CEST 2015 DEBUG:1 : USB Receiver
+Sun May 24 23:59:41 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Mon May 25 00:04:44 CEST 2015 DEBUG:Slick Build #237
+Mon May 25 00:04:44 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Mon May 25 00:04:44 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Mon May 25 00:04:44 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Mon May 25 00:04:44 CEST 2015 DEBUG:Starting display 1056x640
+Mon May 25 00:04:44 CEST 2015 DEBUG:Use Java PNG Loader = true
+Mon May 25 00:04:44 CEST 2015 DEBUG:Found 2 controllers
+Mon May 25 00:04:44 CEST 2015 DEBUG:0 : USB Receiver
+Mon May 25 00:04:44 CEST 2015 DEBUG:1 : USB Receiver
+Mon May 25 00:04:45 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Mon May 25 00:04:48 CEST 2015 DEBUG:Slick Build #237
+Mon May 25 00:04:48 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Mon May 25 00:04:48 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Mon May 25 00:04:48 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Mon May 25 00:04:49 CEST 2015 DEBUG:Starting display 1056x640
+Mon May 25 00:04:49 CEST 2015 DEBUG:Use Java PNG Loader = true
+Mon May 25 00:04:49 CEST 2015 DEBUG:Found 2 controllers
+Mon May 25 00:04:49 CEST 2015 DEBUG:0 : USB Receiver
+Mon May 25 00:04:49 CEST 2015 DEBUG:1 : USB Receiver
+Mon May 25 00:04:50 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Mon May 25 00:05:51 CEST 2015 DEBUG:Slick Build #237
+Mon May 25 00:05:51 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Mon May 25 00:05:51 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Mon May 25 00:05:51 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Mon May 25 00:05:52 CEST 2015 DEBUG:Starting display 1056x640
+Mon May 25 00:05:52 CEST 2015 DEBUG:Use Java PNG Loader = true
+Mon May 25 00:05:52 CEST 2015 DEBUG:Found 2 controllers
+Mon May 25 00:05:52 CEST 2015 DEBUG:0 : USB Receiver
+Mon May 25 00:05:52 CEST 2015 DEBUG:1 : USB Receiver
+Mon May 25 00:05:53 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
