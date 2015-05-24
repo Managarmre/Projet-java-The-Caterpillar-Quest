@@ -1,5 +1,7 @@
 package elementsGraphiques;
 
+import java.util.Iterator;
+
 import jeu.Carte;
 import jeu.Jeu;
 import jeu.PartieException;
@@ -73,9 +75,7 @@ public class Personnage extends ElementDeplacable {
 		
 		vx = (float) (delta * 0.015 * this.speed);
 		vy = (float) (delta * 0.05 * this.speed );
-		
-		
-		
+
 		ay = (float) (vy * (delta/1000.0) / tempsSaut);
 
 		
@@ -113,7 +113,7 @@ public class Personnage extends ElementDeplacable {
 			this.setPositionX(this.getPositionX() + dx);
 			dx = 0;
 		} 
-		//
+
 		
 		if(! jumping){ //si le joueur est au sol
 
@@ -152,6 +152,7 @@ public class Personnage extends ElementDeplacable {
 		if( this.getPositionY() > 32*20 ){
 
 			throw new PartiePerdueException();
+
 		}
 		
 		// les éléments ramassables peuvent disparaître, on utilise une boucle permettant de supprimer les éléments pendant le parcours
@@ -174,7 +175,9 @@ public class Personnage extends ElementDeplacable {
 				
 		for( Ennemi ennemi : carte.getEnnemis() ) {	
 			//if( this.estEnCollisionAvec(ennemi) ) throw new PartiePerdueException();
+
 		}
+				
 					
 		ElementRamassable elementRamassable = carte.getElementRamassableEnCollisionAvecElement(this); 
 		if( elementRamassable != null ) {
@@ -182,10 +185,12 @@ public class Personnage extends ElementDeplacable {
 			carte.supprimerElementRamassable(elementRamassable);
 		}
 		
+		/*
 		if( carte.elementEnCollisionAvecUnElementFixe(this) ) {
 			jumping = false; // on dit que le personnage est au sol
 			estEnCollision = true;
 		}
+		*/
 		
 		// le personnage touche une porte, le joueur gagne la partie
 		//if( carte.elementEnCollisionAvecUnePortes(this) ) throw new PartieGagneeException();

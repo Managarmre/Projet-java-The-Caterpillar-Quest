@@ -307,7 +307,7 @@ public class Carte {
 	 * @param elementAVerifier L'élément à vérifier.
 	 * @return Vrai si une porte est en collision avec l'élément à vérifier, faux s'il n'y en a pas.
 	 */
-	public boolean elementEnCollisionAvecUnePortes( Element elementAVerifier  ) {
+	public boolean elementEnCollisionAvecUnePorte( Element elementAVerifier  ) {
 		return this.getPorteEnCollisionAvecElement(elementAVerifier) != null;
 	}
 	
@@ -316,10 +316,14 @@ public class Carte {
 	 * @param elementAVerifier L'élément à vérifier.
 	 * @return Vrai si un élément ramassable est en collision avec l'élément à vérifier, faux s'il n'y en a pas.
 	 */
-	public boolean elementEnCollisionAvecUnElementsRamassables( Element elementAVerifier  ) {
+	public boolean elementEnCollisionAvecUnElementRamassable( Element elementAVerifier  ) {
 		return this.getElementRamassableEnCollisionAvecElement(elementAVerifier) != null;
 	}
 
+	
+	public ArrayList<ElementFixe> getElementsFixes() {
+		return this.elementsFixes;
+	}
 	
 	
 }
