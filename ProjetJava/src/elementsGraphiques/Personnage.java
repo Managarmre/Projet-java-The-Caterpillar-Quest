@@ -21,7 +21,7 @@ import org.newdawn.slick.geom.Rectangle;
 
 /**
  * @author Cyril
- *
+ * Représente le personnage jouable à l'écran
  */
 public class Personnage extends ElementDeplacable {
 	
@@ -38,7 +38,7 @@ public class Personnage extends ElementDeplacable {
 	private float ay = 0.0f; // valeur de l'accélération
 	private float dx = 0.0f; // valeur du déplacement du personnage en X
 	private float dy = 0.0f; // valeur du déplacement du personnage en Y
-	private double tempsSaut = 0.7;
+	private double tempsSaut = 0.5;
 	
 	/**
 	 * @param x La position en x du personnage
@@ -82,27 +82,25 @@ public class Personnage extends ElementDeplacable {
 			
 			if(isMoving){ // on autorise le personnage à se déplacer une seule fois
 				dx = vx; // déplacement à droite
-				if(jumping){ // si le personnage est en l'air (pour se déplacer dans les airs)
-					dy -= ay;
-				}	
-				
-				//if( this.isCollisionOnTop)
-				//this.setPositionX(this.getPositionX() + dx);
 			}				
 		}
 		else if(direction == Direction.GAUCHE){
 			
 			if(isMoving){
 				dx = -vx;// déplacement à gauche
-				if(jumping && ! isCollisionOnTop){ 
-					dy -= ay;
-				}
-
 			}				
 		}
 		else 
 			dx = 0;
 
+		if(isMoving){
+			
+			if(jumping && ! isCollisionOnTop){  // on autorise le déplacement pendant le saut
+				dy -= ay;
+			}
+
+		}
+		
 		if( this.isCollisionOnTop && isMoving) // si on se déplace sur une plateforme
 			this.setPositionX(this.getPositionX() + dx);
 		
@@ -125,17 +123,14 @@ public class Personnage extends ElementDeplacable {
 
 					this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
 				}
-				
-				
 			}else{
-				//dy = 0; // on ne prend pas en compte le saut car le personnage est déjà en l'air
+				dy = 0; // on ne prend pas en compte le saut car le personnage est déjà en l'air
 			}
 			
 		}else{ // le personnage est en l'air
 			dy -= ay;	// on applique la gravité		
 			this.setPositionY( this.getPositionY() - dy);
 		}
-
 		
 		//this.setPositionY(this.getPositionY() - dy);
 		
@@ -209,7 +204,7 @@ public class Personnage extends ElementDeplacable {
 		for( ElementFixe plateforme : carte.getElementsFixes() ) {	
 			if( this.estEnCollisionAvec(plateforme) ){
 				
-				if(this.getPositionY() + this.getHauteur() <= plateforme.getPositionY() + 15){ // collision en haut
+				if(this.getPositionY() - plateforme.getPositionY() <= 0.1){ // collision en haut
 					this.setPositionY(plateforme.getPositionY() - this.getHauteur());
 					isCollisionOnTop = true;
 					jumping = false;
