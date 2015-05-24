@@ -1,5 +1,13 @@
 package app;
 
+/** 
+ * Classe contenant le point d'entrée du jeu. <br/>
+ * Carte par défaut : "default.map" <br/>
+ * Fichier log Slick2d : "TheCaterpillarQuest.log" <br/>
+ * Fichier des scores : "scores.save"
+ * @author Maxime Pineau
+ */
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

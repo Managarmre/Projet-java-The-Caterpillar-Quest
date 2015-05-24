@@ -17,7 +17,7 @@ public abstract class Ennemi extends ElementDeplacable {
 	private Point depart, arrivee;	
 
 	/**
-	 * Crée un nouvel ennemi.
+	 * Créé un nouvel ennemi.
 	 * @param x La position x de l'ennemi.
 	 * @param y La position y de l'ennemi.
 	 * @param hauteur La hauteur de l'ennemi.
@@ -62,7 +62,7 @@ public abstract class Ennemi extends ElementDeplacable {
 
 	/**
 	 * Retourne le point d'arrivée de l'ennemi.
-	 * @return Le point d'arrivéé.
+	 * @return Le point d'arrivée.
 	 */
 	public Point getArrivee() {
 		return arrivee;

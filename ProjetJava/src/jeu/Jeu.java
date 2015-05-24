@@ -13,7 +13,7 @@ import app.Score;
 /**
  * Représente le jeu joué par le joueur.
  * Cette classe contient la caméra, la carte, et l'image de fond.
- * Cette classe devra être passé en paramètre d'un AppGameContainer, afin d'afficher à l'écran la fenêtre du jeu.
+ * Cette classe devra être passée en paramètre d'un AppGameContainer, afin d'afficher à l'écran la fenêtre du jeu.
  * 
  * @author Maxime Pineau
  * @see <a href="http://slick.ninjacave.com/javadoc/org/newdawn/slick/AppGameContainer.html">AppGameContainer</a>
@@ -44,7 +44,7 @@ public class Jeu extends BasicGame {
 	private long tempsLancement;
 	
 	/**
-	 * Crée un nouveau jeu. 
+	 * Créé un nouveau jeu. 
 	 * @param nomJoueur Le nom du joueur jouant la partie.
 	 */
 	public Jeu( String nomJoueur ) {
@@ -58,7 +58,7 @@ public class Jeu extends BasicGame {
 	
 	/**
 	 * Initialise le jeu. 
-	 * Cette méthode est appelé avant le lancement de la boucle principale.
+	 * Cette méthode est appelée avant le lancement de la boucle principale.
 	 * C'est également dans cette méthode que l'on ajoute l'écouteur du claver, permettant ainsi de bouger le personnage.
 	 * @see <a href="http://slick.ninjacave.com/javadoc/org/newdawn/slick/BasicGame.html#init(org.newdawn.slick.GameContainer)">BasicGame.init()</a>
 	 */

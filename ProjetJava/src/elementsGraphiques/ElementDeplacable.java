@@ -13,7 +13,7 @@ import org.newdawn.slick.geom.Shape;
 
 /**
  * Représente un élément graphique pouvant se déplacer.
- * Cet élément est animé, cette animation sera représenté dans un fichier image appelé sprite.
+ * Cet élément est animé, cette animation sera représentée dans un fichier image appelé sprite.
  * 
  * @author Cyril Caron
  * @author Maxime Pineau
@@ -28,7 +28,7 @@ public abstract class ElementDeplacable extends Element {
 	
 	/**
 	 * Le fichier sprite chargé en mémoire. Cet objet contient également les dimensions de chaque image sur le fichier sprite.
-	 * Cet objet devra être initialiiser dans la méthode initialiser() à redéfinir.
+	 * Cet objet devra être initialiser dans la méthode initialiser() à redéfinir.
 	 */
 	protected SpriteSheet sprite;
 		
@@ -41,7 +41,7 @@ public abstract class ElementDeplacable extends Element {
 	
 	
 	/**
-	 * Crée un nouvel élément déplacable.
+	 * Créé un nouvel élément déplacable.
 	 * @param x La position x de l'élément déplaçable.
 	 * @param y La position y de l'élément déplaçable.
 	 * @param hauteur La hauteur de l'élément déplaçable.
@@ -68,8 +68,8 @@ public abstract class ElementDeplacable extends Element {
 	
 	/**
 	 * Charge une animation contenue dans un fichier sprite à une certaine ligne.
-	 * Les images de l'animations seront celles contenues entres les numéros des colonnes données en paramètres.
-	 * Cet méthode est à appelé lors de l'initialisation de l'élément (redéfinition de la méthode initialisation() ).
+	 * Les images de l'animation seront celles contenues entres les numéros des colonnes données en paramètres.
+	 * Cette méthode est à appeler lors de l'initialisation de l'élément (redéfinition de la méthode initialisation() ).
 	 * @param numeroLigne Le numéro de la ligne contenant les images de l'animation.
 	 * @param debutColonne Le numéro de la première colonne contenant les images de l'animation.
 	 * @param finColonne Le numéro de la dernière colonne contenant les images de l'animation.

@@ -16,7 +16,7 @@ import org.newdawn.slick.geom.Vector2f;
 /**
  * Représente une guêpe.
  * Le sprite de la guêpe se trouve dans le dossier './sprites/guepe.png'.
- * La guêpe effectuera des aller-retour entre sa position de départ et sa position d'arrivée. 
+ * La guêpe effectuera des allers-retours entre sa position de départ et sa position d'arrivée. 
  * La guêpe ne peut pas traverser les éléments fixes de la carte, elle fera donc demi-tour si le cas se présente.
  * 
  * @author Maxime Pineau
@@ -27,7 +27,7 @@ public class Guepe extends Ennemi {
 	/**
 	 * La direction vers laquelle la guêpe se déplace.
 	 * La valeur de cette direction permet de récupérer l'animation correspondante, 
-	 * car elle correspond à l'indice de cet animation dans le tableau d'animations.
+	 * car elle correspond à l'indice de cette animation dans le tableau d'animations.
 	 * @author Maxime
 	 *
 	 */
@@ -42,7 +42,7 @@ public class Guepe extends Ennemi {
 		}
 		
 		/**
-		 * @return L'indice correspondant à l'animation stocké dans le tableau d'animations.
+		 * @return L'indice correspondant à l'animation stockée dans le tableau d'animations.
 		 */
 		public int getIndiceAnimation() {
 			return this.indiceAnimation;
@@ -53,9 +53,9 @@ public class Guepe extends Ennemi {
 	private Orientation orientation;
 		
 	/**
-	 * Crée une nouvelle guêpe, se déplaçant entre le point de départ et le point d'arrivée.
+	 * Créé une nouvelle guêpe, se déplaçant entre le point de départ et le point d'arrivée.
 	 * La position initiale peut être différente du point de départ.
-	 * La guêpe fera des aller-retour entre le point de départ et le point d'arrivée.
+	 * La guêpe fera des allers-retours entre le point de départ et le point d'arrivée.
 	 * @param x La position initiale x de la guêpe.
 	 * @param y La position initiale y de la guêpe.
 	 * @param depart Le point de départ de la guêpe.
@@ -80,7 +80,7 @@ public class Guepe extends Ennemi {
 	}
 
 	/** 
-	 * Crée une nouvelle guêpe, se déplaçant entre le point de départ et le point d'arrivée.
+	 * Créé une nouvelle guêpe, se déplaçant entre le point de départ et le point d'arrivée.
 	 * La position initiale est le point de départ.
 	 * @param xDepart La position x de départ de la guêpe.
 	 * @param yDepart La position y de départ de la guêpe.
@@ -128,7 +128,7 @@ public class Guepe extends Ennemi {
 		
 		if(collision) this.setPosition( oldX, oldY );
 		
-		// si la guêpe est arrivée à destination (sur le point d'arrivé)
+		// si la guêpe est arrivée à destination (sur le point d'arrivée)
 		if( collision || this.estArriveDestination() ) this.faireDemiTour();
 		
 	}
@@ -139,7 +139,7 @@ public class Guepe extends Ennemi {
 	 */
 	private void faireDemiTour() {
 		
-		// on intervertie les points de départ et d'arrivé
+		// on intervertit les points de départ et d'arrivée
 		Point tmp = this.getArrivee();
 		this.setArrivee( this.getDepart() );
 		this.setDepart(tmp);

@@ -15,16 +15,15 @@ import org.newdawn.slick.geom.Polygon;
 public class Cerise extends ElementRamassable {
 
 	/**
-	 * La suite de pionts (x,y) permettant de contruire la hitbox de la cerise.
+	 * La suite de points (x,y) permettant de contruire la hitbox de la cerise.
 	 */
 	public static float[] points = { 6, 20, 23, 7, 23, 25 }; 	// construit un triangle moullant la forme de la cerise.
 	
 	/**
-	 * Crée une nouvelle cerise. La cerise vaut 1 point.
-	 * L'image et la forme de la hitbox sont connus.
+	 * Créé une nouvelle cerise. La cerise vaut 1 point.
+	 * L'image et la forme de la hitbox sont connues.
 	 * @param x La position x de la cerise.
 	 * @param y La position y de la cerise.
-	 * @author Maxime Pineau
 	 */
 	public Cerise( int x, int y ) {
 		super( x, y, 32, 32, new Polygon( Cerise.points.clone() ), "./sprites/cerise.png", 1 );

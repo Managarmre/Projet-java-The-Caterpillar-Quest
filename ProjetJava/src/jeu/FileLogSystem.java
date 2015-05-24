@@ -20,7 +20,7 @@ public class FileLogSystem implements LogSystem {
 	private String cheminFichierLog;; 
 	
 	/**
-	 * Crée une instance de FileLogSystem qui redirigera les logs de Slick2D vers le fichier 'cheminFichierLog'.
+	 * Créé une instance de FileLogSystem qui redirigera les logs de Slick2D vers le fichier 'cheminFichierLog'.
 	 * @param cheminFichierLog Le chemin du fichier vers lequel les logs seront redirigés.
 	 */
 	public FileLogSystem( String cheminFichierLog ) {
@@ -28,7 +28,7 @@ public class FileLogSystem implements LogSystem {
 	}
 	
 	/**
-	 * Crée une instance de FileLogSystem qui redirigera les logs de Slick2D vers le fichier 'TheQuaterpillarQuest.log'.
+	 * Créé une instance de FileLogSystem qui redirigera les logs de Slick2D vers le fichier 'TheQuaterpillarQuest.log'.
 	 */
 	public FileLogSystem() {
 		this("TheCaterpillarQuest.log");

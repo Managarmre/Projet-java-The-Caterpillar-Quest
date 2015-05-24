@@ -14,7 +14,7 @@ import org.newdawn.slick.geom.Rectangle;
 public class Porte extends ElementFixe {
 
 	/**
-	 * Crée une nouvelle porte
+	 * Créé une nouvelle porte
 	 * @param x La position x de la porte.
 	 * @param y La position y de la porte.
 	 */

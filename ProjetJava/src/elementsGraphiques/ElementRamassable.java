@@ -5,7 +5,7 @@ import org.newdawn.slick.geom.Shape;
 
 /**
  * Représente un élément ramassable par le personnage du joueur.
- * Cet élément vaut un certain nombre de points qui seront attribué au joueur lorsque cet élément est ramassé.
+ * Cet élément vaut un certain nombre de points qui seront attribués au joueur lorsque cet élément est ramassé.
  * 
  * @author Cyril Caron
  * @author Maxime Pineau
@@ -16,7 +16,7 @@ public abstract class ElementRamassable extends ElementFixe {
 	private int nbPoints;
 	
 	/**
-	 * Crée un nouvel élément ramassable.
+	 * Créé un nouvel élément ramassable.
 	 * @param x La position x de l'élément ramassable.
 	 * @param y La position y de l'élément ramassable.
 	 * @param hauteur La hauteur de l'élément ramassable.

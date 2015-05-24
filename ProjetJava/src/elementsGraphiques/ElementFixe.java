@@ -9,7 +9,7 @@ import org.newdawn.slick.geom.Shape;
 
 /**
  * Représente un élément fixe  non déplaçable sur la fenêtre de jeu.
- * Cet élément sera représenté par une image non animé.
+ * Cet élément sera représenté par une image non animée.
  * 
  * @author Cyril Caron
  * @author Maxime Pineau
@@ -29,7 +29,7 @@ public abstract class ElementFixe extends Element {
 	protected Image image;
 	
 	/**
-	 * Crée un nouvel élément fixe.
+	 * Créé un nouvel élément fixe.
 	 * @param x La position x de l'élément fixe.
 	 * @param y La position y de l'élément fixe.
 	 * @param hauteur La hauteur de l'élément fixe.
