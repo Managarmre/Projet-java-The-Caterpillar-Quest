@@ -156,7 +156,7 @@ public class Personnage extends ElementDeplacable {
 		}
 		
 		// les éléments ramassables peuvent disparaître, on utilise une boucle permettant de supprimer les éléments pendant le parcours
-		for( Iterator<ElementRamassable> iterateur = carte.getElementsRamassables().iterator(); iterateur.hasNext(); ) {
+		/*for( Iterator<ElementRamassable> iterateur = carte.getElementsRamassables().iterator(); iterateur.hasNext(); ) {
 			
 			ElementRamassable ramassable = iterateur.next();
 			
@@ -183,7 +183,7 @@ public class Personnage extends ElementDeplacable {
 		if( elementRamassable != null ) {
 			this.nbPoints += elementRamassable.getNbPoints();
 			carte.supprimerElementRamassable(elementRamassable);
-		}
+		}*/
 		
 		/*
 		if( carte.elementEnCollisionAvecUnElementFixe(this) ) {

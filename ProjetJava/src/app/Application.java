@@ -30,7 +30,7 @@ public class Application {
 			app.setDisplayMode( Jeu.LARGEUR,  Jeu.HAUTEUR,  false ); 	// false : ne pas mettre en plein écran
 			app.setShowFPS(false);		// n'affiche pas le "FPS" sur la fenêtre
 			app.setForceExit(false);	// ne pas fermer automatiquement le programme après fermeture de la fenêtre
-			
+			app.setTargetFrameRate(60);
 			app.start();
 						
 		} 
