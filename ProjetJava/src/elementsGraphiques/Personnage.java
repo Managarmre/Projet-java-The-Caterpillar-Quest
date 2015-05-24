@@ -1,5 +1,7 @@
 package elementsGraphiques;
 
+import java.util.Iterator;
+
 import jeu.Carte;
 import jeu.Jeu;
 import jeu.PartieException;
@@ -17,36 +19,37 @@ import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Rectangle;
 
 
-
-
+/**
+ * @author Cyril
+ *
+ */
 public class Personnage extends ElementDeplacable {
 	
 	private int nbPoints = 0;
-	private boolean  isMoving = false, jumping = false, estEnCollision = false;
+	private boolean  isMoving = false, jumping = false, isCollisionOnTop = false;;
 
 	private Direction direction;
 
 	
 	private float speed = 10f;
 	
-
-
-	private float vx = 0.0f;
-	private float vy = 0.0f; // A toi de choisir constante1 en faisant des essais pour que le mouvement te convienne
-	private float ay = 0.0f; // Même commentaire que pour constante1
-	private float dx = 0.0f;
-	private float dy = 0.0f;
-
+	private float vx = 0.0f; // vitesse en x
+	private float vy = 0.0f; // vitesse en y
+	private float ay = 0.0f; // valeur de l'accélération
+	private float dx = 0.0f; // valeur du déplacement du personnage en X
+	private float dy = 0.0f; // valeur du déplacement du personnage en Y
+	private double tempsSaut = 0.7;
 	
+	/**
+	 * @param x La position en x du personnage
+	 * @param y La position en y du personnage
+	 */
 	public Personnage( int x, int y ) {
 		super( x, y, 32, 32, new Rectangle(0, 0, 32, 32), "./sprites/personnage.png" );	
 		this.direction = Direction.IMMOBILE;
 		this.animations = new Animation[6];
 	}
 	
-	public void gestionCollision(){
-		
-	}
 	
 	public Direction getDirection() {
 		return direction;
@@ -65,7 +68,6 @@ public class Personnage extends ElementDeplacable {
 		
 	}
 	
-	
 	@Override
 	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException, PartieException {
 		
@@ -74,47 +76,84 @@ public class Personnage extends ElementDeplacable {
 		vx = (float) (delta * 0.015 * this.speed);
 		vy = (float) (delta * 0.05 * this.speed );
 		
-		ay = (float) (vy * (delta/1000.0) / 0.5);
+		ay = (float) (vy * (delta/1000.0) / tempsSaut);
 		
 		if(direction == Direction.DROITE){
 			
-			if(isMoving){
-				dx = vx;
-				if(jumping){
+			if(isMoving){ // on autorise le personnage à se déplacer une seule fois
+				dx = vx; // déplacement à droite
+				if(jumping){ // si le personnage est en l'air (pour se déplacer dans les airs)
 					dy -= ay;
-				}				
-				this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
+				}	
+				
+				//if( this.isCollisionOnTop)
+				//this.setPositionX(this.getPositionX() + dx);
 			}				
 		}
 		else if(direction == Direction.GAUCHE){
 			
 			if(isMoving){
-				dx = -vx;
+				dx = -vx;// déplacement à gauche
 				if(jumping){
 					dy -= ay;
 				}
-				this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
+				//if( this.isCollisionOnTop)
+				//this.setPositionX(this.getPositionX()  + dx);
 			}				
 		}
 		else 
 			dx = 0;
+
+		if( this.isCollisionOnTop && isMoving) // si on se déplace sur une plateforme
+			this.setPositionX(this.getPositionX() + dx);
+		
+		if(this.estEnCollisionAvecPlateforme(carte) && ! isCollisionOnTop){ // on ignore les collisions avec le haut de la plateforme
+			dx = -dx;
+			this.setPositionX(this.getPositionX() + dx);
+			dx = 0;
+		} 
+		//
+		
 		
 		if(! jumping){ //si le joueur est au sol
 
-			if(direction == Direction.HAUT && isMoving){
-				dy = vy;
-				dx = vx;
-				this.jumping = true; // le personnage va sauter
-				isMoving = false;
-				this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
+			if(direction == Direction.HAUT){
+				
+				if( isMoving){
+					dy = vy;
+					dx = vx;
+					this.jumping = true; // le personnage va sauter
+					isMoving = false;
+					this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
+				}
+				
+				
 			}else{
 				dy = 0; // on ne prend pas en compte le saut car le personnage est déjà en l'air
 			}
 			
 		}else{ // le personnage est en l'air
-				dy -= ay;
-				this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
+			dy -= ay;	// on applique la gravité		
+			this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
 		}
+
+		
+		//this.setPositionY(this.getPositionY() - dy);
+		
+		if(this.estEnCollisionAvecPlateforme(carte) && ! isCollisionOnTop){
+			dy = -dy;
+			this.setPositionY(this.getPositionY() + dy);
+			dy = 0;
+		}
+
+			//this.setPosition(this.getPositionX() + dx, this.getPositionY() - dy);
+			
+				
+		if( this.getPositionY() > 32*20 ){
+
+			throw new PartiePerdueException();
+		}
+				
 					
 		ElementRamassable elementRamassable = carte.getElementRamassableEnCollisionAvecElement(this); 
 		if( elementRamassable != null ) {
@@ -122,10 +161,12 @@ public class Personnage extends ElementDeplacable {
 			carte.supprimerElementRamassable(elementRamassable);
 		}
 		
+		/*
 		if( carte.elementEnCollisionAvecUnElementFixe(this) ) {
 			jumping = false; // on dit que le personnage est au sol
 			estEnCollision = true;
 		}
+		*/
 		
 		// le personnage touche une porte, le joueur gagne la partie
 		//if( carte.elementEnCollisionAvecUnePortes(this) ) throw new PartieGagneeException();
@@ -138,9 +179,31 @@ public class Personnage extends ElementDeplacable {
 		
 	}
 	
-	public void gravity(){
+	
+	
+	/**
+	 * Indique si le personnage est en collision avec une plateforme
+	 * @param carte
+	 * @return
+	 */
+	public boolean estEnCollisionAvecPlateforme(Carte carte){
+				
+		for( ElementFixe plateforme : carte.getElementsFixes() ) {	
+			if( this.estEnCollisionAvec(plateforme) ){
+				
+				if(this.getPositionY()  <= plateforme.getPositionY() ){
+					isCollisionOnTop = true;
+					jumping = false;
+				}else
+					isCollisionOnTop = false;
+					
+				return true;		
+			}
+		}
 
+		jumping = true; // le personnage est en l'air
 		
+		return false;
 	}
 	
 	public float getSpeed() {
