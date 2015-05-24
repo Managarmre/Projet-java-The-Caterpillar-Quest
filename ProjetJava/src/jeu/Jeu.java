@@ -131,7 +131,7 @@ public class Jeu extends BasicGame {
 	 * @return Le score du joueur.
 	 */
 	public Score getScoreJoueur() {
-		return new Score( this.carte.getPersonnage().getNbPoints(), this.tempsEcoule );
+		return new Score( this.nomJoueur, this.carte.getPersonnage().getNbPoints(), this.tempsEcoule );
 	}
 	
 	/**
