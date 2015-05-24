@@ -111,7 +111,6 @@ public class Personnage extends ElementDeplacable {
 		else this.dx = 0;
 				
 		oldPosition = this.getPosition();		// on sauvegarde l'ancienne position
-		
 		this.setPositionX( this.getPositionX() + this.dx );
 		if( this.estEnCollisionAvecPlateforme(carte) && ! this.isCollisionOnTop ) this.setPositionX( oldPosition.getX() );
 		
