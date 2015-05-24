@@ -93,13 +93,6 @@ public class Personnage extends ElementDeplacable {
 		else 
 			dx = 0;
 
-		if(isMoving){
-			
-			if(jumping && ! isCollisionOnTop){  // on autorise le déplacement pendant le saut
-				dy -= ay;
-			}
-
-		}
 		
 		if( this.isCollisionOnTop && isMoving) // si on se déplace sur une plateforme
 			this.setPositionX(this.getPositionX() + dx);
@@ -204,7 +197,7 @@ public class Personnage extends ElementDeplacable {
 		for( ElementFixe plateforme : carte.getElementsFixes() ) {	
 			if( this.estEnCollisionAvec(plateforme) ){
 				
-				if(this.getPositionY() - plateforme.getPositionY() <= 0.1){ // collision en haut
+				if(this.getPositionY() + this.getHauteur() - plateforme.getPositionY() <= 15){ // collision en haut
 					this.setPositionY(plateforme.getPositionY() - this.getHauteur());
 					isCollisionOnTop = true;
 					jumping = false;
