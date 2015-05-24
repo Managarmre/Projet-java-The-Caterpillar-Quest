@@ -17,6 +17,8 @@ import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Rectangle;
 
 
+
+
 /**
  * @author Cyril
  *
@@ -115,6 +117,7 @@ public class Personnage extends ElementDeplacable {
 		} 
 		//
 		
+		
 		if(! jumping){ //si le joueur est au sol
 
 			if(direction == Direction.HAUT){
@@ -210,7 +213,7 @@ public class Personnage extends ElementDeplacable {
 		for( ElementFixe plateforme : carte.getElementsFixes() ) {	
 			if( this.estEnCollisionAvec(plateforme) ){
 				
-				if(this.getPositionY()  <= plateforme.getPositionY() ){
+				if(this.getPositionY()  <= plateforme.getPositionY() - 5){
 					isCollisionOnTop = true;
 					jumping = false;
 				}else
