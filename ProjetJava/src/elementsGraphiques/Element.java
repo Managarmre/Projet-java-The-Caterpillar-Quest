@@ -118,7 +118,7 @@ public abstract class Element {
 	 * @return La position de l'élément, stocké dans un objet Point
 	 */
 	public Point getPosition() {
-		return this.position;
+		return new Point( this.position.getX() , this.position.getY() );
 	}
 	
 	
