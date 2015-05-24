@@ -76,26 +76,8 @@ public class Personnage extends ElementDeplacable {
 		this.vx = (float) ( delta * 0.015 * this.speed );
 		this.vy = (float) ( delta * 0.05 * this.speed );
 		
-
-		if(direction == Direction.DROITE){
-			
-			if(isMoving){ // on autorise le personnage à se déplacer une seule fois
-				dx = vx; // déplacement à droite
-			}				
-		}
-		else if(direction == Direction.GAUCHE){
-			
-			if(isMoving){
-				dx = -vx;// déplacement à gauche
-			}				
-		}
-		else 
-			dx = 0;
-
-
 		// accérération, à ajouté à dy pour crééer la gravité, ou retirer à dy pour créer le saut
 		this.ay = (float) ( this.vy * (delta/1000.0) / this.tempsSaut );	
-
 		
 		
 
@@ -164,11 +146,8 @@ public class Personnage extends ElementDeplacable {
 		for( ElementFixe plateforme : carte.getElementsFixes() ) {	
 			if( this.estEnCollisionAvec(plateforme) ){
 				
-				if(this.getPositionY() + this.getHauteur() - plateforme.getPositionY() <= 15){ // collision en haut
-
 				// collision en haut
 				if( this.getPositionY() - plateforme.getPositionY() <= 0.1 ) {
-
 					this.setPositionY(plateforme.getPositionY() - this.getHauteur());
 					isCollisionOnTop = true;
 					jumping = false;
@@ -180,9 +159,8 @@ public class Personnage extends ElementDeplacable {
 				}					
 					
 				return true;		
-				}
-				
 			}
+				
 		}
 
 		jumping = true; // le personnage est en l'air
