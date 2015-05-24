@@ -1,7 +1,7 @@
 package app;
 
 /**
- * Exception lancée lors d'une erreur de chargemet ou de sauvegarde du gestionnaire de score.
+ * Exception lancée lors d'une erreur de chargement ou de sauvegarde du gestionnaire de scores.
  * @author Maxime Pineau
  * @see GestionScores
  */

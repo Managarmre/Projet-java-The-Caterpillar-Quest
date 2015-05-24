@@ -16,9 +16,9 @@ import java.util.ListIterator;
 /**
  * Classe permettant de sauvegarder des scores.
  * Cette classe permet de charger et de sauvegarder un certain nombre de scores à partir d'un fichier.
- * Le nombre de score maximale à sauvegarder sera à choisir par l'utilisateut dans le constructeur. 
+ * Le nombre de scores maximal à sauvegarder sera à choisir par l'utilisateur dans le constructeur. 
  * Les scores seront stockés dans une liste. Celle-ci sera triée. 
- * Seul les 'n' meilleurs scores seront stockés, 'n' étant le nombre de score maximale de la liste.
+ * Seuls les 'n' meilleurs scores seront stockés, 'n' étant le nombre de scores maximal de la liste.
  * 
  * @author Maxime Pineau
  * @see Score
@@ -28,7 +28,7 @@ public class GestionScores implements Serializable {
 	private static final long serialVersionUID = 1217692534656696222L;
 	
 	/**
-	 * Le nombre de scores maximale qu'il est possible de stocker.
+	 * Le nombre de scores maximal qu'il est possible de stocker.
 	 */
 	private int nombreScoresMax;	
 	
@@ -39,7 +39,7 @@ public class GestionScores implements Serializable {
 	
 	/**
 	 * Crée un gestionnaire de scores pouvant contenir 'nombreScoresMax' scores.
-	 * @param nombreScoresMax Le nombre de scores maximale pouvant être stocké.
+	 * @param nombreScoresMax Le nombre de scores maximal pouvant être stockés.
 	 */
 	public GestionScores( int nombreScoresMax ) {
 	
@@ -49,7 +49,7 @@ public class GestionScores implements Serializable {
 	}
 	
 	/**
-	 * Crée un gestionnaire de score pouvant contenir 5 scores au maximum. 
+	 * Créé un gestionnaire de scores pouvant contenir 5 scores au maximum. 
 	 */
 	public GestionScores() {
 		this(5);
@@ -58,7 +58,7 @@ public class GestionScores implements Serializable {
 	
 	/**
 	 * Ajoute un score dans la liste des scores. 
-	 * Le score n'est pas ajouté si la liste est pleine et si le score est inférieur à tout les autres scores stockés.
+	 * Le score n'est pas ajouté si la liste est pleine et si le score est inférieur à tous les autres scores stockés.
 	 * 
 	 * @param score Le score à ajouter.
 	 */
@@ -68,7 +68,7 @@ public class GestionScores implements Serializable {
 				
 		Collections.sort( this.liste );	// on trie la liste 
 				
-		// on retire les scores en trop dans la liste
+		// on retire les scores en trop de la liste
 		while( this.liste.size() > this.nombreScoresMax ) {
 			this.liste.remove(0);	// le premier score correspond au score le plus petit
 		}
@@ -92,7 +92,7 @@ public class GestionScores implements Serializable {
 	
 	/**
 	 * Permet de sauvegarder (écrire) le gestionnaire de scores dans le flux de sortie out.
-	 * @param out Le flux de sortie ou sera sauvegardé (écrit) le gestionnaire. 
+	 * @param out Le flux de sortie où sera sauvegardé (écrit) le gestionnaire. 
 	 * @throws IOException Exception d'entrée / sortie lancée lors d'un problème d'écriture.
 	 */
 	public void writeObject( ObjectOutputStream out ) throws IOException {
@@ -106,8 +106,8 @@ public class GestionScores implements Serializable {
 	}
 	
 	/**
-	 * Permet de charger (lire) un gestionnaire de scores à partir d'un flux d'entré in.
-	 * @param in Le flux d'entré permettant de lire et charger le gestionnaire.
+	 * Permet de charger (lire) un gestionnaire de scores à partir d'un flux d'entrée in.
+	 * @param in Le flux d'entrée permettant de lire et charger le gestionnaire.
 	 * @throws IOException Exception d'entrée / sortie lancée lors d'un problème de lecture.
 	 * @throws ClassNotFoundException Exception lancée lorsqu'il n'est pas possible de lire les attributs du gestionnaire dans le fichier.
 	 */
@@ -136,7 +136,7 @@ public class GestionScores implements Serializable {
 	/**
 	 * Charge et retourne le gestionnaire de scores stocké dans le fichier passé en paramètre.
 	 * @param cheminFichier Le chemin du fichier dans lequel on lit et charge le gestionnaire de scores.
-	 * @return retourne le gestionnaire de scores lu.
+	 * @return retourne le gestionnaire de scores lus.
 	 * @throws GestionScoresException Lancée lorsqu'une exception apparait lors de la lecture du fichier.
 	 */
 	public static GestionScores chargerScores( String cheminFichier ) throws GestionScoresException {
@@ -167,7 +167,7 @@ public class GestionScores implements Serializable {
 	
 	/**
 	 * Sauvegarde les scores dans le fichier passé en paramètre.
-	 * @param cheminFichier Le fichier dans lequel les scores devrotn être sauvegardés.
+	 * @param cheminFichier Le fichier dans lequel les scores devront être sauvegardés.
 	 * @throws GestionScoresException Lancée lorsqu'une exception apparait lors de l'écriture des scores dans le fichier.
 	 */
 	public void sauvegarderScores( String cheminFichier ) throws GestionScoresException {
