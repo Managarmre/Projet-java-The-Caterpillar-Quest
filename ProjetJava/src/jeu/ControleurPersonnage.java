@@ -6,11 +6,12 @@ import elementsGraphiques.Direction;
 import elementsGraphiques.Personnage;
 
 
-
 /**
  * 
  * 
  * @author Cyril Caron
+ * 
+ * Gère les entrées clavier pour déplacer le personnage à l'écran
  *
  */
 public class ControleurPersonnage implements KeyListener {
