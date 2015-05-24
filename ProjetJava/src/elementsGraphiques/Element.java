@@ -78,14 +78,15 @@ public abstract class Element {
 	 * @param graphique Le graphique ou l'on va afficher l'élément.
 	 * @throws SlickException Lancée lorsqu'une erreur est détecté par la librairie Slick2D (image non trouvée...).
 	 */
-	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException
-	{
+	public abstract void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException;
+	/*
 		
 		Shape hitbox = this.getHitbox();	
 		graphique.setColor( Color.red );
 		graphique.draw(hitbox);
 		
 	}
+	*/
 	
 	/**
 	 * Retourne vrai si cet élément est en collision avec l'élément e.

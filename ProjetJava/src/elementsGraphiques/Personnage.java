@@ -142,10 +142,10 @@ public class Personnage extends ElementDeplacable {
 		}
 		
 		// le personnage touche une porte, le joueur gagne la partie
-		//if( carte.elementEnCollisionAvecUnePortes(this) ) throw new PartieGagneeException();
+		if( carte.elementEnCollisionAvecUnePorte(this) ) throw new PartieGagneeException();
 		
 		// le personnage touche une guêpe, le joueur perd la partie
-		//if( carte.elementEnCollisionAvecUnEnnemi(this) ) throw new PartiePerdueException();
+		if( carte.elementEnCollisionAvecUnEnnemi(this) ) throw new PartiePerdueException();
 		
 		// le personnage sort de la fenêtre, le joueur perd la partie
 		if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
@@ -210,7 +210,6 @@ public class Personnage extends ElementDeplacable {
 	@Override
 	public void afficher(GameContainer conteneur, Graphics graphique) throws SlickException {
 		
-		super.afficher(conteneur, graphique);
 		graphique.drawAnimation( this.animations[0], this.getPositionX(), this.getPositionY() );
 	}
 
