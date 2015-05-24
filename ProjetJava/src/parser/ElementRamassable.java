@@ -4,12 +4,15 @@
 
 package parser;
 
-public abstract class ElementRamassable extends ElementFixe {
-
-	private int nbPoints;
-	
-	public ElementRamassable( int x, int y, int hauteur, int largeur, String cheminImage, int nbPoints ) {
-		super( x, y, hauteur, largeur, cheminImage );
-		this.nbPoints = nbPoints;
+public abstract class ElementRamassable extends ElementFixe 
+{
+	/**
+	 * Constructeur de la classe Element Ramassable
+	 * @param x la position colonne
+	 * @param y la position ligne
+	 */
+	public ElementRamassable(int x, int y) 
+	{
+		super(x, y);
 	}	
 }

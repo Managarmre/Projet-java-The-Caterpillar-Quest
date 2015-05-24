@@ -4,12 +4,15 @@
 
 package parser;
 
-public abstract class ElementFixe extends Element {
-
-	protected String cheminImage;
-	
-	public ElementFixe( int x, int y, int hauteur, int largeur, String cheminImage ) {
-		super( x, y, hauteur, largeur);
-		this.cheminImage = cheminImage;
+public abstract class ElementFixe extends Element 
+{
+	/**
+	 * Constructeur de la classe Element Fixe
+	 * @param x la position colonne
+	 * @param y la position ligne
+	 */
+	public ElementFixe( int x, int y) 
+	{
+		super(x, y);
 	}
 }

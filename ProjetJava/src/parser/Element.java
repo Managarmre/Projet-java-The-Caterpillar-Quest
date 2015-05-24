@@ -3,26 +3,32 @@
  */
 
 package parser;
-import org.newdawn.slick.geom.Point;
 
+import java.awt.Point;
 
 public abstract class Element 
 {
+	/**
+	 * Attributs de la classe Element
+	 */
 	private Point position;
-	private int hauteur;
-	private int largeur;
 	
-	public Element( Point forme, int hauteur, int largeur)
+	/**
+	 * Constructeur de la classe Element
+	 * @param p la position de l'élément
+	 */
+	public Element(Point p)
 	{
-		this.position = forme;
-		this.hauteur = hauteur;
-		this.largeur = largeur;
-		//System.out.println(this.getClass());
+		this.position = p;
 	}
 	
-	public Element( int x, int y, int hauteur, int largeur) 
+	/**
+	 * Constructeur de la classe Element
+	 * @param x position colonne de l'élément
+	 * @param y position ligne de l'élément
+	 */
+	public Element( int x, int y) 
 	{
-		this( new Point( x, y) , largeur, hauteur);
-	}
-	
+		this(new Point( x, y));
+	}	
 }
