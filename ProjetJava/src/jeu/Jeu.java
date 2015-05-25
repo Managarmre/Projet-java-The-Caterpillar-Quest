@@ -1,5 +1,7 @@
 package jeu;
 
+import java.io.IOException;
+
 import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
@@ -46,14 +48,27 @@ public class Jeu extends BasicGame {
 	/**
 	 * Créé un nouveau jeu. 
 	 * @param nomJoueur Le nom du joueur jouant la partie.
+	 * @throws PartieException 
 	 */
-	public Jeu( String nomJoueur ) {
+	public Jeu( String nomJoueur, String cheminFichierCarte ) throws PartieException {
 		super("The Caterpillar Quest");
 		
-		this.carte = new Carte();
-		this.camera = new Camera( this.carte.getPersonnage() );
+		try {
+			this.carte = new Carte(cheminFichierCarte);
+		} catch (IOException e) {
+			throw new PartieException("Impossible de charger la carte");
+		}
+		
+		this.camera = new Camera( this.carte.getPersonnage(), this.carte );
+		//this.camera.addObserver( this.carte );
+				
 		this.tempsEcoule = 0;
-		this.nomJoueur = nomJoueur;
+		this.nomJoueur = nomJoueur;	
+		
+	}
+	
+	public Jeu( String nomJoueur ) throws PartieException {
+		this( nomJoueur, "default.map" );
 	}
 	
 	/**
@@ -69,7 +84,7 @@ public class Jeu extends BasicGame {
 		this.fond = new Image("./sprites/fond.png");
 		this.tempsLancement = System.currentTimeMillis();
 		
-		this.carte.initialiser(conteneur);		
+		this.carte.initialiser();		
 	
 		// on ajoute le controleur permettant la gestion des E/S pour le personnage.
 		ControleurPersonnage controller = new ControleurPersonnage( this.carte.getPersonnage() );

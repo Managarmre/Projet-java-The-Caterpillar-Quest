@@ -1,19 +1,19 @@
 package jeu;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
-import elementsGraphiques.Cerise;
+import parser.Parser;
+
 import elementsGraphiques.Element;
 import elementsGraphiques.ElementFixe;
 import elementsGraphiques.ElementRamassable;
 import elementsGraphiques.Ennemi;
-import elementsGraphiques.Guepe;
 import elementsGraphiques.Personnage;
-import elementsGraphiques.Plateforme;
 import elementsGraphiques.Porte;
 
 
@@ -28,6 +28,9 @@ import elementsGraphiques.Porte;
  */
 public class Carte {
 	
+	private String fichier;
+	public Parser parseur;
+	
 	private Personnage personnage;
 		
 	private ArrayList<Porte> portes;
@@ -38,63 +41,36 @@ public class Carte {
 	
 	/**
 	 * Crée une nouvelle carte.
+	 * @throws IOException 
 	 */
-	public Carte() {
-				
+	public Carte( String cheminCarte ) throws IOException {
+		
+		this.fichier = cheminCarte;
+		
+		this.personnage = new Personnage( 0, 0 );
+		
 		this.elementsRamassables = new ArrayList<ElementRamassable>();
 		this.ennemis = new ArrayList<Ennemi>();
 		this.elementsFixes = new ArrayList<ElementFixe>();
 		this.portes = new ArrayList<Porte>();
 		
-		this.personnage = new Personnage( 10, 32 * 10 );
-		
-		this.testerCarte();	// ----------------------------------------------------------- à remplacer par l'appel du parseur
-	}
-
-
-	private void testerCarte() {
-		
-		Plateforme plateforme;
-		for( int i = 0; i < 33; i++ ) {
-			plateforme = new Plateforme( 32*i, 32*19 );
-			this.elementsFixes.add(plateforme);
-		}
-		
-		for( int i = 10; i < 28; i++ ) {
-			plateforme = new Plateforme( 32*i, 32*15 );
-			this.elementsFixes.add(plateforme);
-		}
-		
-		this.portes.add( new Porte(32*30, 32*17) );
-		
-		// déplacements horizontale
-		this.ennemis.add( new Guepe( 400, 100, 600, 100, true ) );	// gauche -> droite
-		this.ennemis.add( new Guepe( 600, 150, 400, 150, true ) );	// droite -> gauche
-		
-		this.ennemis.add( new Guepe(600, 300, 300, 300, true) );
-		
-		// déplacement verticale
-		this.ennemis.add( new Guepe( 100, 500, 100, 1000, false ) );	// haut -> bas
-		this.ennemis.add( new Guepe( 200, 400, 200, 100, false ) );		// bas -> haut
-		
-		// déplacement diagonale
-		this.ennemis.add( new Guepe( 400, 400, 500, 800, true ) );
-		this.ennemis.add( new Guepe( 400, 400, 1000, 400, true ) );
-		
-		
-		Cerise cerise = new Cerise( 32*12, 32*18 );
-		this.elementsRamassables.add(cerise);
+		this.parseur = new Parser(this);
+		this.parseur.getEcranInit();
 		
 	}
+
+	public Carte() throws IOException {
+		this("default.map");
+	}
+	
 	
 	
 	/**
 	 * Initialise la carte et ses éléments graphiques (ajout des images, sprites...).
 	 * Cette méthode est à appeler dans la fonction Jeu.init().
-	 * @param conteneur	Le conteneur du jeu
 	 * @throws SlickException Lancée lorsqu'une erreur est détectée par la librairie Slick2D (image non trouvée...).
 	 */
-	public void initialiser(GameContainer conteneur) throws SlickException {
+	public void initialiser() throws SlickException {
 		
 		for( ElementFixe fixe : this.elementsFixes ) {
 			fixe.initialiser();
@@ -134,6 +110,21 @@ public class Carte {
 		
 	}
 	
+	/*
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		
+		this.parseur.chargerColonneSuivante();
+		try {
+			this.initialiser(null);
+		} catch (SlickException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	*/
+	
 	/**
 	 * Affiche les éléments de la carte dans la fenêtre graphique.
 	 * @param conteneur Le conteneur du jeu.
@@ -171,23 +162,7 @@ public class Carte {
 		return personnage;
 	}
 
-	/*
-	public ArrayList<Porte> getPortes() {
-		return this.portes;
-	}
-	
-	public ArrayList<ElementRamassable> getElementsRamassables() {
-		return elementsRamassables;
-	}
 
-	public ArrayList<Ennemi> getEnnemis() {
-		return ennemis;
-	}
-
-	public ArrayList<ElementFixe> getElementsFixes() {
-		return elementsFixes;
-	}
-	*/
 	
 	
 	/**
@@ -324,6 +299,48 @@ public class Carte {
 	public ArrayList<ElementFixe> getElementsFixes() {
 		return this.elementsFixes;
 	}
+	
+	
+	
+	
+	
+
+	public String getCheminFichierCarte()
+	{
+		return this.fichier;
+	}
+	
+	public void ajoutPorte(Porte p)
+	{
+		this.portes.add(p);
+	}
+	
+	public void ajoutPersonnage(Personnage p)
+	{
+		this.personnage=p;
+	}
+	
+	public boolean aUnPersonnage()
+	{
+		return this.personnage!=null;
+	}
+	
+	public void ajoutElementRamassable(ElementRamassable er)
+	{
+		this.elementsRamassables.add(er);
+	}
+	
+	public void ajoutElementFixe(ElementFixe ef)
+	{
+		this.elementsFixes.add(ef);
+	}
+	
+	public void ajoutEnnemi(Ennemi e)
+	{
+		this.ennemis.add(e);
+	}
+
+		
 	
 	
 }

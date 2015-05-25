@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 import jeu.Jeu;
 import jeu.FileLogSystem;
+import jeu.PartieException;
 
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.SlickException;
@@ -52,7 +53,7 @@ public class Application {
 		String nomJoueur = args[0];
 		System.out.println(nomJoueur);
 		
-		String cheminFichierMap = "";	// chemin par défaut
+		String cheminFichierMap = "default.map";	// chemin par défaut
 		if( args.length >= 2 ) cheminFichierMap = args[1];
 		
 		// verification sur l'existance du fichier à faire
@@ -64,6 +65,8 @@ public class Application {
 		}
 		*/
 		
+		System.out.println( nomJoueur + " " + cheminFichierMap);
+		
 		
 		/*
 		 * Lancement de la fenêtre de jeu ici
@@ -71,9 +74,11 @@ public class Application {
 		// on change la sortie des logs
 		Log.setLogSystem( new FileLogSystem() );	// les logs de la fenêtre vont dans un fichier de log
 		
-		Jeu jeu = new Jeu("Pseudo");
+		
 		
 		try {
+			
+			Jeu jeu = new Jeu("Pseudo");
 			
 			AppGameContainer app = new AppGameContainer(jeu);
 			app.setDisplayMode( Jeu.LARGEUR,  Jeu.HAUTEUR,  false ); 	// false : ne pas mettre en plein écran
@@ -81,45 +86,43 @@ public class Application {
 			app.setForceExit(false);	// ne pas fermer automatiquement le programme après fermeture de la fenêtre
 			app.setTargetFrameRate(60);
 			app.start();
-						
+			
+			
+			/*
+			 * Gestion des scores
+			 */
+			
+			// chargement de le liste des scores
+			GestionScores scores = null;
+			try {
+				scores = GestionScores.chargerScores("scores.save");
+			} catch ( GestionScoresException e) {
+				scores = new GestionScores();
+			}
+			
+
+			if( jeu.isPartieGagnee() ) {
+				
+				scores.ajouterScore( jeu.getScoreJoueur() );
+			}
+			
+			
+			scores.afficherScores();
+			
+			scores.sauvegarderScores("scores.save");	// sauvegarde de la liste des scores
+			
 		} 
 		catch (SlickException e) {
 			e.printStackTrace();
 			Logger.getLogger( Jeu.class.getName()).log(Level.SEVERE, null, e);
 		}
-		
-		
-		if( jeu.isPartieGagnee() ) {
-
-			System.out.println( jeu.getScoreJoueur().toString() );
-			
-		}
-		
-		
-		/*
-		 * Gestion des scores
-		 */
-		
-		// chargement de le liste des scores
-		GestionScores scores = null;
-		try {
-			scores = GestionScores.chargerScores("scores.save");
-		} catch ( GestionScoresException e) {
-			scores = new GestionScores();
-		}
-		
-		//scores.ajouterScore( new Score("test", 2, 8000) );
-				
-		scores.afficherScores();
-		
-		// sauvegarde de la liste des scores
-		try {
-			scores.sauvegarderScores("scores.save");
-			
-		} catch (GestionScoresException e) {
+		catch (GestionScoresException e) {
 			System.err.println( "Erreur lors de la sauvegarde des scores : " + e.getMessage() );
+		} catch (PartieException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
-
+		
 
 	}
 

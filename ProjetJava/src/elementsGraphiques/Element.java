@@ -28,6 +28,8 @@ public abstract class Element {
 	private Point positionOrigineHitbox;
 	private Shape hitbox;
 	
+	private boolean estInitialise;
+	
 	/**
 	 * Crée un nouvel élément graphique.
 	 * Les positions de la hitbox sont à données par rapport à l'élément, et non par rapport à la fenêtre.
@@ -49,6 +51,8 @@ public abstract class Element {
 		this.hitbox.setX( this.positionOrigineHitbox.getX() + position.getX() );	// on replace la hitbox sur l'élément
 		this.hitbox.setY( this.positionOrigineHitbox.getY() + position.getY() );	
 		
+		this.estInitialise = false;
+		
 	}
 	
 	/**
@@ -69,7 +73,10 @@ public abstract class Element {
 	 * Initialisation de l'élément graphique. On initialisera tout ce qui pourrait lancer une exception SlickException ici.
 	 * @throws SlickException Lancée lorsqu'une erreur est détecté par la librairie Slick2D (image non trouvée...).
 	 */
-	public abstract void initialiser() throws SlickException;
+	public void initialiser() throws SlickException {
+		if( this.estInitialise ) return;
+		this.estInitialise = true;
+	}
 	
 	
 	/**

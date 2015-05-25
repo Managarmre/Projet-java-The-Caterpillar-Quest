@@ -95,6 +95,7 @@ public class Guepe extends Ennemi {
 	
 	@Override
 	public void initialiser() throws SlickException {
+		super.initialiser();
 		
 		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
 		

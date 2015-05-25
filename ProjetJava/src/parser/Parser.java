@@ -6,6 +6,9 @@ package parser;
 import java.io.*;
 import java.util.ArrayList;
 
+import jeu.Carte;
+import elementsGraphiques.*;
+
 public class Parser 
 {
 	/**
@@ -65,7 +68,7 @@ public class Parser
 	 * Méthode permettant de récupérer un certain nombre de colonnes
 	 * @param maxCol le nombre de colonnes à récupérer
 	 */
-	public void recupererColonnes(int maxCol)
+	private void recupererColonnes(int maxCol)
 	{
 		int colonneAAtteindre = this.colonne+maxCol; // le numéro de la colonne finale
 		while (this.colonne<colonneAAtteindre)
@@ -87,7 +90,7 @@ public class Parser
 	 * @param c le caractère à vérifier
 	 * @return un booleen
 	 */
-	public boolean estEntier(char c)
+	private boolean estEntier(char c)
 	{
 		return Character.isDigit(c);
 	}
@@ -98,7 +101,7 @@ public class Parser
 	 * @param ligne le numéro de ligne du fichier
 	 * @param colonne le numéro de colonne du fichier
 	 */
-	public void lectureCaractere(char c, int ligne, int colonne)
+	private void lectureCaractere(char c, int ligne, int colonne)
 	{
 		int deplacement=3; // nombre de colonnes par déplacement par défaut
 		int recupDeplacement=colonne+1;
@@ -125,7 +128,7 @@ public class Parser
 					sens="haut";
 				}
 				deplacement*=32;
-				Guepe guepeVerticale = new Guepe(x,y,x,y+deplacement,false,sens);
+				Guepe guepeVerticale = new Guepe(x,y,x,y+deplacement,false);
 				this.carte.ajoutEnnemi(guepeVerticale);
 				break;
 			case 'h': // lecture d'une guepe se déplaçant horizontalement
@@ -143,7 +146,7 @@ public class Parser
 					sens="gauche";
 				}
 				deplacement*=32;
-				Guepe guepeHorizontale = new Guepe(x,y,x+deplacement,y,true,sens);
+				Guepe guepeHorizontale = new Guepe(x,y,x+deplacement,y,true);
 				this.carte.ajoutEnnemi(guepeHorizontale);
 				break;
 			case 'A': // lecture de l'avatar du personnage

@@ -44,9 +44,9 @@ public abstract class ElementFixe extends Element {
 	
 	@Override
 	public void initialiser() throws SlickException {
+		super.initialiser();
 		
 		this.image = new Image( this.cheminImage );
-	
 	}
 	
 	@Override
