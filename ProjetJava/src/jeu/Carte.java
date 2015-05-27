@@ -2,6 +2,7 @@ package jeu;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -28,8 +29,8 @@ import elementsGraphiques.Porte;
  */
 public class Carte {
 	
-	private String fichier;
-	public Parser parseur;
+	private String cheminfichierCarte;	// le chemin du fichier représentant la carte.
+	public Parser parseur; 				// permet de charger la carte dynamiquement depuis un fichier textuel 	
 	
 	private Personnage personnage;
 		
@@ -45,7 +46,7 @@ public class Carte {
 	 */
 	public Carte( String cheminCarte ) throws IOException {
 		
-		this.fichier = cheminCarte;
+		this.cheminfichierCarte = cheminCarte;
 		
 		//this.personnage = new Personnage( 0, 0 );
 		
@@ -149,8 +150,6 @@ public class Carte {
 	}
 
 
-	
-	
 	/**
 	 * Supprime un élément ramassable de la carte.
 	 * @param ramassable L'élément ramassable à supprimer.
@@ -160,32 +159,50 @@ public class Carte {
 		return this.elementsRamassables.remove(ramassable);
 	}
 	
-	/**
-	 * Supprime un ennemi de la carte.
-	 * @param ennemi L'ennemi à supprimer.
-	 * @return Vrai si l'ennemi a bien été supprimé, faux sinon
-	 */
-	public boolean supprimerEnnemi( Ennemi ennemi ) {
-		return this.ennemis.remove(ennemi);
-	}
 	
 	/**
-	 * Supprime un élément fixe de la carte.
-	 * @param fixe L'élément fixe à supprimer.
-	 * @return Vrai si l'élément fixe a bien été supprimé, faux sinon.
+	 * Supprime de la carte les éléments trop éloignés par rapport à une position (représente le bord gauche de la fenêtre).
+	 * La position du bord est stockée dans la classe Camera, qui centre la fenêtre en fonction du déplacement du personnage (fait bouger la carte).
+	 * C'est également la classe Camera qui appelle cette méthode.
+	 * @param positionCameraX La position de la caméra, représentant le bord gauche de la fenêtre.
+	 * @see Camera
 	 */
-	public boolean supprimerElementFixe( ElementFixe fixe ) {
-		return this.elementsFixes.remove(fixe);
+	public void supprimerElementsTropEloignes( float positionCameraX ) {
+		
+		// on supprime tout les éléments ayant dépassé d'une case de l'écran vers la gauche.
+		// sauf pour les ennemis, ou l'on regarde les positions de départ et d'arrivée
+		
+		// la longueur d'une case fait 32 pixel.
+		
+		ElementFixe fixe;
+		for( Iterator<ElementFixe> iterateur = this.elementsFixes.iterator(); iterateur.hasNext(); ) {
+			fixe = iterateur.next();
+			if( fixe.getPositionX() < positionCameraX - 32 ) iterateur.remove();
+		}
+		
+		ElementRamassable ramassable;
+		for( Iterator<ElementRamassable> iterateur = this.elementsRamassables.iterator(); iterateur.hasNext(); ) {
+			ramassable = iterateur.next();
+			// si l'élément sort de l'écran, on le supprime
+			if( ramassable.getPositionX() < positionCameraX - 32 ) iterateur.remove();
+		}
+		
+		Porte porte;
+		for( Iterator<Porte> iterateur = this.portes.iterator(); iterateur.hasNext(); ) {
+			porte = iterateur.next();
+			if( porte.getPositionX() < positionCameraX - 32 ) iterateur.remove();
+		}
+		
+		Ennemi ennemi;
+		for( Iterator<Ennemi> iterateur = this.ennemis.iterator(); iterateur.hasNext(); ) {
+			ennemi = iterateur.next();
+			// si l'ennemi ne se déplace plus sur la zone visible de l'écran, on le supprime.
+			// l'ennemi se déplace entre 2 points, il faut donc vérifier les coordonnées X des deux points.
+			if( ennemi.getDepart().getX() < positionCameraX - 32 && ennemi.getArrivee().getX() < positionCameraX - 32 ) iterateur.remove();
+		}
+		
 	}
 	
-	/**
-	 * Supprime une porte de sortie de la carte.
-	 * @param porte La porte à supprimer.
-	 * @return Vrai si la porte a bien été supprimé, faux sinon.
-	 */
-	public boolean supprimerPorte( Porte porte ) {
-		return this.portes.remove(porte);
-	}
 
 		
 	/**
@@ -282,6 +299,10 @@ public class Carte {
 	}
 
 	
+	/**
+	 * Retourne la liste des éléments fices de la carte.
+	 * @return La liste des éléments fixes de la carte.
+	 */
 	public ArrayList<ElementFixe> getElementsFixes() {
 		return this.elementsFixes;
 	}
@@ -289,44 +310,62 @@ public class Carte {
 	
 	
 	
-	
-
-	public String getCheminFichierCarte()
-	{
-		return this.fichier;
+	/**
+	 * Retourne le chemin du fichier représentant la carte.
+	 * @return Le chemin du fichier représentant la carte.
+	 */
+	public String getCheminFichierCarte() {
+		return this.cheminfichierCarte;
+	}
+		
+	/**
+	 * Modifie le personnage de la carte.
+	 * @param personnage Le nouveau personnage de la carte.
+	 */
+	public void setPersonnage( Personnage personnage ) {
+		this.personnage=personnage;
 	}
 	
-	public void ajoutPorte(Porte p)
-	{
-		this.portes.add(p);
-	}
-	
-	public void ajoutPersonnage(Personnage p)
-	{
-		this.personnage=p;
-	}
-	
-	public boolean aUnPersonnage()
-	{
+	/**
+	 * Retourne vrai si le personnage de la carte existe (a été instancié), faux sinon.
+	 * @return vrai si le personnage de la carte existe, faux sinon.
+	 */
+	public boolean aUnPersonnage() {
 		return this.personnage!=null;
 	}
 	
-	public void ajoutElementRamassable(ElementRamassable er)
-	{
-		this.elementsRamassables.add(er);
+	/**
+	 * Ajoute une porte à la carte, l'initialisation de cette porte devra être effectué avant l'appel des méthodes update et afficher.
+	 * @param porte La porte à ajouter dans la carte.
+	 */
+	public void ajoutPorte( Porte porte ) {
+		this.portes.add(porte);
 	}
 	
-	public void ajoutElementFixe(ElementFixe ef)
-	{
-		this.elementsFixes.add(ef);
+	/**
+	 * Ajoute un élément ramassable à la carte, l'initialisation de cette porte devra être effectué avant l'appel des méthodes update et afficher.
+	 * @param elementRamassable L'élément ramassable à ajouter dans la carte.
+	 */
+	public void ajoutElementRamassable( ElementRamassable elementRamassable ) {
+		this.elementsRamassables.add(elementRamassable);
 	}
 	
-	public void ajoutEnnemi(Ennemi e)
-	{
-		this.ennemis.add(e);
+	/**
+	 * Ajoute un élément fixe à la carte, l'initialisation de cette porte devra être effectué avant l'appel des méthodes update et afficher.
+	 * @param elementFixe L'élément fixe à ajouter dans la carte.
+	 */
+	public void ajoutElementFixe( ElementFixe elementFixe ) {
+		this.elementsFixes.add(elementFixe);
 	}
-
-		
+	
+	/**
+	 * Ajoute un ennemi à la carte, l'initialisation de cette porte devra être effectué avant l'appel des méthodes update et afficher.
+	 * @param ennemi L'ennemi à ajouter dans la carte.
+	 */
+	public void ajoutEnnemi( Ennemi ennemi ) {
+		this.ennemis.add(ennemi);
+	}
+	
 	
 	
 }

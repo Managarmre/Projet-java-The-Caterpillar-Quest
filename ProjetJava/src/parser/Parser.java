@@ -169,7 +169,7 @@ public class Parser
 			case 'A': // lecture de l'avatar du personnage
 				
 				// on s'assure qu'il n'y qu'un seul personnage sur la carte !!!
-				if ( ! this.carte.aUnPersonnage() ) this.carte.ajoutPersonnage( new Personnage(x,y) );
+				if ( ! this.carte.aUnPersonnage() ) this.carte.setPersonnage( new Personnage(x,y) );
 				break;
 				
 			default: // on ignore les autres caractères

@@ -10,7 +10,6 @@ import java.util.logging.Logger;
 
 import jeu.Jeu;
 import jeu.FileLogSystem;
-import jeu.PartieException;
 
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.SlickException;

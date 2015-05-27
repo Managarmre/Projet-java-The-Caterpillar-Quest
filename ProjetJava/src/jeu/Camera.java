@@ -42,9 +42,7 @@ public class Camera {
 	 * @throws SlickException 
 	 */
 	public void update() throws SlickException {
-		
-		float oldPositionCameraX = this.positionCameraX;
-		
+				
 		float positionPersonnageX = this.personnage.getPositionX();
 		float borneDeplacementMaximaleX = this.positionCameraX + this.TIERS_LARGEUR_ECRAN;
 		
@@ -61,7 +59,8 @@ public class Camera {
 			if( calcul <= 5 ) { 
 
 				this.carte.parseur.chargerColonneSuivante();
-				
+				this.carte.supprimerElementsTropEloignes( this.positionCameraX );
+				this.carte.initialiser();
 			}
 			
 		}
