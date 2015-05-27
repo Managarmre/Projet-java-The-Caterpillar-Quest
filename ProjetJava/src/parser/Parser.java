@@ -128,8 +128,16 @@ public class Parser
 					sens="haut";
 				}
 				deplacement*=32;
-				Guepe guepeVerticale = new Guepe(x,y,x,y+deplacement,false);
-				this.carte.ajoutEnnemi(guepeVerticale);
+				if (sens=="haut")
+				{
+					Guepe guepeVerticale = new Guepe(x,y,x,y-deplacement,false);
+					this.carte.ajoutEnnemi(guepeVerticale);
+				}
+				else
+				{
+					Guepe guepeVerticale = new Guepe(x,y,x,y+deplacement,false);
+					this.carte.ajoutEnnemi(guepeVerticale);
+				}
 				break;
 			case 'h': // lecture d'une guepe se déplaçant horizontalement
 				sens="droite"; // sens par défaut horizontalement
@@ -146,15 +154,24 @@ public class Parser
 					sens="gauche";
 				}
 				deplacement*=32;
-				Guepe guepeHorizontale = new Guepe(x,y,x+deplacement,y,true);
-				this.carte.ajoutEnnemi(guepeHorizontale);
-				break;
-			case 'A': // lecture de l'avatar du personnage
-				if (!this.carte.aUnPersonnage()) // on s'assure qu'il n'y qu'un seul personnage sur la carte !!!
+				if (sens=="gauche")
 				{
-					this.carte.ajoutPersonnage(new Personnage(ligne,colonne));
+
+					Guepe guepeHorizontale = new Guepe(x,y,x-deplacement,y,true);
+					this.carte.ajoutEnnemi(guepeHorizontale);
+				}
+				else
+				{
+					Guepe guepeHorizontale = new Guepe(x,y,x+deplacement,y,true);
+					this.carte.ajoutEnnemi(guepeHorizontale);
 				}
 				break;
+			case 'A': // lecture de l'avatar du personnage
+				
+				// on s'assure qu'il n'y qu'un seul personnage sur la carte !!!
+				if ( ! this.carte.aUnPersonnage() ) this.carte.ajoutPersonnage( new Personnage(x,y) );
+				break;
+				
 			default: // on ignore les autres caractères
 				break;
 		}

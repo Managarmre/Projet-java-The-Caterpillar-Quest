@@ -47,7 +47,7 @@ public class Carte {
 		
 		this.fichier = cheminCarte;
 		
-		this.personnage = new Personnage( 0, 0 );
+		//this.personnage = new Personnage( 0, 0 );
 		
 		this.elementsRamassables = new ArrayList<ElementRamassable>();
 		this.ennemis = new ArrayList<Ennemi>();
@@ -110,20 +110,6 @@ public class Carte {
 		
 	}
 	
-	/*
-	@Override
-	public void update(Observable arg0, Object arg1) {
-		// TODO Auto-generated method stub
-		
-		this.parseur.chargerColonneSuivante();
-		try {
-			this.initialiser(null);
-		} catch (SlickException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	*/
 	
 	/**
 	 * Affiche les éléments de la carte dans la fenêtre graphique.
