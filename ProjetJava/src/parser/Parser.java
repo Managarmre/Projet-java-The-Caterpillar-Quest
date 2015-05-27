@@ -128,7 +128,7 @@ public class Parser
 					sens="haut";
 				}
 				deplacement*=32;
-				Guepe guepeVerticale = new Guepe(x,y,x,y+deplacement,false);
+				Guepe guepeVerticale = new Guepe(x,y,x,y-deplacement,false);
 				this.carte.ajoutEnnemi(guepeVerticale);
 				break;
 			case 'h': // lecture d'une guepe se déplaçant horizontalement
@@ -146,7 +146,7 @@ public class Parser
 					sens="gauche";
 				}
 				deplacement*=32;
-				Guepe guepeHorizontale = new Guepe(x,y,x+deplacement,y,true);
+				Guepe guepeHorizontale = new Guepe(x,y,x-deplacement,y,true);
 				this.carte.ajoutEnnemi(guepeHorizontale);
 				break;
 			case 'A': // lecture de l'avatar du personnage

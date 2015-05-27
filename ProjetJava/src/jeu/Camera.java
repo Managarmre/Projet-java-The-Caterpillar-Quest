@@ -56,7 +56,11 @@ public class Camera {
 			this.positionCameraX = positionPersonnageX - this.TIERS_LARGEUR_ECRAN;
 			
 			
-			if( this.positionCameraX - oldPositionCameraX >= 1 ) { //(int)this.positionCameraX % 32 == 1 ) {
+			float calcul = ( this.positionCameraX % 32 );
+			System.out.println( this.positionCameraX + " "  + oldPositionCameraX + " " + calcul );
+			
+			
+			if( calcul <= 5 ) { //(int)this.positionCameraX % 32 == 1 ) {
 
 				this.carte.parseur.chargerColonneSuivante();
 				this.carte.initialiser();

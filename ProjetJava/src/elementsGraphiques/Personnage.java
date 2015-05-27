@@ -81,6 +81,23 @@ public class Personnage extends ElementDeplacable {
 		this.ay = (float) ( this.vy * (delta/1000.0) / this.tempsSaut );	
 		
 		
+		
+
+		
+		
+		
+		// on autorise le personnage à se déplacer une seule fois
+		if( this.direction == Direction.DROITE && this.isMoving ) this.dx = this.vx; 	// déplacement à droite
+		else if( direction == Direction.GAUCHE && this.isMoving ) this.dx = - this.vx; 	// déplacement à gauche
+		else this.dx = 0;
+				
+		oldPosition = this.getPosition();		// on sauvegarde l'ancienne position
+		this.setPositionX( this.getPositionX() + this.dx );
+		if( this.estEnCollisionAvecPlateforme(carte) && ! this.isCollisionOnTop ) this.setPositionX( oldPosition.getX() );
+		
+		
+		
+		
 
 		// si le personnage est en l'air (pour se déplacer dans les airs)
 		if( this.jumping ) this.dy -= this.ay; 	// le personnage est en l'air
@@ -101,19 +118,6 @@ public class Personnage extends ElementDeplacable {
 			this.setPositionY( oldPosition.getY() );
 			this.dy = 0;	// on remet l'accélération à 0
 		}
-		
-		
-		
-		
-		
-		// on autorise le personnage à se déplacer une seule fois
-		if( this.direction == Direction.DROITE && this.isMoving ) this.dx = this.vx; 	// déplacement à droite
-		else if( direction == Direction.GAUCHE && this.isMoving ) this.dx = - this.vx; 	// déplacement à gauche
-		else this.dx = 0;
-				
-		oldPosition = this.getPosition();		// on sauvegarde l'ancienne position
-		this.setPositionX( this.getPositionX() + this.dx );
-		if( this.estEnCollisionAvecPlateforme(carte) && ! this.isCollisionOnTop ) this.setPositionX( oldPosition.getX() );
 		
 		
 					

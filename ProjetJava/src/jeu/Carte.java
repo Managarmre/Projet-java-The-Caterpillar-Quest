@@ -47,7 +47,7 @@ public class Carte {
 		
 		this.fichier = cheminCarte;
 		
-		this.personnage = new Personnage( 0, 0 );
+		//this.personnage = new Personnage( 0, 0 );
 		
 		this.elementsRamassables = new ArrayList<ElementRamassable>();
 		this.ennemis = new ArrayList<Ennemi>();
