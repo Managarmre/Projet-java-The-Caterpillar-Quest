@@ -27,15 +27,17 @@ public class Personnage extends ElementDeplacable {
 	private boolean  isMoving = false, jumping = false, isCollisionOnTop = false;;
 
 	private Direction direction;
+	private Direction orientation;
+	private int situationAnimation;
 
 	
 	private float speed = 10f;
 	
 	private float vx = 0.0f; // vitesse en x
 	private float vy = 0.0f; // vitesse en y
-	private float ay = 0.0f; // valeur de l'accélération
-	private float dx = 0.0f; // valeur du déplacement du personnage en X
-	private float dy = 0.0f; // valeur du déplacement du personnage en Y
+	private float ay = 0.0f; // valeur de l'accï¿½lï¿½ration
+	private float dx = 0.0f; // valeur du dï¿½placement du personnage en X
+	private float dy = 0.0f; // valeur du dï¿½placement du personnage en Y
 	private double tempsSaut = 0.7;
 	
 	/**
@@ -43,9 +45,11 @@ public class Personnage extends ElementDeplacable {
 	 * @param y La position en y du personnage
 	 */
 	public Personnage( int x, int y ) {
-		super( x, y, 32, 32, new Rectangle(0, 0, 32, 32), "./sprites/personnage.png" );	
+		super( x, y, 32, 32, new Rectangle(0, 0, 32, 32), "./sprites/perso.png" );	
 		this.direction = Direction.IMMOBILE;
+		this.orientation = Direction.DROITE;
 		this.animations = new Animation[6];
+		this.situationAnimation = 1;
 	}
 	
 	
@@ -54,6 +58,18 @@ public class Personnage extends ElementDeplacable {
 	}
 
 	public void setDirection(Direction direction) {
+		if(direction == Direction.DROITE || direction == Direction.GAUCHE){
+			if(direction == Direction.DROITE && this.orientation==Direction.GAUCHE){
+				//de gauche Ã  droite
+				this.orientation = Direction.DROITE;
+				this.situationAnimation++;
+			}
+			else if(direction == Direction.GAUCHE && this.orientation==Direction.DROITE){
+				//de droite Ã  gauche
+				this.orientation = Direction.GAUCHE;
+				this.situationAnimation--;
+			}
+		}
 		this.direction = direction;
 	}
 
@@ -63,8 +79,25 @@ public class Personnage extends ElementDeplacable {
 		
 		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
 		
-		this.animations[0] = this.chargerAnimation( 0, 0, 0 );
+		this.animations = new Animation[6];
 		
+		Animation anim;
+		//dÃ©claration des 4 premiÃ¨res animations : immobile et dÃ©placement
+		for(int i=0;i<4;i++){
+			anim = new Animation();
+			anim.addFrame(this.sprite.getSprite(0, i),250);
+			anim.addFrame(this.sprite.getSprite(1, i),250);
+			this.animations[i] = anim;
+		}
+		//5Ã¨me animation : sauter Ã  gauche
+		anim = new Animation();
+		anim.addFrame(this.sprite.getSprite(0, 4), 1000);
+		this.animations[4] = anim;
+		
+		//6Ã¨me nimation : sauter Ã  droite
+		anim = new Animation();
+		anim.addFrame(this.sprite.getSprite(1, 4), 1000);
+		this.animations[5] = anim;
 	}
 	
 	@Override
@@ -75,7 +108,7 @@ public class Personnage extends ElementDeplacable {
 		this.vx = (float) ( delta * 0.015 * this.speed );
 		this.vy = (float) ( delta * 0.05 * this.speed );
 		
-		// accérération, à ajouté à dy pour crééer la gravité, ou retirer à dy pour créer le saut
+		// accï¿½rï¿½ration, ï¿½ ajoutï¿½ ï¿½ dy pour crï¿½ï¿½er la gravitï¿½, ou retirer ï¿½ dy pour crï¿½er le saut
 		this.ay = (float) ( this.vy * (delta/1000.0) / this.tempsSaut );	
 		
 		
@@ -84,9 +117,9 @@ public class Personnage extends ElementDeplacable {
 		
 		
 		
-		// on autorise le personnage à se déplacer une seule fois
-		if( this.direction == Direction.DROITE && this.isMoving ) this.dx = this.vx; 	// déplacement à droite
-		else if( direction == Direction.GAUCHE && this.isMoving ) this.dx = - this.vx; 	// déplacement à gauche
+		// on autorise le personnage ï¿½ se dï¿½placer une seule fois
+		if( this.direction == Direction.DROITE && this.isMoving ) this.dx = this.vx; 	// dï¿½placement ï¿½ droite
+		else if( direction == Direction.GAUCHE && this.isMoving ) this.dx = - this.vx; 	// dï¿½placement ï¿½ gauche
 		else this.dx = 0;
 				
 		oldPosition = this.getPosition();		// on sauvegarde l'ancienne position
@@ -97,24 +130,24 @@ public class Personnage extends ElementDeplacable {
 		
 		
 
-		// si le personnage est en l'air (pour se déplacer dans les airs)
+		// si le personnage est en l'air (pour se dï¿½placer dans les airs)
 		if( this.jumping ) this.dy -= this.ay; 	// le personnage est en l'air
 		else { //si le joueur est au sol
 
 			if( this.direction == Direction.HAUT && this.isMoving ) {
 			
 				this.dy = this.vy;
-				this.jumping = true; // le personnage va sauter
+				this.setJumping(true); // le personnage va sauter
 				
 			}
-			// else : // on ne prend pas en compte le saut car le personnage est déjà en l'air
+			// else : // on ne prend pas en compte le saut car le personnage est dï¿½jï¿½ en l'air
 		}
 		
 		oldPosition = this.getPosition();
 		this.setPositionY( this.getPositionY() - this.dy );
 		if( this.estEnCollisionAvecPlateforme(carte) && ! isCollisionOnTop ) {
 			this.setPositionY( oldPosition.getY() );
-			this.dy = 0;	// on remet l'accélération à 0
+			this.dy = 0;	// on remet l'accï¿½lï¿½ration ï¿½ 0
 		}
 		
 		
@@ -129,10 +162,10 @@ public class Personnage extends ElementDeplacable {
 		// le personnage touche une porte, le joueur gagne la partie
 		if( carte.elementEnCollisionAvecUnePorte(this) ) throw new PartieGagneeException();
 		
-		// le personnage touche une guêpe, le joueur perd la partie
+		// le personnage touche une guï¿½pe, le joueur perd la partie
 		if( carte.elementEnCollisionAvecUnEnnemi(this) ) throw new PartiePerdueException();
 		
-		// le personnage sort de la fenêtre, le joueur perd la partie
+		// le personnage sort de la fenï¿½tre, le joueur perd la partie
 		if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
 		
 	}
@@ -153,12 +186,12 @@ public class Personnage extends ElementDeplacable {
 				if( this.getPositionY() - plateforme.getPositionY() <= 0.1 ) {
 					this.setPositionY(plateforme.getPositionY() - this.getHauteur());
 					isCollisionOnTop = true;
-					jumping = false;
-				}else{// collision sur les autres côtés
+					this.setJumping(false);
+				}else{// collision sur les autres cï¿½tï¿½s
 					
-					jumping = true;
+					this.setJumping(true);
 					isCollisionOnTop = false;
-					isMoving = false;
+					this.setMoving(false);
 				}					
 					
 				return true;		
@@ -166,7 +199,7 @@ public class Personnage extends ElementDeplacable {
 				
 		}
 
-		jumping = true; // le personnage est en l'air
+		this.setJumping(true); // le personnage est en l'air
 		
 		return false;
 	}
@@ -185,13 +218,48 @@ public class Personnage extends ElementDeplacable {
 	}
 
 	public void setMoving(boolean isMoving) {
+		if(this.isMoving == false && isMoving == true && this.jumping == false){
+			//le perso avance
+			this.situationAnimation += 2;
+		}else if(this.isMoving == true && isMoving == false && this.jumping == false){
+			//le perso s'arrÃªte
+			this.situationAnimation -= 2;
+		}
 		this.isMoving = isMoving;
 	}
 	
+	
+	
+	public boolean isJumping() {
+		return jumping;
+	}
+
+
+	public void setJumping(boolean jumping) {
+		if(this.jumping == false && jumping == true && this.isMoving == false){
+			//le perso saute
+			if(this.situationAnimation+4 <= 5) this.situationAnimation += 4;
+			else this.situationAnimation += 2;
+		}else if(this.jumping == true && jumping == false && this.isMoving == false){
+			//le perso retombe
+			this.situationAnimation -= 4;
+		}
+		else if(this.jumping == true && jumping == false && this.isMoving == true){
+			//le perso retombe en bougeant
+			this.situationAnimation -= 2;
+		}
+		else if(this.jumping == false && jumping == true && this.isMoving == true){
+			//le perso saute en bougeant
+			this.situationAnimation += 2;
+		}
+		this.jumping = jumping;
+	}
+
+
 	@Override
 	public void afficher(GameContainer conteneur, Graphics graphique) throws SlickException {
 		
-		graphique.drawAnimation( this.animations[0], this.getPositionX(), this.getPositionY() );
+		graphique.drawAnimation( this.animations[this.situationAnimation], this.getPositionX(), this.getPositionY() );
 	}
 
 	public int getNbPoints() {
