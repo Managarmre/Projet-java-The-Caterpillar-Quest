@@ -128,8 +128,16 @@ public class Parser
 					sens="haut";
 				}
 				deplacement*=32;
-				Guepe guepeVerticale = new Guepe(x,y,x,y-deplacement,false);
-				this.carte.ajoutEnnemi(guepeVerticale);
+				if (sens=="haut")
+				{
+					Guepe guepeVerticale = new Guepe(x,y,x,y-deplacement,false);
+					this.carte.ajoutEnnemi(guepeVerticale);
+				}
+				else
+				{
+					Guepe guepeVerticale = new Guepe(x,y,x,y+deplacement,false);
+					this.carte.ajoutEnnemi(guepeVerticale);
+				}
 				break;
 			case 'h': // lecture d'une guepe se déplaçant horizontalement
 				sens="droite"; // sens par défaut horizontalement
@@ -146,8 +154,17 @@ public class Parser
 					sens="gauche";
 				}
 				deplacement*=32;
-				Guepe guepeHorizontale = new Guepe(x,y,x-deplacement,y,true);
-				this.carte.ajoutEnnemi(guepeHorizontale);
+				if (sens=="gauche")
+				{
+
+					Guepe guepeHorizontale = new Guepe(x,y,x-deplacement,y,true);
+					this.carte.ajoutEnnemi(guepeHorizontale);
+				}
+				else
+				{
+					Guepe guepeHorizontale = new Guepe(x,y,x+deplacement,y,true);
+					this.carte.ajoutEnnemi(guepeHorizontale);
+				}
 				break;
 			case 'A': // lecture de l'avatar du personnage
 				
