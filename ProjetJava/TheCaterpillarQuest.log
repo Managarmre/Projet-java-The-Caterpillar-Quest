@@ -1934,3 +1934,344 @@ Tue May 26 16:15:58 CEST 2015 DEBUG:Starting display 1056x640
 Tue May 26 16:15:58 CEST 2015 DEBUG:Use Java PNG Loader = true
 Tue May 26 16:15:58 CEST 2015 DEBUG:Found 0 controllers
 Tue May 26 16:15:58 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Wed May 27 16:46:14 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 16:46:14 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 16:46:14 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 16:46:14 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 16:46:14 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 16:46:14 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 16:46:14 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 16:46:14 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Wed May 27 17:18:58 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 17:18:58 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 17:18:58 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 17:18:58 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 17:18:58 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 17:18:58 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 17:18:58 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 17:18:58 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Wed May 27 17:27:09 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 17:27:09 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 17:27:09 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 17:27:09 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 17:27:09 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 17:27:09 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 17:27:09 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 17:27:09 CEST 2015 DEBUG:class org.newdawn.slick.opengl.PNGImageData failed to read the data
+Wed May 27 21:45:07 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 21:45:07 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 21:45:07 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 21:45:07 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 21:45:07 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 21:45:07 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 21:45:07 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:09:07 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:09:07 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:09:07 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:09:07 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:09:08 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:09:08 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:09:08 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:09:49 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:09:49 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:09:49 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:09:49 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:09:49 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:09:49 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:09:49 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:15:04 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:15:04 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:15:04 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:15:04 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:15:04 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:15:04 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:15:04 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:27:37 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:27:37 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:27:37 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:27:37 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:27:37 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:27:37 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:27:37 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:29:59 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:29:59 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:29:59 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:29:59 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:29:59 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:29:59 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:29:59 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:30:02 CEST 2015 DEBUG:-1
+Wed May 27 22:30:02 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:30:10 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:30:10 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:30:10 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:30:10 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:30:10 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:30:10 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:30:10 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:30:13 CEST 2015 DEBUG:-1
+Wed May 27 22:30:13 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:31:15 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:31:15 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:31:15 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:31:15 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:31:15 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:31:15 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:31:15 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:31:21 CEST 2015 DEBUG:-1
+Wed May 27 22:31:21 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:31:41 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:31:41 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:31:41 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:31:41 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:31:41 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:31:41 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:31:41 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:31:45 CEST 2015 DEBUG:-1
+Wed May 27 22:31:45 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:32:36 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:32:36 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:32:36 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:32:36 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:32:36 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:32:36 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:32:36 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:32:38 CEST 2015 DEBUG:-1
+Wed May 27 22:32:38 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:33:58 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:33:58 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:33:58 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:33:58 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:33:58 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:33:58 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:33:58 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:33:59 CEST 2015 DEBUG:-1
+Wed May 27 22:33:59 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:34:13 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:34:13 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:34:13 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:34:13 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:34:13 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:34:13 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:34:13 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:34:16 CEST 2015 DEBUG:-1
+Wed May 27 22:34:16 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:36:25 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:36:25 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:36:25 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:36:25 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:36:26 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:36:26 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:36:26 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:36:44 CEST 2015 DEBUG:-1
+Wed May 27 22:36:44 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:38:11 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:38:11 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:38:11 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:38:11 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:38:12 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:38:12 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:38:12 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:38:14 CEST 2015 DEBUG:-1
+Wed May 27 22:38:14 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:41:00 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:41:00 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:41:00 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:41:00 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:41:00 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:41:00 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:41:00 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:41:02 CEST 2015 DEBUG:-1
+Wed May 27 22:41:02 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:43:56 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:43:56 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:43:56 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:43:56 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:43:56 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:43:56 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:43:56 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:44:00 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:44:00 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:44:00 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:44:00 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:44:00 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:44:00 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:44:00 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:44:05 CEST 2015 DEBUG:-1
+Wed May 27 22:44:05 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:45:45 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:45:45 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:45:45 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:45:45 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:45:45 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:45:45 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:45:45 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:45:48 CEST 2015 DEBUG:-1
+Wed May 27 22:45:48 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:46:31 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:46:31 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:46:31 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:46:31 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:46:31 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:46:31 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:46:31 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:46:32 CEST 2015 DEBUG:7
+Wed May 27 22:46:32 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:46:43 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:46:43 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:46:43 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:46:43 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:46:43 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:46:43 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:46:43 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:46:46 CEST 2015 DEBUG:7
+Wed May 27 22:46:46 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:46:54 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:46:54 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:46:54 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:46:54 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:46:54 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:46:54 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:46:54 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:47:03 CEST 2015 DEBUG:7
+Wed May 27 22:47:03 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:47:10 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:47:10 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:47:10 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:47:10 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:47:10 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:47:10 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:47:10 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:48:21 CEST 2015 DEBUG:-1
+Wed May 27 22:48:21 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:51:32 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:51:32 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:51:32 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:51:32 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:51:33 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:51:33 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:51:33 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:59:18 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:59:18 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:59:18 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:59:18 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:59:19 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:59:19 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:59:19 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 22:59:21 CEST 2015 DEBUG:-1
+Wed May 27 22:59:21 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 22:59:26 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 22:59:26 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 22:59:26 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 22:59:26 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 22:59:26 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 22:59:26 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 22:59:26 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:00:59 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:00:59 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:00:59 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:00:59 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:00:59 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:00:59 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:00:59 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:01:14 CEST 2015 DEBUG:6
+Wed May 27 23:01:14 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 23:01:22 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:01:22 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:01:22 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:01:22 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:01:22 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:01:22 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:01:22 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:01:24 CEST 2015 DEBUG:6
+Wed May 27 23:01:24 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 23:01:28 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:01:28 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:01:28 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:01:28 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:01:28 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:01:28 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:01:28 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:01:35 CEST 2015 DEBUG:-1
+Wed May 27 23:01:35 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 23:01:40 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:01:40 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:01:40 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:01:40 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:01:40 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:01:40 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:01:40 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:02:05 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:02:05 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:02:05 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:02:05 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:02:05 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:02:05 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:02:05 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:02:16 CEST 2015 DEBUG:6
+Wed May 27 23:02:16 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 23:02:19 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:02:19 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:02:19 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:02:19 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:02:19 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:02:19 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:02:19 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:02:47 CEST 2015 DEBUG:6
+Wed May 27 23:02:47 CEST 2015 DEBUG:Game.render() failure - check the game code.
+Wed May 27 23:09:18 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:09:18 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:09:18 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:09:18 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:09:18 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:09:18 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:09:18 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:10:37 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:10:37 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:10:37 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:10:37 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:10:37 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:10:37 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:10:37 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:11:35 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:11:35 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:11:35 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:11:35 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:11:35 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:11:35 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:11:35 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:12:40 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:12:40 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:12:40 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:12:40 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:12:40 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:12:40 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:12:40 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:13:27 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:13:27 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:13:27 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:13:27 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:13:27 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:13:27 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:13:27 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:14:37 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:14:37 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:14:37 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:14:37 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:14:37 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:14:37 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:14:37 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:15:23 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:15:23 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:15:23 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:15:23 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:15:23 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:15:23 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:15:23 CEST 2015 DEBUG:Found 0 controllers
+Wed May 27 23:16:12 CEST 2015 DEBUG:Slick Build #237
+Wed May 27 23:16:13 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Wed May 27 23:16:13 CEST 2015 DEBUG:OriginalDisplayMode: 1366 x 768 x 24 @60Hz
+Wed May 27 23:16:13 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Wed May 27 23:16:13 CEST 2015 DEBUG:Starting display 1056x640
+Wed May 27 23:16:13 CEST 2015 DEBUG:Use Java PNG Loader = true
+Wed May 27 23:16:13 CEST 2015 DEBUG:Found 0 controllers
