@@ -150,11 +150,11 @@ public class Parser
 				this.carte.ajoutEnnemi(guepeHorizontale);
 				break;
 			case 'A': // lecture de l'avatar du personnage
-				if (!this.carte.aUnPersonnage()) // on s'assure qu'il n'y qu'un seul personnage sur la carte !!!
-				{
-					this.carte.ajoutPersonnage(new Personnage(ligne,colonne));
-				}
+				
+				// on s'assure qu'il n'y qu'un seul personnage sur la carte !!!
+				if ( ! this.carte.aUnPersonnage() ) this.carte.ajoutPersonnage( new Personnage(x,y) );
 				break;
+				
 			default: // on ignore les autres caractères
 				break;
 		}
