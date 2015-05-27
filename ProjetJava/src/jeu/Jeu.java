@@ -34,8 +34,7 @@ public class Jeu extends BasicGame {
 	 * La hauteur de la fenêtre de jeu.
 	 */
 	public static final int HAUTEUR = 32 * 20;
-		
-	private GameContainer conteneur;
+	
 	private Camera camera;
 	private Carte carte;
 	private Image fond;
@@ -50,24 +49,19 @@ public class Jeu extends BasicGame {
 	 * @param nomJoueur Le nom du joueur jouant la partie.
 	 * @throws PartieException 
 	 */
-	public Jeu( String nomJoueur, String cheminFichierCarte ) throws PartieException {
+	public Jeu( String nomJoueur, String cheminFichierCarte ) throws IOException {
 		super("The Caterpillar Quest");
 		
-		try {
-			this.carte = new Carte(cheminFichierCarte);
-		} catch (IOException e) {
-			throw new PartieException("Impossible de charger la carte");
-		}
-		
+		this.carte = new Carte(cheminFichierCarte);
+				
 		this.camera = new Camera( this.carte.getPersonnage(), this.carte );
-		//this.camera.addObserver( this.carte );
 				
 		this.tempsEcoule = 0;
 		this.nomJoueur = nomJoueur;	
 		
 	}
 	
-	public Jeu( String nomJoueur ) throws PartieException {
+	public Jeu( String nomJoueur ) throws IOException {
 		this( nomJoueur, "default.map" );
 	}
 	
@@ -75,12 +69,12 @@ public class Jeu extends BasicGame {
 	 * Initialise le jeu. 
 	 * Cette méthode est appelée avant le lancement de la boucle principale.
 	 * C'est également dans cette méthode que l'on ajoute l'écouteur du claver, permettant ainsi de bouger le personnage.
+	 * @throws SlickException Exception durant l'initialisation des composants graphiques.
 	 * @see <a href="http://slick.ninjacave.com/javadoc/org/newdawn/slick/BasicGame.html#init(org.newdawn.slick.GameContainer)">BasicGame.init()</a>
 	 */
 	@Override
 	public void init( GameContainer conteneur ) throws SlickException {
 		
-		this.conteneur = conteneur;	
 		this.fond = new Image("./sprites/fond.png");
 		this.tempsLancement = System.currentTimeMillis();
 		
@@ -95,6 +89,7 @@ public class Jeu extends BasicGame {
 	/**
 	 * Met à jour les données du jeu (position des éléments...).
 	 * Les éléments graphiques ne sont pas affichés sur la fenêtre dans cette méthode.
+	 * @throws SlickException Exception durant la mise à jour logique des composants graphiques.
 	 * @see <a href="http://slick.ninjacave.com/javadoc/org/newdawn/slick/BasicGame.html#update(org.newdawn.slick.GameContainer,%20int)">BasicGame.update()</a>
 	 */
 	@Override
@@ -120,6 +115,7 @@ public class Jeu extends BasicGame {
 
 	/**
 	 * Met à jour l'affichage des éléments graphiques (dans la fenêtre de jeu).
+	 * @throws SlickException Exception durant l'affichage des composants graphiques.
 	 * @see <a href="http://slick.ninjacave.com/javadoc/org/newdawn/slick/Game.html#render(org.newdawn.slick.GameContainer,%20org.newdawn.slick.Graphics)">Game.render()</a>
 	 */
 	@Override

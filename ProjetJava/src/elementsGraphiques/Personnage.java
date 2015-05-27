@@ -1,7 +1,5 @@
 package elementsGraphiques;
 
-import java.util.Iterator;
-
 import jeu.Carte;
 import jeu.Jeu;
 import jeu.PartieException;

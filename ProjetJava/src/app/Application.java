@@ -2,6 +2,7 @@ package app;
 
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -113,16 +114,22 @@ public class Application {
 			scores.sauvegarderScores("scores.save");	// sauvegarde de la liste des scores
 			
 		} 
-		catch (SlickException e) {
+		catch( SlickException e) {
 			e.printStackTrace();
 			Logger.getLogger( Jeu.class.getName()).log(Level.SEVERE, null, e);
 		}
-		catch (GestionScoresException e) {
-			System.err.println( "Erreur lors de la sauvegarde des scores : " + e.getMessage() );
-			
-		} catch (PartieException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+		catch( GestionScoresException scoresException ) {
+			System.err.println("Erreur lors de la sauvegarde des scores, impossible de sauvegarder les scores. (voir le fichier .log)");
+			Log.error( scoresException.getMessage() );
+		} 
+		catch( FileNotFoundException notFound ) {
+			System.err.println( "Erreur lors du chargement de la carte, le fichier " + cheminFichierMap + " n'existe pas." );
+			Log.error( notFound.getMessage() );
+		} 
+		catch( IOException ioException ) {
+			System.err.println("Une erreur est survenue lors du chargement du fichier de carte.");
+			System.err.println("Plus d'information dans le fichier de log.");
+			Log.error( ioException.getMessage() );
 		}
 		
 
