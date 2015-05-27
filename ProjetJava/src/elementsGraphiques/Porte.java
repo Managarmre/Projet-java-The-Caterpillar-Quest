@@ -19,7 +19,8 @@ public class Porte extends ElementFixe {
 	 * @param y La position y de la porte.
 	 */
 	public Porte( int x, int y ) {
-		super( x, y, 64, 32, new Rectangle(8, 16, 16, 48), "./sprites/porte.png" );
+		super( x, y - 32, 64, 32, new Rectangle(8, 16, 16, 48), "./sprites/porte.png" );
+		// on diminue y de 32 car : la porte est représenté dans la carte.map par un caractère de 32x32, ce qui décale la position.
 	}
 
 	
