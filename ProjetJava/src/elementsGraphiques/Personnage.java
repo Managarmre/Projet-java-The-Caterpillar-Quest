@@ -120,9 +120,10 @@ public class Personnage extends ElementDeplacable {
 		else this.dx = 0;
 				
 		oldPosition = this.getPosition(); // on sauvegarde l'ancienne position
-		this.setPositionX( this.getPositionX() + this.dx );
+		this.setPositionX( this.getPositionX() + this.dx ); 
 		if( this.estEnCollisionAvecPlateforme(carte) && ! this.isCollisionOnTop ) this.setPositionX( oldPosition.getX() );
 		
+		//
 
 		// si le personnage est en l'air (pour se déplacer dans les airs)
 		if( this.jumping ) this.dy -= this.ay; 	// le personnage est en l'air
