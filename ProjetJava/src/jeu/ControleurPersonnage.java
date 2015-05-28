@@ -27,7 +27,7 @@ public class ControleurPersonnage implements KeyListener {
 	@Override
 	public void keyPressed( int key, char c ) {
 
-		System.out.println(c);
+		//System.out.println(c);
 
 		switch(key) {
 		
@@ -44,7 +44,6 @@ public class ControleurPersonnage implements KeyListener {
 			case Input.KEY_RIGHT:
 				this.player.setMoving(true);
 				this.player.setDirection(Direction.DROITE);
-				
 			    break;
 			
 			default: 

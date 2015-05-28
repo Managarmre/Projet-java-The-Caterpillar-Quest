@@ -83,6 +83,7 @@ public class GestionScores implements Serializable {
 		
 		ListIterator<Score> iterator = this.liste.listIterator( this.liste.size() );
 		
+		// la collection étant triée, on la parcours du plus grand jusqu'au plus petit score, donc dans l'ordre inverse
 		while( iterator.hasPrevious() ) {
 			System.out.println( iterator.previous().toString() );
 		}
