@@ -62,12 +62,12 @@ public class Personnage extends ElementDeplacable {
 	public void setDirection(Direction direction) {
 		if(direction == Direction.DROITE || direction == Direction.GAUCHE){
 			if(direction == Direction.DROITE && this.orientation==Direction.GAUCHE){
-				//de gauche Ã  droite
+				//de gauche à  droite
 				this.orientation = Direction.DROITE;
 				this.situationAnimation++;
 			}
 			else if(direction == Direction.GAUCHE && this.orientation==Direction.DROITE){
-				//de droite Ã  gauche
+				//de droite à  gauche
 				this.orientation = Direction.GAUCHE;
 				this.situationAnimation--;
 			}
@@ -84,19 +84,19 @@ public class Personnage extends ElementDeplacable {
 		this.animations = new Animation[6];
 		
 		Animation anim;
-		//dÃ©claration des 4 premiÃ¨res animations : immobile et dÃ©placement
+		//déclaration des 4 premières animations : immobile et déplacement
 		for(int i=0;i<4;i++){
 			anim = new Animation();
 			anim.addFrame(this.sprite.getSprite(0, i),250);
 			anim.addFrame(this.sprite.getSprite(1, i),250);
 			this.animations[i] = anim;
 		}
-		//5Ã¨me animation : sauter Ã  gauche
+		//5Ã¨me animation : sauter à  gauche
 		anim = new Animation();
 		anim.addFrame(this.sprite.getSprite(0, 4), 1000);
 		this.animations[4] = anim;
 		
-		//6Ã¨me nimation : sauter Ã  droite
+		//Animation : sauter à  droite
 		anim = new Animation();
 		anim.addFrame(this.sprite.getSprite(1, 4), 1000);
 		this.animations[5] = anim;
@@ -107,8 +107,8 @@ public class Personnage extends ElementDeplacable {
 		
 		Point oldPosition;
 		
-		this.vx = (float) ( 17 * 0.015 * this.speed );
-		this.vy = (float) ( 17 * 0.05 * this.speed );
+		this.vx = (float) ( 14 * 0.015 * this.speed );
+		this.vy = (float) ( 14 * 0.05 * this.speed );
 		
 		// accération, à ajouter à dy pour créer la gravité ou retirer à dy pour créer le saut
 		this.ay = (float) ( this.vy * (14/1000.0) / this.tempsSaut );	
@@ -123,7 +123,6 @@ public class Personnage extends ElementDeplacable {
 		this.setPositionX( this.getPositionX() + this.dx ); 
 		if( this.estEnCollisionAvecPlateforme(carte) && ! this.isCollisionOnTop ) this.setPositionX( oldPosition.getX() );
 		
-		//
 
 		// si le personnage est en l'air (pour se déplacer dans les airs)
 		if( this.jumping ) this.dy -= this.ay; 	// le personnage est en l'air
@@ -162,9 +161,7 @@ public class Personnage extends ElementDeplacable {
 		// le personnage sort de la fenêtre, le joueur perd la partie
 		if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
 		
-	}
-	
-	
+	}	
 	
 	/**
 	 * Indique si le personnage est en collision avec une plateforme
@@ -177,12 +174,12 @@ public class Personnage extends ElementDeplacable {
 			if( this.estEnCollisionAvec(plateforme) ){
 				
 				// collision en haut
-				if( this.getPositionY() - plateforme.getPositionY() <= 0.1 ) {
+				if( this.getPositionY() - plateforme.getPositionY() < 0.0f ) {
 					this.setPositionY(plateforme.getPositionY() - this.getHauteur());
 					isCollisionOnTop = true;
 					this.setJumping(false);
 				}else{ // collision sur les autres côtés
-					
+					System.out.println("Collision sur le côté");
 					this.setJumping(true);
 					isCollisionOnTop = false;
 					this.setMoving(false);
@@ -216,13 +213,11 @@ public class Personnage extends ElementDeplacable {
 			//le perso avance
 			this.situationAnimation += 2;
 		}else if(this.isMoving == true && isMoving == false && this.jumping == false){
-			//le perso s'arrÃªte
+			//le perso s'arrête
 			this.situationAnimation -= 2;
 		}
 		this.isMoving = isMoving;
 	}
-	
-	
 	
 	public boolean isJumping() {
 		return jumping;
