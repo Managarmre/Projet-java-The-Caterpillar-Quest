@@ -38,7 +38,7 @@ public class Personnage extends ElementDeplacable {
 	private float ay = 0.0f; // valeur de l'accélération
 	private float dx = 0.0f; // valeur du déplacement du personnage en X
 	private float dy = 0.0f; // valeur du déplacement du personnage en Y
-	private double tempsSaut = 0.7;
+	private double tempsSaut = 0.7f;
 	
 	/**
 	 * @param x La position en x du personnage
@@ -128,7 +128,7 @@ public class Personnage extends ElementDeplacable {
 		if( carte.elementEnCollisionAvecUnePorte(this) ) throw new PartieGagneeException();
 		
 		// le personnage touche une guêpe, le joueur perd la partie
-		if( carte.elementEnCollisionAvecUnEnnemi(this) ) throw new PartiePerdueException();
+		//if( carte.elementEnCollisionAvecUnEnnemi(this) ) throw new PartiePerdueException();
 		
 		// le personnage sort de la fenêtre, le joueur perd la partie
 		if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
