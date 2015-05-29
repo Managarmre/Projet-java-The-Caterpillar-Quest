@@ -43,6 +43,17 @@ public class Personnage extends ElementDeplacable {
 
 	
 	/**
+	 * La suite de points (x,y) permettant de contruire les hitbox de la guêpes
+	 */
+	private static final float[] POSITIONS_HITBOX_GAUCHE = { };
+	private static final float[] POSITIONS_HITBOX_DROITE = { };
+	private static final float[] POSITIONS_HITBOX_DEPLACEMENT_GAUCHE = { };
+	private static final float[] POSITIONS_HITBOX_DEPLACEMENT_DROITE = { };
+	private static final float[] POSITIONS_HITBOX_SAUT_GAUCHE = { };
+	private static final float[] POSITIONS_HITBOX_SAUT_DROITE = { };
+	
+	
+	/**
 	 * @param x La position en x du personnage
 	 * @param y La position en y du personnage
 	 */
@@ -100,6 +111,15 @@ public class Personnage extends ElementDeplacable {
 		anim = new Animation();
 		anim.addFrame(this.sprite.getSprite(1, 4), 1000);
 		this.animations[5] = anim;
+		
+		this.hitboxs = new Hitbox[6];
+		this.hitboxs[0] = new Hitbox( Personnage.POSITIONS_HITBOX_GAUCHE );
+		this.hitboxs[1] = new Hitbox( Personnage.POSITIONS_HITBOX_DROITE );
+		this.hitboxs[2] = new Hitbox( Personnage.POSITIONS_HITBOX_DEPLACEMENT_GAUCHE );
+		this.hitboxs[3] = new Hitbox( Personnage.POSITIONS_HITBOX_DEPLACEMENT_DROITE );
+		this.hitboxs[4] = new Hitbox( Personnage.POSITIONS_HITBOX_SAUT_GAUCHE );
+		this.hitboxs[5] = new Hitbox( Personnage.POSITIONS_HITBOX_SAUT_DROITE );
+		
 	}
 	
 	@Override
