@@ -137,10 +137,10 @@ public class Guepe extends Ennemi {
 		
 		// on met à jour l'orientation de la guêpe
 		// une guêpe verticale ne peut pas changer son orientation
-		int oldOrientation = this.orientation;
 		this.orientation = ( this.deplacementHorizontal && this.getPositionX() < this.getArrivee().getX() ) ? DROITE : GAUCHE;			
 				
-		if( this.orientation != oldOrientation ) this.setHitbox( this.hitboxs[ this.orientation ] );
+		// l'orientation ne change jamais pour une guêpe verticale
+		if( this.deplacementHorizontal ) this.setHitbox( this.hitboxs[ this.orientation ] );
 		
 	}
 	

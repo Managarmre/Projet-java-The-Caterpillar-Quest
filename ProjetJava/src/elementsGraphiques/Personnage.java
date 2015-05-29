@@ -71,7 +71,7 @@ public class Personnage extends ElementDeplacable {
 		this.orientation = Direction.DROITE;
 		
 		this.situationAnimation = 1;
-		this.animations = new Animation[6];	
+		
 	}
 	
 	
@@ -101,9 +101,7 @@ public class Personnage extends ElementDeplacable {
 		
 		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
 		
-		this.animations = new Animation[6];
-		
-		
+		this.animations = new Animation[6];		
 		this.animations[ Personnage.FIXE_GAUCHE ] = this.chargerAnimation( 0, 0, 1 );	// fixe gauche
 		this.animations[ Personnage.FIXE_DROITE ] = this.chargerAnimation( 1, 0, 1 );	// fixe droite
 		this.animations[ Personnage.DEPLACEMENT_GAUCHE ] = this.chargerAnimation( 2, 0, 1 );	// deplacement gauche
@@ -183,7 +181,8 @@ public class Personnage extends ElementDeplacable {
 		// le personnage sort de la fenêtre, le joueur perd la partie
 		if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
 		
-		if( this.situationAnimation != oldSituation ) this.setHitbox( this.hitboxs[this.situationAnimation] );
+		if( this.situationAnimation != oldSituation ) System.out.println( oldSituation + " " + this.situationAnimation );
+		this.setHitbox( this.hitboxs[this.situationAnimation] );
 	}	
 	
 	/**
