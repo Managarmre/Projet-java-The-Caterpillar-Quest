@@ -1,5 +1,6 @@
 package elementsGraphiques;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -25,7 +26,7 @@ public abstract class Element {
 	
 	// on sauvegarde la position de la hitbox relative à l'élément pour pouvoir la placer à la bonne position.
 	private Point positionOrigineHitbox;
-	private Shape hitbox;
+	protected Shape hitbox;
 	
 	private boolean estInitialise;
 	
@@ -84,15 +85,14 @@ public abstract class Element {
 	 * @param graphique Le graphique ou l'on va afficher l'élément.
 	 * @throws SlickException Lancée lorsqu'une erreur est détecté par la librairie Slick2D (image non trouvée...).
 	 */
-	public abstract void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException;
-	/*
-		
+	public /*abstract*/ void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException
+	{
 		Shape hitbox = this.getHitbox();	
 		graphique.setColor( Color.red );
 		graphique.draw(hitbox);
 		
 	}
-	*/
+	
 	
 	/**
 	 * Retourne vrai si cet élément est en collision avec l'élément e.

@@ -41,6 +41,12 @@ public abstract class ElementDeplacable extends Element {
 	
 	
 	/**
+	 * Un élément déplaçable pourra avoir plusieurs hitbox selon l'animation de cet élément.
+	 * La hitbox actuelle sera à remplacer par l'une de ces hitboxs.
+	 */
+	protected Shape[] hitboxs;
+	
+	/**
 	 * Créé un nouvel élément déplacable.
 	 * @param x La position x de l'élément déplaçable.
 	 * @param y La position y de l'élément déplaçable.

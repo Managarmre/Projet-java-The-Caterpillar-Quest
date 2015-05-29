@@ -3,12 +3,15 @@ package elementsGraphiques;
 import jeu.Carte;
 
 import org.newdawn.slick.Animation;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Point;
+import org.newdawn.slick.geom.Polygon;
 import org.newdawn.slick.geom.Rectangle;
+import org.newdawn.slick.geom.Shape;
 import org.newdawn.slick.geom.Vector2f;
 
 
@@ -35,23 +38,29 @@ public class Guepe extends Ennemi {
 		Gauche(0), 	// la guêpe regarde vers la gauche
 		Droite(1); 	// la guêpe regarde vers la droite
 		
-		private int indiceAnimation;
+		private int indice;
 		
 		Orientation( int valeur ) {
-			this.indiceAnimation = valeur;
+			this.indice = valeur;
 		}
 		
 		/**
 		 * @return L'indice correspondant à l'animation stockée dans le tableau d'animations.
 		 */
-		public int getIndiceAnimation() {
-			return this.indiceAnimation;
+		public int getIndice() {
+			return this.indice;
 		}
 	}
 	
 	private boolean deplacementHorizontal;
 	private Orientation orientation;
-		
+	
+	/**
+	 * La suite de points (x,y) permettant de contruire les hitbox de la guêpes
+	 */
+	private static final float[] pointsHitbox1 = { 5, 13, 7, 12, 12, 9, 15, 9, 17, 11, 25, 12, 28, 14, 30, 19, 30, 25, 28, 26, 28, 24, 25, 24, 22, 22, 18, 19, 15, 16, 15, 15, 11, 15, 8, 21, 5, 21 };
+	private static final float[] pointsHitbox2 = { 17, 9, 20, 9, 23, 12, 25, 12, 27, 14, 27, 21, 24, 21, 20, 15, 17, 15, 14, 19, 9, 22, 7, 23, 7, 24, 4, 24, 4, 26, 1, 24, 1, 20, 2, 17, 4, 17, 4, 14, 5, 14, 7, 12, 13, 12 };
+	
 	/**
 	 * Créé une nouvelle guêpe, se déplaçant entre le point de départ et le point d'arrivée.
 	 * La position initiale peut être différente du point de départ.
@@ -67,16 +76,18 @@ public class Guepe extends Ennemi {
 		
 		this.deplacementHorizontal = deplacementHorizontal;
 		
-		if( this.deplacementHorizontal ) {
-			
-			this.animations = new Animation[2];	// 2 animations : aller et retour
+		if( this.deplacementHorizontal ) {	
 			this.orientation = ( this.getPositionX() - this.getArrivee().getX() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
 		}
-		else {
-			this.animations = new Animation[1];	// une seule animation pour la guêpe verticale
-			this.orientation = Orientation.Gauche; 	// une guêpe verticale regarde toujours vers la gauche
-		}
+		else this.orientation = Orientation.Gauche; 	// une guêpe verticale regarde toujours vers la gauche
 				
+		this.animations = new Animation[2];	// 2 animations : aller et retour
+		this.hitboxs = new Shape[2];
+		this.hitboxs[0] = new Polygon( Guepe.pointsHitbox1 );
+		this.hitboxs[1] = new Polygon( Guepe.pointsHitbox2 );
+		
+		this.hitbox = this.hitboxs[ this.orientation.getIndice() ];
+		
 	}
 
 	/** 
@@ -149,13 +160,17 @@ public class Guepe extends Ennemi {
 		// une guêpe verticale ne peut pas changer son orientation
 		this.orientation = ( this.deplacementHorizontal && this.getPositionX() - this.getArrivee().getX() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
 		
+		this.hitbox = this.hitboxs[ this.orientation.getIndice() ];
 	}
 	
 	
 	@Override
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
 
-		graphique.drawAnimation( this.animations[ this.orientation.getIndiceAnimation() ], this.getPositionX(), this.getPositionY() );
+		super.afficher( conteneur, graphique );
+		
+		graphique.drawAnimation( this.animations[ this.orientation.getIndice() ], this.getPositionX(), this.getPositionY() );
+		
 		
 	}
 

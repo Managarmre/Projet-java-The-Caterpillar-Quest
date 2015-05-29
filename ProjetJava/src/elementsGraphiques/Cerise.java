@@ -17,7 +17,7 @@ public class Cerise extends ElementRamassable {
 	/**
 	 * La suite de points (x,y) permettant de contruire la hitbox de la cerise.
 	 */
-	public static float[] points = { 6, 20, 23, 7, 23, 25 }; 	// construit un triangle moullant la forme de la cerise.
+	private static final float[] points = { 6, 20, 23, 7, 23, 25 }; 	// construit un triangle moullant la forme de la cerise.
 	
 	/**
 	 * Créé une nouvelle cerise. La cerise vaut 1 point.
@@ -26,7 +26,7 @@ public class Cerise extends ElementRamassable {
 	 * @param y La position y de la cerise.
 	 */
 	public Cerise( int x, int y ) {
-		super( x, y, 32, 32, new Polygon( Cerise.points.clone() ), "./sprites/cerise.png", 1 );
+		super( x, y, 32, 32, new Polygon( Cerise.points ), "./sprites/cerise.png", 1 );
 	}
 	
 	

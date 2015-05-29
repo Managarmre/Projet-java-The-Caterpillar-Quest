@@ -7,6 +7,7 @@ import jeu.PartieGagneeException;
 import jeu.PartiePerdueException;
 
 import org.newdawn.slick.Animation;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -248,7 +249,9 @@ public class Personnage extends ElementDeplacable {
 	@Override
 	public void afficher(GameContainer conteneur, Graphics graphique) throws SlickException {
 		
-		graphique.drawAnimation( this.animations[this.situationAnimation], this.getPositionX(), this.getPositionY() );
+		super.afficher( conteneur, graphique );
+		
+		graphique.drawAnimation( this.animations[this.situationAnimation], this.getPositionX(), this.getPositionY() );		
 	}
 
 	public int getNbPoints() {
