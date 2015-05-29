@@ -43,7 +43,7 @@ public class Personnage extends ElementDeplacable {
 
 	
 	/**
-	 * La suite de points (x,y) permettant de contruire les hitbox de la guêpes
+	 * La suite de points (x,y) permettant de contruire les hitbox du personnage.
 	 */
 	private static final float[] POSITIONS_HITBOX_GAUCHE = { 6, 0, 9, 2, 14, 7, 14, 10, 13, 12, 11, 14, 14, 17, 17, 18, 21, 24, 24, 21, 27, 25, 27, 28,       25, 32, 3, 32,      2, 19, 4, 14, 1, 10, 1, 7, 2, 5, 4, 3 }; 
 	private static final float[] POSITIONS_HITBOX_DROITE = { 25, 0, 30, 7, 30, 10, 27, 15, 29, 18, 28, 26,       27, 32, 6, 32,     4, 28, 4, 25, 7, 21, 10, 24, 14, 18, 17, 17, 20, 14, 17, 10, 17, 7, 20, 3 };
@@ -104,40 +104,20 @@ public class Personnage extends ElementDeplacable {
 		this.animations = new Animation[6];
 		
 		
-		this.animations[0] = this.chargerAnimation( 0, 0, 1 );	// fixe gauche
-		this.animations[1] = this.chargerAnimation( 1, 0, 1 );	// fixe droite
-		this.animations[2] = this.chargerAnimation( 2, 0, 1 );	// deplacement gauche
-		this.animations[3] = this.chargerAnimation( 3, 0, 1 ); 	// deplacement droite
-		this.animations[4] = this.chargerAnimation( 4, 0, 0 );	// saut gauche
-		this.animations[5] = this.chargerAnimation( 4, 1, 1 );	// saut droite
-		
-		/*
-		Animation anim;
-		//déclaration des 4 premières animations : immobile et déplacement
-		for(int i=0;i<4;i++){
-			anim = new Animation();
-			anim.addFrame(this.sprite.getSprite(0, i),250);
-			anim.addFrame(this.sprite.getSprite(1, i),250);
-			this.animations[i] = anim;
-		}
-		//5Ã¨me animation : sauter à  gauche
-		anim = new Animation();
-		anim.addFrame(this.sprite.getSprite(0, 4), 1000);
-		this.animations[4] = anim;
-		
-		//Animation : sauter à  droite
-		anim = new Animation();
-		anim.addFrame(this.sprite.getSprite(1, 4), 1000);
-		this.animations[5] = anim;
-		*/
-		
+		this.animations[ Personnage.FIXE_GAUCHE ] = this.chargerAnimation( 0, 0, 1 );	// fixe gauche
+		this.animations[ Personnage.FIXE_DROITE ] = this.chargerAnimation( 1, 0, 1 );	// fixe droite
+		this.animations[ Personnage.DEPLACEMENT_GAUCHE ] = this.chargerAnimation( 2, 0, 1 );	// deplacement gauche
+		this.animations[ Personnage.DEPLACEMENT_DROITE ] = this.chargerAnimation( 3, 0, 1 ); 	// deplacement droite
+		this.animations[ Personnage.SAUT_GAUCHE ] = this.chargerAnimation( 4, 0, 0 );	// saut gauche
+		this.animations[ Personnage.SAUT_DROITE ] = this.chargerAnimation( 4, 1, 1 );	// saut droite
+				
 		this.hitboxs = new Hitbox[6];
-		this.hitboxs[0] = new Hitbox( Personnage.POSITIONS_HITBOX_GAUCHE );
-		this.hitboxs[1] = new Hitbox( Personnage.POSITIONS_HITBOX_DROITE );
-		this.hitboxs[2] = new Hitbox( Personnage.POSITIONS_HITBOX_DEPLACEMENT_GAUCHE );
-		this.hitboxs[3] = new Hitbox( Personnage.POSITIONS_HITBOX_DEPLACEMENT_DROITE );
-		this.hitboxs[4] = new Hitbox( Personnage.POSITIONS_HITBOX_SAUT_GAUCHE );
-		this.hitboxs[5] = new Hitbox( Personnage.POSITIONS_HITBOX_SAUT_DROITE );
+		this.hitboxs[ Personnage.FIXE_GAUCHE ] = new Hitbox( Personnage.POSITIONS_HITBOX_GAUCHE );
+		this.hitboxs[ Personnage.FIXE_DROITE ] = new Hitbox( Personnage.POSITIONS_HITBOX_DROITE );
+		this.hitboxs[ Personnage.DEPLACEMENT_GAUCHE ] = new Hitbox( Personnage.POSITIONS_HITBOX_DEPLACEMENT_GAUCHE );
+		this.hitboxs[ Personnage.DEPLACEMENT_DROITE ] = new Hitbox( Personnage.POSITIONS_HITBOX_DEPLACEMENT_DROITE );
+		this.hitboxs[ Personnage.SAUT_GAUCHE ] = new Hitbox( Personnage.POSITIONS_HITBOX_SAUT_GAUCHE );
+		this.hitboxs[ Personnage.SAUT_DROITE ] = new Hitbox( Personnage.POSITIONS_HITBOX_SAUT_DROITE );
 		
 		this.setHitbox( this.hitboxs[ this.situationAnimation ] );
 	}

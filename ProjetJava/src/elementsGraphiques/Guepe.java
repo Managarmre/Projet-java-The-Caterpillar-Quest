@@ -34,14 +34,15 @@ public class Guepe extends Ennemi {
 	private int orientation;
 	private static final int GAUCHE = 0;
 	private static final int DROITE = 1;
-		
-	private boolean deplacementHorizontal;
 	
 	/**
 	 * La suite de points (x,y) permettant de contruire les hitbox de la guêpes
 	 */
 	private static final float[] POSITIONS_HITBOX_DEPLACEMENT_GAUCHE = { 5, 13, 7, 12, 12, 9, 15, 9, 17, 11, 25, 12, 28, 14, 30, 19, 30, 25, 28, 26, 28, 24, 25, 24, 22, 22, 18, 19, 15, 16, 15, 15, 11, 15, 8, 21, 5, 21 };
 	private static final float[] POSITIONS_HITBOX_DEPLACEMENT_DROITE = { 17, 9, 20, 9, 23, 12, 25, 12, 27, 14, 27, 21, 24, 21, 20, 15, 17, 15, 14, 19, 9, 22, 7, 23, 7, 24, 4, 24, 4, 26, 1, 24, 1, 20, 2, 17, 4, 17, 4, 14, 5, 14, 7, 12, 13, 12 };
+	
+	private boolean deplacementHorizontal;
+	
 	
 	/**
 	 * Créé une nouvelle guêpe, se déplaçant entre le point de départ et le point d'arrivée.
@@ -58,12 +59,8 @@ public class Guepe extends Ennemi {
 		
 		this.deplacementHorizontal = deplacementHorizontal;
 		
-		if( this.deplacementHorizontal ) {	
-			this.orientation = ( this.getPositionX() - this.getArrivee().getX() <= 0.1 ) ? DROITE : GAUCHE;			
-		}
-		else this.orientation = GAUCHE; 	// une guêpe verticale regarde toujours vers la gauche
-				
-		//this.animations = new Animation[2];	// 2 animations : aller et retour
+		this.orientation = ( this.deplacementHorizontal && this.getPositionX() - this.getArrivee().getX() <= 5 ) ? DROITE : GAUCHE;			
+		// une guêpe verticale regarde toujours vers la gauche
 		
 	}
 
@@ -89,13 +86,13 @@ public class Guepe extends Ennemi {
 		
 		this.animations = new Animation[2];
 		
-		this.animations[0] = this.chargerAnimation( 0, 0, 3 );
-		if( this.deplacementHorizontal ) this.animations[1] = this.chargerAnimation( 1, 0, 3 );
+		this.animations[ Guepe.GAUCHE ] = this.chargerAnimation( 0, 0, 3 );
+		if( this.deplacementHorizontal ) this.animations[ Guepe.DROITE ] = this.chargerAnimation( 1, 0, 3 );
 		
 		
 		this.hitboxs = new Hitbox[2];
-		this.hitboxs[0] = new Hitbox( Guepe.POSITIONS_HITBOX_DEPLACEMENT_GAUCHE );
-		this.hitboxs[1] = new Hitbox( Guepe.POSITIONS_HITBOX_DEPLACEMENT_DROITE );
+		this.hitboxs[ Guepe.GAUCHE ] = new Hitbox( Guepe.POSITIONS_HITBOX_DEPLACEMENT_GAUCHE );
+		this.hitboxs[ Guepe.DROITE ] = new Hitbox( Guepe.POSITIONS_HITBOX_DEPLACEMENT_DROITE );
 		
 		this.setHitbox( this.hitboxs[ this.orientation ] );		
 	}
@@ -141,7 +138,7 @@ public class Guepe extends Ennemi {
 		// on met à jour l'orientation de la guêpe
 		// une guêpe verticale ne peut pas changer son orientation
 		int oldOrientation = this.orientation;
-		this.orientation = ( this.deplacementHorizontal && this.getPositionX() - this.getArrivee().getX() <= 0f ) ? DROITE : GAUCHE;			
+		this.orientation = ( this.deplacementHorizontal && this.getPositionX() - this.getArrivee().getX() <= 5 ) ? DROITE : GAUCHE;			
 				
 		if( this.orientation != oldOrientation ) this.setHitbox( this.hitboxs[ this.orientation ] );
 		
