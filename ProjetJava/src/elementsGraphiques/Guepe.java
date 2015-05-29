@@ -31,26 +31,11 @@ public class Guepe extends Ennemi {
 	 * @author Maxime
 	 *
 	 */
-	private enum Orientation {
-		Gauche(0), 	// la guêpe regarde vers la gauche
-		Droite(1); 	// la guêpe regarde vers la droite
+	private int orientation;
+	private static final int GAUCHE = 0;
+	private static final int DROITE = 1;
 		
-		private int indice;
-		
-		Orientation( int valeur ) {
-			this.indice = valeur;
-		}
-		
-		/**
-		 * @return L'indice correspondant à l'animation stockée dans le tableau d'animations.
-		 */
-		public int getIndice() {
-			return this.indice;
-		}
-	}
-	
 	private boolean deplacementHorizontal;
-	private Orientation orientation;
 	
 	/**
 	 * La suite de points (x,y) permettant de contruire les hitbox de la guêpes
@@ -74,9 +59,9 @@ public class Guepe extends Ennemi {
 		this.deplacementHorizontal = deplacementHorizontal;
 		
 		if( this.deplacementHorizontal ) {	
-			this.orientation = ( this.getPositionX() - this.getArrivee().getX() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
+			this.orientation = ( this.getPositionX() - this.getArrivee().getX() <= 0.1 ) ? DROITE : GAUCHE;			
 		}
-		else this.orientation = Orientation.Gauche; 	// une guêpe verticale regarde toujours vers la gauche
+		else this.orientation = GAUCHE; 	// une guêpe verticale regarde toujours vers la gauche
 				
 		//this.animations = new Animation[2];	// 2 animations : aller et retour
 		
@@ -112,7 +97,7 @@ public class Guepe extends Ennemi {
 		this.hitboxs[0] = new Hitbox( Guepe.POSITIONS_HITBOX_DEPLACEMENT_GAUCHE );
 		this.hitboxs[1] = new Hitbox( Guepe.POSITIONS_HITBOX_DEPLACEMENT_DROITE );
 		
-		this.setHitbox( this.hitboxs[ this.orientation.getIndice() ] );		
+		this.setHitbox( this.hitboxs[ this.orientation ] );		
 	}
 	
 
@@ -155,10 +140,10 @@ public class Guepe extends Ennemi {
 		
 		// on met à jour l'orientation de la guêpe
 		// une guêpe verticale ne peut pas changer son orientation
-		Orientation oldOrientation = this.orientation;
-		this.orientation = ( this.deplacementHorizontal && this.getPositionX() - this.getArrivee().getX() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
+		int oldOrientation = this.orientation;
+		this.orientation = ( this.deplacementHorizontal && this.getPositionX() - this.getArrivee().getX() <= 0.1 ) ? DROITE : GAUCHE;			
 				
-		if( this.orientation != oldOrientation ) this.setHitbox( this.hitboxs[ this.orientation.getIndice() ] );
+		if( this.orientation != oldOrientation ) this.setHitbox( this.hitboxs[ this.orientation ] );
 		
 	}
 	
@@ -168,7 +153,7 @@ public class Guepe extends Ennemi {
 		
 		super.afficher( conteneur, graphique );
 				
-		graphique.drawAnimation( this.animations[ this.orientation.getIndice() ], this.getPositionX(), this.getPositionY() );
+		graphique.drawAnimation( this.animations[ this.orientation ], this.getPositionX(), this.getPositionY() );
 				
 	}
 
