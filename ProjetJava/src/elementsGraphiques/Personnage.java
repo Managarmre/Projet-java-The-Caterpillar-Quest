@@ -45,12 +45,13 @@ public class Personnage extends ElementDeplacable {
 	/**
 	 * La suite de points (x,y) permettant de contruire les hitbox de la guêpes
 	 */
-	private static final float[] POSITIONS_HITBOX_GAUCHE = { };
-	private static final float[] POSITIONS_HITBOX_DROITE = { };
-	private static final float[] POSITIONS_HITBOX_DEPLACEMENT_GAUCHE = { };
-	private static final float[] POSITIONS_HITBOX_DEPLACEMENT_DROITE = { };
-	private static final float[] POSITIONS_HITBOX_SAUT_GAUCHE = { };
-	private static final float[] POSITIONS_HITBOX_SAUT_DROITE = { };
+	private static final float[] POSITIONS_HITBOX_GAUCHE = { 6, 0, 9, 2, 14, 7, 14, 10, 13, 12, 11, 14, 14, 17, 17, 18, 21, 24, 24, 21, 27, 25, 27, 28,       25, 32, 3, 32,      2, 19, 4, 14, 1, 10, 1, 7, 2, 5, 4, 3 }; 
+	private static final float[] POSITIONS_HITBOX_DROITE = { 25, 0, 30, 7, 30, 10, 27, 15, 29, 18, 28, 26,       27, 32, 6, 32,     4, 28, 4, 25, 7, 21, 10, 24, 14, 18, 17, 17, 20, 14, 17, 10, 17, 7, 20, 3 };
+	private static final float[] POSITIONS_HITBOX_DEPLACEMENT_GAUCHE = { 2, 1, 4, 1, 6, 3, 11, 3, 16, 8, 16, 11, 14, 14, 15, 16, 20, 17, 20, 22, 26, 30, 27, 24,       27, 32, 5, 32,       5, 26, 6, 23, 3, 20, 6, 15, 3, 11, 3, 8, 4, 5 }; 
+
+	private static final float[] POSITIONS_HITBOX_DEPLACEMENT_DROITE = { 29, 1, 27, 5, 28, 8, 28, 11, 25, 15, 28, 19, 25, 23, 26, 26,            26, 32, 4, 32,      4, 24, 5, 20, 11, 27, 11, 17, 18, 15, 15, 11, 15, 8, 20, 3, 25, 3, 27, 1 };
+	private static final float[] POSITIONS_HITBOX_SAUT_GAUCHE = { 0, 0, 2, 0, 4, 2, 8, 2, 13, 7, 13, 10, 15, 12, 19, 15, 19, 19, 24, 19, 24, 23, 28, 23,      28, 32, 18, 32,     8, 23, 8, 20, 3, 18, 3, 14, 0, 10 };
+	private static final float[] POSITIONS_HITBOX_SAUT_DROITE = { 31, 0, 29, 0, 27, 2, 23, 2, 18, 7, 18, 10, 16, 12, 12, 15, 12, 19, 7, 19, 7, 23, 3, 23,     3, 32, 13, 32,    23, 23, 23, 20, 28, 18, 28, 14, 31, 10 };
 	
 	
 	/**
@@ -125,6 +126,8 @@ public class Personnage extends ElementDeplacable {
 	@Override
 	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException, PartieException {
 		
+		int oldSituation = this.situationAnimation;
+		
 		Point oldPosition;
 		
 		this.vx = (float) ( 14 * 0.015 * this.speed );
@@ -181,6 +184,7 @@ public class Personnage extends ElementDeplacable {
 		// le personnage sort de la fenêtre, le joueur perd la partie
 		if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
 		
+		if( this.situationAnimation != oldSituation ) this.setHitbox( this.hitboxs[this.situationAnimation] );
 	}	
 	
 	/**

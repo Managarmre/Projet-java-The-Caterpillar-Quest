@@ -14,7 +14,7 @@ import org.newdawn.slick.geom.Rectangle;
 public class Plateforme extends ElementFixe {
 
 	public Plateforme( int x, int y ) {
-		super( x, y, 32, 32, new Rectangle( 0, 0, 30, 30 ), "./sprites/plateforme.png" );
+		super( x, y, 32, 32, new Rectangle( 0, 0, 31, 30 ), "./sprites/plateforme.png" );
 	}
 		
 }
