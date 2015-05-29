@@ -138,7 +138,7 @@ public class Personnage extends ElementDeplacable {
 		if( this.direction == Direction.DROITE && this.isMoving ) this.dx = this.vx; 	// déplacement à droite
 		else if( direction == Direction.GAUCHE && this.isMoving ) this.dx = - this.vx; 	// déplacement à gauche
 		else this.dx = 0;
-				
+		
 		oldPosition = this.getPosition(); // on sauvegarde l'ancienne position
 		this.setPositionX( this.getPositionX() + this.dx ); 
 		if( this.estEnCollisionAvecPlateforme(carte) && ! this.isCollisionOnTop ) this.setPositionX( oldPosition.getX() );

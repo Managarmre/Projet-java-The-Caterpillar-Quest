@@ -53,7 +53,7 @@ public class Parser
 	 */
 	public void getEcranInit() throws IOException
 	{
-		recupererColonnes(32);
+		recupererColonnes(33);
 	}
 	
 	/**
