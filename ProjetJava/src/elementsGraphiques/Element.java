@@ -25,8 +25,8 @@ public abstract class Element {
 	private int largeur;
 	
 	// on sauvegarde la position de la hitbox relative à l'élément pour pouvoir la placer à la bonne position.
-	private Point positionOrigineHitbox;
-	protected Shape hitbox;
+	//private Point positionOrigineHitbox;
+	private Hitbox hitbox;
 	
 	private boolean estInitialise;
 	
@@ -36,20 +36,17 @@ public abstract class Element {
 	 * @param position La position de cet élément dans la fenêtre de jeu.
 	 * @param hauteur La hauteur de l'élément.
 	 * @param largeur La largeur de l'élément.
-	 * @param hitbox La hitbox de l'élément.
+	 * @param formeHitbox La forme de la hitbox de l'élément.
 	 */
-	public Element( Point position, int hauteur, int largeur, Shape hitbox ){
+	public Element( Point position, int hauteur, int largeur, Shape formeHitbox ){
 		
 		this.position = position;
 		this.hauteur = hauteur;
 		this.largeur = largeur;
 		
 		// la position de la hitbox est donnée par rapport à l'image, et non à la fenêtre
-		// on modifie donc cette hitbox pour quelle ait les bonnes positions
-		this.positionOrigineHitbox = new Point( hitbox.getX(), hitbox.getY() );
-		this.hitbox = hitbox;
-		this.hitbox.setX( this.positionOrigineHitbox.getX() + position.getX() );	// on replace la hitbox sur l'élément
-		this.hitbox.setY( this.positionOrigineHitbox.getY() + position.getY() );	
+		this.hitbox = new Hitbox(formeHitbox);
+		this.hitbox.setPosition(position);	// on met la hitbox sur l'élément
 		
 		this.estInitialise = false;
 		
@@ -62,10 +59,10 @@ public abstract class Element {
 	 * @param y La position y de l'élément sur la fenêtre de jeu.
 	 * @param hauteur La hauteur de l'élément.
 	 * @param largeur La largeur de l'élément.
-	 * @param hitbox La hitbox de l'élément.
+	 * @param formeHitbox La forme de la hitbox de l'élément.
 	 */
-	public Element( int x, int y, int hauteur, int largeur, Shape hitbox ) {
-		this( new Point(x, y) , largeur, hauteur, hitbox );
+	public Element( int x, int y, int hauteur, int largeur, Shape formeHitbox ) {
+		this( new Point(x, y) , largeur, hauteur, formeHitbox );
 	}
 	
 	
@@ -86,8 +83,8 @@ public abstract class Element {
 	 * @throws SlickException Lancée lorsqu'une erreur est détecté par la librairie Slick2D (image non trouvée...).
 	 */
 	public /*abstract*/ void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException
-	{
-		Shape hitbox = this.getHitbox();	
+	{		
+		Shape hitbox = this.getHitbox().getForme();			
 		graphique.setColor( Color.red );
 		graphique.draw(hitbox);
 		
@@ -137,7 +134,7 @@ public abstract class Element {
 	 */
 	public void setPositionX( float x ) {
 		this.position.setX(x);
-		this.hitbox.setX( this.positionOrigineHitbox.getX() + x );	// on replace la hitbox sur l'élément
+		this.hitbox.setX(x);	// on replace la hitbox sur l'élément
 
 	}
 	
@@ -149,7 +146,7 @@ public abstract class Element {
 	 */
 	public void setPositionY( float y ) {
 		this.position.setY(y);
-		this.hitbox.setY( this.positionOrigineHitbox.getY() + y );	// on replace la hitbox sur l'élément
+		this.hitbox.setY(y);	// on replace la hitbox sur l'élément
 	}
 	
 	/**
@@ -174,6 +171,7 @@ public abstract class Element {
 	public void setPosition( double x, double y ) {
 		this.setPosition( (float)x, (float)y );
 	}
+	
 	/**
 	 * Met à jour la position de l'élément graphique.
 	 * Cette méthode met égalemet à jour la position de la hitbox.
@@ -182,9 +180,7 @@ public abstract class Element {
 	 */
 	public void setPosition( Point position ) {
 		this.position = position;
-		this.hitbox.setX( this.positionOrigineHitbox.getX() + position.getX() );	// on replace la hitbox sur l'élément
-		this.hitbox.setY( this.positionOrigineHitbox.getY() + position.getY() );
-
+		this.hitbox.setPosition(position);	// on replace la hitbox sur l'élément
 	}
 	
 	
@@ -208,7 +204,13 @@ public abstract class Element {
 	 * Retourne la hitbox de l'élément graphique.
 	 * @return La hitbox de l'élément.
 	 */
-	public Shape getHitbox() {
-		return hitbox;
+	public Hitbox getHitbox() {
+		return this.hitbox;
 	}
+	
+	public void setHitbox( Hitbox hitbox ) {
+		this.hitbox = hitbox;
+		this.hitbox.setPosition( this.position );	// on met la hitbox sur l'élément
+	}
+	
 }

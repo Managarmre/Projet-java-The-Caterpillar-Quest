@@ -59,7 +59,10 @@ public class Application {
 		
 		// si la carte par défaut n'existe pas, elle est recréée.
 		File fichierCarte = new File(cheminFichierMap);
-		if( cheminFichierMap.equals("default.map") && ! fichierCarte.exists() ) creerFichierMapDefaut();
+		if( cheminFichierMap.equals("default.map") && ! fichierCarte.exists() ) {
+			System.err.println("La carte pas défaut n'existe pas, regénération de celle-ci.");
+			creerFichierMapDefaut();
+		}
 		
 		
 		System.out.println( "Nouvelle partie pour le joueur " + nomJoueur + " avec la carte " + cheminFichierMap );
@@ -75,7 +78,7 @@ public class Application {
 		
 		try {
 			
-			Jeu jeu = new Jeu("Pseudo");
+			Jeu jeu = new Jeu( nomJoueur, cheminFichierMap );
 			
 			AppGameContainer app = new AppGameContainer(jeu);
 			app.setDisplayMode( Jeu.LARGEUR,  Jeu.HAUTEUR,  false ); 	// false : ne pas mettre en plein écran

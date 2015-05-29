@@ -123,15 +123,15 @@ public class Carte {
 		for( ElementFixe fixe : this.elementsFixes ) {
 			fixe.afficher( conteneur, graphique );
 		}
-		
+				
 		for( ElementRamassable ramassable : this.elementsRamassables ) {
 			ramassable.afficher( conteneur, graphique );
 		}
-		
+				
 		for( Ennemi ennemi : this.ennemis ) {
 			ennemi.afficher( conteneur, graphique );
 		}
-		
+				
 		for( Porte porte : this.portes ) {
 			porte.afficher( conteneur, graphique );
 		}

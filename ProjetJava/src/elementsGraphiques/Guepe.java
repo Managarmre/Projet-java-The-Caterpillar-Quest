@@ -81,12 +81,7 @@ public class Guepe extends Ennemi {
 		}
 		else this.orientation = Orientation.Gauche; 	// une guêpe verticale regarde toujours vers la gauche
 				
-		this.animations = new Animation[2];	// 2 animations : aller et retour
-		this.hitboxs = new Shape[2];
-		this.hitboxs[0] = new Polygon( Guepe.pointsHitbox1 );
-		this.hitboxs[1] = new Polygon( Guepe.pointsHitbox2 );
-		
-		this.hitbox = this.hitboxs[ this.orientation.getIndice() ];
+		//this.animations = new Animation[2];	// 2 animations : aller et retour
 		
 	}
 
@@ -110,12 +105,17 @@ public class Guepe extends Ennemi {
 		
 		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
 		
-		int nombreAnimations = this.sprite.getVerticalCount();
-		this.animations = new Animation[ nombreAnimations ];
+		this.animations = new Animation[2];
 		
 		this.animations[0] = this.chargerAnimation( 0, 0, 3 );
 		if( this.deplacementHorizontal ) this.animations[1] = this.chargerAnimation( 1, 0, 3 );
 		
+		
+		this.hitboxs = new Hitbox[2];
+		this.hitboxs[0] = new Hitbox( Guepe.pointsHitbox1 );
+		this.hitboxs[1] = new Hitbox( Guepe.pointsHitbox2 );
+		
+		this.setHitbox( this.hitboxs[ this.orientation.getIndice() ] );		
 	}
 	
 
@@ -158,20 +158,21 @@ public class Guepe extends Ennemi {
 		
 		// on met à jour l'orientation de la guêpe
 		// une guêpe verticale ne peut pas changer son orientation
+		Orientation oldOrientation = this.orientation;
 		this.orientation = ( this.deplacementHorizontal && this.getPositionX() - this.getArrivee().getX() <= 0.1 ) ? Orientation.Droite : Orientation.Gauche;			
+				
+		if( this.orientation != oldOrientation ) this.setHitbox( this.hitboxs[ this.orientation.getIndice() ] );
 		
-		this.hitbox = this.hitboxs[ this.orientation.getIndice() ];
 	}
 	
 	
 	@Override
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
-
+		
 		super.afficher( conteneur, graphique );
-		
+				
 		graphique.drawAnimation( this.animations[ this.orientation.getIndice() ], this.getPositionX(), this.getPositionY() );
-		
-		
+				
 	}
 
 	

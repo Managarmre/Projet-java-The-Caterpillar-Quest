@@ -131,7 +131,7 @@ public class Jeu extends BasicGame {
 		
 		// on déplace le graphique vers la gauche pour faire bouger la carte à l'écran
 		this.camera.placer( conteneur, graphique );
-		
+				
 		// on affiche les éléments de la carte sur le graphique
 		this.carte.afficher( conteneur, graphique );
 				
