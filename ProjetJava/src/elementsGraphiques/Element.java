@@ -86,7 +86,7 @@ public abstract class Element {
 	{		
 		Shape hitbox = this.getHitbox().getForme();			
 		graphique.setColor( Color.red );
-		graphique.draw(hitbox);
+		//graphique.draw(hitbox);
 		
 	}
 	
