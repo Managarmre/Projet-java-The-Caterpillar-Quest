@@ -188,7 +188,7 @@ public class Personnage extends ElementDeplacable {
 			
 		}
 		
-
+		
 		this.setPositionX(newPositionX);
 		
 		for( ElementFixe plateforme : carte.getElementsFixes() ) {
@@ -203,10 +203,21 @@ public class Personnage extends ElementDeplacable {
 					continue; 	// c'est la collision avec le sol
 				}
 				else {
-					this.dx = 0;
-					this.isMoving = false;
-					if( this.getPositionX() - plateforme.getPositionX() < 0.0f ) this.setPositionX( plateforme.getPositionX() - plateforme.getLargeur() );
-					else this.setPositionX( plateforme.getPositionX() + plateforme.getLargeur() );
+					
+					
+					if( this.surLeSol ) {
+						
+						this.isMoving = false;
+						if( this.getPositionX() - plateforme.getPositionX() < 0.0f ) this.setPositionX( plateforme.getPositionX() - plateforme.getLargeur() );
+						else this.setPositionX( plateforme.getPositionX() + plateforme.getLargeur() );
+						
+					}
+					else {
+						this.isMoving = false;
+						this.setPositionX( oldPosition.getX() );
+					}
+					
+					
 					
 					break;
 				}
