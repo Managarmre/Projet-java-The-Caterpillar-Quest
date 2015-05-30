@@ -42,8 +42,8 @@ public class ControleurPersonnage implements KeyListener {
 			    break;
 			    
 			case Input.KEY_RIGHT:
-				this.player.setMoving(true);
 				this.player.setDirection(Direction.DROITE);
+				this.player.setMoving(true);
 			    break;
 			
 			default: 

@@ -119,13 +119,17 @@ public class Personnage extends ElementDeplacable {
 		
 		this.setHitbox( this.hitboxs[ this.situationAnimation ] );
 	}
+
+	
+	private boolean surLeSol = false;
+	
 	
 	@Override
 	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException, PartieException {
 		
 		int oldSituation = this.situationAnimation;
+		Point oldPosition = this.getPosition(); 	// on sauvegarde l'ancienne position
 		
-		Point oldPosition;
 		
 		this.vx = (float) ( 14 * 0.015 * this.speed );
 		this.vy = (float) ( 14 * 0.05 * this.speed );
@@ -139,31 +143,69 @@ public class Personnage extends ElementDeplacable {
 		else if( direction == Direction.GAUCHE && this.isMoving ) this.dx = - this.vx; 	// déplacement à gauche
 		else this.dx = 0;
 		
-		oldPosition = this.getPosition(); // on sauvegarde l'ancienne position
-		this.setPositionX( this.getPositionX() + this.dx ); 
-		if( this.estEnCollisionAvecPlateforme(carte) && ! this.isCollisionOnTop ) this.setPositionX( oldPosition.getX() );
 		
-
+		
+		
 		// si le personnage est en l'air (pour se déplacer dans les airs)
-		if( this.jumping ) this.dy -= this.ay; 	// le personnage est en l'air
-		else { //si le joueur est au sol
-
-			if( this.direction == Direction.HAUT && this.isMoving ) {
+		//if( this.jumping ) this.dy += this.ay; 	// le personnage est en l'air (+ car on descend vers le bas)
+		
+		// si le joueur veut sauter, qu'il bouge
+		if( this.direction == Direction.HAUT && this.isMoving && ! this.jumping ) {
+			this.dy =  - this.vy;	// (- car on remonte vers le haut, donc y plus petit)
+			this.setJumping(true); // le personnage saute
+		}
+		else {
+			this.dy += this.ay;		// le joueur est en l'air ou tombe
+		}
+		
+		float newPositionX = this.getPositionX() + this.dx;
+		float newPositionY = this.getPositionY() + this.dy;
+		
+		this.setPositionX(newPositionX); 
+		this.setPositionY(newPositionY);
+		
+		this.surLeSol = false;
+		
+		for( ElementFixe fixe : carte.getElementsFixes() ) {
 			
-				this.dy = this.vy;
-				this.setJumping(true); // le personnage va sauter
+			if( fixe.estEnCollisionAvec(this) ) {
+								
+				// personnage au dessus de la plateforme en collision
+				if( this.getPositionY() < fixe.getPositionY() ) {
+					
+					this.setPositionY( fixe.getPositionY() - this.getHauteur() );
+					this.setJumping(false);
+					this.surLeSol = true;
+					this.isCollisionOnTop = true;
+					
+				}
+				else if( this.getPositionY() > fixe.getPositionY() ) {
+					this.setPositionY( oldPosition.getY() );
+					//this.setJumping(false);
+					this.isCollisionOnTop = false;
+					this.dy = 0;
+				}
+				
+				if( fixe.estEnCollisionAvec(this) && newPositionY > fixe.getPositionY() ){
+					
+					System.out.println("collision droite / gauche ");
+					
+					this.setPositionX( oldPosition.getX() );
+				}
 				
 			}
+			
 		}
 		
-		oldPosition = this.getPosition();
-		this.setPositionY( this.getPositionY() - this.dy );
-		if( this.estEnCollisionAvecPlateforme(carte) && ! isCollisionOnTop ) { // si on est en collision avec autre chose que le sommet de la plateforme
-			this.setPositionY( oldPosition.getY() );
-			this.dy = 0;	// on remet l'accélération à 0
-		}
+		
 		
 
+		if( this.situationAnimation != oldSituation ) System.out.println( oldSituation + " " + this.situationAnimation );
+		this.setHitbox( this.hitboxs[this.situationAnimation] );
+		
+		
+		
+		// le personnage touche une cerise
 		ElementRamassable elementRamassable = carte.getElementRamassableEnCollisionAvecElement(this); 
 		if( elementRamassable != null ) {
 			this.nbPoints += elementRamassable.getNbPoints();
@@ -172,17 +214,13 @@ public class Personnage extends ElementDeplacable {
 		
 		// le personnage touche une porte, le joueur gagne la partie
 		if( carte.elementEnCollisionAvecUnePorte(this) ) throw new PartieGagneeException();
-		
 
 		// le personnage touche une guêpe, le joueur perd la partie
 		if( carte.elementEnCollisionAvecUnEnnemi(this) ) throw new PartiePerdueException();
-
 		
 		// le personnage sort de la fenêtre, le joueur perd la partie
 		if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
 		
-		if( this.situationAnimation != oldSituation ) System.out.println( oldSituation + " " + this.situationAnimation );
-		this.setHitbox( this.hitboxs[this.situationAnimation] );
 	}	
 	
 	/**
