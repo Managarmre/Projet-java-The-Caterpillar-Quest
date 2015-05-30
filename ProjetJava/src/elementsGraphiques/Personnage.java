@@ -148,7 +148,7 @@ public class Personnage extends ElementDeplacable {
 		
 
 		// si le personnage est en l'air (pour se déplacer dans les airs)
-				if( this.jumping ) this.dy += this.ay; 	// le personnage est en l'air
+		if( this.jumping ) this.dy += this.ay; 	// le personnage est en l'air
 		else { //si le joueur est au sol
 
 			if( this.direction == Direction.HAUT && this.isMoving ) {
