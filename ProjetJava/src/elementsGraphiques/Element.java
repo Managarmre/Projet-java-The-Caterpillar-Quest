@@ -28,7 +28,7 @@ public abstract class Element {
 	//private Point positionOrigineHitbox;
 	private Hitbox hitbox;
 	
-	private boolean estInitialise;
+	protected boolean estInitialise;
 	
 	/**
 	 * Crée un nouvel élément graphique.
@@ -70,10 +70,7 @@ public abstract class Element {
 	 * Initialisation de l'élément graphique. On initialisera tout ce qui pourrait lancer une exception SlickException ici.
 	 * @throws SlickException Lancée lorsqu'une erreur est détecté par la librairie Slick2D (image non trouvée...).
 	 */
-	public void initialiser() throws SlickException {
-		if( this.estInitialise ) return;
-		this.estInitialise = true;
-	}
+	public abstract void initialiser() throws SlickException;
 	
 	
 	/**

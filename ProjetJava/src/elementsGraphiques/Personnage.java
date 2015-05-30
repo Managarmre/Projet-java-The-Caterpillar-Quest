@@ -97,7 +97,8 @@ public class Personnage extends ElementDeplacable {
 
 	@Override
 	public void initialiser() throws SlickException {
-		super.initialiser();
+		if( this.estInitialise ) return;
+		this.estInitialise = true;
 		
 		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
 		
@@ -121,8 +122,6 @@ public class Personnage extends ElementDeplacable {
 	}
 
 	
-	private boolean surLeSol = false;
-	
 	
 	@Override
 	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException, PartieException {
@@ -144,18 +143,13 @@ public class Personnage extends ElementDeplacable {
 		else this.dx = 0;
 		
 		
-		
-		
-		// si le personnage est en l'air (pour se déplacer dans les airs)
-		//if( this.jumping ) this.dy += this.ay; 	// le personnage est en l'air (+ car on descend vers le bas)
-		
 		// si le joueur veut sauter, qu'il bouge
 		if( this.direction == Direction.HAUT && this.isMoving && ! this.jumping ) {
 			this.dy =  - this.vy;	// (- car on remonte vers le haut, donc y plus petit)
 			this.setJumping(true); // le personnage saute
 		}
 		else {
-			this.dy += this.ay;		// le joueur est en l'air ou tombe
+			this.dy += this.ay;		// le joueur est en l'air ou tombe (pour se déplacer dans les airs)
 		}
 		
 		float newPositionX = this.getPositionX() + this.dx;
@@ -164,7 +158,7 @@ public class Personnage extends ElementDeplacable {
 		this.setPositionX(newPositionX); 
 		this.setPositionY(newPositionY);
 		
-		this.surLeSol = false;
+		float old_dy = this.dy;
 		
 		for( ElementFixe fixe : carte.getElementsFixes() ) {
 			
@@ -175,34 +169,44 @@ public class Personnage extends ElementDeplacable {
 					
 					this.setPositionY( fixe.getPositionY() - this.getHauteur() );
 					this.setJumping(false);
-					this.surLeSol = true;
 					this.isCollisionOnTop = true;
+					//System.out.println("replace perso au dessus");
 					
 				}
-				else if( this.getPositionY() > fixe.getPositionY() ) {
+				else { //if( this.getPositionY() > fixe.getPositionY() ) {
 					this.setPositionY( oldPosition.getY() );
 					//this.setJumping(false);
 					this.isCollisionOnTop = false;
-					this.dy = 0;
+					
+					this.dy = 0;	// on touche une plateforme au dessus, on va réappliquer la gravité
+					
+					//System.out.println("replace perso en dessous");
 				}
+				
 				
 				if( fixe.estEnCollisionAvec(this) && newPositionY > fixe.getPositionY() ){
 					
-					System.out.println("collision droite / gauche ");
+					//System.out.println("collision droite / gauche ");
 					
 					this.setPositionX( oldPosition.getX() );
+					
+					if( this.jumping ) {
+						this.dy = old_dy;
+						this.setMoving(false);
+					}
+					
 				}
+				
 				
 			}
 			
 		}
 		
 		
-		
+				
 
 		if( this.situationAnimation != oldSituation ) System.out.println( oldSituation + " " + this.situationAnimation );
 		this.setHitbox( this.hitboxs[this.situationAnimation] );
-		
 		
 		
 		// le personnage touche une cerise

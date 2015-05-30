@@ -93,7 +93,8 @@ public class Guepe extends Ennemi {
 	
 	@Override
 	public void initialiser() throws SlickException {
-		super.initialiser();
+		if( this.estInitialise ) return;
+		this.estInitialise = true;
 		
 		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
 		
@@ -150,7 +151,7 @@ public class Guepe extends Ennemi {
 		
 		// on met à jour l'orientation de la guêpe
 		// une guêpe verticale ne peut pas changer son orientation
-		this.orientation = ( this.deplacementHorizontal && this.getPositionX() < this.getArrivee().getX() ) ? Orientation.Droite : Orientation.Gauche;			
+		this.orientation = ( this.deplacementHorizontal && this.getPositionX() - this.getArrivee().getX() < 0.0f ) ? Orientation.Droite : Orientation.Gauche;			
 				
 		// l'orientation ne change jamais pour une guêpe verticale
 		if( this.deplacementHorizontal ) this.setHitbox( this.hitboxs[ this.orientation.indice() ] );
