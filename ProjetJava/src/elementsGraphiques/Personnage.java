@@ -39,7 +39,7 @@ public class Personnage extends ElementDeplacable {
 	private float ay = 0.0f; // valeur de l'accélération
 	private float dx = 0.0f; // valeur du déplacement du personnage en X
 	private float dy = 0.0f; // valeur du déplacement du personnage en Y
-	private double tempsSaut = 2.0f;
+	private double tempsSaut = 0.5f;
 
 	
 	/**
