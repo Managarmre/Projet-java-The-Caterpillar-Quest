@@ -204,6 +204,7 @@ public class Personnage extends ElementDeplacable {
 				}
 				else {
 					this.dx = 0;
+					this.isMoving = false;
 					if( this.getPositionX() - plateforme.getPositionX() < 0.0f ) this.setPositionX( plateforme.getPositionX() - plateforme.getLargeur() );
 					else this.setPositionX( plateforme.getPositionX() + plateforme.getLargeur() );
 					
