@@ -24,8 +24,11 @@ import org.newdawn.slick.geom.Rectangle;
 public class Personnage extends ElementDeplacable {
 	
 	private int nbPoints = 0;
-	private boolean  isMoving = false, jumping = false, isCollisionOnTop = false;;
+	private boolean isMoving = false;
+	private boolean dansLesAirs = false;
+	private boolean surLeSol = false;
 
+	
 	private Direction direction;
 	private Direction orientation;
 	private int situationAnimation;
@@ -103,8 +106,6 @@ public class Personnage extends ElementDeplacable {
 		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
 		
 		this.animations = new Animation[6];
-		
-		
 		this.animations[ Personnage.FIXE_GAUCHE ] = this.chargerAnimation( 0, 0, 1 );	// fixe gauche
 		this.animations[ Personnage.FIXE_DROITE ] = this.chargerAnimation( 1, 0, 1 );	// fixe droite
 		this.animations[ Personnage.DEPLACEMENT_GAUCHE ] = this.chargerAnimation( 2, 0, 1 );	// deplacement gauche
@@ -123,50 +124,111 @@ public class Personnage extends ElementDeplacable {
 		this.setHitbox( this.hitboxs[ this.situationAnimation ] );
 	}
 	
+	
 	@Override
 	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException, PartieException {
-		
-		int oldSituation = this.situationAnimation;
-		
-		Point oldPosition;
-		
+				
 		this.vx = (float) ( 14 * 0.015 * this.speed );
 		this.vy = (float) ( 14 * 0.05 * this.speed );
 		
 		// accération, à ajouter à dy pour créer la gravité ou retirer à dy pour créer le saut
 		this.ay = (float) ( this.vy * (14/1000.0) / this.tempsSaut );	
 		
-
-		// on autorise le personnageà se déplacer une seule fois
+		// déplacement sur X
 		if( this.direction == Direction.DROITE && this.isMoving ) this.dx = this.vx; 	// déplacement à droite
 		else if( direction == Direction.GAUCHE && this.isMoving ) this.dx = - this.vx; 	// déplacement à gauche
 		else this.dx = 0;
+		
+		// déplacement sur Y
+		if( this.direction == Direction.HAUT && this.isMoving && ! this.dansLesAirs && this.surLeSol ) {
+			
+			this.dy = - this.vy;
+			this.dansLesAirs = true; // le personnage va sauter
+			
+		}
+		else this.dy += this.ay;	// le personnage est dans les airs, ou tombe, gravité constante toujours appliquée
+		
+		
+		
+		System.out.println("\n New positionnement : ");
+		System.out.println(" delta : " + delta );
+		
+		Point oldPosition = this.getPosition();
+		float newPositionX = this.getPositionX() + this.dx;
+		float newPositionY = this.getPositionY() + this.dy;
+		
+		this.setPositionY(newPositionY);
+		for( ElementFixe plateforme : carte.getElementsFixes() ) {
+			
+			if( plateforme.estEnCollisionAvec(this) ) {
 				
-		oldPosition = this.getPosition(); // on sauvegarde l'ancienne position
-		this.setPositionX( this.getPositionX() + this.dx ); 
-		if( this.estEnCollisionAvecPlateforme(carte) && ! this.isCollisionOnTop ) this.setPositionX( oldPosition.getX() );
+				// la plateforme est en dessous du personnage
+				if( this.getPositionY() - plateforme.getPositionY() < 0.f ) {
+
+					System.out.println("SOL   PERSO : " + this.getPositionY() + " plateforme : " + plateforme.getPositionY() );
+					
+					this.setPositionY( plateforme.getPositionY() - this.getHauteur() );
+					this.surLeSol = true;	// on est sur le sol
+					this.dansLesAirs = false;		// on est pas dans les airs
+				}
+				else { 	// on a modifier que la position Y, la plateforme ne peut être qu'au dessus
+					
+					System.out.println("DESSUS PERSO : " + this.getPositionY() + " plateforme : " + plateforme.getPositionY() );
+					
+					this.setPositionY( oldPosition.getY() );
+					this.surLeSol = false;	// il n'y a pas de sol, on est pas sur le sol
+					this.dansLesAirs = true;	// on est dans les airs
+				}
+				
+				this.dy = 0;			// on a touché quelque chose (au dessus ou en dessous), on remet l'accélération à 0
+				
+				break;
+			}
+			else this.dansLesAirs = true;
+			
+		}
 		
 
-		// si le personnage est en l'air (pour se déplacer dans les airs)
-		if( this.jumping ) this.dy += this.ay; 	// le personnage est en l'air
-		else { //si le joueur est au sol
-
-			if( this.direction == Direction.HAUT && this.isMoving ) {
+		this.setPositionX(newPositionX);
+		
+		for( ElementFixe plateforme : carte.getElementsFixes() ) {
 			
-				this.dy = - this.vy;
-				this.setJumping(true); // le personnage va sauter
+			if( plateforme.estEnCollisionAvec(this) ) {
+				
+				System.out.println(" sur sol " + this.surLeSol + " dans les airs : " + this.dansLesAirs );
+				System.out.println(" pos x : " + this.getPositionX() + " plateforme x : " + plateforme.getPositionX() );
+				
+				if( this.surLeSol && this.getPositionY() - plateforme.getPositionY() < 0.f ) {
+					System.out.println("Collision avec le sol ok");
+					continue; 	// c'est la collision avec le sol
+				}
+				else {
+					this.dx = 0;
+					if( this.getPositionX() - plateforme.getPositionX() < 0.0f ) this.setPositionX( plateforme.getPositionX() - plateforme.getLargeur() );
+					else this.setPositionX( plateforme.getPositionX() + plateforme.getLargeur() );
+					
+					break;
+				}
 				
 			}
 		}
-		
-		oldPosition = this.getPosition();
-		this.setPositionY( this.getPositionY() + this.dy );
-		if( this.estEnCollisionAvecPlateforme(carte) && ! isCollisionOnTop ) { // si on est en collision avec autre chose que le sommet de la plateforme
-			this.setPositionY( oldPosition.getY() );
-			this.dy = 0;	// on remet l'accélération à 0
-		}
-		
+			
 
+		
+		
+		int oldSituation = this.situationAnimation;
+		
+		if( this.dansLesAirs && this.orientation == Direction.GAUCHE ) this.situationAnimation = SAUT_GAUCHE;
+		else if( this.dansLesAirs && this.orientation == Direction.DROITE ) this.situationAnimation = SAUT_DROITE;
+		else if( this.isMoving && this.orientation == Direction.GAUCHE ) this.situationAnimation = DEPLACEMENT_GAUCHE;
+		else if( this.isMoving && this.orientation == Direction.DROITE ) this.situationAnimation = DEPLACEMENT_DROITE;
+		else if( this.orientation == Direction.GAUCHE ) this.situationAnimation = FIXE_GAUCHE;
+		else this.situationAnimation = FIXE_DROITE;
+		
+		if( oldSituation != this.situationAnimation ) this.setHitbox( this.hitboxs[this.situationAnimation] );
+
+		
+		
 		ElementRamassable elementRamassable = carte.getElementRamassableEnCollisionAvecElement(this); 
 		if( elementRamassable != null ) {
 			this.nbPoints += elementRamassable.getNbPoints();
@@ -184,7 +246,6 @@ public class Personnage extends ElementDeplacable {
 		// le personnage sort de la fenêtre, le joueur perd la partie
 		if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
 		
-		this.setHitbox( this.hitboxs[this.situationAnimation] );
 	}	
 	
 	/**
@@ -193,22 +254,23 @@ public class Personnage extends ElementDeplacable {
 	 * @return
 	 */
 	public boolean estEnCollisionAvecPlateforme(Carte carte){
-				
+		
+		Point oldPosition = this.getPosition();
 		for( ElementFixe plateforme : carte.getElementsFixes() ) {	
 			if( this.estEnCollisionAvec(plateforme) ){
 				
 				// collision en haut
 				if( this.getPositionY() - plateforme.getPositionY() < 0.0f ) {
 					this.setPositionY(plateforme.getPositionY() - this.getHauteur());
-					isCollisionOnTop = true;
+					surLeSol = true;
 					this.setJumping(false);
 				}else{ // collision sur les autres côtés
 					System.out.println("Collision sur le côté");
 					this.setJumping(true);
-					isCollisionOnTop = false;
+					surLeSol = false;
 					this.setMoving(false);
 				}					
-					
+				
 				return true;		
 			}
 				
@@ -233,39 +295,16 @@ public class Personnage extends ElementDeplacable {
 	}
 
 	public void setMoving(boolean isMoving) {
-		if(this.isMoving == false && isMoving == true && this.jumping == false){
-			//le perso avance
-			this.situationAnimation += 2;
-		}else if(this.isMoving == true && isMoving == false && this.jumping == false){
-			//le perso s'arrête
-			this.situationAnimation -= 2;
-		}
 		this.isMoving = isMoving;
 	}
 	
 	public boolean isJumping() {
-		return jumping;
+		return dansLesAirs;
 	}
 
 
 	public void setJumping(boolean jumping) {
-		if(this.jumping == false && jumping == true && this.isMoving == false){
-			//le perso saute
-			if(this.situationAnimation+4 <= 5) this.situationAnimation += 4;
-			else this.situationAnimation += 2;
-		}else if(this.jumping == true && jumping == false && this.isMoving == false){
-			//le perso retombe
-			this.situationAnimation -= 4;
-		}
-		else if(this.jumping == true && jumping == false && this.isMoving == true){
-			//le perso retombe en bougeant
-			this.situationAnimation -= 2;
-		}
-		else if(this.jumping == false && jumping == true && this.isMoving == true){
-			//le perso saute en bougeant
-			this.situationAnimation += 2;
-		}
-		this.jumping = jumping;
+		this.dansLesAirs = jumping;
 	}
 
 

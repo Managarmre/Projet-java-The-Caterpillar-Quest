@@ -99,10 +99,8 @@ public class Guepe extends Ennemi {
 		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
 		
 		this.animations = new Animation[2];
-		
 		this.animations[ Orientation.Gauche.indice() ] = this.chargerAnimation( 0, 0, 3 );
 		if( this.deplacementHorizontal ) this.animations[ Orientation.Droite.indice() ] = this.chargerAnimation( 1, 0, 3 );
-		
 		
 		this.hitboxs = new Hitbox[2];
 		this.hitboxs[ Orientation.Gauche.indice() ] = new Hitbox( Guepe.POSITIONS_HITBOX_DEPLACEMENT_GAUCHE );
