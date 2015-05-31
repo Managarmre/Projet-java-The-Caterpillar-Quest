@@ -16,6 +16,8 @@ import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Rectangle;
 
+import app.Ressources;
+
 
 /**
  * Cette classe représente le personnage du joueur dans la fenêtre.
@@ -71,7 +73,7 @@ public class Personnage extends ElementDeplacable {
 	 * @param y La position en y du personnage
 	 */
 	public Personnage( int x, int y ) {
-		super( x, y, 32, 32, new Rectangle(0, 0, 31, 32), "./sprites/perso.png" );	
+		super( x, y, 32, 32, new Rectangle(0, 0, 31, 32), Ressources.Sprites.PERSO );	
 		this.direction = Direction.IMMOBILE;
 		this.orientation = Direction.DROITE;
 		

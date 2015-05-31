@@ -2,19 +2,19 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/jinput.jar">
+	<classpathentry kind="lib" path="C:/Users/Maxime/Documents/Etudes/Polytech/Programmation à objets en JAVA/Projet-java-The-Caterpillar-Quest/ProjetJava/Ressources/libs/jinput.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="TheCaterpillarQuest/lib/native"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="TheCaterpillarQuest/Ressources/libs/natives"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/lwjgl.jar">
+	<classpathentry kind="lib" path="C:/Users/Maxime/Documents/Etudes/Polytech/Programmation à objets en JAVA/Projet-java-The-Caterpillar-Quest/ProjetJava/Ressources/libs/lwjgl.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="TheCaterpillarQuest/lib/native"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="TheCaterpillarQuest/Ressources/libs/natives"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/slick.jar">
+	<classpathentry kind="lib" path="C:/Users/Maxime/Documents/Etudes/Polytech/Programmation à objets en JAVA/Projet-java-The-Caterpillar-Quest/ProjetJava/Ressources/libs/slick.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="TheCaterpillarQuest/lib/native"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="TheCaterpillarQuest/Ressources/libs/natives"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>

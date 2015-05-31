@@ -2,6 +2,8 @@ package elementsGraphiques;
 
 import org.newdawn.slick.geom.Polygon;
 
+import app.Ressources;
+
 
 /**
  * Représente une cerise.
@@ -26,7 +28,7 @@ public class Cerise extends ElementRamassable {
 	 * @param y La position y de la cerise.
 	 */
 	public Cerise( int x, int y ) {
-		super( x, y, 32, 32, new Polygon( Cerise.points ), "./sprites/cerise.png", 1 );
+		super( x, y, 32, 32, new Polygon( Cerise.points ), Ressources.Sprites.CERISE, 1 );
 	}
 	
 	

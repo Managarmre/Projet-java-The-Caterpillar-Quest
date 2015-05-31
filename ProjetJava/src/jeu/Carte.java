@@ -8,6 +8,8 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
+import app.Ressources;
+
 import parser.Parser;
 
 import elementsGraphiques.Element;
@@ -64,7 +66,7 @@ public class Carte {
 	 * @throws IOException Une erreur est survenue lors du chargement de la carte (lecture du fichier de carte).
 	 */
 	public Carte() throws IOException {
-		this("default.map");
+		this(Ressources.Cartes.DEFAULT);
 	}
 	
 	

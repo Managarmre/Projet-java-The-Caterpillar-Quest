@@ -9,6 +9,7 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
+import app.Ressources;
 import app.Score;
 
 
@@ -68,7 +69,7 @@ public class Jeu extends BasicGame {
 	 * @throws IOException Une erreur est survenue lors du chargement de la carte (lecture du fichier de carte).
 	 */
 	public Jeu( String nomJoueur ) throws IOException {
-		this( nomJoueur, "default.map" );
+		this( nomJoueur, Ressources.Cartes.DEFAULT );
 	}
 	
 	/**
@@ -81,7 +82,7 @@ public class Jeu extends BasicGame {
 	@Override
 	public void init( GameContainer conteneur ) throws SlickException {
 		
-		this.fond = new Image("./sprites/fond.png");
+		this.fond = new Image( Ressources.Sprites.FOND );
 		this.tempsLancement = System.currentTimeMillis();
 		
 		this.carte.initialiser();		

@@ -2,6 +2,8 @@ package elementsGraphiques;
 
 import org.newdawn.slick.geom.Rectangle;
 
+import app.Ressources;
+
 /**
  * Représente une porte.
  * La partie se termine lorsque le personnage du joueur arrive à une porte.
@@ -19,7 +21,7 @@ public class Porte extends ElementFixe {
 	 * @param y La position y de la porte.
 	 */
 	public Porte( int x, int y ) {
-		super( x, y - 32, 64, 32, new Rectangle(8, 16, 16, 48), "./sprites/porte.png" );
+		super( x, y - 32, 64, 32, new Rectangle(8, 16, 16, 48), Ressources.Sprites.PORTE );
 		// on diminue y de 32 car : la porte est représenté dans la carte.map par un caractère de 32x32, ce qui décale la position.
 	}
 

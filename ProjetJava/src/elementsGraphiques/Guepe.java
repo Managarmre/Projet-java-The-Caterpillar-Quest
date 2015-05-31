@@ -11,6 +11,8 @@ import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Vector2f;
 
+import app.Ressources;
+
 
 
 /**
@@ -68,7 +70,7 @@ public class Guepe extends Ennemi {
 	 * @param deplacementHorizontal Vrai si la guêpe se déplace horizontalement, et faux si elle se déplace verticalement.
 	 */
 	public Guepe( int x, int y, Point depart, Point arrivee, boolean deplacementHorizontal ) {
-		super( x, y, 32, 32, new Rectangle(5, 9, 25, 17), "./sprites/guepe.png", depart, arrivee );
+		super( x, y, 32, 32, new Rectangle(5, 9, 25, 17), Ressources.Sprites.GUEPE, depart, arrivee );
 		
 		this.deplacementHorizontal = deplacementHorizontal;
 		

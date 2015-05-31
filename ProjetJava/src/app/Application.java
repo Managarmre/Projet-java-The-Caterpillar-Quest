@@ -54,12 +54,12 @@ public class Application {
 		
 		String nomJoueur = args[0];
 		
-		String cheminFichierMap = "default.map";	// chemin par défaut
+		String cheminFichierMap = Ressources.Cartes.DEFAULT;	// chemin par défaut
 		if( args.length >= 2 ) cheminFichierMap = args[1];
 		
 		// si la carte par défaut n'existe pas, elle est recréée.
 		File fichierCarte = new File(cheminFichierMap);
-		if( cheminFichierMap.equals("default.map") && ! fichierCarte.exists() ) {
+		if( cheminFichierMap.equals(Ressources.Cartes.DEFAULT) && ! fichierCarte.exists() ) {
 			System.err.println("La carte pas défaut n'existe pas, regénération de celle-ci.");
 			creerFichierMapDefaut();
 		}
@@ -142,7 +142,7 @@ public class Application {
 	
 	private static void creerFichierMapDefaut() {
 		
-		File fichierCarte = new File("default.map");
+		File fichierCarte = new File(Ressources.Cartes.DEFAULT);
 		
 		try {
 			

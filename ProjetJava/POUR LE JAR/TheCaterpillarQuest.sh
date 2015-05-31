@@ -14,5 +14,5 @@ if ! type -p java > /dev/null; then
 
 fi
 
+java -Djava.library.path="Ressources/libs/natives" -jar TheCaterpillarQuest_jarsplice.jar $1 $2
 
-java -jar ./TheCaterpillarQuest.jar $1 $2 
