@@ -136,14 +136,14 @@ public class Personnage extends ElementDeplacable {
 		else this.dy += this.ay;	// le personnage est dans les airs, ou tombe, gravité constante toujours appliquée
 		
 		
-		// on calcul les nouvelles positions du personnage.		
+		// on calcule les nouvelles positions du personnage.		
 		Point oldPosition = this.getPosition();
 		float newPositionX = this.getPositionX() + this.dx;
 		float newPositionY = this.getPositionY() + this.dy;
 		
 		
 		/*
-		 * On test les collisions
+		 * On teste les collisions
 		 */
 		
 		this.setPositionY(newPositionY);	// on le déplace en Y (haut, bas)
@@ -157,16 +157,16 @@ public class Personnage extends ElementDeplacable {
 					this.surLeSol = true;			// on est sur le sol
 					this.dansLesAirs = false;		// on est pas dans les airs
 				}
-				else { 	// on a modifier que la position Y, la plateforme ne peut être qu'au dessus
+				else { 	// on a modifié que la position Y, la plateforme ne peut être qu'au dessus
 					this.setPositionY( oldPosition.getY() );
-					this.surLeSol = false;		// il n'y a pas de sol, on est pas sur le sol
+					this.surLeSol = false;		// il n'y a pas de sol, on n'est pas sur le sol
 					this.dansLesAirs = true;	// on est dans les airs
 				}
 				
 				this.dy = 0;			// on a touché quelque chose (au dessus ou en dessous), on remet l'accélération à 0
 				break;
 			}
-			else this.dansLesAirs = true;	// pas de collision avec une pateforme, ni en haut, ni en bas, on est dans les airs.
+			else this.dansLesAirs = true;	// pas de collision avec une plateforme, ni en haut, ni en bas, on est dans les airs.
 			
 		}
 		
@@ -177,7 +177,7 @@ public class Personnage extends ElementDeplacable {
 			if( plateforme.estEnCollisionAvec(this) ) {
 				
 				if( this.surLeSol && this.getPositionY() - plateforme.getPositionY() < 0.f ) {
-					continue; 	// c'est la collision avec le sol, on ne la prends pas en compte.
+					continue; 	// c'est la collision avec le sol, on ne la prend pas en compte.
 				}
 				else {
 					
@@ -212,7 +212,7 @@ public class Personnage extends ElementDeplacable {
 
 		
 		
-		// le personnage touche une cerise, il l'a ramasse et obtient un certain nombre de points.
+		// le personnage touche une cerise, il la ramasse et obtient un certain nombre de points.
 		ElementRamassable elementRamassable = carte.getElementRamassableEnCollisionAvecElement(this); 
 		if( elementRamassable != null ) {
 			this.nbPoints += elementRamassable.getNbPoints();
@@ -298,7 +298,7 @@ public class Personnage extends ElementDeplacable {
 	}
 	
 	/**
-	 * Retourne le nombre de points qu'a réussit à obtenir le personnage du joueur durant son déplacement.
+	 * Retourne le nombre de points qu'a réussi à obtenir le personnage du joueur durant son déplacement.
 	 * @return Le nombre de points obtenu par le personnage.
 	 */
 	public int getNbPoints() {
