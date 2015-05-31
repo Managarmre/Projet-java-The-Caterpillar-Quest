@@ -1,0 +1,24 @@
+
+####### Installation :
+
+1 - Placer le dossier 'TheCaterpillarQuest' quelque part sur votre disque dur.
+
+2 - Assurez vous que le dossier contienne bien le dossier 'Ressources' et le jar 'TheCaterpillarQuest.jar'.
+
+3 - Utiliser la commande chmod sur le fichier script :
+	chmod 755 ./TheCaterpillarQuest/TheCaterpillarQuest.sh
+
+
+
+####### Lancement :
+
+Le jeu peut être lancer de deux manières.
+Vous devrez ouvrir un terminal, et vous placer dans le dossier 'TheCaterpillarQuest' que vous avez mis sur votre disque dur.
+
+- soit avec la commande utilisant le script
+	./TheCaterpillarQuest.sh <nomJoueur> 
+	./TheCaterpillarQuest.sh <nomJoueur> <fichierCarte>
+Vous devrez pour cela avoir les droits d'exécutions sur le fichier ./TheCaterpillarQuest.sh
+
+- soit avec la commande :
+	java -Djava.library.path="Ressources/libs/natives" -jar TheCaterpillarQuest.jar <nomJoueur> 

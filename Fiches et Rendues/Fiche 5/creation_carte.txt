@@ -1,0 +1,35 @@
+﻿Créé sa propre carte pour le jeu : The Caterpillar Quest
+
+1 - Les symboles reconnus
+
+	Les éléments du jeu :
+		- # : ce caractère est utilisé pour représenter une plateforme
+		- c : ce caractère est utilisé pour représenter une cerise
+		- P : ce caractère est utilisé pour représenter une porte
+		- A : ce caractère est utilisé pour représenter l'avatar du joueur
+		- v : ce caractère est utilisé pour représenter une guêpe se déplaçant verticalement
+		- h : ce caractère est utilisé pour représenter une guêpe se déplaçant horizontalement
+
+	Les déplacements :
+		- par défaut : les guêpes se déplaçant verticalement iront vers le bas, et celles se déplaçant horizontalement iront vers la droite
+		- < : déplacement vers la gauche (guêpe se déplaçant horizontalement uniquement)
+		- ^ : déplacement vers le haut (guêpe se déplaçant verticalement uniquement)
+		- les chiffres : indiquent le nombre de colonnes ou de lignes que les guêpes vont parcourir en se déplaçant (par défaut ce chiffre est fixé à 3)
+
+	Les caractères d'espacement (ne correspondent pas à des éléments) :
+		- l'espace
+		- la tabulation (une tabulation correspond à trois espaces consécutifs)
+
+2 - Les ennemis
+
+	Il y a plusieurs possibilités de déclarer un ennemi sur la carte :
+		- déclarer un ennemi par défaut (v ou h)
+		- déclarer un ennemi en indiquant le nombre de cases de déplacement (h5 ou v5)
+		- déclarer un ennemi en modifiant son sens de déplacement (h< ou v^)
+		- décalrer un ennemi en indiquant son nombre de cases de déplacement et son sens de déplacement (h5< ou v5^)
+
+3 - Les contraintes
+
+	- si plusieurs personnages sont représentés sur la carte, seule la première position lue sera prise en compte
+	- le personnage doit être sur l'une des 32 premières colonnes du fichier
+	- la carte ne peut pas dépasser les 20 lignes (à partir de la 21ème, le parser ne lira plus le fichier)
