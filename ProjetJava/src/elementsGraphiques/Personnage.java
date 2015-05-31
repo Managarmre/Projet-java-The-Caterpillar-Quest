@@ -53,6 +53,7 @@ public class Personnage extends ElementDeplacable {
 	private static final float[] POSITIONS_HITBOX_SAUT_GAUCHE = { 0, 0, 2, 0, 4, 2, 8, 2, 13, 7, 13, 10, 15, 12, 19, 15, 19, 19, 24, 19, 24, 23, 28, 23,      28, 32, 18, 32,     8, 23, 8, 20, 3, 18, 3, 14, 0, 10 };
 	private static final float[] POSITIONS_HITBOX_SAUT_DROITE = { 31, 0, 29, 0, 27, 2, 23, 2, 18, 7, 18, 10, 16, 12, 12, 15, 12, 19, 7, 19, 7, 23, 3, 23,     3, 32, 13, 32,    23, 23, 23, 20, 28, 18, 28, 14, 31, 10 };
 	
+	// les situations correspondent à des indices dans les tableaux des animations et des hitbox.
 	private static final int FIXE_GAUCHE = 0;
 	private static final int FIXE_DROITE = 1;
 	private static final int DEPLACEMENT_GAUCHE = 2;
