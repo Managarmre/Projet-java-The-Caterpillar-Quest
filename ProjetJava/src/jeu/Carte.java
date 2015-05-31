@@ -42,27 +42,24 @@ public class Carte {
 	
 	/**
 	 * Crée une nouvelle carte.
-	 * @throws IOException Une erreur est survenue lors du chargement de la carte (lecture du fichier de carte).
+	 * @throws IOException 
 	 */
 	public Carte( String cheminCarte ) throws IOException {
 		
 		this.cheminfichierCarte = cheminCarte;
-				
+		
+		//this.personnage = new Personnage( 0, 0 );
+		
 		this.elementsRamassables = new ArrayList<ElementRamassable>();
 		this.ennemis = new ArrayList<Ennemi>();
 		this.elementsFixes = new ArrayList<ElementFixe>();
 		this.portes = new ArrayList<Porte>();
 		
 		this.parseur = new Parser(this);
-		this.parseur.getEcranInit();	
-		// le personnage est initialiser lors de l'appel du parseur
+		this.parseur.getEcranInit();
 		
 	}
 
-	/**
-	 * Crée une nouvelle carte en urilisant le fichier de carte par défaut.
-	 * @throws IOException Une erreur est survenue lors du chargement de la carte (lecture du fichier de carte).
-	 */
 	public Carte() throws IOException {
 		this("default.map");
 	}
@@ -122,19 +119,10 @@ public class Carte {
 	 * @throws SlickException Lancée lorsqu'une erreur est détectée par la librairie Slick2D.
 	 */
 	public void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException {
-		
-		/* 
-			L'ordre d'affichage est important ici, 
-			car les éléments affichés avant les autres seront en dessous des nouveaux éléments affichés.		
-		*/
-		
-		for( Porte porte : this.portes ) {
-			porte.afficher( conteneur, graphique );
-		}
-		
+				
 		for( ElementFixe fixe : this.elementsFixes ) {
 			fixe.afficher( conteneur, graphique );
-		}	
+		}
 				
 		for( ElementRamassable ramassable : this.elementsRamassables ) {
 			ramassable.afficher( conteneur, graphique );
@@ -142,6 +130,10 @@ public class Carte {
 				
 		for( Ennemi ennemi : this.ennemis ) {
 			ennemi.afficher( conteneur, graphique );
+		}
+				
+		for( Porte porte : this.portes ) {
+			porte.afficher( conteneur, graphique );
 		}
 		
 		this.personnage.afficher( conteneur, graphique );

@@ -265,7 +265,6 @@ public class Personnage extends ElementDeplacable {
 	 * @param carte
 	 * @return
 	 */
-	/*
 	public boolean estEnCollisionAvecPlateforme(Carte carte){
 		
 		Point oldPosition = this.getPosition();
@@ -293,7 +292,6 @@ public class Personnage extends ElementDeplacable {
 		
 		return false;
 	}
-	*/
 	
 	public float getSpeed() {
 		return speed;

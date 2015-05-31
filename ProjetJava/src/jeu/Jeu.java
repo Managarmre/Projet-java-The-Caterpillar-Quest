@@ -41,14 +41,13 @@ public class Jeu extends BasicGame {
 	private boolean partieGagnee = false;
 	
 	private String nomJoueur;
-	private int tempsEcoule;	// représente le temps écoulé à partir du lancement de la partie, initialisé à 0.
-	private long tempsLancement;	// représente le temps du système du lancement du jeu, l'initialisation est inconnue (currentTimeMillis).
+	private int tempsEcoule;
+	private long tempsLancement;
 	
 	/**
 	 * Créé un nouveau jeu. 
 	 * @param nomJoueur Le nom du joueur jouant la partie.
-	 * @param cheminFichierCarte Le chemin du fichier contenant la carte à charger.
-	 * @throws IOException Une erreur est survenue lors du chargement de la carte (lecture du fichier de carte).
+	 * @throws PartieException 
 	 */
 	public Jeu( String nomJoueur, String cheminFichierCarte ) throws IOException {
 		super("The Caterpillar Quest");
@@ -62,11 +61,6 @@ public class Jeu extends BasicGame {
 		
 	}
 	
-	/**
-	 * Crée un nouveau jeu en utilisant la carte par défaut.
-	 * @param nomJoueur Le nom du joueur jouant la partie.
-	 * @throws IOException Une erreur est survenue lors du chargement de la carte (lecture du fichier de carte).
-	 */
 	public Jeu( String nomJoueur ) throws IOException {
 		this( nomJoueur, "default.map" );
 	}
@@ -106,17 +100,15 @@ public class Jeu extends BasicGame {
 		} 
 		catch( PartieGagneeException gagnee ) {
 			this.partieGagnee = true;
-			conteneur.exit();		// arrête le jeu.
+			conteneur.exit();
 			
 		} catch( PartieException partieException ) {
 			this.partieGagnee = false;
-			conteneur.exit();		// arrête le jeu.
+			conteneur.exit();
 		}
 		
-		this.camera.update();	// on remet la caméra en fonction de la position du personnage à l'écran.
+		this.camera.update();
 		
-		// on met à jour le temps du jeu.
-		// ce temps devant commencer à 0, on soustrait le temps système de lancement (celui de la machine).
 		this.tempsEcoule = (int) (System.currentTimeMillis() - this.tempsLancement) / 1000;
 		
 	}

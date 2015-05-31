@@ -1,17 +1,14 @@
-package parser;
+/**
+ * @author Pauline
+ */
 
+package parser;
 import java.io.*;
 import java.util.ArrayList;
 
 import jeu.Carte;
 import elementsGraphiques.*;
 
-/**
- * Cette classe permet de charger dynamiquement les éléments d'une classe Carte à partir d'un fichier.
- * @see jeu.Carte
- * @author Pauline Houlgatte 
- *
- */
 public class Parser 
 {
 	/**
@@ -26,7 +23,7 @@ public class Parser
 	/**
 	 * Constructeur de la classe parser
 	 * @param carte La carte à mettre à jour
-	 * @throws IOException Une erreur est survenue lors de la lecture du fichier contenant la carte.
+	 * @throws IOException
 	 */
 	public Parser(Carte carte) throws IOException
 	{
@@ -52,7 +49,7 @@ public class Parser
 	
 	/**
 	 * Méthode permettant de récupérer les 32 premières colonnes des 20 lignes chargées. Cette méthode permet donc de charger l'écran initial.
-	 * @throws IOException Une erreur est survenue lors de la lecture du fichier contenant la carte.
+	 * @throws IOException
 	 */
 	public void getEcranInit() throws IOException
 	{
@@ -91,7 +88,7 @@ public class Parser
 	/**
 	 * Méthode permettant de vérifier qu'un caractère est un entier
 	 * @param c le caractère à vérifier
-	 * @return Vrai si le caractère est un entier, faux sinon.
+	 * @return un booleen
 	 */
 	private boolean estEntier(char c)
 	{
@@ -180,11 +177,8 @@ public class Parser
 		}
 	}
 
-	/**
-	 * Classe interne permettant de tester la classe Parser.
-	 * @author Pauline Houlgatte
-	 */
-	public static class Test
+	// test interne
+	public static class Application
 	{
 		public static void main(String[] args) throws IOException
 		{

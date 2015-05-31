@@ -7,29 +7,28 @@ import elementsGraphiques.Personnage;
 
 
 /**
- * Gère les entrées clavier pour déplacer le personnage à l'écran.
  * Cette classe permet de récupérer les entrées clavier, et de modifier vers quelle direction le personnage se dirige en fonction de celles-ci.
- *  
+ * 
  * @author Cyril Caron
  * 
+ * Gère les entrées clavier pour déplacer le personnage à l'écran
+ *
  */
 public class ControleurPersonnage implements KeyListener {
 
 
 	private Personnage player;
 	
-	/**
-	 * Construit un nouveau controleur d'entrée / sortie pour le personnage passé en paramètre.
-	 * @param player Le personnage à modifier en fonction des entrées / sorties clavier de l'utilisateur.
-	 */
-	public ControleurPersonnage( Personnage player ) {
+	public ControleurPersonnage( Personnage player) {
 		this.player = player;
-	}
+		}
 
 	
 	@Override
 	public void keyPressed( int key, char c ) {
-		
+
+		//System.out.println(c);
+
 		switch(key) {
 		
 			case Input.KEY_UP:
@@ -55,7 +54,7 @@ public class ControleurPersonnage implements KeyListener {
 
 	@Override
 	public void keyReleased( int key, char c ) {
-		 this.player.setMoving(false);		// le personnage arrete de boger lorsque le joueur relache la touche.
+		 this.player.setMoving(false);
 		
 	}
 	

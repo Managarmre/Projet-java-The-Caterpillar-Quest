@@ -28,7 +28,7 @@ public class Guepe extends Ennemi {
 	 * La direction vers laquelle la guêpe se déplace.
 	 * La valeur de cette direction permet de récupérer l'animation correspondante, 
 	 * car elle correspond à l'indice de cette animation dans le tableau d'animations.
-	 * @author Maxime Pineau
+	 * @author Maxime
 	 *
 	 */
 	private Orientation orientation;	
@@ -36,7 +36,7 @@ public class Guepe extends Ennemi {
 		Gauche(0),
 		Droite(1);
 		
-		private int indice;	// représente l'indice du tableau dans lequel on va stocké la hitbox et l'annimation correspondant à l'orientation.
+		private int indice;
 		
 		Orientation( int indice ) {
 			this.indice = indice;
@@ -49,12 +49,12 @@ public class Guepe extends Ennemi {
 	}
 	
 	/**
-	 * La suite de points (x,y) permettant de contruire les hitbox de la guêpes.
+	 * La suite de points (x,y) permettant de contruire les hitbox de la guêpes
 	 */
 	private static final float[] POSITIONS_HITBOX_DEPLACEMENT_GAUCHE = { 5, 13, 7, 12, 12, 9, 15, 9, 17, 11, 25, 12, 28, 14, 30, 19, 30, 25, 28, 26, 28, 24, 25, 24, 22, 22, 18, 19, 15, 16, 15, 15, 11, 15, 8, 21, 5, 21 };
 	private static final float[] POSITIONS_HITBOX_DEPLACEMENT_DROITE = { 17, 9, 20, 9, 23, 12, 25, 12, 27, 14, 27, 21, 24, 21, 20, 15, 17, 15, 14, 19, 9, 22, 7, 23, 7, 24, 4, 24, 4, 26, 1, 24, 1, 20, 2, 17, 4, 17, 4, 14, 5, 14, 7, 12, 13, 12 };
 	
-	private boolean deplacementHorizontal;	// indique si la guêpe se déplace horizontalement ou verticalement.
+	private boolean deplacementHorizontal;
 	
 	
 	/**
@@ -93,7 +93,7 @@ public class Guepe extends Ennemi {
 	
 	@Override
 	public void initialiser() throws SlickException {
-		if( this.estInitialise ) return;	// on initialise qu'une et une seule fois.
+		if( this.estInitialise ) return;
 		this.estInitialise = true;
 		
 		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
@@ -102,12 +102,10 @@ public class Guepe extends Ennemi {
 		this.animations[ Orientation.Gauche.indice() ] = this.chargerAnimation( 0, 0, 3 );
 		if( this.deplacementHorizontal ) this.animations[ Orientation.Droite.indice() ] = this.chargerAnimation( 1, 0, 3 );
 		
-		// on a une hitbox par aniamtions.
 		this.hitboxs = new Hitbox[2];
 		this.hitboxs[ Orientation.Gauche.indice() ] = new Hitbox( Guepe.POSITIONS_HITBOX_DEPLACEMENT_GAUCHE );
 		this.hitboxs[ Orientation.Droite.indice() ] = new Hitbox( Guepe.POSITIONS_HITBOX_DEPLACEMENT_DROITE );
 		
-		// on initialise la hitbox actuelle de l'élément à partir de l'orientation initiale de la guêpe.
 		this.setHitbox( this.hitboxs[ this.orientation.indice() ] );		
 	}
 	
@@ -115,15 +113,13 @@ public class Guepe extends Ennemi {
 	@Override
 	public void update( GameContainer conteneur, int delta, Carte carte ) throws SlickException {
 		
-		// on sauvegarde les anciennes positions
 		float oldX = this.getPositionX();
 		float oldY = this.getPositionY();
 		
-		// on calcul les prochaines positions en utilisant un vecteur pour déterminer la direction.
 		Vector2f vecteurDirection = new Vector2f( this.getArrivee().getX() - oldX, this.getArrivee().getY() - oldY );
 		
-		Vector2f vecteur = new Vector2f( 0.1f * delta, 0 );	// le vecteur de base indiquant de combient la guêpe peut se déplacer.
-		vecteur.add( vecteurDirection.getTheta() );		// on replace ce vecteur sur le vecteur de direction, permettant de déplacer la guêpe vers la bonne direction.
+		Vector2f vecteur = new Vector2f( 0.1f * delta, 0 );
+		vecteur.add( vecteurDirection.getTheta() );
 		
 		float newX = this.getPositionX() + vecteur.getX();
 		float newY = this.getPositionY() + vecteur.getY();
@@ -133,16 +129,16 @@ public class Guepe extends Ennemi {
 		// gestion de la collision avec les éléments de la carte
 		boolean collision = carte.elementEnCollisionAvecUnElementFixe(this);
 		
-		if(collision) this.setPosition( oldX, oldY );	// une collision est détectée, on revient à la position précédente.
+		if(collision) this.setPosition( oldX, oldY );
 		
-		// si la guêpe est arrivée à destination (sur le point d'arrivée), ou qu'elle est arrêtée en chemin.
+		// si la guêpe est arrivée à destination (sur le point d'arrivée)
 		if( collision || this.estArriveDestination() ) this.faireDemiTour();
 		
 	}
 	
 	
 	/**
-	 * La guêpe fait demi-tour. On échange les points de départ et d'arrivée.
+	 * La guêpe fait demi-tour.
 	 */
 	private void faireDemiTour() {
 		

@@ -80,11 +80,11 @@ public abstract class Element {
 	 * @throws SlickException Lancée lorsqu'une erreur est détecté par la librairie Slick2D (image non trouvée...).
 	 */
 	public /*abstract*/ void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException
-	{	
-		// à décommenté pour voir les hitbox.	
-		//Shape hitbox = this.getHitbox().getForme();			
+	{		
+		Shape hitbox = this.getHitbox().getForme();			
 		graphique.setColor( Color.red );
-		//graphique.draw(hitbox);		
+		//graphique.draw(hitbox);
+		
 	}
 	
 	
@@ -95,7 +95,7 @@ public abstract class Element {
 	 * @return Vrai si cet élément graphique et l'élément e sont en collision, faux sinon.
 	 */
 	public boolean estEnCollisionAvec(Element e){
-		return this.hitbox.intersects( e.getHitbox() );		// on utilise les méthodes des Shapes pour détecter les collisions.
+		return this.hitbox.intersects( e.getHitbox() );
 	}
 
 	/**
@@ -115,8 +115,7 @@ public abstract class Element {
 	}
 	
 	/**
-	 * Retourne la position de l'élément sur la fenêtre.
-	 * Cette position est une copie de l'objet Point de l'élément.
+	 * Retourne la position de l'élément sur la fenêtre
 	 * @return La position de l'élément, stocké dans un objet Point
 	 */
 	public Point getPosition() {

@@ -44,7 +44,7 @@ public abstract class ElementFixe extends Element {
 	
 	@Override
 	public void initialiser() throws SlickException {
-		if( this.estInitialise ) return;	// on ne fait l'initialisation qu'une et une seule fois.
+		if( this.estInitialise ) return;
 		this.estInitialise = true;
 		
 		this.image = new Image( this.cheminImage );
