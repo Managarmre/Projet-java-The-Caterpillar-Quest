@@ -31,7 +31,7 @@ public class Application {
 	 * - args[0] contiendra le nom / pseudo du joueur. <br/>
 	 * - arg[1] pourra contenir le chemin du fichier. <br/>
 	 * Redirige également les logs dans un fichier de log. <br/>
-	 * À la fin de la partie, les scores des 5 meilleurs joueurs s'afficheront, ainsi que le score du joueur actuel si il a terminé la partie. <br/>
+	 * À la fin de la partie, les scores des 5 meilleurs joueurs s'afficheront, ainsi que le score du joueur actuel s'il a terminé la partie. <br/>
 	 * Les 5 meilleurs scores seront sauvegardés dans le fichier "scores.save". <br/>
 	 * Carte par défaut : "default.map" <br/>
 	 * Fichier log Slick2d : "TheCaterpillarQuest.log" 
