@@ -18,28 +18,26 @@ import org.newdawn.slick.geom.Rectangle;
 
 
 /**
- * @author Cyril
- *
+ * Cette classe représente le personnage du joueur dans la fenêtre.
+ * Le joueur peut déplacer ce personnage à l'aide des touche haut, gauche et droite du clavier.
+ * @see ControleurPersonnage
+ * @author Cyril Caron
+ * @autor Maxime Pineau
  */
 public class Personnage extends ElementDeplacable {
 	
 	private int nbPoints = 0;
+	
 	private boolean isMoving = false;
 	private boolean dansLesAirs = false;
 	private boolean surLeSol = false;
 
-	
-	private Direction direction;
-	private Direction orientation;
-	private int situationAnimation;
 
-	
+	// les attributs permettant le déplacement du personnage.
 	private float speed = 10f;
-	
 	private float vx = 0.0f; // vitesse en x
 	private float vy = 0.0f; // vitesse en y
-
-	private float ay = 0.0f; // valeur de l'accélération
+	private float ay = 0.0f; // valeur de l'accélération, pour la gravité ou le saut.
 	private float dx = 0.0f; // valeur du déplacement du personnage en X
 	private float dy = 0.0f; // valeur du déplacement du personnage en Y
 	private double tempsSaut = 0.5f;
@@ -55,7 +53,6 @@ public class Personnage extends ElementDeplacable {
 	private static final float[] POSITIONS_HITBOX_SAUT_GAUCHE = { 0, 0, 2, 0, 4, 2, 8, 2, 13, 7, 13, 10, 15, 12, 19, 15, 19, 19, 24, 19, 24, 23, 28, 23,      28, 32, 18, 32,     8, 23, 8, 20, 3, 18, 3, 14, 0, 10 };
 	private static final float[] POSITIONS_HITBOX_SAUT_DROITE = { 31, 0, 29, 0, 27, 2, 23, 2, 18, 7, 18, 10, 16, 12, 12, 15, 12, 19, 7, 19, 7, 23, 3, 23,     3, 32, 13, 32,    23, 23, 23, 20, 28, 18, 28, 14, 31, 10 };
 	
-	
 	private static final int FIXE_GAUCHE = 0;
 	private static final int FIXE_DROITE = 1;
 	private static final int DEPLACEMENT_GAUCHE = 2;
@@ -63,6 +60,10 @@ public class Personnage extends ElementDeplacable {
 	private static final int SAUT_GAUCHE = 4;
 	private static final int SAUT_DROITE = 5;
 	
+
+	private Direction direction;	// représente la direction donnée par les entrées du clavier (Gauche, Droite, Haut)
+	private Direction orientation;	// représente l'orientation du personnage (à gauche ou à droite)
+	private int situationAnimation;	// indice permettant de récupérer l'animation et la hitbox en fonction du déplacement du personnage
 	
 	/**
 	 * @param x La position en x du personnage
@@ -81,30 +82,15 @@ public class Personnage extends ElementDeplacable {
 	public Direction getDirection() {
 		return direction;
 	}
-
-	public void setDirection(Direction direction) {
-		if(direction == Direction.DROITE || direction == Direction.GAUCHE){
-			if(direction == Direction.DROITE && this.orientation==Direction.GAUCHE){
-				//de gauche à  droite
-				this.orientation = Direction.DROITE;
-				this.situationAnimation++;
-			}
-			else if(direction == Direction.GAUCHE && this.orientation==Direction.DROITE){
-				//de droite à  gauche
-				this.orientation = Direction.GAUCHE;
-				this.situationAnimation--;
-			}
-		}
-		this.direction = direction;
-	}
-
+	
 	@Override
 	public void initialiser() throws SlickException {
-		if( this.estInitialise ) return;
+		if( this.estInitialise ) return;	// on initialise une et une seule fois
 		this.estInitialise = true;
 		
 		this.sprite = new SpriteSheet( this.cheminSprite, 32, 32 );
 		
+		// initialisation des animations du personnage
 		this.animations = new Animation[6];
 		this.animations[ Personnage.FIXE_GAUCHE ] = this.chargerAnimation( 0, 0, 1 );	// fixe gauche
 		this.animations[ Personnage.FIXE_DROITE ] = this.chargerAnimation( 1, 0, 1 );	// fixe droite
@@ -112,7 +98,8 @@ public class Personnage extends ElementDeplacable {
 		this.animations[ Personnage.DEPLACEMENT_DROITE ] = this.chargerAnimation( 3, 0, 1 ); 	// deplacement droite
 		this.animations[ Personnage.SAUT_GAUCHE ] = this.chargerAnimation( 4, 0, 0 );	// saut gauche
 		this.animations[ Personnage.SAUT_DROITE ] = this.chargerAnimation( 4, 1, 1 );	// saut droite
-				
+		
+		// initialisation des hitbox du personnage, à une animation correspond une hitbox.
 		this.hitboxs = new Hitbox[6];
 		this.hitboxs[ Personnage.FIXE_GAUCHE ] = new Hitbox( Personnage.POSITIONS_HITBOX_GAUCHE );
 		this.hitboxs[ Personnage.FIXE_DROITE ] = new Hitbox( Personnage.POSITIONS_HITBOX_DROITE );
@@ -121,6 +108,7 @@ public class Personnage extends ElementDeplacable {
 		this.hitboxs[ Personnage.SAUT_GAUCHE ] = new Hitbox( Personnage.POSITIONS_HITBOX_SAUT_GAUCHE );
 		this.hitboxs[ Personnage.SAUT_DROITE ] = new Hitbox( Personnage.POSITIONS_HITBOX_SAUT_DROITE );
 		
+		// initialisation de la hitbox actuelle du personnage en fonction de l'orientation du joueur.
 		this.setHitbox( this.hitboxs[ this.situationAnimation ] );
 	}
 	
@@ -130,104 +118,85 @@ public class Personnage extends ElementDeplacable {
 				
 		this.vx = (float) ( 14 * 0.015 * this.speed );
 		this.vy = (float) ( 14 * 0.05 * this.speed );
-		
-		// accération, à ajouter à dy pour créer la gravité ou retirer à dy pour créer le saut
-		this.ay = (float) ( this.vy * (14/1000.0) / this.tempsSaut );	
+				
+		this.ay = (float) ( this.vy * (14/1000.0) / this.tempsSaut );	// accération, à ajouter à dy pour créer la gravité.
 		
 		// déplacement sur X
 		if( this.direction == Direction.DROITE && this.isMoving ) this.dx = this.vx; 	// déplacement à droite
-		else if( direction == Direction.GAUCHE && this.isMoving ) this.dx = - this.vx; 	// déplacement à gauche
+		else if( this.direction == Direction.GAUCHE && this.isMoving ) this.dx = - this.vx; 	// déplacement à gauche
 		else this.dx = 0;
 		
 		// déplacement sur Y
-		if( this.direction == Direction.HAUT && this.isMoving && ! this.dansLesAirs && this.surLeSol ) {
+		if( this.direction == Direction.HAUT && this.isMoving && ! this.dansLesAirs /*&& this.surLeSol*/ ) {
 			
-			this.dy = - this.vy;
+			this.dy = - this.vy;		// on enlève pour faire déplacer le personnage vers le haut.
 			this.dansLesAirs = true; // le personnage va sauter
-			
 		}
 		else this.dy += this.ay;	// le personnage est dans les airs, ou tombe, gravité constante toujours appliquée
 		
 		
-		
-		System.out.println("\n New positionnement : ");
-		System.out.println(" delta : " + delta );
-		
+		// on calcul les nouvelles positions du personnage.		
 		Point oldPosition = this.getPosition();
 		float newPositionX = this.getPositionX() + this.dx;
 		float newPositionY = this.getPositionY() + this.dy;
 		
-		this.setPositionY(newPositionY);
+		
+		/*
+		 * On test les collisions
+		 */
+		
+		this.setPositionY(newPositionY);	// on le déplace en Y (haut, bas)
 		for( ElementFixe plateforme : carte.getElementsFixes() ) {
 			
 			if( plateforme.estEnCollisionAvec(this) ) {
 				
 				// la plateforme est en dessous du personnage
-				if( this.getPositionY() - plateforme.getPositionY() < 0.f ) {
-
-					System.out.println("SOL   PERSO : " + this.getPositionY() + " plateforme : " + plateforme.getPositionY() );
-					
-					this.setPositionY( plateforme.getPositionY() - this.getHauteur() );
-					this.surLeSol = true;	// on est sur le sol
+				if( this.getPositionY() - plateforme.getPositionY() < 0.f ) {			
+					this.setPositionY( plateforme.getPositionY() - this.getHauteur() );	// on replace le personnage sur la plateforme.
+					this.surLeSol = true;			// on est sur le sol
 					this.dansLesAirs = false;		// on est pas dans les airs
 				}
 				else { 	// on a modifier que la position Y, la plateforme ne peut être qu'au dessus
-					
-					System.out.println("DESSUS PERSO : " + this.getPositionY() + " plateforme : " + plateforme.getPositionY() );
-					
 					this.setPositionY( oldPosition.getY() );
-					this.surLeSol = false;	// il n'y a pas de sol, on est pas sur le sol
+					this.surLeSol = false;		// il n'y a pas de sol, on est pas sur le sol
 					this.dansLesAirs = true;	// on est dans les airs
 				}
 				
 				this.dy = 0;			// on a touché quelque chose (au dessus ou en dessous), on remet l'accélération à 0
-				
 				break;
 			}
-			else this.dansLesAirs = true;
+			else this.dansLesAirs = true;	// pas de collision avec une pateforme, ni en haut, ni en bas, on est dans les airs.
 			
 		}
 		
 		
-		this.setPositionX(newPositionX);
-		
+		this.setPositionX(newPositionX); 	// on le déplace en X (gauche, droite)
 		for( ElementFixe plateforme : carte.getElementsFixes() ) {
 			
 			if( plateforme.estEnCollisionAvec(this) ) {
 				
-				System.out.println(" sur sol " + this.surLeSol + " dans les airs : " + this.dansLesAirs );
-				System.out.println(" pos x : " + this.getPositionX() + " plateforme x : " + plateforme.getPositionX() );
-				
 				if( this.surLeSol && this.getPositionY() - plateforme.getPositionY() < 0.f ) {
-					System.out.println("Collision avec le sol ok");
-					continue; 	// c'est la collision avec le sol
+					continue; 	// c'est la collision avec le sol, on ne la prends pas en compte.
 				}
 				else {
 					
-					
 					if( this.surLeSol ) {
 						
-						this.isMoving = false;
 						if( this.getPositionX() - plateforme.getPositionX() < 0.0f ) this.setPositionX( plateforme.getPositionX() - plateforme.getLargeur() );
 						else this.setPositionX( plateforme.getPositionX() + plateforme.getLargeur() );
 						
 					}
-					else {
-						this.isMoving = false;
-						this.setPositionX( oldPosition.getX() );
-					}
+					else this.setPositionX( oldPosition.getX() );
 					
-					
-					
+					this.isMoving = false;
 					break;
 				}
-				
+			
 			}
 		}
 			
 
-		
-		
+		// on modifie l'animation et la hitbox en fonction du déplacement actuel du personnage		
 		int oldSituation = this.situationAnimation;
 		
 		if( this.dansLesAirs && this.orientation == Direction.GAUCHE ) this.situationAnimation = SAUT_GAUCHE;
@@ -237,10 +206,12 @@ public class Personnage extends ElementDeplacable {
 		else if( this.orientation == Direction.GAUCHE ) this.situationAnimation = FIXE_GAUCHE;
 		else this.situationAnimation = FIXE_DROITE;
 		
+		// on met à jour la hitbox actuelle du personnage
 		if( oldSituation != this.situationAnimation ) this.setHitbox( this.hitboxs[this.situationAnimation] );
 
 		
 		
+		// le personnage touche une cerise, il l'a ramasse et obtient un certain nombre de points.
 		ElementRamassable elementRamassable = carte.getElementRamassableEnCollisionAvecElement(this); 
 		if( elementRamassable != null ) {
 			this.nbPoints += elementRamassable.getNbPoints();
@@ -250,78 +221,15 @@ public class Personnage extends ElementDeplacable {
 		// le personnage touche une porte, le joueur gagne la partie
 		if( carte.elementEnCollisionAvecUnePorte(this) ) throw new PartieGagneeException();
 		
-
 		// le personnage touche une guêpe, le joueur perd la partie
 		if( carte.elementEnCollisionAvecUnEnnemi(this) ) throw new PartiePerdueException();
 
-		
 		// le personnage sort de la fenêtre, le joueur perd la partie
 		if( this.getPositionY() > Jeu.HAUTEUR ) throw new PartiePerdueException();
 		
 	}	
 	
-	/**
-	 * Indique si le personnage est en collision avec une plateforme
-	 * @param carte
-	 * @return
-	 */
-	/*
-	public boolean estEnCollisionAvecPlateforme(Carte carte){
-		
-		Point oldPosition = this.getPosition();
-		for( ElementFixe plateforme : carte.getElementsFixes() ) {	
-			if( this.estEnCollisionAvec(plateforme) ){
-				
-				// collision en haut
-				if( this.getPositionY() - plateforme.getPositionY() < 0.0f ) {
-					this.setPositionY(plateforme.getPositionY() - this.getHauteur());
-					surLeSol = true;
-					this.setJumping(false);
-				}else{ // collision sur les autres côtés
-					System.out.println("Collision sur le côté");
-					this.setJumping(true);
-					surLeSol = false;
-					this.setMoving(false);
-				}					
-				
-				return true;		
-			}
-				
-		}
-
-		this.setJumping(true); // le personnage est en l'air
-		
-		return false;
-	}
-	*/
 	
-	public float getSpeed() {
-		return speed;
-	}
-
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
-
-
-	public boolean isMoving() {
-		return isMoving;
-	}
-
-	public void setMoving(boolean isMoving) {
-		this.isMoving = isMoving;
-	}
-	
-	public boolean isJumping() {
-		return dansLesAirs;
-	}
-
-
-	public void setJumping(boolean jumping) {
-		this.dansLesAirs = jumping;
-	}
-
-
 	@Override
 	public void afficher(GameContainer conteneur, Graphics graphique) throws SlickException {
 		
@@ -329,7 +237,69 @@ public class Personnage extends ElementDeplacable {
 		
 		graphique.drawAnimation( this.animations[this.situationAnimation], this.getPositionX(), this.getPositionY() );		
 	}
+	
+	
+	
+	public void setDirection(Direction direction) {		
+		if(direction == Direction.DROITE || direction == Direction.GAUCHE){
+			if(direction == Direction.DROITE && this.orientation==Direction.GAUCHE){
+				//de gauche à  droite
+				this.orientation = Direction.DROITE;
+			}
+			else if(direction == Direction.GAUCHE && this.orientation==Direction.DROITE){
+				//de droite à  gauche
+				this.orientation = Direction.GAUCHE;
+			}
+		}
+		this.direction = direction;
+	}
+	
+	
+	/**
+	 * Retourne la vitesse de déplacement du personnage.
+	 * @return La vitesse de déplacement du personnage.
+	 */
+	public float getSpeed() {
+		return speed;
+	}
 
+	/**
+	 * Modifie la vitesse de déplacement du personnage
+	 * @param speed La nouvelle vitesse de déplacement du personnage.
+	 */
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+
+
+	/**
+	 * Vérifie si le personnage bouge.
+	 * @return Vrai si le personnage bouge, faux si le personange est immobile.
+	 */
+	public boolean isMoving() {
+		return isMoving;
+	}
+
+	/**
+	 * Permet de dire que le personnage est en train de bouger ou non.
+	 * @param isMoving
+	 */
+	public void setMoving(boolean isMoving) {
+		this.isMoving = isMoving;
+	}
+	
+	/**
+	 * Permet de dire que le personnage est dans les airs ou non.
+	 * @param jumping
+	 */
+	public void setJumping(boolean jumping) {
+		this.dansLesAirs = jumping;
+	}
+	
+	/**
+	 * Retourne le nombre de points qu'a réussit à obtenir le personnage du joueur durant son déplacement.
+	 * @return Le nombre de points obtenu par le personnage.
+	 */
 	public int getNbPoints() {
 		return this.nbPoints;
 	}
