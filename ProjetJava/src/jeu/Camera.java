@@ -12,6 +12,7 @@ import elementsGraphiques.Personnage;
  * La caméra permet de faire avancer la carte (les éléments de la carte) à l'écran. <br/>
  * La carte s'avancera si le personnage arrive à la limite de sa zone de déplacement. <br/>
  * Le personnage du joueur ne peut se déplacer que sur le 1er tiers de l'écran. <br/>
+ * C'est également la caméra qui va charger les nouveaux éléments de la carte, et supprimer ceux trop éloignés et non atteingnable par le personnage.
  * 
  * @author Maxime Pineau
  *
@@ -27,6 +28,7 @@ public class Camera {
 	/**
 	 * Créé une caméra qui déplacera les éléments graphiques lorsque le personnage arrivera à la limite de sa zone de déplacement.
 	 * @param personnage Le personnage que la caméra doit surveiller.
+	 * @param carte La carte qui sera mis à jour selon la position du personnage (si le personnage va trop loin, on charge des éléments, et l'on supprime ceux inutiles).
 	 */
 	public Camera( Personnage personnage, Carte carte ) {
 		this.personnage = personnage;

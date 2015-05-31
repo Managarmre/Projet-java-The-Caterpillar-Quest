@@ -44,6 +44,7 @@ public class Carte {
 	
 	/**
 	 * Créé une nouvelle carte.
+	 * @param cheminCarte Le chemin du fichier représentant la carte.
 	 * @throws IOException Une erreur est survenue lors du chargement de la carte (lecture du fichier de carte).
 	 */
 	public Carte( String cheminCarte ) throws IOException {

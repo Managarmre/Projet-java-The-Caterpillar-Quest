@@ -22,9 +22,9 @@ import app.Ressources;
 /**
  * Cette classe représente le personnage du joueur dans la fenêtre.
  * Le joueur peut déplacer ce personnage à l'aide des touche haut, gauche et droite du clavier.
- * @see ControleurPersonnage
+ * @see jeu.ControleurPersonnage
  * @author Cyril Caron
- * @autor Maxime Pineau
+ * @author Maxime Pineau
  */
 public class Personnage extends ElementDeplacable {
 	
@@ -285,7 +285,7 @@ public class Personnage extends ElementDeplacable {
 
 	/**
 	 * Permet de dire que le personnage est en train de bouger ou non.
-	 * @param isMoving
+	 * @param isMoving vrai si le personnage bouge, faux sinon.
 	 */
 	public void setMoving(boolean isMoving) {
 		this.isMoving = isMoving;
@@ -293,7 +293,7 @@ public class Personnage extends ElementDeplacable {
 	
 	/**
 	 * Permet de dire que le personnage est dans les airs ou non.
-	 * @param jumping
+	 * @param jumping vrai si le personnage saute, faux sinon.
 	 */
 	public void setJumping(boolean jumping) {
 		this.dansLesAirs = jumping;
