@@ -39,7 +39,8 @@ public class Camera {
 	 * Met à jour la position de la caméra en fonction de la position du personnage (et de sa zone de déplacement).
 	 * Si le personnage dépasse sa zone de déplacement à droite, la caméra avance avec lui, déplaçant ainsi la carte.
 	 * Si le personnage dépasse sa zone de déplacement à gauche, et sort de l'écran, on replace le personnage sur le bord de la fenêtre.
-	 * @throws SlickException 
+	 * C'est également cette méthode qui charge les cases suivantes de la carte en appelant le parseur, et qui les initialises.
+	 * @throws SlickException Exception durant la mise à jour de la caméra (durant l'initialisation des nouveaux éléments de la cartes) .
 	 */
 	public void update() throws SlickException {
 				
