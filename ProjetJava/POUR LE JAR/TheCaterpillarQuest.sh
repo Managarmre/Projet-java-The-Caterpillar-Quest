@@ -5,7 +5,6 @@
 
 # on vérifie si Java est dans PATH
 if ! type -p java > /dev/null; then
-    
     # on vérifie si java est dans JAVA_HOME
 	if ! [[ -n "$JAVA_HOME" ]] || ! [[ -x "$JAVA_HOME/bin/java" ]];  then
 		echo "Java n'est pas installé sur votre machine."
@@ -15,4 +14,3 @@ if ! type -p java > /dev/null; then
 fi
 
 java -Djava.library.path="Ressources/libs/natives" -jar TheCaterpillarQuest.jar $1 $2
-
