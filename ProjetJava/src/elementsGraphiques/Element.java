@@ -11,8 +11,8 @@ import org.newdawn.slick.geom.Shape;
 /**
  * Représente un élément graphique sur le fenêtre.
  * Cet élément possèdera une position, une hitbox pour la gestion des collisions, et une méthode d'affichage. <br/>
- * La positions de la hitbox sont à données par rapport à l'élément, et non par rapport à la fenêtre.
- * La position de la hitbox est ensuite recalculé par rapport à la fenêtre. 
+ * La positions de la hitbox sont à donner par rapport à l'élément, et non par rapport à la fenêtre.
+ * La position de la hitbox est ensuite recalculée par rapport à la fenêtre. 
  * 
  * @author Cyril Caron
  * @author Maxime Pineau
@@ -31,8 +31,8 @@ public abstract class Element {
 	protected boolean estInitialise;
 	
 	/**
-	 * Crée un nouvel élément graphique.
-	 * Les positions de la hitbox sont à données par rapport à l'élément, et non par rapport à la fenêtre.
+	 * Créé un nouvel élément graphique.
+	 * Les positions de la hitbox sont à donner par rapport à l'élément, et non par rapport à la fenêtre.
 	 * @param position La position de cet élément dans la fenêtre de jeu.
 	 * @param hauteur La hauteur de l'élément.
 	 * @param largeur La largeur de l'élément.
@@ -53,8 +53,8 @@ public abstract class Element {
 	}
 	
 	/**
-	 * Crée un nouvel élément graphique.
-	 * Les positions de la hitbox sont à données par rapport à l'élément, et non par rapport à la fenêtre.
+	 * Créé un nouvel élément graphique.
+	 * Les positions de la hitbox sont à donner par rapport à l'élément, et non par rapport à la fenêtre.
 	 * @param x La position x de l'élément sur la fenêtre de jeu.
 	 * @param y La position y de l'élément sur la fenêtre de jeu.
 	 * @param hauteur La hauteur de l'élément.
@@ -68,7 +68,7 @@ public abstract class Element {
 	
 	/**
 	 * Initialisation de l'élément graphique. On initialisera tout ce qui pourrait lancer une exception SlickException ici.
-	 * @throws SlickException Lancée lorsqu'une erreur est détecté par la librairie Slick2D (image non trouvée...).
+	 * @throws SlickException Lancée lorsqu'une erreur est détectée par la librairie Slick2D (image non trouvée...).
 	 */
 	public abstract void initialiser() throws SlickException;
 	
@@ -76,12 +76,12 @@ public abstract class Element {
 	/**
 	 * Affiche l'élément graphique dans la fenêtre de jeu.
 	 * @param conteneur Le conteneur du jeu.
-	 * @param graphique Le graphique ou l'on va afficher l'élément.
-	 * @throws SlickException Lancée lorsqu'une erreur est détecté par la librairie Slick2D (image non trouvée...).
+	 * @param graphique Le graphique où l'on va afficher l'élément.
+	 * @throws SlickException Lancée lorsqu'une erreur est détectée par la librairie Slick2D (image non trouvée...).
 	 */
 	public /*abstract*/ void afficher( GameContainer conteneur, Graphics graphique ) throws SlickException
 	{	
-		// à décommenté pour voir les hitbox.	
+		// à décommenter pour voir les hitbox.	
 		//Shape hitbox = this.getHitbox().getForme();			
 		graphique.setColor( Color.red );
 		//graphique.draw(hitbox);		
@@ -117,7 +117,7 @@ public abstract class Element {
 	/**
 	 * Retourne la position de l'élément sur la fenêtre.
 	 * Cette position est une copie de l'objet Point de l'élément.
-	 * @return La position de l'élément, stocké dans un objet Point
+	 * @return La position de l'élément, stockée dans un objet Point
 	 */
 	public Point getPosition() {
 		return new Point( this.position.getX() , this.position.getY() );
@@ -126,7 +126,7 @@ public abstract class Element {
 	
 	/**
 	 * Met à jour la position x de l'élément graphique.
-	 * Cette méthode met égalemet à jour la position de la hitbox.
+	 * Cette méthode met également à jour la position de la hitbox.
 	 * @param x La nouvelle position x de l'élément graphique.
 	 * @author Maxime Pineau
 	 */
@@ -138,7 +138,7 @@ public abstract class Element {
 	
 	/**
 	 * Met à jour la position y de l'élément graphique.
-	 * Cette méthode met égalemet à jour la position de la hitbox.
+	 * Cette méthode met également à jour la position de la hitbox.
 	 * @param y La nouvelle position y de l'élément graphique.
 	 * @author Maxime Pineau
 	 */
@@ -161,7 +161,7 @@ public abstract class Element {
 	
 	/**
 	 * Met à jour la position de l'élément graphique.
-	 * Cette méthode met égalemet à jour la position de la hitbox.
+	 * Cette méthode met également à jour la position de la hitbox.
 	 * @param x La nouvelle position x de l'élément graphique.
 	 * @param y La nouvelle position y de l'élément graphique.
 	 * @author Cyril Caron
@@ -172,7 +172,7 @@ public abstract class Element {
 	
 	/**
 	 * Met à jour la position de l'élément graphique.
-	 * Cette méthode met égalemet à jour la position de la hitbox.
+	 * Cette méthode met également à jour la position de la hitbox.
 	 * @param position La nouvelle position de l'élément graphique.
 	 * @author Maxime Pineau
 	 */

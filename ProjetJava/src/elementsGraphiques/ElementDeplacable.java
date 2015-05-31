@@ -28,7 +28,7 @@ public abstract class ElementDeplacable extends Element {
 	
 	/**
 	 * Le fichier sprite chargé en mémoire. Cet objet contient également les dimensions de chaque image sur le fichier sprite.
-	 * Cet objet devra être initialiser dans la méthode initialiser() à redéfinir.
+	 * Cet objet devra être initialisé dans la méthode initialiser() à redéfinir.
 	 */
 	protected SpriteSheet sprite;
 		
@@ -42,7 +42,7 @@ public abstract class ElementDeplacable extends Element {
 	
 	/**
 	 * Un élément déplaçable pourra avoir plusieurs hitbox selon l'animation de cet élément.
-	 * La hitbox actuelle sera à remplacer par l'une de ces hitboxs.
+	 * La hitbox actuelle sera à remplacer par l'une de ces hitbox.
 	 */
 	protected Hitbox[] hitboxs;
 	
@@ -74,13 +74,12 @@ public abstract class ElementDeplacable extends Element {
 	
 	/**
 	 * Charge une animation contenue dans un fichier sprite à une certaine ligne.
-	 * Les images de l'animation seront celles contenues entres les numéros des colonnes données en paramètres.
+	 * Les images de l'animation seront celles contenues entre les numéros des colonnes donnés en paramètres.
 	 * Cette méthode est à appeler lors de l'initialisation de l'élément (redéfinition de la méthode initialisation() ).
 	 * @param numeroLigne Le numéro de la ligne contenant les images de l'animation.
 	 * @param debutColonne Le numéro de la première colonne contenant les images de l'animation.
 	 * @param finColonne Le numéro de la dernière colonne contenant les images de l'animation.
 	 * @return L'animation correspondante.
-	 * @author Maxime Pineau
 	 */
 	protected Animation chargerAnimation( int numeroLigne, int debutColonne, int finColonne ) {
 		

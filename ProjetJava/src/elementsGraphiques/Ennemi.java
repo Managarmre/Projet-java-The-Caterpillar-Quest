@@ -23,7 +23,7 @@ public abstract class Ennemi extends ElementDeplacable {
 	 * @param hauteur La hauteur de l'ennemi.
 	 * @param largeur La largeur de l'ennemi.
 	 * @param hitbox La hitbox de l'ennemi.
-	 * @param cheminSprite Le chemn vers le fichier sprite contenant l'animation.
+	 * @param cheminSprite Le chemin vers le fichier sprite contenant l'animation.
 	 * @param depart Le point de départ de l'ennemi.
 	 * @param arrivee Le point d'arrivée de l'ennemi.
 	 */
@@ -37,7 +37,6 @@ public abstract class Ennemi extends ElementDeplacable {
 	/**
 	 * Retourne vrai si l'ennemi est arrivé à son point d'arrivée, faux sinon.
 	 * @return Vrai si l'ennemi est arrivé à son point d'arrivée, faux sinon.
-	 * @author Maxime Pineau
 	 */
 	public boolean estArriveDestination() {
 		// on laisse une marge de 0.7f pixel pour la comparaison (on ne compare pas à 0, flottants)

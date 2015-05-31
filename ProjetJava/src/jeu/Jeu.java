@@ -63,7 +63,7 @@ public class Jeu extends BasicGame {
 	}
 	
 	/**
-	 * Crée un nouveau jeu en utilisant la carte par défaut.
+	 * Créé un nouveau jeu en utilisant la carte par défaut.
 	 * @param nomJoueur Le nom du joueur jouant la partie.
 	 * @throws IOException Une erreur est survenue lors du chargement de la carte (lecture du fichier de carte).
 	 */

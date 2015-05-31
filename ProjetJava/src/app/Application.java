@@ -27,7 +27,7 @@ public class Application {
 
 	/** 
 	 * Point d'entrée du jeu. Lance la fenêtre de jeu.
-	 * Le joueur devra entrer son nom en premier paramètre, puis le chemin vers le fichier de la carte s'il le désir. <br/>
+	 * Le joueur devra entrer son nom en premier paramètre, puis le chemin vers le fichier de la carte s'il le désire. <br/>
 	 * - args[0] contiendra le nom / pseudo du joueur. <br/>
 	 * - arg[1] pourra contenir le chemin du fichier. <br/>
 	 * Redirige également les logs dans un fichier de log. <br/>

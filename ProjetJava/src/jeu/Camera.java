@@ -25,7 +25,7 @@ public class Camera {
 	private final float TIERS_LARGEUR_ECRAN;
 	
 	/**
-	 * Créé une caméra, qui déplacera les éléments graphiques lorsque le personnage arrivera à la limite de sa zone de déplacement.
+	 * Créé une caméra qui déplacera les éléments graphiques lorsque le personnage arrivera à la limite de sa zone de déplacement.
 	 * @param personnage Le personnage que la caméra doit surveiller.
 	 */
 	public Camera( Personnage personnage, Carte carte ) {
@@ -72,7 +72,7 @@ public class Camera {
 	
 	/**
 	 * Place la caméra sur le graphique. Cette méthode translate la zone graphique. 
-	 * Les éléments dessinés sur le graphiques après cette méthode seront donc translatés eux aussi.
+	 * Les éléments dessinés sur le graphiques après l'appel de cette méthode seront donc translatés eux aussi.
 	 * 
 	 * @param conteneur Le conteneur graphique de la fenêtre (On pourra récupérer la largeur de la fenêtre...).
 	 * @param graphique Le graphique à translater.

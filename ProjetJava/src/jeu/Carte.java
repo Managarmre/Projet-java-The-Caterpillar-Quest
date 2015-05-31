@@ -21,8 +21,8 @@ import elementsGraphiques.Porte;
 
 /**
  * Classe représantant la carte du jeu.
- * Cette classe contient tout les éléments graphique. Ces éléments graphiques se trouvent dans le package 'elementsGraphiques'.
- * Celle-ci doit être chargée à partir d'un fichier .map, se chargement est effectuer à l'aide de la classe Parser.
+ * Cette classe contient tout les éléments graphiques. Ces éléments graphiques se trouvent dans le package 'elementsGraphiques'.
+ * Celle-ci doit être chargée à partir d'un fichier .map, ce chargement est effectué à l'aide de la classe Parser.
  * 
  * @author Maxime Pineau
  * @see elementsGraphiques
@@ -41,7 +41,7 @@ public class Carte {
 	
 	
 	/**
-	 * Crée une nouvelle carte.
+	 * Créé une nouvelle carte.
 	 * @throws IOException Une erreur est survenue lors du chargement de la carte (lecture du fichier de carte).
 	 */
 	public Carte( String cheminCarte ) throws IOException {
@@ -55,12 +55,12 @@ public class Carte {
 		
 		this.parseur = new Parser(this);
 		this.parseur.getEcranInit();	
-		// le personnage est initialiser lors de l'appel du parseur
+		// le personnage est initialisé lors de l'appel du parseur
 		
 	}
 
 	/**
-	 * Crée une nouvelle carte en urilisant le fichier de carte par défaut.
+	 * Créé une nouvelle carte en utilisant le fichier de carte par défaut.
 	 * @throws IOException Une erreur est survenue lors du chargement de la carte (lecture du fichier de carte).
 	 */
 	public Carte() throws IOException {
@@ -98,7 +98,7 @@ public class Carte {
 
 
 	/**
-	 * Met à jours les données de la cartes (positions des éléments...).
+	 * Met à jour les données de la cartes (position des éléments...).
 	 * @param conteneur Le conteneur du jeu.
 	 * @param delta Le temps qui s'est passé depuis la dernière mise à jour en millisecondes. 
 	 * @throws SlickException Lancée lorsqu'une erreur est détectée par la librairie Slick2D.
@@ -177,8 +177,8 @@ public class Carte {
 	 */
 	public void supprimerElementsTropEloignes( float positionCameraX ) {
 		
-		// on supprime tout les éléments ayant dépassé d'une case de l'écran vers la gauche.
-		// sauf pour les ennemis, ou l'on regarde les positions de départ et d'arrivée
+		// on supprime tous les éléments ayant dépassés d'une case de l'écran vers la gauche.
+		// sauf pour les ennemis, où l'on regarde les positions de départ et d'arrivée
 		
 		// la longueur d'une case fait 32 pixel.
 		
@@ -215,10 +215,10 @@ public class Carte {
 		
 	/**
 	 * Retourne l'élément de la liste avec lequel l'élément à vérifier est en collision.
-	 * On vérifiera tout les éléments de la liste passé en paramètre.
+	 * On vérifiera tous les éléments de la liste passée en paramètre.
 	 * Si il y en a un qui est en collision avec l'élément à vérifier, on le retourne.
-	 * Si aucun éléments n'est en collision avec l'émément à vérifier, on retourne null.
-	 * @param listeElements La liste de tous les éléments poossiblement en collision avec l'élément à vérifier.
+	 * Si aucun élément n'est en collision avec l'élément à vérifier, on retourne null.
+	 * @param listeElements La liste de tous les éléments possiblement en collision avec l'élément à vérifier.
 	 * @param elementAVerifier L'élément à vérifier
 	 * @return L'élément de la liste qui est en collision avec l'élément à vérifier passé en paramètre, null si aucun élément de la liste n'est en collision avec l'élément à vérifier.
 	 */
@@ -260,7 +260,7 @@ public class Carte {
 	}
 	
 	/**
-	 * Retourne le premier élément rammassable de la carte qui est en collision avec l'élément à vérifier, null s'il n'y en a aucun.
+	 * Retourne le premier élément ramassable de la carte qui est en collision avec l'élément à vérifier, null s'il n'y en a aucun.
 	 * @param elementAVerifier L'élément à vérifier.
 	 * @return Le premier élément ramassable de la carte qui est en collision avec l'élément à vérifier, null s'il n'y en a aucun.
 	 */
@@ -308,7 +308,7 @@ public class Carte {
 
 	
 	/**
-	 * Retourne la liste des éléments fices de la carte.
+	 * Retourne la liste des éléments fixes de la carte.
 	 * @return La liste des éléments fixes de la carte.
 	 */
 	public ArrayList<ElementFixe> getElementsFixes() {
@@ -343,7 +343,7 @@ public class Carte {
 	}
 	
 	/**
-	 * Ajoute une porte à la carte, l'initialisation de cette porte devra être effectué avant l'appel des méthodes update et afficher.
+	 * Ajoute une porte à la carte, l'initialisation de cette porte devra être effectuée avant l'appel des méthodes update et afficher.
 	 * @param porte La porte à ajouter dans la carte.
 	 */
 	public void ajoutPorte( Porte porte ) {
@@ -351,7 +351,7 @@ public class Carte {
 	}
 	
 	/**
-	 * Ajoute un élément ramassable à la carte, l'initialisation de cette porte devra être effectué avant l'appel des méthodes update et afficher.
+	 * Ajoute un élément ramassable à la carte, l'initialisation de cet élément devra être effectuée avant l'appel des méthodes update et afficher.
 	 * @param elementRamassable L'élément ramassable à ajouter dans la carte.
 	 */
 	public void ajoutElementRamassable( ElementRamassable elementRamassable ) {
@@ -359,7 +359,7 @@ public class Carte {
 	}
 	
 	/**
-	 * Ajoute un élément fixe à la carte, l'initialisation de cette porte devra être effectué avant l'appel des méthodes update et afficher.
+	 * Ajoute un élément fixe à la carte, l'initialisation de cet élément devra être effectuée avant l'appel des méthodes update et afficher.
 	 * @param elementFixe L'élément fixe à ajouter dans la carte.
 	 */
 	public void ajoutElementFixe( ElementFixe elementFixe ) {
@@ -367,7 +367,7 @@ public class Carte {
 	}
 	
 	/**
-	 * Ajoute un ennemi à la carte, l'initialisation de cette porte devra être effectué avant l'appel des méthodes update et afficher.
+	 * Ajoute un ennemi à la carte, l'initialisation de cet ennemi devra être effectuée avant l'appel des méthodes update et afficher.
 	 * @param ennemi L'ennemi à ajouter dans la carte.
 	 */
 	public void ajoutEnnemi( Ennemi ennemi ) {

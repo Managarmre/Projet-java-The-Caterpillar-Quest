@@ -38,8 +38,8 @@ public class GestionScores implements Serializable {
 	private ArrayList<Score> liste;
 	
 	/**
-	 * Crée un gestionnaire de scores pouvant contenir 'nombreScoresMax' scores.
-	 * @param nombreScoresMax Le nombre de scores maximal pouvant être stockés.
+	 * Créé un gestionnaire de scores pouvant contenir 'nombreScoresMax' scores.
+	 * @param nombreScoresMax Le nombre de scores maximal pouvant être stocké.
 	 */
 	public GestionScores( int nombreScoresMax ) {
 	
@@ -83,7 +83,7 @@ public class GestionScores implements Serializable {
 		
 		ListIterator<Score> iterator = this.liste.listIterator( this.liste.size() );
 		
-		// la collection étant triée, on la parcours du plus grand jusqu'au plus petit score, donc dans l'ordre inverse
+		// la collection étant triée, on la parcourt du plus grand jusqu'au plus petit score, donc dans l'ordre inverse
 		while( iterator.hasPrevious() ) {
 			System.out.println( iterator.previous().toString() );
 		}

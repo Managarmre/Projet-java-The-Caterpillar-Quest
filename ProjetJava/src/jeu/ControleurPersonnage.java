@@ -55,7 +55,7 @@ public class ControleurPersonnage implements KeyListener {
 
 	@Override
 	public void keyReleased( int key, char c ) {
-		 this.player.setMoving(false);		// le personnage arrete de boger lorsque le joueur relache la touche.
+		 this.player.setMoving(false);		// le personnage arrete de bouger lorsque le joueur relache la touche.
 		
 	}
 	

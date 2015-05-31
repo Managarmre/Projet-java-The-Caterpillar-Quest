@@ -36,7 +36,7 @@ public class Guepe extends Ennemi {
 		Gauche(0),
 		Droite(1);
 		
-		private int indice;	// représente l'indice du tableau dans lequel on va stocké la hitbox et l'annimation correspondant à l'orientation.
+		private int indice;	// représente l'indice du tableau dans lequel on va stocker la hitbox et l'animation correspondante à l'orientation.
 		
 		Orientation( int indice ) {
 			this.indice = indice;
@@ -102,7 +102,7 @@ public class Guepe extends Ennemi {
 		this.animations[ Orientation.Gauche.indice() ] = this.chargerAnimation( 0, 0, 3 );
 		if( this.deplacementHorizontal ) this.animations[ Orientation.Droite.indice() ] = this.chargerAnimation( 1, 0, 3 );
 		
-		// on a une hitbox par aniamtions.
+		// on a une hitbox par animations.
 		this.hitboxs = new Hitbox[2];
 		this.hitboxs[ Orientation.Gauche.indice() ] = new Hitbox( Guepe.POSITIONS_HITBOX_DEPLACEMENT_GAUCHE );
 		this.hitboxs[ Orientation.Droite.indice() ] = new Hitbox( Guepe.POSITIONS_HITBOX_DEPLACEMENT_DROITE );
@@ -119,10 +119,10 @@ public class Guepe extends Ennemi {
 		float oldX = this.getPositionX();
 		float oldY = this.getPositionY();
 		
-		// on calcul les prochaines positions en utilisant un vecteur pour déterminer la direction.
+		// on calcule les prochaines positions en utilisant un vecteur pour déterminer la direction.
 		Vector2f vecteurDirection = new Vector2f( this.getArrivee().getX() - oldX, this.getArrivee().getY() - oldY );
 		
-		Vector2f vecteur = new Vector2f( 0.1f * delta, 0 );	// le vecteur de base indiquant de combient la guêpe peut se déplacer.
+		Vector2f vecteur = new Vector2f( 0.1f * delta, 0 );	// le vecteur de base indiquant de combien la guêpe peut se déplacer.
 		vecteur.add( vecteurDirection.getTheta() );		// on replace ce vecteur sur le vecteur de direction, permettant de déplacer la guêpe vers la bonne direction.
 		
 		float newX = this.getPositionX() + vecteur.getX();

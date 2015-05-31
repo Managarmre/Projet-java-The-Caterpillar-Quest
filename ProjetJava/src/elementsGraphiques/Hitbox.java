@@ -19,7 +19,7 @@ public class Hitbox {
 	
 	
 	/**
-	 * Crée une nouvelle hitbox ayant une certaine forme, et décalé d'une certaine position.
+	 * Créé une nouvelle hitbox ayant une certaine forme, et décalée d'une certaine position.
 	 * @param formeHitbox La forme de la hitbox, possédant une position x et y d'origine.
 	 * @param decalageOrigine Le décalage de la hitbox, on replace la forme en fonction de ce décalage.
 	 */
@@ -29,7 +29,7 @@ public class Hitbox {
 	}
 	
 	/**
-	 * Crée une nouvelle hitbox ayant une certaine forme, et décalé d'une certaine position.
+	 * Créé une nouvelle hitbox ayant une certaine forme, et décalée d'une certaine position.
 	 * @param formeHitbox La forme de la hitbox, possédant une position x et y d'origine.
 	 * @param decalageOrigineX Le décalage de la hitbox en X, on replace la forme en fonction de ce décalage.
 	 * @param decalageOrigineY Le décalage de la hitbox en Y, on replace la forme en fonction de ce décalage.
@@ -39,7 +39,7 @@ public class Hitbox {
 	}
 	
 	/**
-	 * Crée une nouvelle hitbox ayant une certaine forme.
+	 * Créé une nouvelle hitbox ayant une certaine forme.
 	 * Les positions de la forme de la hitbox sont à données par rapport à l'élément (la position (0,0) de la forme correspond au bord en haut à gauche de l'élément),
 	 * et non pas par rapport à la fenêtre.
 	 * On considère que le décalage de la hitbox correspond à la position initiale de la forme.
@@ -50,7 +50,7 @@ public class Hitbox {
 	}
 	
 	/**
-	 * Crée une nouvelle hitbox, en construisant une forme à partir de la suite de points (x, y) données en paramètres.
+	 * Créé une nouvelle hitbox, en construisant une forme à partir de la suite de points (x, y) donnée en paramètres.
 	 * Les positions des points sont à données par rapport à l'élément (la position (0,0) de la forme correspond au bord en haut à gauche de l'élément),
 	 * et non pas par rapport à la fenêtre.
 	 * On considère que le décalage de la hitbox correspond à la position initiale de la forme.
@@ -96,7 +96,7 @@ public class Hitbox {
 	
 	/**
 	 * Modifie la position X de la hitbox.
-	 * La hitbox est placé sur la position x, puis elle est décalée selon son décalage en x.
+	 * La hitbox est placée sur la position x, puis elle est décalée selon son décalage en x.
 	 * @param x La nouvelle position X de la hotbox.
 	 */
 	public void setX( float x ) {
@@ -105,7 +105,7 @@ public class Hitbox {
 	
 	/**
 	 * Modifie la position Y de la hitbox.
-	 * La hitbox est placé sur la position Y, puis elle est décalée selon son décalage en Y.
+	 * La hitbox est placée sur la position Y, puis elle est décalée selon son décalage en Y.
 	 * @param y La nouvelle position Y de la hitbox
 	 */
 	public void setY( float y ) {
@@ -114,7 +114,7 @@ public class Hitbox {
 	
 	/**
 	 * Modifie la position de la hitbox
-	 * La hitbox est placé sur la position attendue, puis elle est décalée selon son décalage.
+	 * La hitbox est placée sur la position attendue, puis elle est décalée selon son décalage.
 	 * @param x La nouvelle position X de la hitbox
 	 * @param y La nouvelle position Y de la hitbox
 	 */
@@ -125,7 +125,7 @@ public class Hitbox {
 	
 	/**
 	 * Modifie la position de la hitbox. 
-	 * La hitbox est placé sur la position attendue, puis elle est décalée selon son décalage.
+	 * La hitbox est placée sur la position attendue, puis elle est décalée selon son décalage.
 	 * @param position La nouvelle position de la hitbox
 	 */
 	public void setPosition( Point position ) {
