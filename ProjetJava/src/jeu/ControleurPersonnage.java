@@ -46,7 +46,6 @@ public class ControleurPersonnage implements KeyListener {
 			case Input.KEY_RIGHT:
 				this.player.setOrientation( Orientation.DROITE );
 				this.player.setMoving(true);
-				System.out.println("DROITE DEBUT");
 			    break;
 			
 			default: 
@@ -62,7 +61,6 @@ public class ControleurPersonnage implements KeyListener {
 			
 			case Input.KEY_UP:
 				this.player.setVeutSauter(false);
-				//this.player.setMoving(false);
 				break;
 		
 			case Input.KEY_LEFT:
@@ -71,7 +69,6 @@ public class ControleurPersonnage implements KeyListener {
 			    
 			case Input.KEY_RIGHT:
 				this.player.setMoving(false);		// le personnage arrete de bouger lorsque le joueur relache la touche.
-				System.out.println("DROITE FIN");
 				break;
 			
 			default: 

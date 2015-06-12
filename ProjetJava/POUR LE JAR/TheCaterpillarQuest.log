@@ -145,3 +145,12 @@ Thu Jun 11 20:49:34 CEST 2015 DEBUG:Found 3 controllers
 Thu Jun 11 20:49:34 CEST 2015 DEBUG:0 : USB Receiver
 Thu Jun 11 20:49:34 CEST 2015 DEBUG:1 : USB Receiver
 Thu Jun 11 20:49:34 CEST 2015 DEBUG:2 : HID Interface
+Fri Jun 12 17:52:48 CEST 2015 DEBUG:Slick Build #237
+Fri Jun 12 17:52:48 CEST 2015 DEBUG:LWJGL Version: 2.9.2
+Fri Jun 12 17:52:48 CEST 2015 DEBUG:OriginalDisplayMode: 1600 x 900 x 32 @60Hz
+Fri Jun 12 17:52:48 CEST 2015 DEBUG:TargetDisplayMode: 1056 x 640 x 0 @0Hz
+Fri Jun 12 17:52:48 CEST 2015 DEBUG:Starting display 1056x640
+Fri Jun 12 17:52:49 CEST 2015 DEBUG:Use Java PNG Loader = true
+Fri Jun 12 17:52:49 CEST 2015 DEBUG:Found 2 controllers
+Fri Jun 12 17:52:49 CEST 2015 DEBUG:0 : USB Receiver
+Fri Jun 12 17:52:49 CEST 2015 DEBUG:1 : USB Receiver

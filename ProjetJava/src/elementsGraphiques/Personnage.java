@@ -76,7 +76,7 @@ public class Personnage extends ElementDeplacable {
 	 */
 	public Personnage( int x, int y ) {
 		super( x, y, 32, 32, new Rectangle(0, 0, 31, 32), Ressources.Sprites.PERSO );	
-		//this.direction = Direction.IMMOBILE;
+
 		this.orientation = Orientation.DROITE;
 		this.veutSauter = false;
 		
@@ -129,7 +129,7 @@ public class Personnage extends ElementDeplacable {
 		else this.dx = 0;
 		
 		// déplacement sur Y
-		if( this.veutSauter && /*this.isMoving &&*/ ! this.dansLesAirs /*&& this.surLeSol*/ ) {
+		if( this.veutSauter && ! this.dansLesAirs ) {
 			
 			this.dy = - this.vy;		// on enlève pour faire déplacer le personnage vers le haut.
 			this.dansLesAirs = true; // le personnage va sauter
@@ -244,18 +244,6 @@ public class Personnage extends ElementDeplacable {
 	
 	
 	public void setOrientation( Orientation orientation ) {	
-		/*
-		if(orientation == Direction.DROITE || orientation == Direction.GAUCHE){
-			if(orientation == Direction.DROITE && this.orientation==Direction.GAUCHE){
-				//de gauche à  droite
-				this.orientation = Direction.DROITE;
-			}
-			else if(orientation == Direction.GAUCHE && this.orientation==Direction.DROITE){
-				//de droite à  gauche
-				this.orientation = Direction.GAUCHE;
-			}
-		}
-		*/
 		this.orientation = orientation;
 	}
 	
