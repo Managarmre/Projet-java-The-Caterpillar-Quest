@@ -30,7 +30,9 @@ public class Personnage extends ElementDeplacable {
 	
 	private int nbPoints = 0;
 	
-	private boolean isMoving = false;
+	private boolean isMoving = false;	// le personnage bouge sur l'axe X (gauche / droite)
+	private boolean veutSauter;			// le personnage veut sauter et bouger sur l'axe Y (haut/bas).
+	
 	private boolean dansLesAirs = false;
 	private boolean surLeSol = false;
 
@@ -63,9 +65,9 @@ public class Personnage extends ElementDeplacable {
 	private static final int SAUT_GAUCHE = 4;
 	private static final int SAUT_DROITE = 5;
 	
-
-	private Direction direction;	// représente la direction donnée par les entrées du clavier (Gauche, Droite, Haut)
-	private Direction orientation;	// représente l'orientation du personnage (à gauche ou à droite)
+	private Orientation orientation;	// représente l'orientation du personnage (à gauche ou à droite)
+	
+	
 	private int situationAnimation;	// indice permettant de récupérer l'animation et la hitbox en fonction du déplacement du personnage
 	
 	/**
@@ -74,17 +76,14 @@ public class Personnage extends ElementDeplacable {
 	 */
 	public Personnage( int x, int y ) {
 		super( x, y, 32, 32, new Rectangle(0, 0, 31, 32), Ressources.Sprites.PERSO );	
-		this.direction = Direction.IMMOBILE;
-		this.orientation = Direction.DROITE;
+		//this.direction = Direction.IMMOBILE;
+		this.orientation = Orientation.DROITE;
+		this.veutSauter = false;
 		
 		this.situationAnimation = 1;
 		this.animations = new Animation[6];	
 	}
 	
-	
-	public Direction getDirection() {
-		return direction;
-	}
 	
 	@Override
 	public void initialiser() throws SlickException {
@@ -125,12 +124,12 @@ public class Personnage extends ElementDeplacable {
 		this.ay = (float) ( this.vy * (14/1000.0) / this.tempsSaut );	// accération, à ajouter à dy pour créer la gravité.
 		
 		// déplacement sur X
-		if( this.direction == Direction.DROITE && this.isMoving ) this.dx = this.vx; 	// déplacement à droite
-		else if( this.direction == Direction.GAUCHE && this.isMoving ) this.dx = - this.vx; 	// déplacement à gauche
+		if( this.orientation == Orientation.DROITE && this.isMoving ) this.dx = this.vx; 	// déplacement à droite
+		else if( this.orientation == Orientation.GAUCHE && this.isMoving ) this.dx = - this.vx; 	// déplacement à gauche
 		else this.dx = 0;
 		
 		// déplacement sur Y
-		if( this.direction == Direction.HAUT && this.isMoving && ! this.dansLesAirs /*&& this.surLeSol*/ ) {
+		if( this.veutSauter && /*this.isMoving &&*/ ! this.dansLesAirs /*&& this.surLeSol*/ ) {
 			
 			this.dy = - this.vy;		// on enlève pour faire déplacer le personnage vers le haut.
 			this.dansLesAirs = true; // le personnage va sauter
@@ -202,11 +201,11 @@ public class Personnage extends ElementDeplacable {
 		// on modifie l'animation et la hitbox en fonction du déplacement actuel du personnage		
 		int oldSituation = this.situationAnimation;
 		
-		if( this.dansLesAirs && this.orientation == Direction.GAUCHE ) this.situationAnimation = SAUT_GAUCHE;
-		else if( this.dansLesAirs && this.orientation == Direction.DROITE ) this.situationAnimation = SAUT_DROITE;
-		else if( this.isMoving && this.orientation == Direction.GAUCHE ) this.situationAnimation = DEPLACEMENT_GAUCHE;
-		else if( this.isMoving && this.orientation == Direction.DROITE ) this.situationAnimation = DEPLACEMENT_DROITE;
-		else if( this.orientation == Direction.GAUCHE ) this.situationAnimation = FIXE_GAUCHE;
+		if( this.dansLesAirs && this.orientation == Orientation.GAUCHE ) this.situationAnimation = SAUT_GAUCHE;
+		else if( this.dansLesAirs && this.orientation == Orientation.DROITE ) this.situationAnimation = SAUT_DROITE;
+		else if( this.isMoving && this.orientation == Orientation.GAUCHE ) this.situationAnimation = DEPLACEMENT_GAUCHE;
+		else if( this.isMoving && this.orientation == Orientation.DROITE ) this.situationAnimation = DEPLACEMENT_DROITE;
+		else if( this.orientation == Orientation.GAUCHE ) this.situationAnimation = FIXE_GAUCHE;
 		else this.situationAnimation = FIXE_DROITE;
 		
 		// on met à jour la hitbox actuelle du personnage
@@ -243,18 +242,25 @@ public class Personnage extends ElementDeplacable {
 	
 	
 	
-	public void setDirection(Direction direction) {		
-		if(direction == Direction.DROITE || direction == Direction.GAUCHE){
-			if(direction == Direction.DROITE && this.orientation==Direction.GAUCHE){
+	
+	public void setOrientation( Orientation orientation ) {	
+		/*
+		if(orientation == Direction.DROITE || orientation == Direction.GAUCHE){
+			if(orientation == Direction.DROITE && this.orientation==Direction.GAUCHE){
 				//de gauche à  droite
 				this.orientation = Direction.DROITE;
 			}
-			else if(direction == Direction.GAUCHE && this.orientation==Direction.DROITE){
+			else if(orientation == Direction.GAUCHE && this.orientation==Direction.DROITE){
 				//de droite à  gauche
 				this.orientation = Direction.GAUCHE;
 			}
 		}
-		this.direction = direction;
+		*/
+		this.orientation = orientation;
+	}
+	
+	public void setVeutSauter( boolean veutSauter ) {
+		this.veutSauter = veutSauter;
 	}
 	
 	

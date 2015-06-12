@@ -2,7 +2,7 @@ package jeu;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.KeyListener;
 
-import elementsGraphiques.Direction;
+import elementsGraphiques.Orientation;
 import elementsGraphiques.Personnage;
 
 
@@ -33,18 +33,20 @@ public class ControleurPersonnage implements KeyListener {
 		switch(key) {
 		
 			case Input.KEY_UP:
-				this.player.setDirection(Direction.HAUT);
-				this.player.setMoving(true);
+				//this.player.setOrientation(Orientation.HAUT);
+				this.player.setVeutSauter(true);
+				//this.player.setMoving(true);
 				break;
 				
 			case Input.KEY_LEFT:
-				this.player.setDirection(Direction.GAUCHE);
+				this.player.setOrientation( Orientation.GAUCHE );
 				this.player.setMoving(true);
 			    break;
 			    
 			case Input.KEY_RIGHT:
-				this.player.setDirection(Direction.DROITE);
+				this.player.setOrientation( Orientation.DROITE );
 				this.player.setMoving(true);
+				System.out.println("DROITE DEBUT");
 			    break;
 			
 			default: 
@@ -55,7 +57,26 @@ public class ControleurPersonnage implements KeyListener {
 
 	@Override
 	public void keyReleased( int key, char c ) {
-		 this.player.setMoving(false);		// le personnage arrete de bouger lorsque le joueur relache la touche.
+		
+		switch(key) {
+			
+			case Input.KEY_UP:
+				this.player.setVeutSauter(false);
+				//this.player.setMoving(false);
+				break;
+		
+			case Input.KEY_LEFT:
+				this.player.setMoving(false);		// le personnage arrete de bouger lorsque le joueur relache la touche.
+			    break;
+			    
+			case Input.KEY_RIGHT:
+				this.player.setMoving(false);		// le personnage arrete de bouger lorsque le joueur relache la touche.
+				System.out.println("DROITE FIN");
+				break;
+			
+			default: 
+				break;
+		}
 		
 	}
 	
